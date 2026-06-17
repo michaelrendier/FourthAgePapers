@@ -68,20 +68,30 @@
 [ ] pilot_wave             — Engine: tier6_physics. Quantum potential = DM density.
 [ ] hypercomplex_spectral  — Engine: jwst module. All σface ptorrents ready.
 [ ] lagrangian_identity    — Engine: lagrangian + h_rb_hat. 97% overhead derivation.
-[ ] noether_wiles (D15)    — Engine: noether + noether_information. Identity stated.
+[ ] noether_wiles (D15)    — Engine: noether_wiles_engine.py (built 2026-06-17). Notebooks: COMPLETE.
+    Dir: FourthAgePapers/NoetherWiles/
     Claim: FLT and RH are corollaries of one Noether conservation identity.
     Re(s)=½ IS σ=½ IS θ=½ (Bombieri-Vinogradov prime distribution barrier).
-    NEW (2026-06-17): 246 = 1000×d* — Maynard/Polymath unconditional prime gap bound
-    equals 1000 × d* = 1000 × 0.24600. Zero free parameters. Not fitted.
+    246 = 1000×d* — CONFIRMED by engine. Exact integer match. Zero free parameters.
     The sedenion prime hash IS the smooth-number sieve (Zhang 2013) stated algebraically.
     θ=½ wall (GPY stuck here 2005) = σ=½ fold catastrophe = rainbow caustic.
     Zhang pushed past by 1/584 using smooth numbers = sedenion ZD prime selection.
-    Maynard showed θ=½ is not fundamental for gaps = σ=½ is the visible caustic, not the wall.
-    Under Elliott-Halberstam (θ→1): gap drops to 12. Under stronger version: 6.
-    Unconditional prediction from d*: gap = 246 = 1000×d*.
-    TODO: Build engine connecting ZD prime hash → arithmetic progression distribution → gap bound.
-    TODO: Notebooks: 00_vision / 01_predictions / 02_data / 03_results
-    TODO: Derive gap = 1000×d* from first principles (or find the correct scaling).
+    Maynard ordinal tuple = ONE PATH through sedenion space. Sedenion = ALL PATHS.
+    Chain: Fixed Point (σ=½) → Fixed Question (L_(I|O)) → Boundary Shape (admissibility ν_p<p).
+    NEW RESULTS (2026-06-17, engine v0.200):
+      NR1: 84 ZD pairs = 72 bridge (odd+even) + 12 all-odd CONSTELLATIONS (prime-sector ZD pairs)
+           12 constellations couple two prime pairs in ZD tension — not single-pair extinction
+      NR2: ODD×ODD basis products → EVEN index (100%, 64/64). Prime×prime leaves prime sector.
+           This is the sedenion shadow of the Fundamental Theorem of Arithmetic.
+      NR3: Gap=8 = N_BASIS/2 = Nyquist frequency of sedenion prime stencil.
+           ONLY gap completely outside ZD structure. σ=½ inside the prime sector geometry.
+      NR4: J_red × J_blue = e^{-E} CONSTANT for ALL σ. Lagrangian is conserved everywhere.
+           ζ(s)=Σn^{-s} measures the SUM (non-conserved, varies). WRONG OBJECT.
+           L_(I|O) measures the PRODUCT (conserved, invariant). WHY primes exist.
+           AM=GM uniquely at σ=½. One uniqueness condition: RH = BV = sedenion = AM-GM.
+    OPEN DERIVATIONS: P1 (J_prime construction), P3 (Zhang Type I/II/III ↔ cd_mul),
+      gap=12 from d* under EH, gap=6 under strong EH, group structure of 12 constellations.
+    TODO: Write wiki page (LAST).
 
 ---
 

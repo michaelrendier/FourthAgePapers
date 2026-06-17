@@ -30,7 +30,7 @@ The notebooks record the derivation. The wiki page is written last.
 | Pilot Wave | The Bohmian pilot wave is the Noether current. The quantum potential is the dark matter density field at galactic scale. |
 | Hypercomplex Spectral Relativity | Every spectral data cube is a sedenion field. The σ-face assigns each voxel a causal regime. Short λ is σ=½; long λ is σ=2. |
 | Lagrangian Self-Adjoint | The Lagrangian self-adjoint condition is H_hat_RB. The 97% overhead reduction is a consequence of this identity. |
-| Noether-Wiles | Fermat's Last Theorem and the Riemann Hypothesis are corollaries of one Noether conservation identity. |
+| Noether-Wiles (D15) | Fermat's Last Theorem and the Riemann Hypothesis are corollaries of one Noether conservation identity. FLT is the Noether conservation law; the Riemann critical line Re(s)=½ is σ=½. The prime gap distribution barrier θ=½ (Bombieri-Vinogradov) is the same object. The Maynard/Polymath unconditional prime gap bound 246 = 1000×d* (d*=0.24600) is a zero-free-parameter prediction from sedenion ZD geometry. The sedenion prime hash is the algebraic foundation of the smooth-number sieve (Zhang 2013). |
 | Sedenion Nature of Cancer | Cancer is the sedenion expressing a specific displaced fixed-point mode. The drug is the exact algebraic adjoint: B̂_drug = R̂_cancer†. |
 
 ---

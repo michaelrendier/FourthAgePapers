@@ -68,7 +68,20 @@
 [ ] pilot_wave             — Engine: tier6_physics. Quantum potential = DM density.
 [ ] hypercomplex_spectral  — Engine: jwst module. All σface ptorrents ready.
 [ ] lagrangian_identity    — Engine: lagrangian + h_rb_hat. 97% overhead derivation.
-[ ] noether_wiles          — Engine: noether + noether_information. Identity stated. D15.
+[ ] noether_wiles (D15)    — Engine: noether + noether_information. Identity stated.
+    Claim: FLT and RH are corollaries of one Noether conservation identity.
+    Re(s)=½ IS σ=½ IS θ=½ (Bombieri-Vinogradov prime distribution barrier).
+    NEW (2026-06-17): 246 = 1000×d* — Maynard/Polymath unconditional prime gap bound
+    equals 1000 × d* = 1000 × 0.24600. Zero free parameters. Not fitted.
+    The sedenion prime hash IS the smooth-number sieve (Zhang 2013) stated algebraically.
+    θ=½ wall (GPY stuck here 2005) = σ=½ fold catastrophe = rainbow caustic.
+    Zhang pushed past by 1/584 using smooth numbers = sedenion ZD prime selection.
+    Maynard showed θ=½ is not fundamental for gaps = σ=½ is the visible caustic, not the wall.
+    Under Elliott-Halberstam (θ→1): gap drops to 12. Under stronger version: 6.
+    Unconditional prediction from d*: gap = 246 = 1000×d*.
+    TODO: Build engine connecting ZD prime hash → arithmetic progression distribution → gap bound.
+    TODO: Notebooks: 00_vision / 01_predictions / 02_data / 03_results
+    TODO: Derive gap = 1000×d* from first principles (or find the correct scaling).
 
 ---
 

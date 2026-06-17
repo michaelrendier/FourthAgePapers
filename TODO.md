@@ -6,6 +6,18 @@
 
 ## Active
 
+[ ] CMB_PlasmaBoundary — Part 3: H_hat_RB theoretical boundary comparison
+    Engine: fractal_flames.py (complete)
+    Data: Planck 70GHz SEVEM nside=1024 + WMAP synfast (complete)
+    Results: fractal_flames.png, fractal_flames_cascade.png (complete)
+    P1: PARTIAL — D_f = φ at θ* ≈ 7–10° only, not universal
+    P2: FAILED — D_f runs from ~2.0 (30°) to ~1.25 (1°). Stays in data.
+    P3: CONFIRMED — Planck and WMAP agree within 2σ at all scales
+    P4: CONFIRMED — filamentary plasma flame structure (visual)
+    TODO: Build H_hat_RB boundary engine → predict θ* from first principles
+    TODO: Add Simons Observatory / ACT DR6 as Dataset 3 (in-situ ptorrent)
+    TODO: Write wiki page (LAST)
+
 [ ] CMB_FractalBoundary — add P6 (local scale invariance)
     The fractal boundary looks the same at every scale.
     D_f = φ−1 locally at every sub-band, not just globally.

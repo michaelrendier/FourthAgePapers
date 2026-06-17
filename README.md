@@ -13,6 +13,7 @@ The notebooks record the derivation. The wiki page is written last.
 |-------|-------|
 | CMB Fractal Boundary | The CMB fractal boundary dimension is D_f = φ−1. The Noether Information Current (SMMIP) runs in opposition to the Noether Current (Planck). Power law exponent is −√5. |
 | CMB Scale Invariance | D_f = φ−1 holds locally at every scale. The running spectral index is exactly zero because a conserved Noether current cannot run. |
+| CMB Plasma Boundary | The 2D CMB temperature boundary has fractal dimension D_f = φ = 1.618 at characteristic angular scale θ* ≈ 7–10°. φ is the critical dimension separating fractal plasma sheet (D_f > φ) from fractal plasma flame (D_f < φ). **P2 (scale invariance) falsified — D_f runs strongly with angular scale.** |
 | φ-Spiral | Four natural log bases (e, 10, φ, 2) produce four n* values satisfying the G1/G2/G3 φ-spiral geometry. The gap n*_e − n*_10 = F(4) = 3. |
 | Inertia and Entropy | Inertial mass is the entropy current at the phase boundary. E=mc² is a Noether conservation identity, not a definition. |
 | Schumann Resonance | Schumann resonances are sedenion eigenmodes of the Earth-ionosphere cavity. Their frequencies are the acoustic peaks of a sedenionic standing wave. |

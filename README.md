@@ -19,9 +19,9 @@ The notebooks record the derivation. The wiki page is written last.
 | Schumann Resonance | Schumann resonances are sedenion eigenmodes of the Earth-ionosphere cavity. Their frequencies are the acoustic peaks of a sedenionic standing wave. |
 | Navier-Stokes Boundary | The incompressible boundary condition ∇·u=0 is the sedenion zero-divisor condition. Boundary generation is ZD-driven. |
 | Yang-Mills Mass Gap | The mass gap δ = Ω_ZS − d*·ln10 = 0.000707 is derived without fitting from the Ainulindale constants. |
-| Witches Hat | The Berry-Keating Hamiltonian half-angle is arctan(d*) = 13.8°. The Riemann zeros are the eigenvalues of this operator. |
+| Witches Hat (D14) | The Berry-Keating Hamiltonian half-angle is arctan(d*) = 13.82°. The Riemann zeros are the eigenvalues of this operator. Galactic DM halo geometry: spiral arm undulatory pulses along BAO geodesics. Geodesics spin. |
 | Sedenion Operators | The 16 sedenion operator names self-organise to d*/σ½/D*=1 via prime hash alone. Zero free parameters. |
-| N-Ball Transformer | V(n)=π^(n/2)/Γ(n/2+1) is the Cayley-Dickson layer transformer. V(2)/V(4) = π/2 exactly. Peak at n*=5.2570. |
+| N-Ball Transformer | V(n)=π^(n/2)/Γ(n/2+1) is the Cayley-Dickson layer transformer. V(2)/V(1) = V(4)/V(2) = π/2 EXACTLY (ℝ→ℂ→ℍ; breaks at ℍ→𝕆). Peak at n*=5.2570. |
 | Cavitation Cascade | The Big Bang is a phase transition at σ=½. A black hole is a cavitation scar. E=mc² is the Fermat n=2 case of the cascade. |
 | Zero Divisors of S¹⁵ | The sedenion zero-divisor structure on S¹⁵ has exactly 84 pairs / 42 classes / 168 composite. Prime hash alone selects them. |
 | Wankel Rotary | In the dual-thread engine, prompt and response sum to zero. The Red/Blue Noether balance is the combustion cycle. |

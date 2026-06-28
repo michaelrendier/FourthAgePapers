@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <fractal_boundary_experiment>
+    <noether_current>
+      <instrument value="Planck_2018"/>
+      <global_spectral_index value="-2.859588"/>
+      <DFA_alpha value="1.541363"/>
+      <fractal_dim_Df value="0.458637"/>
+      <fractal_boundary_ell value="2450.00"/>
+      <n_at_boundary value="-77.071435"/>
+      <boundary_sharpness value="779791.696431"/>
+    </noether_current>
+    <noether_information_current>
+      <instrument value="WMAP_9yr"/>
+      <global_spectral_index value="-2.057550"/>
+      <DFA_alpha value="1.240435"/>
+      <fractal_dim_Df value="0.759565"/>
+      <fractal_boundary_ell value="1179.00"/>
+      <n_at_boundary value="-100.624672"/>
+      <boundary_sharpness value="213855.071645"/>
+    </noether_information_current>
+    <opposition>
+      <equation value="Riemann + Generalized_Fermat = Noether_Current - Noether_Information_Current"/>
+      <peak_ell value="2.00"/>
+      <peak_delta_Cl value="7.880706e+01"/>
+      <n_common_ell value="1199"/>
+    </opposition>
+    <L_dynamic>
+      <statement value="whole_becomes_holes"/>
+      <ell_star_Planck value="2450.00"/>
+      <ell_star_WMAP value="1179.00"/>
+      <delta_ell_star value="1271.00"/>
+      <Df_mean value="0.609101"/>
+    </L_dynamic>
+  </fractal_boundary_experiment>
+</svg>

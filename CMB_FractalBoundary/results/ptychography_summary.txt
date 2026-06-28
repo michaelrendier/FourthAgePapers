@@ -1,0 +1,21 @@
+CMB PTYCHOGRAPHY — FRACTAL BOUNDARY RESOLUTION
+========================================================
+
+Object           : last scattering surface  z≈1100
+Oldest light     : ~380,000 yr after the Bang
+
+Probe 1 (WMAP)   : FWHM=13.2'  ℓ*=1179  θ*=9.2'
+Probe 2 (Planck) : FWHM=5.0'   ℓ*=2450  θ*=4.4'
+Overlap          : ℓ = 2..1179
+
+Reconstruction   : ℓ = 2..2450  (2507 bins)
+Extrapolation    : ℓ = 2451..5450  (3000 bins)
+
+Fractal law      : C_ℓ ~ ℓ^-2.2182
+D_f              : 0.609101  (≈ φ−1 = 0.618034)
+Convergence      : 32 iterations  loss=5.6601e-13
+
+C_ℓ at ℓ=2450    : 1.3823e-03
+C_ℓ at ℓ=3000    : 3.3444e-04
+C_ℓ at ℓ=4000    : 1.7668e-04
+C_ℓ at ℓ=5450    : 8.8959e-05

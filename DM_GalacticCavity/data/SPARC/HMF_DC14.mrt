@@ -1,0 +1,26 @@
+Title: The Halo Mass Function of Late-Type Galaxies from HI Kinematics
+Authors: P. Li, F. Lelli, S.S. McGaugh, M.S. Pawlowski, M. Zwaan, J.M. Schombert
+================================================================================
+Byte-by-byte Description of file: HMF_DC14.mrt
+--------------------------------------------------------------------------------
+   Bytes Format Units         Label     Explanations
+--------------------------------------------------------------------------------
+   1-  5 F5.1   solMass       log(M200) Log of the dark-matter halo mass (1)
+   6- 11 F5.2   Mpc^-3        log(Phi)  Number of halos per unit volume
+  12- 16 F4.2   Mpc^-3    eup_log(Phi)  Upper error on log(Phi)
+  17- 21 F4.2   Mpc^-3    elo_log(Phi)  Lower error on log(Phi) 
+--------------------------------------------------------------------------------
+(1) This is the central value of the mass bin
+--------------------------------------------------------------------------------
+10.5 -1.23 0.14 0.20
+10.7 -1.23 0.11 0.16
+10.9 -1.53 0.11 0.14
+11.1 -1.54 0.09 0.12
+11.3 -1.81 0.09 0.11
+11.5 -1.89 0.10 0.12
+11.7 -2.16 0.10 0.14
+11.9 -2.42 0.12 0.17
+12.1 -2.85 0.15 0.22
+12.3 -3.41 0.18 0.32
+12.5 -3.90 0.19 0.36
+12.7 -5.06 0.25 0.67

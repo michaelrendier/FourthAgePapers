@@ -1,0 +1,124 @@
+{
+  "experiment": "CMB Fractal Plasma Flame Boundary",
+  "dataset": "Planck 70GHz SEVEM nside=1024",
+  "prediction_P7": "D_f(2D boundary) = phi = 1.618034",
+  "prediction_P8": "D_f constant at all angular scales (ptychographic invariance)",
+  "new_physical_claim": "CMB boundary = fractal plasma flame (not fur, not foam)",
+  "phi": 1.618033988749895,
+  "phi_1": 0.6180339887498949,
+  "ptychography": [
+    {
+      "fov": 30,
+      "dataset": "Planck",
+      "Df": 1.9731063818245462,
+      "Df_err": 0.012545326758306982,
+      "vs_phi": 0.3550723930746513,
+      "vs_phi1": 1.3550723930746513,
+      "n_patches": 5
+    },
+    {
+      "fov": 30,
+      "dataset": "WMAP",
+      "Df": 2.010623327869341,
+      "Df_err": 0.0028124760402065663,
+      "vs_phi": 0.39258933911944593,
+      "vs_phi1": 1.392589339119446,
+      "n_patches": 5
+    },
+    {
+      "fov": 15,
+      "dataset": "Planck",
+      "Df": 1.833402749996404,
+      "Df_err": 0.0234922240889396,
+      "vs_phi": 0.21536876124650917,
+      "vs_phi1": 1.2153687612465092,
+      "n_patches": 5
+    },
+    {
+      "fov": 15,
+      "dataset": "WMAP",
+      "Df": 1.907936634427249,
+      "Df_err": 0.004852209981970509,
+      "vs_phi": 0.28990264567735413,
+      "vs_phi1": 1.2899026456773541,
+      "n_patches": 5
+    },
+    {
+      "fov": 7,
+      "dataset": "Planck",
+      "Df": 1.6751916669755187,
+      "Df_err": 0.03081892115887559,
+      "vs_phi": 0.05715767822562379,
+      "vs_phi1": 1.0571576782256238,
+      "n_patches": 5
+    },
+    {
+      "fov": 7,
+      "dataset": "WMAP",
+      "Df": 1.7184065042633876,
+      "Df_err": 0.016909108630761595,
+      "vs_phi": 0.10037251551349269,
+      "vs_phi1": 1.1003725155134927,
+      "n_patches": 5
+    },
+    {
+      "fov": 3,
+      "dataset": "Planck",
+      "Df": 1.4766922606748076,
+      "Df_err": 0.03837036263312124,
+      "vs_phi": -0.14134172807508727,
+      "vs_phi1": 0.8586582719249127,
+      "n_patches": 5
+    },
+    {
+      "fov": 3,
+      "dataset": "WMAP",
+      "Df": 1.4914499834104569,
+      "Df_err": 0.02882590355650402,
+      "vs_phi": -0.12658400533943803,
+      "vs_phi1": 0.873415994660562,
+      "n_patches": 5
+    },
+    {
+      "fov": 1.5,
+      "dataset": "Planck",
+      "Df": 1.3599428416195198,
+      "Df_err": 0.037262073340333594,
+      "vs_phi": -0.25809114713037506,
+      "vs_phi1": 0.7419088528696249,
+      "n_patches": 5
+    },
+    {
+      "fov": 1.5,
+      "dataset": "WMAP",
+      "Df": 1.38405367084492,
+      "Df_err": 0.02369159599822196,
+      "vs_phi": -0.23398031790497487,
+      "vs_phi1": 0.7660196820950251,
+      "n_patches": 5
+    }
+  ],
+  "zoom_cascade": [
+    {
+      "fov": 30,
+      "Df": 1.842776511135901,
+      "Df_err": 0.027537401494648468
+    },
+    {
+      "fov": 10,
+      "Df": 1.6447854774530066,
+      "Df_err": 0.028641580697844466
+    },
+    {
+      "fov": 3,
+      "Df": 1.3449541721734066,
+      "Df_err": 0.017517141054691297
+    },
+    {
+      "fov": 1,
+      "Df": 1.2458050563788163,
+      "Df_err": 0.016434281133831892
+    }
+  ],
+  "part_3_pending": "Compare boundary to H_hat_RB theoretical prediction \u2014 deferred until data confirmed"
+}

@@ -1,0 +1,10 @@
+# Heavy MCMC/corner-plot archives — stay in DataSets, not in repo
+MCMCfits.tar.gz
+PXL/
+*.tar.gz
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Generated figures are committed (they are the pre-registration record)
+# figures/*.png  <-- DO NOT ignore these

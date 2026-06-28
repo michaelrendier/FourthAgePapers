@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <boundary_interrogation>
+    <question>what_are_you</question>
+    <noether_current>
+      <name value="Planck_2018 / Noether_Current"/>
+      <ell_star value="2450"/>
+      <theta_arcmin value="4.408163265306123"/>
+      <Cl_star value="0.00024403943735901485"/>
+      <Dl_star value="233.232755"/>
+      <local_n value="-8.232691837306524"/>
+      <r value="-0.17471208080955897"/>
+      <Df_implied value="3.616345918653262"/>
+      <self_sim_ratio value="0.06164306456250103"/>
+      <closest value="2^slope"/>
+      <closest_val value="0.003324396465624497"/>
+      <closest_err value="0.05831866809687653"/>
+    </noether_current>
+    <noether_information_current>
+      <name value="WMAP_9yr / Noether_Information_Current"/>
+      <ell_star value="1179"/>
+      <theta_arcmin value="9.160305343511451"/>
+      <Cl_star value="-0.0016053113474767862"/>
+      <Dl_star value="-355.4473"/>
+      <local_n value="-9.419764620995817"/>
+      <r value="-0.15201173636696397"/>
+      <Df_implied value="4.209882310497909"/>
+      <self_sim_ratio value="-0.03745878725269263"/>
+      <closest value="2^slope"/>
+      <closest_val value="0.0014600519107560962"/>
+      <closest_err value="0.03891883916344873"/>
+    </noether_information_current>
+    <gap>
+      <delta_ell value="1271"/>
+      <ell_ratio value="2.0780322307039865"/>
+      <Cl_ratio value="-6.578081661101182"/>
+      <delta_n value="1.1870727836892936"/>
+    </gap>
+  </boundary_interrogation>
+</svg>

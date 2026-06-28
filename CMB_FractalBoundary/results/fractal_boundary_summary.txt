@@ -1,0 +1,35 @@
+FRACTAL BOUNDARY EXPERIMENT
+Noether Current (Planck) vs Noether Information Current (WMAP)
+============================================================
+
+[noether_current]
+  instrument                     = Planck_2018
+  global_spectral_index          = -2.859588
+  DFA_alpha                      = 1.541363
+  fractal_dim_Df                 = 0.458637
+  fractal_boundary_ell           = 2450.00
+  n_at_boundary                  = -77.071435
+  boundary_sharpness             = 779791.696431
+
+[noether_information_current]
+  instrument                     = WMAP_9yr
+  global_spectral_index          = -2.057550
+  DFA_alpha                      = 1.240435
+  fractal_dim_Df                 = 0.759565
+  fractal_boundary_ell           = 1179.00
+  n_at_boundary                  = -100.624672
+  boundary_sharpness             = 213855.071645
+
+[opposition]
+  equation                       = Riemann + Generalized_Fermat = Noether_Current - Noether_Information_Current
+  peak_ell                       = 2.00
+  peak_delta_Cl                  = 7.880706e+01
+  n_common_ell                   = 1199
+
+[L_dynamic]
+  statement                      = whole_becomes_holes
+  ell_star_Planck                = 2450.00
+  ell_star_WMAP                  = 1179.00
+  delta_ell_star                 = 1271.00
+  Df_mean                        = 0.609101
+

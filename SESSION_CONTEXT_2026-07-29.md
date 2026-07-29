@@ -77,11 +77,25 @@ from ValaQuenta.modules.X import maths
 ```
 
 `FourthAgePapers/<Paper>/` → `../..` is `ThePlace`, which holds the `ValaQuenta`
-package. **The older papers use `'../../../ValaQuenta'`, which resolves above
-`ThePlace` and does not exist.** Eight notebooks across Telperion, ZeroTree,
-NoetherWiles, FermatMonster, MonsterSiblings still have the broken form. They
-have not been fixed — out of scope this session, but they will not run on any
-machine as written.
+package.
+
+The older papers use `'../../../ValaQuenta'`. That does not resolve on the
+phone, but it is **not a mistake** — it is correct for the laptop layout, where
+`FourthAgePapers/` sat inside `Ainulindale/` on the SD card
+(`/media/rendier/0123-4567/Ainulindale/FourthAgePapers/<Paper>/` → `../../..`
+= the card root, so `../../../ValaQuenta` is the sibling repo).
+
+**Standing instruction from Cody, 2026-07-29: all old laptop references stay.**
+The SD card in this phone *is* the laptop's card, and the work goes back to a
+computer. When a notebook needs to run in both places, **add** a portable
+`sys.path` entry next to the laptop one — never replace it. Python ignores a
+`sys.path` entry that does not exist, so carrying both is free.
+
+This was applied to the four `singularity_null` / `turing_diagonal` notebooks in
+ValaQuenta, which now carry both. The eight FourthAgePapers notebooks
+(Telperion, ZeroTree, NoetherWiles, FermatMonster, MonsterSiblings) still carry
+the laptop form only; if they are ever needed on the phone, add — do not
+substitute.
 
 ---
 

@@ -38,7 +38,24 @@ Version: 0.300 — correct one-claim: N-Shape Fermat IS Monster + siblings (2026
 
 import math
 import cmath
+import os
+import sys
 from typing import Dict, List, Tuple
+
+# Cross-repo import (2026-07-11): T32/GF(2) nilpotency primitives, built
+# and verified in ValaQuenta specifically so this engine and
+# hypergon_constructibility share ONE implementation instead of each
+# maintaining its own copy -- the module's own docstring records two real
+# transcription bugs caught in an earlier copy of this exact code. Falls
+# back to None if ValaQuenta isn't on this machine's path; callers of
+# t32_nilpotency_check() should check for that rather than assume it works.
+_THEPLACE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+if _THEPLACE not in sys.path:
+    sys.path.insert(0, _THEPLACE)
+try:
+    from ValaQuenta.modules.t32_nilpotency.maths import prime_nilpotency_report
+except ImportError:
+    prime_nilpotency_report = None
 
 
 # ── Constants ─────────────────────────────────────────────────────────────────
@@ -463,6 +480,59 @@ def fermat_niemeier_bridge() -> Dict:
     }
 
     return {'B1': b1, 'B2': b2, 'B3': b3, 'B4': b4}
+
+
+# ── T32/GF(2) nilpotency cross-check (2026-07-11) ────────────────────────────
+
+def t32_nilpotency_check() -> Dict:
+    """
+    Cross-reference MOONSHINE_PRIMES against T32/GF(2) nilpotency, using
+    ValaQuenta's shared t32_nilpotency primitives (imported, not
+    reimplemented -- see the module-level import comment above).
+
+    This is a DIFFERENT question from fermat_niemeier_bridge()'s B1/B2/B3:
+    that function asks which primes fill the Niemeier gap {1,11,15} mod 16.
+    This asks whether those same primes have any distinguishing algebraic
+    signature (nilpotency) in a completely different algebra (T32/GF(2),
+    via Hyperwebster address encoding) -- checking for a correlation
+    between two independently-derived characterizations of "special" primes,
+    not assuming one.
+
+    HONEST CONTEXT: the same T32/GF(2) nilpotency mechanism was tested as a
+    candidate RSA-factorization signal (hypergon_constructibility engine,
+    ValaQuenta) and found NOT to survive a magnitude-matched control there
+    -- verdict ARTIFACT, not signal. This function does not inherit that
+    verdict (a different question -- correlation with Niemeier-gap
+    membership, not factoring) but it should not be read as validated
+    machinery either. Report the raw correlation, do not oversell it.
+    """
+    if prime_nilpotency_report is None:
+        return {'error': 'ValaQuenta.modules.t32_nilpotency not importable on this path', 'available': False}
+
+    report = prime_nilpotency_report(MOONSHINE_PRIMES)
+    gap_primes = {17, 11, 59, 31, 47}  # exact fillers of e1, e11, e15 per fermat_n_shape_map()
+    for row in report['rows']:
+        row['fills_niemeier_gap'] = row['prime'] in gap_primes
+
+    gap_rows = [r for r in report['rows'] if r['fills_niemeier_gap']]
+    non_gap_rows = [r for r in report['rows'] if not r['fills_niemeier_gap']]
+    gap_nilpotent_pct = 100 * sum(r['nilpotent'] for r in gap_rows) / len(gap_rows) if gap_rows else 0.0
+    non_gap_nilpotent_pct = 100 * sum(r['nilpotent'] for r in non_gap_rows) / len(non_gap_rows) if non_gap_rows else 0.0
+
+    return {
+        'rows': report['rows'],
+        'overall_nilpotent_pct': report['nilpotent_pct'],
+        'gap_filling_primes_nilpotent_pct': gap_nilpotent_pct,
+        'non_gap_primes_nilpotent_pct': non_gap_nilpotent_pct,
+        'note': (
+            'Raw correlation between Niemeier-gap membership and T32/GF(2) '
+            'nilpotency, using a mechanism already shown NOT to survive a '
+            'magnitude-matched control in the factorization context '
+            '(hypergon_constructibility). Report this number, do not treat '
+            'a difference here as validated without the same control-testing '
+            'discipline applied.'
+        ),
+    }
 
 
 # ── Wiles = Noether check ─────────────────────────────────────────────────────

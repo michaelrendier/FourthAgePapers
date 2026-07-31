@@ -50,7 +50,7 @@ LN10     = np.log(10)
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 
-SPARC_DIR   = '/media/rendier/0123-4567/DataSets/Astrophysics/SPARC'
+SPARC_DIR   = os.path.join(os.path.dirname(__file__), 'data', 'SPARC')
 ROTMOD_DIR  = os.path.join(SPARC_DIR, 'Rotmod_LTG')
 MASTER_FILE = os.path.join(SPARC_DIR, 'SPARC_Lelli2016c.mrt')
 OUT_DIR     = os.path.join(os.path.dirname(__file__), 'results')

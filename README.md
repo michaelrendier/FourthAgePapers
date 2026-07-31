@@ -32,6 +32,7 @@ The notebooks record the derivation. The wiki page is written last.
 | Lagrangian Self-Adjoint | The Lagrangian self-adjoint condition is H_hat_RB. The 97% overhead reduction is a consequence of this identity. |
 | Noether-Wiles (D15) | Fermat's Last Theorem and the Riemann Hypothesis are corollaries of one Noether conservation identity. FLT is the Noether conservation law; the Riemann critical line Re(s)=½ is σ=½. The prime gap distribution barrier θ=½ (Bombieri-Vinogradov) is the same object. The Maynard/Polymath unconditional prime gap bound 246 = 1000×d* (d*=0.24600) is a zero-free-parameter prediction from sedenion ZD geometry. The sedenion prime hash is the algebraic foundation of the smooth-number sieve (Zhang 2013). |
 | Sedenion Nature of Cancer | Cancer is the sedenion expressing a specific displaced fixed-point mode. The drug is the exact algebraic adjoint: B̂_drug = R̂_cancer†. |
+| Axis N-Shape | The partial sums of the 16 sedenion basis directions (16th roots of unity) follow the Dirichlet kernel exactly; the partial sum's phase crosses the real (Telperion) axis exactly at m=8=N/2, i.e. σ=½, from THE_ANGLE=π/8 alone. Zero free parameters. |
 
 ---
 

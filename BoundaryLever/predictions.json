@@ -1,0 +1,42 @@
+{
+  "P1": {
+    "what": "orphans at dim=128",
+    "expect": [
+      0,
+      64
+    ]
+  },
+  "P2": {
+    "what": "mirror order-reversing at dim=128",
+    "expect": {
+      "reversed": 3782,
+      "preserved": 0,
+      "pairs": 3782
+    }
+  },
+  "P3": {
+    "what": "upper*upper escapes lower at dim=128",
+    "expect": 0
+  },
+  "P4": {
+    "what": "ZD census at dim=64",
+    "expect": {
+      "lower": 588,
+      "cross": 2940,
+      "upper": 588,
+      "total": 4116
+    }
+  },
+  "P5": {
+    "what": "nullity classes at dim=64",
+    "expect": {
+      "non_crossing": [
+        16
+      ],
+      "crossing": [
+        8,
+        24
+      ]
+    }
+  }
+}

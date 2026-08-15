@@ -51,9 +51,26 @@ dim 64   non-crossing [8, 16, 24]   /4 = [2, 4, 6]        even
          crossing     [4, 12, 20, 28] /4 = [1, 3, 5, 7]   odd
 ```
 
-**Pre-registered, deliberately untested here — P6:** the parity law holds at `dim = 256`.
-Testing a post-hoc pattern on the data that produced it is the error P4 and P5 exist
-to catch.
+**P6 — CONFIRMED (2026-08-15, after the paper was written).** The parity law holds at
+`dim = 256`, and at `dim = 512` as well — two levels past registration.
+
+```
+dim 256   ZD  59,772 = {13884, 32004, 13884}   orphans [0, 128]
+dim 512   ZD 249,084 = {59772, 129540, 59772}  orphans [0, 256]
+```
+
+Both match the closed form `ZD(d) = d(d + 3/2 − 3·log₂d) − 4` to the unit, and
+`lower(2d) = upper(2d) = total(d)` exactly. The main claim's orphans hold at both levels
+too.
+
+⚠ **Method changed.** The SVD census is `O(d³)` per candidate — 45 minutes at dim 256,
+with a tolerance you have to guess. Every `P_i` is a **signed permutation matrix**, so
+`ker(P_i + s·P_j) = ker(I + s·Q)` with `Q = P_i⁻¹P_j` also a signed permutation — and a
+signed permutation's spectrum is fixed by its **cycle structure** alone. Nullity becomes a
+cycle walk: `O(d)`, exact integers, **no tolerance at all**. dim 128: 27s → 1.8s. dim 256:
+~45 min → 3.4s. dim 512 became reachable (29.5s). Script:
+`ThePlace/.claude/scratchpad/2026-08-15_zd_asymptote/parity_fast.py`, validated against
+the SVD census at 16/32/64/128 before being trusted.
 
 ---
 

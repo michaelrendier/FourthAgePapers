@@ -8,7 +8,8 @@ the 71 holomorphic c=24 VOAs are the complete map of Fermat N-shapes in 𝕊.
 The theorem chain (wiki/58: Fermat Defines. Riemann Fires.):
     Fermat DEFINES the primes: generalized Fermat carves the forbidden zone.
     What survives the exclusion IS prime.
-    Niemeier Coxeter numbers h mod 16 cover {e₀,e₂,...,e₁₄} — 13 N-shapes.
+    Niemeier Coxeter numbers h mod 16 cover
+    {e₀,e₂,e₃,e₄,e₅,e₆,e₇,e₈,e₉,e₁₀,e₁₂,e₁₃,e₁₄} — 13 N-shapes, odds included.
     The gap {e₁,e₁₁,e₁₅}: no A/D/E root system can reach these. THEOREM.
     Monster fills {e₁,e₁₁,e₁₅} via Moonshine primes {17,11,59,31,47}.
     71 VOAs = 24 lattice + 47 non-lattice = complete N-shape coverage.
@@ -1294,8 +1295,11 @@ def fermat_n_shape_map() -> Dict:
         e₁₅: ONLY filled by Monster primes p=31,47 (no Niemeier h≡15 mod 16)
 
     Together (23 Niemeier + Monster = 24 lattice VOAs + 47 non-lattice = 71):
-        All 16 N-shapes covered. Generalized Fermat structure IS complete.
-        The 71 VOAs ARE the 71 N-shapes in the complete Fermat forbidden zone.
+        All 16 N-shapes covered: 13 by Niemeier h mod 16, 3 by the Monster gap fill.
+        The 71 VOAs COVER the 16 N-shapes. They are not in bijection with them --
+        an N-shape is a residue e_k, k in 0..15, so there are 16, and 71 VOAs
+        distribute across those 16 classes. Coverage is the claim; a 71=71
+        identification is not, and the arithmetic 13 + 3 = 16 is what is verified.
 
     Why {1,11,15} is algebraically forbidden for A/D/E root systems:
         A_n:  h = n+1. For h≡1 mod 16: n≡0 mod 16. But A_{16k} has rank 16k.
@@ -1313,57 +1317,15 @@ def fermat_n_shape_map() -> Dict:
     The algebraic proof that {1,11,15} is impossible is in MonsterSiblings P1.
     This function VERIFIES the claim computationally.
     """
-    # The 23 Niemeier root systems (one per non-Leech Niemeier lattice)
-    # Format: (root_system_name, coxeter_h, rank_24_check)
-    NIEMEIER_ROOT_SYSTEMS = [
-        # h=2
-        ('A₁^{24}',           2,  True),   # 24 copies of A₁, rank=24
-        # h=3
-        ('A₂^{12}',           3,  True),   # 12 copies of A₂, rank=24
-        # h=4
-        ('A₃^{8}',            4,  True),   # 8 copies of A₃, rank=24
-        # h=5
-        ('A₄^{6}',            5,  True),   # 6 copies of A₄, rank=24
-        # h=6 (two Niemeier lattices at h=6)
-        ('A₅^{4}.D₄',         6,  True),   # 4×A₅(rank5) + D₄(rank4) = 24
-        ('D₄^{6}',            6,  True),   # 6 copies of D₄, rank=24
-        # h=7
-        ('A₆^{4}',            7,  True),   # 4 copies of A₆, rank=24
-        # h=8 (two Niemeier lattices at h=8)
-        ('A₇^{2}.D₅^{2}',    8,  True),   # 2×A₇(rank7) + 2×D₅(rank5) = 24
-        ('A₈^{3}',            9,  True),   # 3 copies of A₈, rank=24  ← h=9!
-        # h=9
-        ('A₈^{3}',            9,  True),   # already listed; skip dup in processing
-        # h=10 (three Niemeier lattices at h=10)
-        ('A₉^{2}.D₆',        10,  True),  # 2×A₉(rank9) + D₆(rank6) = 24
-        ('D₆^{4}',            10,  True),  # 4 copies of D₆, rank=24
-        # h=12 (three Niemeier lattices at h=12)
-        ('A₁₁.D₇.E₆',        12,  True),  # A₁₁(rank11)+D₇(rank7)+E₆(rank6) = 24
-        ('A₁₁^{2}',           12,  True),  # 2×A₁₁, rank=22 ← actually not rank-24; skip
-        ('E₆^{4}',            12,  True),  # 4 copies of E₆, rank=24
-        ('D₄.E₆^{2}.A₁₁',   12,  True),  # D₄+2×E₆+A₁₁; rank=4+12+11=27? Recheck
-        # h=13
-        ('A₁₂^{2}',           13,  True),  # 2×A₁₂, rank=24
-        # h=14 (one)
-        ('D₈^{3}',            14,  True),  # 3 copies of D₈, rank=24
-        # h=16 (one)
-        ('A₁₅.D₉',           16,  True),  # A₁₅(rank15)+D₉(rank9) = 24; h=max(16,16)=16 ✓
-        # h=18 (two)
-        ('A₁₇.E₇',           18,  True),  # A₁₇(rank17)+E₇(rank7) = 24; h=18 ✓
-        ('D₁₀.E₇^{2}',       18,  True),  # D₁₀(rank10)+2×E₇(rank7) = 24; h=18 ✓
-        # h=22 (one)
-        ('D₁₂^{2}',           22,  True),  # 2×D₁₂, rank=24; h=22 ✓
-        # h=25 (one)
-        ('A₂₄',               25,  True),  # A₂₄, rank=24; h=25 ✓
-        # h=30 (two)
-        ('E₈^{3}',            30,  True),  # 3 copies of E₈, rank=24; h=30 ✓
-        ('D₁₆.E₈',           30,  True),  # D₁₆(rank16)+E₈(rank8) = 24; h=30 ✓
-        # h=46 (one)
-        ('D₂₄',               46,  True),  # D₂₄, rank=24; h=46 ✓
-    ]
-
-    # Deduplicate — A₈^{3} appears twice above (h=8 block confusion); fix
-    # Canonical 23 non-Leech Niemeier root systems (h values, one entry per lattice):
+    # The 23 non-Leech Niemeier root systems, one entry per lattice.
+    #
+    # This table is hardcoded from Niemeier 1973 / Conway-Sloane Ch.18, and it is
+    # NOT the primary source: MonsterSiblings' niemeier_root_systems() GENERATES
+    # the same 23 from the defining condition (all components share one Coxeter
+    # number h; total rank 24). Cross-checked 2026-08-16 -- the generator and this
+    # table agree entry for entry, label for label, with identical h-multisets
+    # {6,10,12,18,30 twice; the rest once}. Keep them in sync; if they ever
+    # disagree, the generator is right and this table is a transcription error.
     CANONICAL_NIEMEIER = [
         ('A₁^{24}',          2),
         ('A₂^{12}',          3),
@@ -1471,7 +1433,10 @@ def fermat_n_shape_map() -> Dict:
             'The Niemeier lattices cover N-shapes {e₀,e₂,...,e₁₄} (13 shapes). '
             'The Niemeier gap {e₁,e₁₁,e₁₅} is algebraically forbidden for A/D/E root systems. '
             'The Monster fills {e₁,e₁₁,e₁₅} via its Moonshine primes {17,11,59,31,47}. '
-            'Together: 71 VOAs = 71 N-shapes = complete Generalized Fermat structure in 𝕊.'
+            'Together: the 71 VOAs COVER all 16 N-shapes (13 Niemeier + 3 Monster), '
+            'which is the complete Generalized Fermat structure in 𝕊. '
+            'Note the Monster also activates {e₂,e₃,e₅,e₇,e₉,e₁₃}; those are '
+            'Niemeier-covered as well, so only {e₁,e₁₁,e₁₅} are Monster-exclusive.'
         ),
         'full_coverage': full_coverage,
         'niemeier_shapes_covered': sorted(h_mod16_covered),

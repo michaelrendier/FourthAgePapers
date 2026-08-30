@@ -6,6 +6,30 @@
 
 ## Active
 
+[x] DeSitterCavitation — "No Singularity: the Abrikosov-Vortex Core and De Sitter
+    Cavitation over a Black Hole's Life"  (built 2026-08-30)
+    Engine: ValaQuenta/modules/desitter_cavitation/ (DeSitterCavitationModule,
+      8 equations) — calculation, not simulation. Full Engine Protocol 1–5 done:
+      registered in __main__.py + modules/__init__.py; notebooks/engines/
+      18_desitter_cavitation.ipynb; ValaQuenta/wiki/desitter_cavitation.md +
+      00_index row; Ainulindale/wiki/108_desitter_cavitation.md;
+      ~/.clauderc_ValaQuenta CTX_DESITTER_CAVITATION + engine index.
+    Claim: no singularity — finite sub-Planckian de Sitter core.
+    P1 (Holcus): K_core(M) = 24/r_s⁴ = (3/2) c⁸/(G⁴M⁴). STANDS (consistency
+      check across 27-order mass sweep; M⁻⁴ to 1.6e-16; crossover (3/2)^¼ m_Pl).
+    Falsifier: divergent core K, or K pinned to K_Planck independent of M; no
+      ringdown echoes to the required reflectivity bound.
+    P2 ASSERTED (energy split 1-d* : d*). P3 CONFIRMED in-model (QGP only
+      M ≲ 3 Msun + kugelblitz). P4 FALSIFIED as a magnitude (Ω_cav ~ 7.5e-6 vs
+      Ω_Λ ~ 0.685) — dark-flow signature only; stays in data. P5 CONFIRMED
+      (T_dS = 2 T_H).
+    Notebooks 00–03 + predictions.json + engine/ copy (standalone via _registry
+      shim) all present and executing clean.
+    TODO: observational falsifier — track LIGO/Virgo ringdown-echo bounds; LISA
+      forecast for SMBH mergers. TODO: derive (not assert) the d* energy split
+      or retract P2.
+
+
 [ ] CMB_PlasmaBoundary — Part 3: H_hat_RB theoretical boundary comparison
     Engine: fractal_flames.py (complete)
     Data: Planck 70GHz SEVEM nside=1024 + WMAP synfast (complete)

@@ -1,0 +1,51 @@
+{
+  "paper": "No Singularity — the Abrikosov-Vortex Core and De Sitter Cavitation over a Black Hole's Life",
+  "version": "0.100",
+  "date_committed": "2026-08-30",
+  "engine": "ValaQuenta/modules/desitter_cavitation/  (DeSitterCavitationModule)",
+  "claim": "There is no singularity. The black-hole interior is a finite, sub-Planckian de Sitter core — the Abrikosov vortex core made gravitational: the condensate goes to zero (a Riemann zero, winding 1) while density, pressure and curvature stay finite.",
+  "holcus": "P1",
+  "falsifier": "A core curvature that either DIVERGES (classical GR singularity) or PINS TO K_Planck independent of M (limiting-curvature / Planck-star). Observationally: no gravitational-wave ringdown echoes down to the reflectivity bound a finite core requires.",
+  "rule": "The claim rests on P1 alone. A falsified secondary (P2–P5) is kept in the data and never reinterpreted to save the claim.",
+  "predictions": [
+    {
+      "id": "P1",
+      "kind": "HOLCUS",
+      "statement": "K_core(M) = 24 / L_dS^4 = 24 / r_s^4 = (3/2) c^8 / (G^4 M^4) [m^-4]. Finite for every M > 0; scales as M^-4; sub-Planckian for every M > (3/2)^(1/4) m_Pl ≈ 1.107 m_Pl. Observational shadow: ringdown echo at delay ≈ (2 r_s/c)·ln(r_s/l_Pl), of order the interior light-crossing time r_s/c.",
+      "test": "Compute K_core two independent ways (24/r_s^4 and the closed form) across a mass sweep spanning ~27 orders; verify finiteness, the M^-4 law between rungs, and K_core < K_Planck above the crossover; confirm the Schwarzschild interior K(r) -> inf as r -> 0 as the denied contrast.",
+      "load_bearing": true
+    },
+    {
+      "id": "P2",
+      "kind": "SECONDARY",
+      "statement": "Over the full lifetime the mass-energy partitions E_space/E_total = 1 - d* = 0.75400 (stiff space, metric / Lambda-signed) and E_matter/E_total = d* = 0.24600 (stiff matter, radiative).",
+      "test": "energy_partition(M) with the default split; parameterised so alternatives (1/2, Omega_ZS, ...) can be tried.",
+      "load_bearing": false,
+      "status_expected": "ASSERTED — no independent measurement of the non-radiative fraction yet."
+    },
+    {
+      "id": "P3",
+      "kind": "SECONDARY",
+      "statement": "The core reaches quark-gluon deconfinement (rho_core c^2 >= 1 GeV/fm^3) only for M <~ 3 M_sun and for kugelblitz / primordial mass. rho_core ~ M^-2 makes the small holes the hot ones; supermassive cores are cold vacuum.",
+      "test": "reheating_reaches_qgp(M) across the mass-class table.",
+      "load_bearing": false,
+      "status_expected": "CONFIRMED in-model."
+    },
+    {
+      "id": "P4",
+      "kind": "SECONDARY",
+      "statement": "Naive cosmic budget Omega_cav ≈ Omega_BH·(1 - d*) ≈ 7.5e-6 versus Omega_Lambda ≈ 0.685.",
+      "test": "cosmic_cavitation_budget(). Expected to fall short by ~5 orders.",
+      "load_bearing": false,
+      "status_expected": "FALSIFIED as a magnitude — kept in data. Any real trace is dark flow (directional, cumulative along the spin axis), not a dark-energy density."
+    },
+    {
+      "id": "P5",
+      "kind": "SECONDARY",
+      "statement": "The de Sitter temperature of the core horizon is exactly twice the Hawking temperature of the parent hole, T_dS = 2·T_H(M), for every M — both scale as c^3/GM.",
+      "test": "interior_timescales(M): T_desitter_over_T_hawking.",
+      "load_bearing": false,
+      "status_expected": "CONFIRMED (ratio = 2.000)."
+    }
+  ]
+}

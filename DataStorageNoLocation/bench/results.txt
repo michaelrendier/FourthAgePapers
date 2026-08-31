@@ -1,0 +1,63 @@
+document: /home/rendier/Projects/ThePlace/FourthAgePapers/DataStorageNoLocation/engine/../bench/cover_letter.txt
+          3360 bytes, 552 words
+reference machine: ThinkPad X1 Carbon 6th gen · Intel Core i7-8650U (4C/8T, Kaby Lake R, 1.9 GHz base / 4.2 GHz turbo, 8 MB L3) · 16 GB LPDDR3-2133 · NVMe SSD
+this run:          Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz · 8 logical CPUs · Linux 6.8.0-138-lowlatency
+
+── time per data size ──
+  reference : ThinkPad X1 Carbon 6th gen · Intel Core i7-8650U (4C/8T, Kaby Lake R, 1.9 GHz base / 4.2 GHz turbo, 8 MB L3) · 16 GB LPDDR3-2133 · NVMe SSD
+  this run  : Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz · 8 logical CPUs · Linux 6.8.0-138-lowlatency
+
+     bytes   Horner_bits   t_Horner(ms)   t_ℂ(ms)   t_ℍ(ms)   t_𝕆(ms)   t_𝕊(ms)
+  ────────   ───────────   ────────────   ───────   ───────   ───────   ───────
+       512         4,095          0.201     4.974    29.438    60.404   254.353
+      1024         8,191          0.407     5.191    27.111   122.760   508.788
+      2048        16,383          1.462    10.197    57.127   247.073   1049.572
+      4096        32,767          5.406    20.218   114.649   513.473   2069.054
+      8192        65,535         20.524    45.156   222.294   988.350   4075.613
+     16384       131,071         82.632    84.946   461.135   1989.126   8270.125
+     32768       262,143        323.365   170.982   938.469   3976.921   16474.002
+
+── rung 0 · ℝ · the raw Horner bijection ──
+  address bits : 26,879   (8,092 decimal digits)
+  address head : 127917411118033649907328061003986640184180233700474349468640…
+  address tail : …932393495921884881272498579542714051887160483450464542617098
+  t_forward    : 3.801 ms   (string -> integer)
+  t_backward   : 15.105 ms   (integer -> string, EXACT)
+  reversible   : yes   (a bijection; Red and Blue cost the same)
+
+── de Bruijn window sequence: 3357 windows of 4 bytes ──
+
+rung  alg  dim  addr_bits   |Π|       t_fwd(ms)  t_bwd(ms)  Red≠Blue   reversible
+────  ───  ───  ─────────   ───────   ─────────  ─────────  ────────   ──────────
+0     ℝ    1       26,879   1.0000        3.801     15.105  0.00e+00   yes
+1     ℂ    2           64   1.0000       18.164     16.988  3.75e-15   yes
+2     ℍ    4           64   1.0000       96.698     92.729  1.02e-04   yes
+3     𝕆    8           64   1.0000      415.377    425.726  1.16e-04   yes
+4     𝕊    16          64   1.0000     1740.087   1773.986  1.18e-04   yes
+
+the single address for the whole document, per rung:
+  rung 0 · ℝ  : 26,879-bit integer  (see bench/rung0_address.txt)
+  rung 1 · ℂ  : Re(Π) = -6.522358407905645e-01   [64 bits, fixed — independent of document length]
+  rung 2 · ℍ  : Re(Π) = -9.998723308138144e-01   [64 bits, fixed — independent of document length]
+  rung 3 · 𝕆  : Re(Π) = -9.996828572314536e-01   [64 bits, fixed — independent of document length]
+  rung 4 · 𝕊  : Re(Π) = -1.966702526234948e-01   [64 bits, fixed — independent of document length]
+
+── the floating-point sidebar ──
+  IEEE double:   0.1 + 0.2 == 0.3  ->  False
+  (mant, exp):   (1,-1) + (2,-1) == (3,-1)  ->  True   [exact, no rounding]
+  π to 21 digits as an index: address=74817487977009743370608260854683093789617147098166  length=21  point_after=1
+  precision is the LENGTH field; the de Bruijn permutation orders the digits.
+
+── reading the result ──
+  • the address SHRINKS: rung 0 is 8·N bits and grows with the document;
+    every rung above it is one 64-bit real, fixed, because Re(Π) of unit
+    elements is bounded.
+  • the INVARIANT |Π| = 1 holds through 𝕆 (the division algebras) and is
+    where it first moves that matters — see the 𝕊 row.
+  • Red ≠ Blue is 0 for ℝ and ℂ (commutative — order is free) and grows
+    ℍ → 𝕆 → 𝕊. That number is where the work is: the entropic cost of
+    the fold is the amount by which the forward product and its reverse
+    disagree.
+  • reversibility holds through 𝕆; at 𝕊 a zero divisor makes the backward
+    current unable to return — forward propagation there is not lossless,
+    it has become a one-way current.

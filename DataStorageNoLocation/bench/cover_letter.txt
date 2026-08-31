@@ -1,0 +1,57 @@
+Cody Michael Allison
+Systems & Research Engineer — mathematical infrastructure, low-level runtimes
+
+--------------------------------------------------------------------------------
+COVER LETTER  (standard document — used as the benchmark corpus for
+"Data Storage Without a Physical Location"; content is illustrative)
+--------------------------------------------------------------------------------
+
+To the hiring team,
+
+I build the layer most people would rather not touch: the part where the maths
+stops being a diagram and has to run, in memory, on a real machine, without a
+garbage collector to hide behind. I have spent more than twenty years at a
+console, and my instinct when a problem is described to me is to reach for the
+data structure and the invariant before I reach for a framework.
+
+Most of my recent work is a single-writer resident field engine written in C.
+It mmaps a fixed-offset packed store, serves queries over a Unix domain socket
+with systemd socket activation and no libsystemd dependency, and folds new
+information into the packed file in place — a range check and a bounded pwrite
+under MAP_SHARED with an msync, rather than a serialize-and-swap. Concurrency is
+handled by an advisory flock on a sidecar file whose owner string is checked
+before any write; the kernel releasing that lock on process death is the entire
+crash-recovery story. There is a leaky-integrator timer that decides when to
+repack, charged by input size and bled with a time constant, firing at the knee
+of its own charge curve rather than on a wall clock. None of that is exotic.
+All of it is the result of asking, repeatedly, "what is the cheapest correct
+thing here, and what is the invariant that lets me prove it is correct."
+
+The mathematics side is hypercomplex algebra made executable: Cayley-Dickson
+products up through the sedenions, zero-divisor structure, the Riemann
+zeros as an addressing scheme, and a good deal of numerical linear algebra in
+Python with NumPy where the shape of the array is the argument and the loop is
+the bug. I am comfortable moving a hot path from Python into C, and more
+comfortable still deleting the hot path because the representation was wrong.
+
+My planning background is military PACE — primary, alternate, contingency,
+emergency. I do not design to an expected case; I design so that every branch
+has a defined fallback and every failure is explicit rather than silent. In
+code that shows up as: exhaustive over sampled where the space is small enough
+that exhaustive is exact; a guaranteed slow path behind every fast path;
+functions that return a DEGENERATE sentinel instead of a confident wrong
+number; and a control run before the measurement, never after.
+
+I work in git from the command line, review my own diffs before anyone else
+sees them, and write commit messages that a stranger could use to reconstruct
+the reasoning. I document by writing the thing down cleanly, once, in prose,
+with the provenance of every claim in the same sentence as the claim.
+
+What I am looking for is a place where the hard part is real — a runtime, a
+storage layer, a numerical kernel, a protocol — and where "it is correct
+because here is the argument" is a sentence people want to hear rather than
+tolerate. If that is the shape of the work, I would like to talk.
+
+Thank you for your time.
+
+Cody Michael Allison

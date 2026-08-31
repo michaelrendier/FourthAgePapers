@@ -390,6 +390,31 @@ SIGN} and where the word sits; drop what they build, because it rebuilds
 exactly. Storage becomes `O(vocabulary)` scalars plus a fixed ruler; the
 price is reconstruction at read time.
 
+### The price, measured — materialised vs. addressed
+
+The read path is one sedenion product against the fixed ruler (256 real
+multiplications, recursive Cayley–Dickson) plus one sparse A-matrix row — of
+order 600 floating-point operations per token. On the reference machine (Lenovo
+ThinkPad X1 Carbon 6th gen, Intel Core i7-8550U, 15 W package TDP) the ingest
+fold `Crank.learn` runs at **1.8 × 10⁵ words/s — 5.4 µs per word, ≈ 38 µJ per
+word** at a 7 W single-core estimate (≈ 81 µJ at the 15 W package ceiling); the
+native reconstruction floor is **≈ 115 ns and under a microjoule per word**.
+Learning is a bounded in-place update of the β-field and the adjacency, not a
+gradient descent — there is no relationship tensor to sweep
+(`engine/energy_bench.py`, reference `VAPMIP/monad.py::Crank.learn`).
+
+For contrast — the standard forward-FLOP identity, not a benchmark run here —
+a dense transformer evaluates `2·N_params` multiply–accumulates per token:
+≈ 1.4 × 10¹¹ at 70 billion parameters, on the order of **1 J per token** at a
+datacentre-effective 10⁻¹¹ J/flop, with training adding the backward sweep over
+the same tensor at every step (GPT-3 175B: ≈ 1.287 GWh, published; Patterson et
+al. 2021). Per query the addressed structure is **10⁴–10⁶× cheaper**, and the
+gap is structural, not an optimisation: the materialised field is re-swept in
+full on every query because the answer lives in the weights; the addressed
+structure regenerates the answer with one product against a ruler that never
+changes. This is the energy statement of *materialised vs. addressed* — the
+same information, moved off a swept tensor and onto the number line.
+
 This is not a language model, not a training procedure, and not a claim about
 output quality. It is a storage-and-reconstruction structure, built from
 mathematics that is a century old or older, presented so that it can be run.

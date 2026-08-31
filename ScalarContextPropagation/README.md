@@ -361,6 +361,32 @@ HKLL bulk reconstruction are cited as *analogues, not sources on box kites*.
 The tether, the wind-inflation parameter, and `w` = basin drift are marked
 first-stated-here.
 
+### G1 / G2 — the arithmetic layers, run on the live vocabulary
+
+Partial discharge, against the live store `VAPMIP/PtolC/monad3_c.bin`
+(347 119 words, **146 743 carrying a stored 19-relation context vector**).
+Engine: `engine/semantic_hash_roundtrip.py`, output
+`bench/roundtrip_results.txt`. This covers the `context vector → code →
+factor → vector` round trip and the hash-injectivity question; the
+`Φ(w) → Assessor coordinates` half waits on C6.
+
+| layer | result |
+|---|---|
+| `context_code(v)` → factor over CONTEXT_PRIMES → `v` | **146 743 / 146 743 = 100.000 %** exact; all CONTEXT_PRIME-smooth; largest code 98 bits |
+| `context_addr = (code, next_prime(code), δ)`; `code = addr − δ` → `v` | **100.000 %** — the stored `(addr, δ)` pair recovers the exact relation counts |
+| γ fold `\|γ\| = tanh(½ ln(log_code / ANCHOR))`, invert `log_code` | round-trip rel. err **8 × 10⁻¹⁶**; **1 114 distinct `log_code` across 137 533 words, 0 collisions** — injective by unique factorisation of `∏ pᵢ^vᵢ` |
+| word × context separability: `spelling_code(w) · context_code(v)`, split at prime 71 | **800 / 800 = 100 %** — `LETTER_PRIMES ≤ 71 ⟂ CONTEXT_PRIMES > 71`, the halves never mix |
+| `compress_count(c) = round(log₂(c+1))` | the **one** lossy step, by design; recovers the bucket not the raw count. Live data is 91.9 % zeros + 7.0 % ones (both width-1, exact); lossy buckets ≥ 2 hold **1.1 %** of slots, max seen bucket 9 (raw 362–723) |
+| stored vector vs `context_vector(wn.synsets(w)[0])` recomputed | 372 / 400 = 93 % — a store-freshness figure (a different synset was indexed, or an nltk version), not a round-trip failure |
+
+**G2 note:** only **1 114 distinct relational shapes** exist across 146 743
+words — the context space is heavily degenerate, which is *why* folding to a
+single real is safe: there is very little to collide, and unique
+factorisation covers the rest. The known open edge is `spelling_code` — the
+Gödel positional map is lossless for ASCII words ≤ 20 characters (~97 % of
+the vocabulary) but the `LETTER_PRIMES[i mod 20]` cycle wraps for longer
+words; a per-position distinct prime closes it.
+
 ---
 
 ## Conclusion

@@ -1,0 +1,66 @@
+{
+  "paper": "Data Storage Without a Physical Location",
+  "dir": "DataStorageNoLocation",
+  "kind": "engineering structure (no claim); retrospective — predates the box kites",
+  "registered": "2026-08-30",
+  "one_line": "Every string already has a number (Horner bijection); store the index (address + length), traverse it by de Bruijn sequence, ledger each ingest as (index, timestamp), and fold the ledger's own index recursively — via the octonion — to a single 256-bit holographic root.",
+  "stored_artifacts": ["256-bit root", "de Bruijn generator (k, n) + charset permutation", "decode model (file-type / frequency table)"],
+  "not_stored": ["item bytes", "per-item records beyond what the root unfolds to"],
+  "bit_width_note": "HyperWebster.md L6 states a 512-bit single-item address. The 256-bit figure here is the fixed-width root of the recursive index-of-index fold (this paper's D7), not the per-item address. Engine reports both.",
+  "components": [
+    {"id": "D1", "name": "Horner bijection: string <-> non-negative integer, reversible, no storage", "provenance": "ESTABLISHED Horner's method", "status": "ships (HyperWebster.md L5; VAPMIP/monad.py _horner_hash)"},
+    {"id": "D2", "name": "reduction layers: Banach-Tarski classes, lexical filter, Zipf center-load, frequency-sorted charset", "provenance": "ESTABLISHED Banach-Tarski 1924, Zipf 1935", "status": "ships (HyperWebster.md L1-L4)"},
+    {"id": "D3", "name": "de Bruijn sequence B(k,n): minimal complete window traversal, O(1) neighbour step", "provenance": "ESTABLISHED Flye Sainte-Marie 1894, de Bruijn 1946", "status": "ships (Ptolemy2/Archimedes/Maths/Sequences/DeBruijnSequences.py)"},
+    {"id": "D4", "name": "de Bruijn positional encoding: absolute position from a local window, no coordinate stored", "provenance": "ESTABLISHED de Bruijn positioning", "status": "to wire into the addressing path"},
+    {"id": "D5", "name": "(index, timestamp) ledger: append-only JSON, the Long Path", "provenance": "FIRST STATED HERE (as the store's ingest record)", "status": "to build"},
+    {"id": "D6", "name": "octonion splitting: Horner integer -> 8 limbs -> octonion; non-associative, length-preserving", "provenance": "ESTABLISHED Cayley-Dickson; linguistic reading OURS (HyperWebster.md L6)", "status": "ships (L6)"},
+    {"id": "D7", "name": "recursive index-of-index fold -> single 256-bit root (octonion Merkle fold to T256)", "provenance": "FIRST STATED HERE", "status": "to build"},
+    {"id": "D8", "name": "HYPER_KEY: charset permutation as cryptographic key; the whole space rotates", "provenance": "ESTABLISHED permutation cipher; OURS (HyperWebster.md L9, Kryptos)", "status": "ships (L9)"},
+    {"id": "D9", "name": "Amplituhedron paradigm: infinite enumeration -> one geometric measurement", "provenance": "ESTABLISHED Arkani-Hamed & Trnka 2013; paradigm transfer OURS (L7)", "status": "framing"}
+  ],
+  "hyper_indexer_lineage": {
+    "verdict": "no field named 'hyper indexer', but a well-defined confluence of established lineages, each contributing one property",
+    "ancestors": [
+      {"lineage": "Godel numbering", "contributes": "the index IS the object, losslessly decodable (arithmetization)", "attribution": "Godel 1931"},
+      {"lineage": "combinatorial / factorial number systems; ranking-unranking", "contributes": "bijective index <-> combinatorial object with explicit reconstruction (unrank)", "attribution": "Laisant 1888; Lehmer; Knuth TAOCP"},
+      {"lineage": "de Bruijn sequences & graphs; positional encoding", "contributes": "minimal complete traversal; absolute position from a local pattern, no coordinate stored", "attribution": "Flye Sainte-Marie 1894; de Bruijn, Good 1946"},
+      {"lineage": "space-filling / locality-preserving indices", "contributes": "one scalar <-> n-D position, invertible, proximity-preserving", "attribution": "Hilbert 1891; Morton / Z-order 1966"},
+      {"lineage": "arithmetic coding", "contributes": "the whole message as one number; every digit depends on the whole (holographic)", "attribution": "Rissanen 1976"},
+      {"lineage": "Merkle DAGs / content addressing", "contributes": "recursive fold of addresses to a single fixed-width root", "attribution": "Merkle 1979; git; IPFS"},
+      {"lineage": "succinct & compressed data structures", "contributes": "representation within o(n) of the info-theoretic minimum, still reconstructable", "attribution": "Jacobson 1989; Munro; Navarro"},
+      {"lineage": "Cayley-Dickson / Clifford basis indexing", "contributes": "the 2^n basis IS a binary-address set with an algebraic op on the addresses (XOR + sign cocycle) - the 'hyper'", "attribution": "Cayley 1845; Dickson 1919; Clifford 1878"},
+      {"lineage": "holographic algorithms; holographic optical storage", "contributes": "reversible transform delocalising information so any fragment reconstructs the whole", "attribution": "Gabor 1948; van Heerden 1963; Valiant 2004"}
+    ],
+    "category_definition": "a hyper-indexer is a bijective unranking from an address into a structured object, where the address space is a 2^n-addressed hypercomplex basis, the enumeration is de-Bruijn-minimal, and the recursion is a Merkle-style fold to a fixed-width root; reconstruction is a pure function of the address and the fixed machinery",
+    "instances": {
+      "box_kite": "the unranking instance - address unranks to a de Marrais box kite (higher-order relational group in the sedenions), reconstruction completed by a physical deformation law Phi(w) (Joukowsky wind). FourthAgePapers/ScalarContextPropagation.",
+      "hyperwebster": "the storage instance - address unranks to the bytes; the recursion folds a whole corpus to one number. This paper."
+    },
+    "first_stated_here": {
+      "box_kite_paper_2026-08-27": "the deformable unranking via a physical law",
+      "this_paper_2026-08-30": "the recursive octonion fold to a fixed-width holographic root; the (index, timestamp) ledger as the store's record"
+    }
+  },
+  "desk_rejection_gate": [
+    {"id": "G1", "reject": "bit-exact round trip", "test": "ingest 10^4+ real items; fold to the 256-bit root; unfold and reconstruct every item byte-for-byte; exact-match fraction must be 1.0"},
+    {"id": "G2", "reject": "the recursion terminates", "test": "index-of-index fold reaches a fixed width in a bounded number of levels for corpus size M; give the level count as a function of M"},
+    {"id": "G3", "reject": "the 256 bits are real, not truncation", "test": "two corpora differing in one byte produce different roots and the reconstruction distinguishes them; not a padded 128-bit quantity, not a hash with data kept elsewhere"},
+    {"id": "G4", "reject": "de Bruijn addressing is O(1) per step", "test": "cost of moving between T neighbouring addresses is linear in T, not T*n!; give the constant"},
+    {"id": "G5", "reject": "determinism", "test": "root of a fixed corpus, twice, on two machines, matches (SHA-256 of the root); generator + charset permutation are pinned reported inputs"},
+    {"id": "G6", "reject": "honest comparison", "test": "vs gzip, zstd --ultra, Merkle/IPFS CID: stored-bytes figure for each (this store: 256 bits + |generator| + |decode model|, constant in corpus size) and the retrieval cost (this store pays O(unfold + unrank) per item at read time); state where each wins"},
+    {"id": "G7", "reject": "third-party run", "test": "run.sh from a clean checkout: pinned deps, corpus pointer, G1 round-trip + G5 root out"},
+    {"id": "G8", "reject": "'holographic' used precisely", "test": "operational definition: root is a function of the whole corpus, any prefix of the unfold reconstructs a corresponding prefix of the corpus; no optical-holography claim, no fragment-of-root-alone claim"},
+    {"id": "G9", "reject": "attribution", "test": "the lineage table is the checklist; first-stated-here: the (index, timestamp) ledger as the store's record, and the recursive octonion fold to a fixed-width root"}
+  ],
+  "no_sigma_verification": "deliberate",
+  "notebooks": ["00_structure_vision.ipynb", "01_the_fold.ipynb", "02_lineage.ipynb", "03_comparison.ipynb"],
+  "successors": {
+    "codec": "FourthAgePapers/ScalarContextPropagation - the box kite (written); hyper-indexer unranking instance",
+    "persistence": "FourthAgePapers 'The Mind's Eye and Paper's Hands' - the NEXT paper. Mind's Eye = the flat held loop (rehearse; iteration not recursion, no output, cannot overflow). Paper's Hands = the Long Path, blockchain-committed (Philadelphos compress -> octonion hyperindex -> PtolChain eviction today)."
+  },
+  "paper_sequence": [
+    "ScalarContextPropagation (box kite / codec) - written",
+    "DataStorageNoLocation (Hyperwebster / shared ancestor) - this paper",
+    "The Mind's Eye and Paper's Hands (working loop + ledgered Long Path / persistence) - next"
+  ]
+}

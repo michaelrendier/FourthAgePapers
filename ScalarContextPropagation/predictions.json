@@ -1,0 +1,69 @@
+{
+  "paper": "Forward Propagation of Information and Context by Scalar Value for Reconstructible Lossless Continuity of Context from WordNet Box Kites",
+  "dir": "ScalarContextPropagation",
+  "registered": "2026-08-30",
+  "engine": "VAPMIP monad (monad.py, harness.py, PtolC/); conversational-ingest service live 2026-08-30",
+  "claim": "Context forward-propagates turn-by-turn carrying only scalar values (one Riemann-zero address gamma per token, plus tier-0 field scalars beta, E, Gamma); the full WordNet box-kite algebraic structure reconstructs from those addresses exactly, zero loss, deterministically. No dense multiplication table / adjacency tensor / attention matrix is stored or propagated.",
+  "domain_decomposition": {
+    "tier_0_propagated": ["ADD", "SCALE", "SIGN", "gamma (address)", "beta", "E", "Gamma"],
+    "tier_2_3_reconstructed_not_stored": ["vector", "box-kite chart", "the 42 Assessors as a set", "chirality", "PSL(2,7) orbit counts", "19-relation census"],
+    "lineage_verdict": "no new generator required; box-kite apparatus is Laurelin composite (tier 2-3), regenerated from tier-0 generators + address",
+    "emergence_note": "the (w_sem, w_ctx) split asserts beta orthogonal to A; an asserted orthogonality made computable IS i = sqrt(SIGN); the vector is the 2-D shadow of that assertion; i is a known consequence of SIGN under Cayley-Dickson doubling"
+  },
+  "predictions": [
+    {
+      "id": "P1",
+      "name": "structural losslessness",
+      "statement": "For every word in a real ingested corpus, the Assessor membership, box-kite chart, zero-divisor partner set, and 19-relation adjacency reconstructed from gamma alone EQUAL those from the materialised 16-D sedenion + WordNet computation.",
+      "quantity": "agreement fraction over (words x relations)",
+      "predicted": 1.0,
+      "tolerance": 0.0,
+      "exhaustive": true,
+      "falsifies_claim_if": "any single mismatch"
+    },
+    {
+      "id": "P2",
+      "name": "fold-order invariance",
+      "statement": "Ingesting the same turns in any permutation of fold order yields a byte-identical monad.bin.",
+      "quantity": "SHA-256(monad.bin) across >= 20 random fold-order permutations",
+      "predicted": "all equal",
+      "exhaustive": false,
+      "falsifies_claim_if": "any two hashes differ"
+    },
+    {
+      "id": "P3",
+      "name": "no collision",
+      "statement": "Over the ingested vocabulary the map w -> (gamma, E) is injective.",
+      "quantity": "count of distinct words sharing an address",
+      "predicted": 0,
+      "tolerance": 0,
+      "exhaustive": true,
+      "falsifies_claim_if": "count > 0"
+    },
+    {
+      "id": "P4",
+      "name": "the 16-to-1 fold",
+      "statement": "sigma^16 reduces to the single signed scalar Gamma = (P_red - P_blue)/(P_red + P_blue) = 2*sigma_self - 1 = tanh(u/2), u = ln(P_red/P_blue); reconstruction of the 16 channels from Gamma and the address is exact.",
+      "quantity": "max abs error, reconstructed 16-vector vs materialised, over all queries",
+      "predicted": 0.0,
+      "tolerance": 1e-12,
+      "exhaustive": true,
+      "falsifies_claim_if": "error above float round-off"
+    },
+    {
+      "id": "P5",
+      "name": "geometric continuity (weak leg: faithful, not exact)",
+      "statement": "Context carried forward as scalars and rebuilt reproduces the co-occurrence neighbourhood (A-matrix basin) of a held concept to within the field's own max(existing, new) deepen rule.",
+      "quantity": "Jaccard(rebuilt basin, materialised basin) at k=20, IDF-weighted",
+      "predicted": ">= 0.9",
+      "exhaustive": false,
+      "note": "MAY be shown unfaithful without touching P1-P4; structural losslessness and dynamical faithfulness are registered separately.",
+      "falsifies_claim_if": "does NOT falsify the structural claim; informs the dynamical claim only"
+    }
+  ],
+  "falsifier": [
+    "one box-kite relation the materialised computation produces that does not reconstruct from the scalar addresses alone",
+    "two distinct contexts that propagate to the same scalar set (a collision that unpacks)",
+    "monad.bin not byte-identical under a fold-order permutation"
+  ]
+}

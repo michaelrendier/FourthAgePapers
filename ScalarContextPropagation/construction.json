@@ -28,6 +28,19 @@
     "the spectrum is the deformation modes: {4,4,4} = struts opening, {6,6} = sail pairs, {0} = fixed e0 anchor",
     "tear-off: chart_of outside_share -> 1 past a finite w, onset where the elastica leaves the unit sphere"
   ],
+  "desk_rejection_gate": [
+    {"id": "G1", "reject": "lossless of what? show a bit-exact round trip on real data", "test": "10^4+ real WordNet synsets; token->gamma->pencil->w->Phi(w)->box kite vs materialised modules/box_kite + WordNet; report exact-match fraction + residual distribution; name any structural mismatch and its cause"},
+    {"id": "G2", "reject": "16-bit hash into 6542 buckets is not injective", "test": "report words-per-bucket distribution over a real vocab; then min|dw| among co-located words vs Phi reconstruction tolerance; any pair below tolerance is a reported collision. Claim is exact reconstruction from (pencil,w), NOT gamma injectivity"},
+    {"id": "G3", "reject": "circularity: inverting your own encoder with hidden state", "test": "freeze w; on a clean process with no learned A-matrix beyond frozen WordNet, run Phi(w); reconstruction must be a pure function of (pencil, w, WordNet) only"},
+    {"id": "G4", "reject": "determinism", "test": "SHA-256 of the reconstructed box-kite table, twice, on two machines, matches; extends SPEC.md 3 byte-reproducibility through Phi"},
+    {"id": "G5", "reject": "Joukowsky identity real or decorative", "test": "across-strut map = r <-> 1/r symbolically to inversion.md precision, not shape-matched by eye"},
+    {"id": "G6", "reject": "NN comparison is a strawman", "test": "fix one task (19-relation adjacency for a 10^4-word vocab); byte counts materialised vs addressed as one ratio; state addressed query-time cost O(structure queried)/lookup"},
+    {"id": "G7", "reject": "runs only on the author's machine", "test": "run.sh from a clean checkout: pinned deps, WordNet pointer, G1 numbers out; third party executes"},
+    {"id": "G8", "reject": "context is never defined", "test": "context = the word's box kite (WordNet relational position + co-occurrence basin); continuity = the w stream reconstructing each box kite per turn. Stated in the paper"},
+    {"id": "G9", "reject": "the flashlight adds detail, where from", "test": "reconstruct at two magnifications; high-M structure is a deterministic upsample of low-M; mutual information with w does not increase with M"},
+    {"id": "G10", "reject": "attribution", "test": "checklist discharged by pencil_hyperstring.md provenance table: de Marrais owns the box kite; hypercomplex-NN line cited as contrast; Joukowsky/elastica/Smith/Gaussian-splat cited for what each contributes; Maxwell-Laman/moment-map/HKLL cited as analogues not sources; tether + wind-inflation + w=basin-drift marked first-stated-here"}
+  ],
+  "no_sigma_verification": "deliberate — no critical-line / Ainulindale-constant checks; the structure stands on established maths and a working round trip",
   "notebooks": [
     "00_structure_vision.ipynb",
     "01_the_pass.ipynb",

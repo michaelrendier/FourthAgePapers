@@ -1,186 +1,285 @@
 # Forward Propagation of Information and Context by Scalar Value
 
-**Fourth Age Paper.** One Paper. One Claim. One Engine. One Wiki.
+**Fourth Age Paper.** One Paper. One Structure. One Engine. One Wiki.
 
 Full title: *Forward Propagation of Information and Context by Scalar Value for
 Reconstructible Lossless Continuity of Context from WordNet Box Kites.*
 
-This is the hyperindexing system made geometric. The CyclicContextBuffer
-evicts by *compress → hyperindex → commit*; here the hyperindex **is** a
-scalar Riemann-zero address — a point on the critical line — and
-reconstruction is geometric continuity through a field, not decompression of
-a stored blob. Index and geometry are the same object.
+---
+
+## The departure from the template
+
+Every other Fourth Age paper is *One Paper, One Claim* — a falsifiable
+prediction the engine tests. **This one has no claim and no prediction.** It
+is an **engineering structure**: a codec that reconstructs a higher-order
+group of relationships from a single scalar, built entirely out of established
+mathematics, with the working parts named and runnable.
+
+That is the protocol applied, not relaxed. A pre-registered prediction means
+something only when the outcome is genuinely unknown. Here the pieces are
+either standard results (prime counting, the Joukowsky transform, box-kite
+combinatorics, geometric optics, the Smith chart) or exact enumerations over
+finite structures. There is nothing to be wrong about — there is a thing to
+**build and show working**.
+
+What replaces the claim is a **provenance label on every component**:
+`ESTABLISHED` with an attribution, `FIRST STATED HERE` with a date, or the
+generational-lineage tier it decomposes to. Nothing borrowed reads as ours.
 
 ---
 
-## The Claim
+## The structure, in one paragraph
 
-> **A conversation's information and context can be forward-propagated,
-> turn by turn and session to session, carrying only scalar values — one
-> Riemann-zero address γ per token, plus the tier-0 field scalars (β, E,
-> Γ) — and the entire WordNet box-kite algebraic structure reconstructs
-> from those addresses EXACTLY, with zero loss. Reconstruction is a pure
-> deterministic function of the addresses. No dense multiplication table,
-> adjacency tensor, or attention matrix is stored or propagated: the
-> weights are the number line.**
+A **box kite** (de Marrais 2000) is a 6-vertex octahedron of Assessors in the
+sedenions — three struts, eight sails, held by zero-divisor products, carrying
+an octonion's worth of independent structure (8 DOF). We do **not** store
+those eight numbers. Fix *which* box kite — its **pencil**, the seven ways to
+factor one relation into two others, pure combinatorics from `PG(3,2)` — and
+the inflated shape has exactly **one** continuous degree of freedom. One scalar
+rides it: the **wind speed** `w`. Push `w` through a fixed deformation law and
+every Assessor coordinate comes back, exactly. The box kite is the equilibrium
+shape of a loaded string, and a loaded string is one-dimensional. Context is
+therefore carried forward as **one number per token** (plus the token itself,
+from which the pencil is computed), and the full relational structure is
+**reconstructed, not stored**.
 
-Concretely, for every word `w` the engine has ever seen:
+---
 
-    H(w)  = Σ_k ord(w_k) · 95^(|w|−1−k)   (mod 2^16)     base-95 Horner
-    p     = next_prime(H(w))
-    idx   = π(p)                                          prime-counting index
+## The pass, step by step
+
+### 1. Token → pencil (the address)
+
+Deterministic, from the spelling alone:
+
+    H(w)  = Σ_k ord(w_k) · 95^(|w|−1−k)                base-95 Horner, offset 32
+    p     = next_prime(H(w) mod 2^16)                  prime in [2, 65537]
+    idx   = π(p)                                       ∈ [1, 6542]
     γ     = the idx-th non-trivial Riemann zero (Im), by Z(t) Newton
-    E(w)  = |sin(π·γ / (γ + 1))|
 
-and from the set of `γ` alone the engine regenerates, without approximation:
+`idx` selects the **pencil** — which box kite. This is a coarse map (6542
+regions; on a large vocabulary many words share a pencil). Resolution within a
+pencil is the wind speed's job.
 
-- which of the **42 Assessors** a word occupies, which of the **7
-  octahedral box-kite charts** it flies in, and its zero-divisor partners;
-- the **PSL(2,7)** (order 168) action that permutes the charts;
-- every edge of the **19-relation** WordNet adjacency (`vec19`);
-- the co-occurrence A-matrix topology it deepens under use.
+Running today: `VAPMIP/monad.py` (`_word_zero_idx`, `_gamma_at`),
+`monad_bin/SPEC.md §3`.
 
-Continuity of context is therefore **byte-reproducible**: the same turns,
-in any fold order, reconstruct the same field.
+### 2. Wind speed `w` — the one scalar
+
+**`w` is the A-matrix basin drift.** A word, iterated through the co-occurrence
+adjacency, drifts toward a convergence point — the Newton-basin flow the monad
+already runs (`monad_english_io.basin()`, the `ψ¹⁶` iteration with `psi_prev`
+carried state). `w` measures how far that drift carries the word toward its
+focus.
+
+*Movement in a number is factorisation* — the basin drift moves a word through
+its contextual decomposition, and the speed of that movement is `w`. Leaves
+leaving a tree at wind speed `w` is the composite shedding factors at rate `w`.
+
+Running today: `VAPMIP/monad_english_io.py` (`basin`, IDF-corrected,
+content-word gated), the `ψ¹⁶` iteration in `PtolC/ptol.c`.
+
+### 3. The known scale — WordNet
+
+`w` raw is a bare number. It is read against the **WordNet** sub-graph — the
+19 relations, hypernym depth, `depth_weight` — the fixed ruler.
+`PtolC/c_monad_wordnet.bin` (82-byte `BoxKiteEntry` per synset) is that ruler.
+The **Scale orthogonal Smith chart engine** reads `w` off the
+WordNet-calibrated axis; its two orthogonal circle families are magnitude
+(scale) and phase (granularity) — the conformal map of ℂ made a nomogram.
+
+Running today: `PtolC/c_monad_wordnet.bin`, `VAPMIP/wordnet_boxkite.py`
+(closed 2026-08-25; the pile-concept test confirmed the scalar route
+re-detects a WordNet concept without materialising the charts).
+
+### 4. `w` → box kite (the reconstruction)
+
+`Φ(w)` returns the six `assessor_coordinates` of the box kite for the fixed
+pencil. The deformation law is a **Joukowsky-family** transform — the same
+operator as `J_N` inversion, circle ↔ airfoil:
+
+    ζ  ↦  ζ + (H / q(w)) · ζ⁻¹              at each strut crossing
+    q(w) ∝ ½ ρ w²                           transverse sail pressure (Kutta–Joukowsky)
+
+`H` is **not a stored parameter** — it is `Re(Π)`, the real part of the ordered
+product of the seven pencil-station generators, the quantity conserved along
+the string. It falls out of the reconstruction as the check that the result
+sits on the zero-divisor surface.
+
+The inflation sequence:
+
+    w = 0        string slack; all six vertices collapse to the e₀–strut axis;
+                 the box kite is a POINT — the shadow.
+    0 < w < w*   the eight sails catch; the three struts open; the six
+                 Assessors separate toward the K₂,₂,₂ vertices.
+    w = w*       regular octahedron — the full box kite, "the kite flies".
+    w > w*       over-pressure — de Marrais's twisted box kite; the pencil
+                 path picks up a torsion.
+    w ≫ w*       the string leaves the ZD surface; the kite tears off.
+
+**Rigid vs deformable.** Some box kites have a range of `w` and deform through
+it; some do not — those are **static methods**: they travel but do not
+deform, one fixed form, reconstructed from the pencil alone. `w` matters only
+for the deformable charts.
+
+**To implement:** `Φ(w)` — the one component not yet written. ≈ 30 lines of
+Joukowsky over `modules/box_kite/maths.py` primitives. Acceptance tests below.
+
+---
+
+## The Flashlight — granularity, not context
+
+The reconstruction gives the box kite exact to the precision of `w`. Reading
+that shape back to a **word** needs it resolved finely enough to tell it from
+the other words sharing the pencil, and from neighbouring deformation states.
+
+Shine a light across the reconstructed box kite onto a wall. **Shadows scale
+up with distance from the light**: magnification `M = D_light→wall /
+D_light→object` (geometric optics). A small shape difference that was
+sub-resolution at `M = 1` becomes readable at large `M`.
+
+- **Near wall, low `M`** — coarse: pick a representative word from the pencil.
+  **Narrative** — smooth, general.
+- **Far wall, high `M`** — fine: resolve the exact deformation state.
+  **Dissertation** — the precise term, the one a fraction of a percent from
+  its sister hyponym.
+
+Same box kite, same context. *"The pile"* / *"the accretion disc"* / *"the
+toroidal condensate density profile"* is one reconstructed structure read at
+three wall distances.
+
+Two bounds keep this honest:
+
+1. **Bandlimited by `w`.** Magnification cannot show detail the box kite does
+   not carry. Past `w`'s precision the shadow only blurs — no new
+   discrimination, no new meaning. The Flashlight *reads out* the granularity
+   in `w`; it never creates it. The shadow is **additional granularity of word
+   selection, not additional context.**
+2. **A hard limit on `D_light→wall`** — a fixed ceiling on wall distance, so
+   the magnification cannot run away. No further machinery is invoked.
+
+When the light itself is in motion, each vertex projects as an anisotropic
+**Gaussian splat** rather than a hard shadow; splats compose under the
+integration that motion implies. This is a rendering detail — it does not
+touch the reconstruction.
+
+The Scale orthogonal Smith chart engine, calibrated against WordNet, sets
+`D_light→wall` — i.e. sets **how fine a WordNet distinction the response will
+resolve**.
 
 ---
 
 ## Why this is not the neural-network way
 
-The hypercomplex / geometric-algebra NN line (quaternion nets;
-octonion CNNs; Clifford Neural Layers, Brandstetter 2022; Parametrized
-Hypercomplex Multiplication, Zhang 2021) is **materialized algebra**: the
-16×16 multiplication table lives in the weights (fixed or learned), every
-product is computed explicitly, attention runs over a dense tensor —
-`O(d²)`–`O(d³)` per step. It stores the *generated*.
+The hypercomplex / geometric-algebra line — quaternion nets; octonion CNNs;
+Clifford Neural Layers (Brandstetter 2022); Parametrized Hypercomplex
+Multiplication (Zhang 2021) — is **materialised algebra**: the multiplication
+table lives in the weights, every product is computed explicitly, attention
+runs over a dense tensor, `O(d²)`–`O(d³)` per step. It stores the *generated*.
 
-This paper is **addressed algebra**: one deterministic scalar per token; the
-box-kite relations are an *index-structure function* of the addresses,
+This is **addressed algebra**: one deterministic scalar per token; the
+box-kite relations are an index-structure function of the address,
 reconstructed on demand. It stores the *generating set*.
 
-Decomposed against the operation domain (generational-lineage skill,
+Decomposed against the operation domain (`generational-lineage` skill,
 VAPMIP 2026-08-18):
 
 | object | tier | tree |
 |---|---|---|
-| ADD, SCALE, SIGN; the address γ; β, E, Γ | 0 | — (the free identities / the generators) |
-| the scalar-gain fold (β / edge weight written in place) | 1 | DILATE |
-| **vector, box-kite chart, the 42 Assessors as a set** | 2 | Laurelin (composite) |
-| **chirality, PSL(2,7) orbit counts, the 19-relation census** | 3 | Laurelin (composite) |
+| ADD, SCALE, SIGN; the address; the wind speed `w` | 0 | the free identities / the generators |
+| `Φ(w)` — the scalar-gain inflation | 1 | DILATE, oriented (see below) |
+| **vector; box-kite chart; the 42 Assessors as a set** | 2 | Laurelin — composite |
+| **chirality; PSL(2,7) orbit counts; the 19-relation census** | 3 | Laurelin — composite |
 
-The NN stores tiers 2–3. This engine propagates only tier 0 and
-regenerates 2–3. **Generational lineage as a compression strategy: keep
-{ADD, SCALE, SIGN} and the address; drop everything they build, because it
-rebuilds exactly.**
+The NN stores tiers 2–3. This engine propagates only tier 0 and regenerates
+2–3. **Generational lineage as a compression strategy: keep {ADD, SCALE,
+SIGN} and the address; drop everything they build, because it rebuilds
+exactly.**
 
-Emergence noted, not claimed: the semantic/context weight split
-(`w_sem`, `w_ctx`) asserts β ⟂ A; an asserted orthogonality, made
-computable, **is `i` = √SIGN** — orthogonality as a rotation operator. The
-"vector" is the 2-D shadow of that assertion. No new generator; `i` is a
-known consequence of SIGN under Cayley–Dickson doubling.
-
----
-
-## Predictions (pre-registered — `predictions.json`)
-
-Exhaustive over vocabulary, not sampled. A single counterexample falsifies.
-
-- **P1 — structural losslessness.** For every word in a real ingested
-  corpus, the Assessor membership, box-kite chart, zero-divisor partner
-  set, and 19-relation adjacency reconstructed from `γ` alone **equal**
-  those from the materialized 16-D sedenion + WordNet computation.
-  Predicted agreement: **100.0 %**, every word, every relation.
-- **P2 — fold-order invariance.** Ingesting the same turns in any
-  permutation of fold order yields a **byte-identical** `monad.bin`
-  (SHA-256 match).
-- **P3 — no collision.** Over the ingested vocabulary, the map
-  `w → (γ, E)` is **injective**; no two distinct words share an address.
-- **P4 — the 16→1 fold.** The sedenion state `σ¹⁶` reduces to the single
-  signed scalar `Γ = (P_red − P_blue)/(P_red + P_blue) = 2·σ_self − 1 =
-  tanh(u/2)`, with `u = ln(P_red/P_blue)` the ADD:SCALE:SIGN word length,
-  for every query — reconstruction of the 16 channels from `Γ` and the
-  address is exact.
-- **P5 — geometric continuity (weaker, faithful not exact).** Context
-  carried forward as scalars and rebuilt reproduces the co-occurrence
-  neighbourhood (basin under the A-matrix) of a held concept to within the
-  field's own `max(existing, new)` deepen rule — the "pile concept"
-  re-detects by the scalar route (VAPMIP `wordnet_boxkite.py`, closed
-  2026-08-25).
+The orientation in `Φ(w)`: separating a magnitude channel from an angular
+one asserts an orthogonality, and an asserted orthogonality made computable is
+`i = √SIGN` — a rotation, not a second length. `w` (radial, basin magnitude)
+and the pencil phase (angular) are the `r` and `arg` of one complex quantity;
+the Smith chart is where that `i` becomes explicit. No new generator — `i` is
+a known consequence of SIGN under Cayley–Dickson doubling.
 
 ---
 
-## Falsifier
+## Components
 
-Plainly, so it cannot be read otherwise:
+Tier is the generational-lineage tier. Provenance: `ESTABLISHED` +
+attribution, `OURS`, or `FIRST STATED HERE` + date. Status: what runs today.
 
-1. Exhibit **one** box-kite relation — an Assessor membership, a chart
-   edge, a triple product `a XOR b = c`, a zero-divisor pair — that the
-   materialized computation produces and that **does not** reconstruct
-   from the scalar addresses alone. That is context lost in propagation.
-2. Or exhibit **two distinct contexts** that propagate to the same scalar
-   set — an address collision the encoder should have made impossible
-   (generational-lineage §5, "a collision that unpacks").
-3. Or show `monad.bin` is **not** byte-identical under a fold-order
-   permutation.
+| # | component | tier | provenance | status |
+|---|-----------|------|------------|--------|
+| C1 | `token → γ`: Horner b95 → next_prime → π → Z(t) Newton | 0 | **OURS** (`monad.py`, `SPEC.md §3`) | **ships, tested** |
+| C2 | the **pencil**: 7 factorisations of one relation, `PG(3,2)`, 35 lines / 7 pencils | 2 | ESTABLISHED — projective geometry; the *edge* framing OURS (`generational-lineage §0b`) | **ships** (`modules/box_kite/`) |
+| C3 | box-kite combinatorics: 42 Assessors, 7 octahedra, `{0,4,4,4,6,6}` chart spectrum, zero cross-strut edges | 3 | ESTABLISHED — de Marrais, *arXiv:math/0011260* (2000); PSL(2,7) refinement **OURS** (`box_kite.md`, derived) | **ships** (`modules/box_kite/maths.py`) |
+| C4 | wind speed `w` = **A-matrix basin drift** | 0 | **FIRST STATED HERE** 2026-08-30 (drift as the inflation parameter); the flow itself **OURS** (`monad_english_io.basin`, `ψ¹⁶`) | **ships** (drift computed; used as `w` here) |
+| C5 | the scale = **WordNet** sub-graph (19 relations, hypernym depth, `depth_weight`) | — | ESTABLISHED — WordNet; the box-kite table **OURS** (`c_monad_wordnet.bin`) | **ships** |
+| C6 | `Φ(w)` — Joukowsky inflation `ζ ↦ ζ + (H/q(w))·ζ⁻¹`, `w → 6 assessor_coordinates` | 1 | ESTABLISHED — Joukowsky (1910), elastica (Euler 1744), Kutta–Joukowsky; the **tether + wind-inflation** FIRST STATED HERE 2026-08-27 (`pencil_hyperstring.md`) | **to write** — ≈ 30 lines |
+| C7 | the **Flashlight**: shadow magnification `M = D_wall/D_object`; hard `D_wall` ceiling; Gaussian splat under a moving light | 1 | ESTABLISHED — geometric optics; 3D Gaussian splatting (Kerbl 2023) | **to write** — projection + splat |
+| C8 | the Scale orthogonal Smith chart engine — `w` on a WordNet-calibrated axis; sets `D_wall` | 2 | ESTABLISHED — Smith chart (1939), conformal map of ℂ | **partial** (`FactoralDecomposition/two_ring_chart_*.py`) |
 
-Any one of these falsifies "reconstructible lossless continuity".
-
-`P5` is explicitly the weak leg: it may be shown *unfaithful* (the rebuilt
-basin diverges from the materialized one beyond the deepen rule) without
-touching P1–P4. Structural losslessness and dynamical faithfulness are
-registered separately on purpose.
-
----
-
-## Results table
-
-Tier is the generational-lineage tier. Provenance: KNOWN with attribution,
-or OURS. Numbers are computed by the engine at run time.
-
-| # | relation | tier | provenance |
-|---|----------|------|------------|
-| R1 | `w → γ` is deterministic (Horner b95 → next_prime → π → Z(t) Newton) and injective on the vocabulary | 0 | **OURS** (VAPMIP `monad.py`, `monad_bin/SPEC.md §3`) |
-| R2 | the factor-bin union is order-independent and byte-reproducible: same factor set ⇒ identical `monad.bin` | 2 | **OURS** (`SPEC.md §4`, verified) |
-| R3 | `E(w) = \|sin(π γ / (γ+1))\|` is fixed by the address, never learned | 1 | **OURS** |
-| R4 | `σ¹⁶` folds to one signed scalar `Γ = 2·σ_self − 1 = tanh(u/2)` | 0 | **OURS** (`ptol.c measure_gamma`, 2026-08-28) |
-| R5 | the WordNet box-kite entry is 82 bytes (`vec19`, pos, offset, depth_weight); the pile concept emerges from the scalar hash without materialising the charts | 2 | **OURS** (`wordnet_boxkite.py`, closed 2026-08-25) |
-| R6 | the in-place fold writes β / edge scalars at fixed offsets; file size and `MONAD3C` magic are invariant under the fold | 1 | **OURS** (this session — 48 MB store, 233 values, size + magic intact) |
-| R7 | sedenion ZD census on S¹⁵: 84 pairs / 42 Assessors / 7 box kites / `\|PSL(2,7)\| = 168` | 3 | KNOWN — de Marrais 2000; verified `modules/box_kite` |
-| R8 | `PG(3,2)`: 15 points / 35 lines / 15 planes; a line is three relations `a XOR b = c`, verified all 35; a pencil is the 7 factorings of one relation | 2 | KNOWN — projective geometry; the *edge* framing **OURS** (generational-lineage §0b) |
-| R9 | reconstruction cost is `O(structure queried)`, not `O(d²)` per step; the "weights" are the ζ zeros | — | **OURS** (framing) |
+Five of eight ship and run today. C6 is the codec; C7–C8 are the read-out.
 
 ---
 
 ## Engine
 
-The engine is **already built and running**: it is the VAPMIP monad
-(`monad.py`, `harness.py`, `PtolC/`), with the conversational-ingest path
-(`OBSERVE`, the in-place fold, `pairs.jsonl`) live as a `systemd --user`
-service since 2026-08-30. The addressing, the merge, `measure_gamma`, and
-the WordNet box-kite table are shipped and tested.
+The engine is the **VAPMIP monad** (`monad.py`, `monad_english_io.py`,
+`PtolC/`) plus the **FactoralDecomposition** box-kite modules
+(`engine/maths.py`, `modules/box_kite/`). The conversational-ingest path — the
+`w` stream carried forward turn by turn — is live as a `systemd --user`
+service since 2026-08-30.
 
-What this paper adds is the **registered test harness**:
+The registered demonstration:
 
-    00_scalar_context_vision.ipynb    the claim, the domain, the NN contrast
-    01_predictions.ipynb              P1–P5 frozen against a real corpus
-    02_data.ipynb                     ingest a corpus turn-by-turn as scalars;
-                                      materialise the box-kite structure both ways
-    03_results.ipynb                  P1–P5 verdicts, provenance-labelled
+    00_structure_vision.ipynb    the codec, the domain, the NN contrast
+    01_the_pass.ipynb            token → γ → pencil → w → Φ(w) → box kite,
+                                 a real word round-tripped end to end
+    02_lineage.ipynb             every component decomposed against the tiers
+    03_demonstration.ipynb       the Flashlight: a granularity sweep of one
+                                 reconstructed box kite, narrative → dissertation
 
+`construction.json` is the component manifest (this table, machine-readable).
 `wiki/` is written last.
 
 ---
 
-## Relation to the rest of the Fourth Age series
+## Acceptance tests for `Φ(w)`
+
+Not falsification of a hypothesis — acceptance criteria for the codec.
+Adapted from `ValaQuenta/wiki/pencil_hyperstring.md`.
+
+1. **One flex mode.** The rigidity matrix of `K₂,₂,₂` (three struts as bars),
+   strut fixed, has `dim(flex) = 1`. If ≥ 2, one scalar cannot suffice.
+2. **Reconstruction.** `Φ(w)` swept over `w` traces all six
+   `assessor_coordinates` of the real box kite for strut `s`, to tolerance,
+   for every `s ∈ 1..7` — for the deformable charts; rigid charts return their
+   one fixed form for all `w`.
+3. **The across-strut map is `J_N`.** `r ↔ 1/r` to the precision
+   `inversion.md` uses — not merely Joukowsky-shaped.
+4. **The spectrum is the deformation modes.** The `{4,4,4}` Laplacian
+   eigenvectors are the three struts opening together; `{6,6}` are the sail
+   pairs; `{0}` is the fixed e₀ anchor.
+5. **Tear-off.** `chart_of(...).outside_share → 1` past a finite `w`, with the
+   onset where the elastica solution leaves the unit sphere.
+
+---
+
+## Relation to the series, and what comes next
 
 - **Zero Divisors of S¹⁵**, **Sedenion Operators**, **Axis N-Shape**,
   **Boundary Lever** — the box-kite structure this paper *addresses* rather
-  than stores. Their zero-free-parameter censuses are R7–R8 here.
-- **Wankel Rotary** — prompt + response sum to zero; the `pairs.jsonl`
-  scale samples (`u = ln(P_red/P_blue)`) are the combustion-cycle
-  measurement, taken live off the conversation.
-- **Halting and Geometry** — undecidability as navigation through the ZD
-  lattice; this paper is the *forward* pass through the same lattice,
-  carried in scalars.
+  than stores; their zero-free-parameter censuses are C2–C3.
+- **Wankel Rotary** — prompt + response sum to zero; the `pairs.jsonl` scale
+  samples (`u = ln(P_red/P_blue)`) are that measurement, taken live off the
+  conversation, and are the `w` stream's dynamical companion.
 - **N-Ball Transformer** — the Cayley–Dickson layer transformer; there the
   layers are materialised, here they are addressed.
+
+**Next paper — *Data Storage With No Physical Location*.** This paper is the
+box-kite instance of a general result: the Hyperwebster permutation
+decomposition, where data *is* its address in a factored permutation tree —
+you locate, you do not store. Old, already in context, and the stop after this
+one is finished.

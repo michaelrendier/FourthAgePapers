@@ -1,0 +1,38 @@
+{
+  "paper": "Forward Propagation of Information and Context by Scalar Value for Reconstructible Lossless Continuity of Context from WordNet Box Kites",
+  "dir": "ScalarContextPropagation",
+  "kind": "engineering structure (no claim, no prediction)",
+  "registered": "2026-08-30",
+  "one_line": "A codec that reconstructs a box kite (a higher-order group of relationships) from a single scalar per token, built entirely from established mathematics.",
+  "engine": {
+    "monad": "VAPMIP/ (monad.py, monad_english_io.py, PtolC/)",
+    "boxkite": "FactoralDecomposition/ (engine/maths.py, modules/box_kite/)",
+    "live_service": "systemd --user ptolemy-monad — the w stream carried forward turn by turn, since 2026-08-30"
+  },
+  "components": [
+    {"id": "C1", "name": "token -> gamma (Horner b95 -> next_prime -> pi -> Z(t) Newton)", "tier": 0, "provenance": "OURS (monad.py, SPEC.md 3)", "status": "ships, tested"},
+    {"id": "C2", "name": "the pencil: 7 factorisations of one relation, PG(3,2)", "tier": 2, "provenance": "ESTABLISHED projective geometry; edge framing OURS (generational-lineage 0b)", "status": "ships (modules/box_kite/)"},
+    {"id": "C3", "name": "box-kite combinatorics: 42 Assessors, 7 octahedra, {0,4,4,4,6,6} spectrum, zero cross-strut edges", "tier": 3, "provenance": "ESTABLISHED de Marrais arXiv:math/0011260 (2000); PSL(2,7) refinement OURS", "status": "ships (modules/box_kite/maths.py)"},
+    {"id": "C4", "name": "wind speed w = A-matrix basin drift", "tier": 0, "provenance": "FIRST STATED HERE 2026-08-30 (drift as inflation parameter); flow itself OURS (basin, psi^16)", "status": "ships (drift computed; used as w)"},
+    {"id": "C5", "name": "the scale = WordNet sub-graph (19 relations, hypernym depth, depth_weight)", "tier": null, "provenance": "ESTABLISHED WordNet; box-kite table OURS (c_monad_wordnet.bin)", "status": "ships"},
+    {"id": "C6", "name": "Phi(w): Joukowsky inflation zeta -> zeta + (H/q(w))/zeta, w -> 6 assessor_coordinates", "tier": 1, "provenance": "ESTABLISHED Joukowsky 1910, elastica Euler 1744, Kutta-Joukowsky; tether + wind-inflation FIRST STATED HERE 2026-08-27 (pencil_hyperstring.md)", "status": "to write (~30 lines)"},
+    {"id": "C7", "name": "the Flashlight: shadow magnification M = D_wall/D_object; hard D_wall ceiling; Gaussian splat under a moving light", "tier": 1, "provenance": "ESTABLISHED geometric optics; 3D Gaussian splatting (Kerbl 2023)", "status": "to write (projection + splat)"},
+    {"id": "C8", "name": "Scale orthogonal Smith chart engine: w on a WordNet-calibrated axis; sets D_wall", "tier": 2, "provenance": "ESTABLISHED Smith chart 1939, conformal map of C", "status": "partial (FactoralDecomposition/two_ring_chart_*.py)"}
+  ],
+  "H_note": "H is NOT a stored parameter. H = Re(Pi), the real part of the ordered product of the seven pencil-station generators, conserved along the string; it falls out of Phi(w) as the zero-divisor-surface check. Only w is the payload. (pencil_hyperstring.md still shows the two-knob Phi_w(H); update to w-only.)",
+  "flashlight_note": "The shadow is additional GRANULARITY of word selection, not additional context. Magnification is bandlimited by w's precision: past it the shadow only blurs. Near wall / low M = narrative (representative word); far wall / high M = dissertation (exact term).",
+  "acceptance_tests_for_Phi": [
+    "one flex mode: dim(flex) of K222 with strut fixed = 1",
+    "reconstruction: Phi(w) swept traces all six assessor_coordinates for every strut s in 1..7 (deformable charts); rigid charts return one fixed form for all w",
+    "the across-strut map is J_N: r <-> 1/r to inversion.md precision",
+    "the spectrum is the deformation modes: {4,4,4} = struts opening, {6,6} = sail pairs, {0} = fixed e0 anchor",
+    "tear-off: chart_of outside_share -> 1 past a finite w, onset where the elastica leaves the unit sphere"
+  ],
+  "notebooks": [
+    "00_structure_vision.ipynb",
+    "01_the_pass.ipynb",
+    "02_lineage.ipynb",
+    "03_demonstration.ipynb"
+  ],
+  "next_paper": "Data Storage With No Physical Location — the Hyperwebster permutation decomposition; this paper is its box-kite instance"
+}

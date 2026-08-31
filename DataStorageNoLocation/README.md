@@ -21,9 +21,13 @@ where multiplication still preserves length but no longer associates — carries
 the recursion's depth: eight limbs, order-dependent, enough structure for the
 fold to reach **256 bits** without collapsing to a plain hash. What is stored
 is that one number, the de Bruijn generator, and the decode model. Nothing
-else. This was the original design for AI context continuity and persistent
-memory; it is presented here as the shared ancestor of the two structures that
-replaced it.
+else. Nothing is compressed, because nothing is stored: once the content is
+free at its address, the only quantities left to account for are the **cost**
+to reach an address and the **change** between one and the next. This was the
+original design for AI context continuity and persistent memory; it is
+presented here as the shared ancestor of the two structures that replaced it,
+and as the first working definition of **hyperindexing** — the formal
+treatment deferred.
 
 ---
 
@@ -37,6 +41,42 @@ name what grew out of it.
 
 Every component carries a provenance label: `ESTABLISHED` with an attribution,
 or `FIRST STATED HERE` with a date.
+
+---
+
+## This is not compression — it is cost and change
+
+Compression removes redundancy from stored data: the bytes are kept, in fewer
+of them. **Nothing here is compressed, because nothing is stored.** Horner's
+method is a bijection — every string is *already* a number — so the store does
+not shrink data, it *addresses* it. The 256-bit root is not the corpus made
+small; it is the corpus's **address** in the space of all corpora, from which
+the corpus is reconstructed by a pure function.
+
+Once you accept that the content is free at its address, only two things are
+left to account for, and the whole construction is about them:
+
+- **the cost** — what it takes to *reach* an address and *reconstruct* from
+  it: navigating the address space, running `Φ`, unfolding the recursion. The
+  de Bruijn permutation (§2) exists to drive this down — from factorial tree
+  navigation to `O(1)` steps.
+- **the change** — the *delta* between addresses: the local operation that
+  moves you from one to the next (a de Bruijn shift, a successor, a limb
+  increment), and the transport that keeps content operations consistent
+  across the move. Each ledger row (§3) is one timestamped change; the Long
+  Path is their sequence.
+
+The working term for this, as used in this paper, is **hyperindexing**: an
+address you reconstruct *from*, not a pointer you look *up* — storage-free
+(the map holds no table that scales with the content), bijective (the address
+is the content, up to a known symmetry), structure-carrying (operations on the
+content pull back to operations on the address), recursively foldable (the
+address of the address, iterated, reaches a fixed-width root). Its subject
+matter is the permutations, partitions, and folds of a cyclic index — one
+object seen three ways — accounted for by cost and change, not by entropy and
+redundancy. A formal treatment of hyperindexing algorithms is a later,
+separate work; here the term is defined only as far as the construction uses
+it.
 
 ---
 
@@ -134,9 +174,9 @@ whole fold lands, at the tower's genome rung `T₂₅₆` (`2⁸`), on a single
 
 *(The Hyperwebster wiki states a 512-bit address at Layer 6; that is the
 pre-recursion single-item address. The 256-bit figure here is the fixed-width
-root of the recursive fold of §4 — a smaller number carrying more, because the
-octonion depth does the carrying. The two are not in conflict; the paper's
-engine reports both.)*
+root of the recursive fold of §4 — a different quantity, an address in the
+space of corpora rather than of items, with the octonion carrying the
+recursion depth. The two are not in conflict; the engine reports both.)*
 
 ### 6. What is stored
 
@@ -149,41 +189,36 @@ No item bytes. No per-item records beyond what the root unfolds to. The
 
 ---
 
-## The hyper-indexer lineage
+## Where hyperindexing comes from
 
-Cody's question: *is there an established lineage to a "hyper indexer" category
-of mathematics?* There is no field by that name, but the category is a
-well-defined confluence of established lineages, each contributing one property:
+The term is used here as defined above — an address you reconstruct from,
+accounted for by cost and change. It is not a new invention; it names a
+pattern that established mathematics has arrived at from several directions,
+each contributing one property:
 
-| lineage | contributes | attribution |
+| line of work | contributes | attribution |
 |---|---|---|
-| **Gödel numbering** | the index *is* the object, losslessly decodable — arithmetization | Gödel (1931) |
-| **combinatorial / factorial number systems; ranking–unranking** | a bijective index ↔ combinatorial object with *explicit reconstruction* (unrank) — "store the address, not the data" | Laisant (1888); Lehmer; Knuth TAOCP |
-| **de Bruijn sequences & graphs; de Bruijn positional encoding** | minimal complete traversal of a window-space; absolute position from a local pattern, no coordinate stored | Flye Sainte-Marie (1894); de Bruijn, Good (1946) |
+| **Gödel numbering** | the index *is* the object, decodable — arithmetization | Gödel (1931) |
+| **combinatorial / factorial number systems; ranking–unranking** | a bijective index ↔ combinatorial object with *explicit reconstruction* (unrank) | Laisant (1888); Lehmer; Knuth TAOCP |
+| **de Bruijn sequences & positional encoding** | minimal complete traversal of a window-space; absolute position from a local pattern, no coordinate stored | Flye Sainte-Marie (1894); de Bruijn, Good (1946) |
 | **space-filling / locality-preserving indices** | one scalar ↔ `n`-D position, invertible, proximity-preserving | Hilbert (1891); Morton / Z-order (1966) |
-| **arithmetic coding** | the whole message as one number; every digit depends on the whole — holographic | Rissanen (1976) |
+| **arithmetic coding** | the whole message as one number; every digit depends on the whole | Rissanen (1976) |
 | **Merkle DAGs / content addressing** | recursive fold of addresses to a single fixed-width root | Merkle (1979); git; IPFS |
-| **succinct & compressed data structures** | the representation within `o(n)` of the information-theoretic minimum, still reconstructable | Jacobson (1989); Munro; Navarro |
-| **Cayley–Dickson / Clifford basis indexing** | the `2ⁿ` basis *is* a binary-address set with an algebraic operation on the addresses (XOR + sign cocycle) — the *hyper* in hyper-indexer | Cayley (1845); Dickson (1919); Clifford (1878) |
-| **holographic algorithms; holographic optical storage** | a reversible transform that delocalises information so any fragment reconstructs the whole | Gabor (1948); van Heerden (1963); Valiant (2004) |
+| **Cayley–Dickson / Clifford basis indexing** | the `2ⁿ` basis *is* a binary-address set with an operation on the addresses (XOR + sign cocycle) | Cayley (1845); Dickson (1919); Clifford (1878) |
 
-**The category, stated:** a *hyper-indexer* is a bijective unranking from an
-address into a structured object, where the address space is a `2ⁿ`-addressed
-hypercomplex basis, the enumeration is de-Bruijn-minimal, and the recursion is
-a Merkle-style fold to a fixed-width root. Reconstruction is a pure function of
-the address and the fixed machinery.
+**The box kite** (companion paper) is the *unranking* case: the address
+unranks to a de Marrais box kite — a higher-order relational group in the
+sedenions — completed by a physical deformation law (`Φ(w)`, the Joukowsky
+wind).
 
-**The box kite is the unranking instance:** the address unranks to a de Marrais
-box kite — a higher-order relational group in the sedenions — and the
-reconstruction is completed by a physical deformation law (`Φ(w)`, the
-Joukowsky wind). *That paper is a companion to this one; see below.*
-
-**The Hyperwebster is the storage instance:** the address unranks to the bytes,
+**The Hyperwebster** is the *storage* case: the address unranks to the bytes,
 and the recursion folds a whole corpus to one number.
 
-What is `FIRST STATED HERE` in each: the *deformable* unranking via a physical
-law (box kite paper, 2026-08-27); the recursive octonion fold to a fixed-width
-holographic root (this paper).
+`FIRST STATED HERE` in each: the deformable unranking via a physical law (box
+kite paper, 2026-08-27); the recursive octonion fold to a fixed-width root,
+and the `(index, timestamp)` ledger as the store's record (this paper). The
+category itself — its objects, its models, and its relation to gauge symmetry
+— is deferred to a formal treatment after the Ainulindalë and VAPMIP papers.
 
 ---
 
@@ -247,11 +282,17 @@ constant.
 machines, matches (SHA-256 of the root). The de Bruijn generator and charset
 permutation are pinned inputs, reported.
 
-**G6 — honest comparison.** Against `gzip`, `zstd --ultra`, and a Merkle/IPFS
-CID for the same corpus: report the stored-bytes figure for each (for this
-store: `256 bits + |generator| + |decode model|`, constant in corpus size) and
-the *retrieval cost* (this store pays `O(unfold + unrank)` per item at read
-time; the others pay a disk fetch). State plainly where each wins.
+**G6 — the comparison is on cost, not size.** A reviewer will reach for `gzip`
+and `zstd --ultra`. Those are compressors — they keep the bytes and shrink
+them; this keeps nothing. The honest comparison is against **content
+addressing** (a Merkle/IPFS CID): both replace the data with an address. State
+the two axes side by side — the **cost** to reconstruct one item (this store:
+`O(unfold + unrank)`; a CID: a disk or network fetch of stored bytes) and the
+**change** a single ledger row carries (this store: a timestamped
+`(address, length)` delta; a CID: a new hash over the changed bytes). Do not
+report a "compression ratio"; there is no compression here. Where a
+compressor genuinely wins — keeping bytes local for fast sequential read —
+say so.
 
 **G7 — third-party run.** A `run.sh` from a clean checkout: pinned deps, a
 corpus pointer, the G1 round-trip and the G5 root out the other end.
@@ -286,10 +327,10 @@ index-of-index fold to the 256-bit root (D7). The rest is assembly.
                                  the recursion, the octonion depth
     01_the_fold.ipynb            ingest a real corpus → 256-bit root →
                                  reconstruct, byte-exact
-    02_lineage.ipynb            the hyper-indexer category, each ancestor
-                                 discharged
-    03_comparison.ipynb         G6 — vs gzip / zstd / Merkle CID, with the
-                                 retrieval-cost column
+    02_where_it_comes_from.ipynb the ancestors of the term, each discharged
+    03_cost_and_change.ipynb     G6 — reconstruction cost per item and the
+                                 delta a ledger row carries, vs a Merkle CID;
+                                 no compression ratio
 
 `wiki/` is written last.
 
@@ -298,35 +339,41 @@ index-of-index fold to the 256-bit root (D7). The rest is assembly.
 ## Conclusion
 
 Storage does not require a location. Horner's bijection makes every string a
-number that already exists; a de Bruijn sequence makes the number cheap to
-reach; a ledger records what was reached and when; and the ledger's own index,
-taken recursively, folds an entire corpus into one 256-bit root. The octonion —
-the deepest algebra that still preserves length — carries the recursion's depth
-into that fixed width, and carries it *ordered*, because the path through an
-address space is not commutative any more than context is. What persists on a
-disk is the root, the generator, and the decode rules. Everything else is
-navigation.
+number that already exists; a de Bruijn sequence makes the number **cheap to
+reach**; a ledger records **what changed and when**; and the ledger's own
+index, taken recursively, folds an entire corpus into one 256-bit root. The
+octonion — the deepest algebra that still preserves length — carries the
+recursion's depth into that fixed width, and carries it *ordered*, because the
+path through an address space is not commutative any more than context is.
+What persists on a disk is the root, the generator, and the decode rules.
+Everything else is navigation, and navigation is only two quantities: the
+**cost** to reach an address and the **change** between one address and the
+next. Nothing is compressed, because nothing is stored.
 
-This was the first design for an AI's context continuity and persistent memory:
-one number that holographically encodes everything taken in, unfoldable on
-demand. It has since divided into its two halves, each now its own Fourth Age
-paper:
+This was the first design for an AI's context continuity and persistent
+memory: one number that unfolds to everything taken in. It has since divided
+into its two halves, each now its own Fourth Age paper:
 
 - **the codec** — reconstructing a higher-order relational group from a single
   scalar — is the box kite. *`FourthAgePapers/ScalarContextPropagation/` —
   Forward Propagation of Information and Context by Scalar Value* (written).
-  The box kite belongs to the **hyper-indexer** category defined above: an
-  unranking from an address into a hypercomplex object, completed by a
-  physical deformation law.
 
 - **the persistence** — the working loop that holds an intention, and the
   append-only ledgered record that makes it durable and ordered — is
   ***The Mind's Eye and Paper's Hands***, the next paper in this series. The
   Mind's Eye is the flat held loop (`rehearse` — iteration, not recursion, no
   output, cannot overflow); Paper's Hands is the Long Path, blockchain-
-  committed (implemented today as Philadelphos's `compress → octonion
-  hyperindex → PtolChain` eviction). The Long Path makes the memory *durable
-  and ordered* where the fold of this paper makes it *small*.
+  committed (Philadelphos's `compress → octonion hyperindex → PtolChain`
+  eviction today).
 
-The single 256-bit number was the whole idea. The box kite, and the Mind's Eye
-with Paper's Hands, are what it became when it was built.
+Between them: this paper's fold makes the memory *reachable at low cost*, the
+Long Path makes it *durable and ordered*. The single 256-bit number was the
+whole idea. The box kite, and the Mind's Eye with Paper's Hands, are what it
+became when it was built.
+
+The formal treatment of hyperindexing — its objects and models, and why the
+gauge symmetries of the Standard Model are one of them — comes after the
+Ainulindalë and VAPMIP papers, led by Noether: the Noether current runs *up*
+the tower carrying information forward, the Noether Information Current runs
+*down* it carrying information back. Cost forward, change returned — the two
+directions that have to balance.

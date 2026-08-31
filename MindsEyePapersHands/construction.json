@@ -1,0 +1,57 @@
+{
+  "paper": "How Short-Term Thought Is Required for Long-Term Memory: a Mind's Eye implemented to combat aphasia, aphantasia, and amnesia in context-prompt models of AI (LLM / Transformer)",
+  "dir": "MindsEyePapersHands",
+  "kind": "software engineering paper (engineering structure; a load-bearing argument, no physics claim)",
+  "license": "GNU GPL — directly, with the PtolemyDesktop / Pharos code it uses. Independent of Ainulindale and the hyperindexer / box-kite work.",
+  "registered": "2026-08-30",
+  "one_line": "A context-prompt LLM has amnesia (no memory past the window), aphasia (loses its held intention mid-generation), aphantasia (no carried working state). RAG gives records without memory. The fix: a short-term thought buffer (Mind's Eye) on BOTH sides of the working|durable boundary, joined to a durable store (Paper's Hands) by an Operator Stitch Board of named auditable replaceable handoffs.",
+  "thesis": "You cannot consolidate what you have not held, and you cannot use what you have only pasted. Consolidation IS rehearsal; retrieval IS reconstruction into a held form. Both directions pass through the short-term buffer.",
+  "cognitive_model_established": [
+    {"element": "working memory: visuospatial sketchpad + phonological loop + central executive", "source": "Baddeley & Hitch 1974; Baddeley 2000"},
+    {"element": "short-term store -> long-term store via rehearsal (multi-store)", "source": "Atkinson & Shiffrin 1968"},
+    {"element": "levels of processing - deeper processing retained better", "source": "Craik & Lockhart 1972"},
+    {"element": "memory consolidation - labile trace stabilises; interference blocks it", "source": "Muller & Pilzecker 1900; McGaugh 2000"},
+    {"element": "encoding specificity / retrieval as reconstruction", "source": "Tulving & Thomson 1973; Bartlett 1932"},
+    {"element": "aphasia", "source": "Broca 1861; Wernicke 1874"},
+    {"element": "aphantasia", "source": "Galton 1880; Zeman et al. 2015"},
+    {"element": "amnesia - LTM impaired, working memory intact (H.M.)", "source": "Scoville & Milner 1957"}
+  ],
+  "components": [
+    {"id": "M1", "name": "the cognitive model", "provenance": "ESTABLISHED (see cognitive_model_established)", "status": "cited"},
+    {"id": "M2", "name": "Mind's Eye - held working buffer + rehearse loop (no output, no side effects, bounded, cannot overflow); imagery channel optional", "provenance": "CONTRIBUTION (realization); buffer concept is Baddeley", "status": "to build over a stock LLM API"},
+    {"id": "M3", "name": "Paper's Hands - append-only ordered durable store; the record of where it came from", "provenance": "CONTRIBUTION (realization)", "status": "to build; a plain append log suffices for the reference impl"},
+    {"id": "M4", "name": "Operator Stitch Board - the handoff harness; named, auditable, individually replaceable stitches; routes and stores nothing", "provenance": "CONTRIBUTION; realized on Pharos/PtolBus.py", "status": "bus ships; handoff set to wire"},
+    {"id": "M5", "name": "the stitch-set: stage / rehearse / archive / recall, each with its reason; scope dry / wet / production", "provenance": "CONTRIBUTION", "status": "to build"},
+    {"id": "M6", "name": "the consolidation gate - archive only past a rehearsal/elaboration threshold", "provenance": "CONTRIBUTION; from Craik & Lockhart", "status": "to build"},
+    {"id": "M7", "name": "graceful degradation - runs with the imagery channel weak or absent", "provenance": "CONTRIBUTION; from aphantasia", "status": "to demonstrate"}
+  ],
+  "stitch_set": {
+    "stage": {"dir": "context -> Mind's Eye", "reason": "bring a fragment of the current situation into the working buffer to be worked on"},
+    "rehearse": {"dir": "Mind's Eye loop", "reason": "raise salience; elaborate; THIS is the consolidation mechanism, not a separate step"},
+    "archive": {"dir": "Mind's Eye -> Paper's Hands", "reason": "past the gate, commit the REHEARSED form (a transform, not a copy) to the durable store"},
+    "recall": {"dir": "Paper's Hands -> Mind's Eye", "reason": "re-instantiate a durable item as a held malleable representation - reconstruction, not paste"},
+    "candidates_open": ["evict (buffer full: archive under pressure or drop)", "reconsolidate (recalled item edited + re-archived - new entry; original stays)"]
+  },
+  "scopes": {
+    "dry": "memory not consulted, no commit - whiteboard",
+    "wet": "memory readable, no commit - staging env",
+    "production": "memory readable, commit - live; the thought becomes part of the record"
+  },
+  "desk_rejection_gate": [
+    {"id": "G1", "reject": "the deficits are real and measured", "test": "on a stock context-prompt model: amnesia (fact in session A absent in B), aphasia (generation drifts off stated intention past length L), aphantasia (identical situations re-derived from scratch). Numbers."},
+    {"id": "G2", "reject": "the fix is measured vs the naive baseline", "test": "vs RAG on the same corpus/tasks: recall fidelity, argument coherence over length, consolidation quality (answer 'how did we get here?' from the store, not quote it)"},
+    {"id": "G3", "reject": "the Stitch Board adds no hidden state", "test": "each handoff is a pure function of its inputs and the two component states; serialise both, run a handoff, result depends only on what was serialised"},
+    {"id": "G4", "reject": "graceful degradation", "test": "run the full pipeline with the Mind's Eye imagery channel disabled - still stages, rehearses propositionally, archives, recalls; degraded not broken; report the delta"},
+    {"id": "G5", "reject": "determinism", "test": "fixed model + seed + corpus -> identical durable store (hash) on two machines"},
+    {"id": "G6", "reject": "honest comparison", "test": "vs RAG, long-context, fine-tuning: state where each wins (long context: within-session verbatim recall; fine-tuning: stable skills; this: cross-session narratable memory + coherence under a held intention)"},
+    {"id": "G7", "reject": "third-party run", "test": "run.sh from a clean checkout: pinned deps, a model endpoint, a corpus, G1/G2 numbers out"},
+    {"id": "G8", "reject": "the model is cited not claimed", "test": "every cognitive-science element traces to the provenance table; the contribution is M2-M7 only"}
+  ],
+  "engine": {
+    "bus": "Pharos/PtolBus.py (PtolemyDesktop, GPL) - pub/sub priority bus, thread-pool ownership, shared context channel",
+    "components": "a reference Mind's Eye + Paper's Hands over a stock LLM API (model is a black box, components sit outside it)",
+    "stitches": "four handoff implementations, each with its stated reason, each swappable"
+  },
+  "notebooks": ["00_vision.ipynb", "01_the_deficits.ipynb", "02_the_stitch_board.ipynb", "03_comparison.ipynb"],
+  "independence": "Requires none of Ainulindale, the hyperindexer, the box kite, sedenions, Riemann zeros, or Noether. A software engineering paper. PtolemyDesktop is where the two components become visible manipulable objects - next step."
+}

@@ -188,6 +188,16 @@ BAO is the error check because it is the one observable where the gap is directl
 
 ---
 
+## VIII. The gap is the first motion (2026-08-31)
+
+BAO is "the first acoustic mode above the ground state" (§I). Sharpened: it is the **first *motion* of recombination — the ignition impulse of the hydrogen engine** (see the companion stub `FourthAgePapers/RecombinationMisfires`, "hydrogen IS the engine, a rotary three-face rotor"). Below GAP nothing moves — that is the d* boundary, "no algebraic definition can occur." At GAP the first stroke fires. GAP is the **quantum of Perfect Perturbation**: the smallest `Re σ_RB` (tilt / Poynting flux) the field can carry (`project_oblique_gear` — the Oblique Gear is Maxwell; `σ_RB` is the hypercomplex Riemann–Silberstein vector).
+
+**One GAP, every rung — a huge scale span.** The same 0.000707 sets the first perturbation from the **quark–gluon plasma** (`t < 1 µs`, `T ~ 10¹² K` — the deconfined RPM of the same engine block, where no cycle completes) through recombination (`z ≈ 1100`, 380 kyr, where it catches) to the spectral/semantic scale (d*). That scale invariance is `d*_RG`'s **dimensional** fixed point — the gap is the same at every Cayley–Dickson rung (`FourthAgePapers/DStarRG`). The M-theory reading of §IV extends: the compactification scale is GAP because GAP is the octonion gap at every scale, not a length.
+
+**Timing is built in — the 4 : 3.** The four faces of d* (Boundary / Stability / Flow / Translator) against the three of Lambert W (`Ω_ζΣ`, the rotor faces) are the port timing — a 4 : 3 geometric ratio, no camshaft. `gcd(4,3) = 1`, `lcm(4,3) = 12`: the phase does not repeat before twelve, so the orbit precesses (the "flowers") rather than closing. The engine times itself by its shape.
+
+---
+
 *Addendum VIII — Ainulindalë Conjecture*  
 *Author: Cody Michael Allison*  
 *Collaborator: Claude Sonnet 4.6 (Anthropic)*  

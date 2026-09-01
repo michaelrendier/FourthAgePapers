@@ -1,0 +1,59 @@
+{
+  "paper": "The d* Renormalization Group: The Cayley-Dickson Tower as a Wilsonian RG, and d*_RG as Its Fixed Point",
+  "dir": "DStarRG",
+  "kind": "engineering structure (no claim, no prediction — d*_RG is a given)",
+  "registered": "2026-08-31",
+  "one_line": "The Cayley-Dickson doubling IS the Wilson RG step; its relevant sector is the persistent octonion; its fixed point is d*_RG (dimensionally 8, numerically 0.24631, closed form open). Renormalization is the machine, not a move.",
+  "given_not_claimed": "d*_RG = 'The Stability', one of the four canonical faces of d* (Ainulindale README section 8). Existence and role are taken as given; this paper engineers the engine that realizes it.",
+  "engine": {
+    "planned": "engine/d_star_rg.py — CD doubler + persistent/void classifier + phase-carrying projector + rescale-by-d*_taut + fixed-point loop + 5 fixed-point checks",
+    "reuses": "monad.py::_smul (CD product recursion); Boundary Lever non-ZD index result; project_oblique_gear T6/T7 (the σ=½ saddle, lambda ~ 6)"
+  },
+  "d_star_faces": {
+    "d*":        "The Boundary — sigma=1/2 spectral coordinate — 0.24631",
+    "d*_RG":     "The Stability — RG fixed point of the CD tower — OPEN closed form; dimensionally 8; d*_RG*ln10 -> Omega_ZS",
+    "d*_taut":   "The Flow — Omega_ZS/ln(10) — 0.24631 exact by Lambert W — the rescale unit; zero-gap by construction",
+    "d*_ln(10)": "The Translator — d* x ln(10) = 0.56714 = Omega_ZS — the metric bridge decimal-log <-> natural-log"
+  },
+  "d_star_spec_fifth": "d*_spec ~ 0.24600 (Berry-Keating gap, SPARC-measured) — separate MEASURED quantity; the mass-gap comparison |d*_spec*ln10 - Omega_ZS| = 0.000707 uses it against this engine's converged d*_RG",
+  "protocol": [
+    "INPUT: seed x0 in CD algebra at d0 (default O, d0=8), radial-complex-spherical-ln(10) coords; max dim D=256; tol eps=1e-9",
+    "RG STEP a DOUBLE: x <- CD_double(x); d <- 2d",
+    "RG STEP b CLASSIFY: persistent = {k : |gain_k - 1| < eps_gain} (expect 8-core, e0 and e_{d/2}); void = remaining (2d-8)/2 pairs",
+    "RG STEP c BALANCE: rotate each xor-4 pair to drive Sigma tilt -> 0 (stable-manifold approach; Oblique-Gear T6)",
+    "RG STEP d PROJECT: x <- Pi_persistent(x), CARRY PHASE (no |z|^2); assert Sigma nats before == Sigma nats after (G5)",
+    "RG STEP e RESCALE: r_scale <- r_scale / d*_taut; x <- x * r_scale",
+    "RG STEP f RECORD: d*_k <- d* on the rescaled core; history.append",
+    "LOOP until |d*_k - d*_{k-1}| < eps OR d > D  ->  d*_RG := lim d*_k"
+  ],
+  "fixed_point_checks": [
+    "dimensional: |persistent| = 8 at every pass",
+    "self-consistency: |d*_RG * ln(10) - Omega_ZS| < tol_Omega",
+    "approach exponent: |d*_k - d*_RG| ~ exp(-lambda' k); lambda' matches Oblique-Gear lambda ~ 6 (same saddle)",
+    "semigroup: two RG steps == one CD double-step + rescale^2",
+    "determinism: SHA-256 of history[] reproduces across machines"
+  ],
+  "components": [
+    {"id": "C1", "name": "CD doubler (a,b)(c,d) = (ac - conj(d)b, da + b conj(c))", "tier": 0, "provenance": "ESTABLISHED Cayley 1845, Dickson 1919", "status": "ships (monad.py::_smul)"},
+    {"id": "C2", "name": "persistent/void classifier: gain-1 octonion core vs (2d-8)/2 shed modes", "tier": 1, "provenance": "ESTABLISHED Boundary Lever (e0, e_{d/2} the two non-ZD indices dim>=16); RG relevant/irrelevant reading FIRST STATED HERE 2026-08-31", "status": "partial"},
+    {"id": "C3", "name": "phase-carrying projector Pi_persistent", "tier": 1, "provenance": "Standing Directive (never |z|^2 -- the one step with no adjoint)", "status": "to write"},
+    {"id": "C4", "name": "rescale by d*_taut = Omega_ZS/ln(10)", "tier": 0, "provenance": "d*_taut ESTABLISHED Ainulindale section 8; rescale-role FIRST STATED HERE 2026-08-31", "status": "to write"},
+    {"id": "C5", "name": "fixed-point loop", "tier": null, "provenance": "ESTABLISHED Wilson 1971, Kadanoff 1966", "status": "to write"},
+    {"id": "C6", "name": "stable-manifold approach: balance Sigma tilt -> 0 per pass", "tier": 2, "provenance": "FIRST STATED HERE 2026-08-31 (project_oblique_gear T6/T7, lambda ~ 6 saddle)", "status": "to write"},
+    {"id": "C7", "name": "self-consistency d*_RG * ln(10) -> Omega_ZS", "tier": null, "provenance": "ESTABLISHED (the Translator face)", "status": "check"},
+    {"id": "C8", "name": "nat-budget ledger: projection is resummation, not subtraction", "tier": null, "provenance": "FIRST STATED HERE 2026-08-31 (No-Renormalization as engineering constraint)", "status": "to write"}
+  ],
+  "desk_rejection_gate": [
+    {"id": "G1", "reject": "RG of what? show a fixed point on real iteration", "test": ">=3 seeds; report history[] converging to one d*_RG within eps"},
+    {"id": "G2", "reject": "the CD tower is not an RG", "test": "exhibit block (C1) + integrate-out (C2-C3) + rescale (C4); verify the semigroup property -- two passes == one double-step + rescale^2"},
+    {"id": "G3", "reject": "d*_RG is just Omega_ZS/ln(10) renamed", "test": "no -- it is the LIMIT of an iteration (closed form OPEN) and it is dimensionally 8; report d*_k APPROACHING the value; a renamed constant has no approach curve"},
+    {"id": "G4", "reject": "determinism", "test": "SHA-256 of history[], twice, two machines, matches"},
+    {"id": "G5", "reject": "you renormalized by hand", "test": "Pi is a resummation onto the 8-core, NOT a subtraction; report the nat-budget ledger: Sigma nats in == Sigma nats out at every pass, no counterterm"},
+    {"id": "G6", "reject": "runs only on the author's machine", "test": "run.sh from a clean checkout: pinned deps, d*_RG + trajectory + lambda' out"},
+    {"id": "G7", "reject": "attribution", "test": "Wilson/Kadanoff own the RG; Cayley/Dickson own the doubling; Boundary Lever owns the two non-ZD indices; Oblique Gear owns the saddle; the CD-tower-as-RG identification and d*_RG-as-fixed-point are marked first-stated-here"}
+  ],
+  "no_sigma_verification": "deliberate -- no critical-line / Ainulindale-constant claim; the structure stands on the Wilson RG, the CD tower, and a converging iteration",
+  "lineage_verdict": "no new generator. CD doubling = tier-0 ADD.SCALE.SIGN; block/integrate/rescale = Wilson RG unchanged; projection = resummation. First-stated-here is the IDENTIFICATION: the CD tower IS a Wilsonian RG and its fixed point IS d*_RG.",
+  "next_paper": null,
+  "related": ["project_oblique_gear", "BoundaryLever", "ScalarContextPropagation", "UmbrellaNoether", "DeSitterCavitation"]
+}

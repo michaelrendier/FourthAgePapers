@@ -217,6 +217,39 @@
     Do cancer types separate in ZD space?
     Engine: tier9_chem + TCGA dataset.
 
+[ ] RecombinationMisfires — STUB registered 2026-08-31 (RecombinationMisfires/README.md)
+    "Hydrogen IS the engine." Census the failed attempts at hydrogen before,
+    during, and after recombination — misfires (inside condition unmet: cascade
+    photoionised mid-way) vs backfires (outside condition unmet: a finished atom
+    re-ionised by another's emission photon). k(z) < 1 → sub-critical branching
+    process, mirrors a decaying nuclear chain reaction. QGP = same engine block
+    at deconfined RPM (no cycle completes).
+    Engine to build (deferred): parton-shower-idiom Monte Carlo of the
+    recombination cascade at electron-shell time steps, feedback coupled across
+    pairs; outputs M(z), k(z), failed-attempt redshift distribution; rerun at
+    QGP conditions.
+    TODO — yottasecond resolution (Cody): step must reach the Bohr timescale
+    (~1.5e-16 s) across a ~1e12 s epoch — dynamic range ~1e28. "Yottasecond
+    resolution" = yocto-scale (1e-24 s) stepping / ~1e24 resolution elements.
+    The dynamic range IS the hard part and probably the real subject. Use
+    adaptive / multi-rate integration or an EXACT resummation of the fast loop
+    — NOT a renormalisation subtraction (standing No-Renormalization rule).
+
+[ ] DStarRG — Engineering structure registered 2026-08-31 (DStarRG/README.md + construction.json)
+    "The d* Renormalization Group." No claim — d*_RG is a given (The Stability,
+    Ainulindale README section 8). The CD doubling IS the Wilson RG step:
+    block = CD-double, integrate-out = project onto the persistent octonion
+    (gain-1 core, e0 & e_{d/2}), rescale = / d*_taut. Iterate to the fixed
+    point -> d*_RG (dimensionally 8, numerically 0.24631, closed form open).
+    Flow is a sigma=1/2 saddle (Oblique Gear lambda ~ 6) -> approach on the
+    stable manifold, balance Sigma tilt -> 0 per pass.
+    Engine to build (deferred): engine/d_star_rg.py per the §4 protocol —
+    CD doubler + persistent/void classifier + phase projector + rescaler +
+    fixed-point loop + 5 checks (dimensional=8, d*_RG*ln10 -> Omega_ZS,
+    approach exponent == Oblique-Gear lambda, semigroup, SHA determinism).
+    Renormalization is built in: the void is PROJECTED (exact resummation,
+    phase carried), never subtracted — nat budget balances every pass (G5).
+
 ---
 
 ## Open Derivations (formal proofs pending)

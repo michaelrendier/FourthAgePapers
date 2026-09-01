@@ -250,6 +250,25 @@
     Renormalization is built in: the void is PROJECTED (exact resummation,
     phase carried), never subtracted — nat budget balances every pass (G5).
 
+[ ] HyperBifurcation — Engineering structure registered 2026-08-31 (HyperBifurcation/README.md + construction.json)
+    Sibling of DStarRG — same renormalization, parameter-plane version.
+    Windows of order ARE Feigenbaum RG fixed points (R[f] = alpha f(f(x/alpha)),
+    delta ~ 4.6692, alpha ~ 2.5029). Working maths lives in the bubbles;
+    chaos is the medium. Bubbles rise buoyantly and trail WAKES (disorder
+    return path = Noether Information current = Oblique-Gear "ringing
+    backwards"), often the readable part. 2-D logistic diagram = one slice;
+    the 3-D subject is how window orderings RECONNECT across slices (2nd param /
+    CD rung / UNS generation / Im c). In un-sieve space: bifurcation = one
+    prime activation forking the birth stream; trifurcation = three. A
+    modulus' factors = the order-bubble it is born into; navigable by the RG,
+    bounded ONLY where an entry point exists (close primes / partial bits /
+    readable wake).
+    Engine to build (deferred): engine/hyper_bifurcation.py per the §6 protocol
+    (iterate -> window detect -> RG classify -> wake -> lift to 3-D -> UNS
+    bi/trifurcation map -> optional factor read). Reuses lineage.py::un_sieve
+    and DStarRG. CHECK: FACTOR READ never returns a factor without
+    "entry point: yes/no"; unbounded search reported as unbounded. No cheating.
+
 ---
 
 ## Open Derivations (formal proofs pending)

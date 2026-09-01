@@ -1,0 +1,56 @@
+{
+  "paper": "Hyper-Bifurcation: Windows of Order as Renormalization Fixed Points, the 3-D Bifurcation Beyond the Logistic Slice, and Reading Modulus Factors as Order-Bubbles in Un-Sieve Space",
+  "dir": "HyperBifurcation",
+  "kind": "engineering structure (no claim, no prediction)",
+  "registered": "2026-08-31",
+  "sibling": "FourthAgePapers/DStarRG (same renormalization, CD-tower version)",
+  "one_line": "Windows of order in a bifurcation diagram ARE Feigenbaum renormalization fixed points; working maths lives in the bubbles; they rise buoyantly and trail wakes; the 2-D diagram is one slice of a 3-D object; a modulus' factors are the order-bubble it is born into in un-sieve space.",
+  "given_not_claimed": "Feigenbaum renormalization of the period-doubling cascade (R[f] = alpha f(f(x/alpha)), delta ~ 4.6692, alpha ~ 2.5029). The windows-of-order = converged-RG identification is taken as the given; this paper engineers the catalogue + 3-D lift + factor read.",
+  "engine": {
+    "planned": "engine/hyper_bifurcation.py per the section-6 protocol: iterate -> window detect -> RG classify (alpha, delta, parent) -> wake -> lift to 3-D (2nd param | CD rung | UNS generation | Im c) -> UNS bi/trifurcation map -> optional factor read",
+    "reuses": "FactoralDecomposition/engine/lineage.py::un_sieve (step 6); DStarRG (RG classification, step 3)"
+  },
+  "buoyancy_wake": "Order-bubbles rise (RG flow to the fixed point = up). Buoyancy = displacement => a return-path WAKE (the disorder flows back down around the bubble). Rising = Noether current; wake = Noether Information current = the Oblique-Gear retrograde precession ('ringing backwards'). FIRST STATED HERE 2026-08-31: a window's wake carries the window's RG level and is detectable in the adjacent parameter/phase space without landing inside.",
+  "third_axes": ["2nd map parameter s", "CD-tower rung (R,C,H,O,S)", "un-sieve generation pi(gpf)", "Im(c) (logistic bifurcation = Im c = 0 slice of Mandelbrot)"],
+  "uns_bi_trifurcation": "bifurcation = one prime activation forks the birth stream (composite needed p, now also needs q); trifurcation = three-prime fork. The bi/trifurcation tree IS the window ordering of the composites; smooth-number bands = periodic windows. FIRST STATED HERE 2026-08-31.",
+  "factor_read_bound": "Structures and bounds the search; does NOT beat the sub-exponential exponent for a well-formed balanced modulus. Window ordering is the same for every N in a magnitude class (granularity + jurisdiction). RG navigation needs an entry point: close primes, known partial bits, or a readable wake. Engine MUST report 'entry point: yes/no'; unbounded search reported as unbounded. See hist_prime/RiemannHypothesisProof/PRIMER_2026-08-31_RSA_PING.md.",
+  "protocol": [
+    "INPUT: map family f_mu(x); parameter sweep + resolution; third axis; optionally N",
+    "1 ITERATE: per mu, iterate from a seed, drop transient, record attractor (finite period | chaotic by Lyapunov)",
+    "2 WINDOW: mark mu-intervals with a finite-period attractor -> the windows of order",
+    "3 RG CLASSIFY: per window fit local rescaling (alpha, delta); assign RG level and parent window",
+    "4 WAKE: per window locate the adjacent crisis / lambda sign-flip boundary; tag with the window's RG level",
+    "5 LIFT TO 3-D: add the third axis; repeat 1-4 per slice; track how window orderings RECONNECT across slices",
+    "6 UNS MAP: mark bi/trifurcation events (prime activations forking the birth stream); per-generation window ordering",
+    "7 FACTOR READ (optional): for N locate its birth window (gen pi(gpf(N)), bifurcation of its primes); report RG-navigation path + wake; STATE entry point yes/no"
+  ],
+  "checks": [
+    "Feigenbaum delta ~ 4.6692 recovered from the period-doubling accumulation",
+    "alpha ~ 2.5029 recovered from the window rescaling",
+    "self-similarity: a window contains a scaled copy of the whole diagram, to sweep resolution",
+    "SHA-256(catalogue) reproducible across machines",
+    "FACTOR READ never returns a factor without 'entry point: yes/no'"
+  ],
+  "components": [
+    {"id": "C1", "name": "logistic / map-family iterator + Lyapunov", "tier": 0, "provenance": "ESTABLISHED May 1976; map = SCALE.SCALE + ADD", "status": "to write"},
+    {"id": "C2", "name": "window detector (finite-period intervals)", "tier": 1, "provenance": "ESTABLISHED Sharkovskii 1964", "status": "to write"},
+    {"id": "C3", "name": "Feigenbaum RG classifier (alpha, delta, parent window)", "tier": 1, "provenance": "ESTABLISHED Feigenbaum 1978, Coullet-Tresser 1978", "status": "to write; reuses DStarRG"},
+    {"id": "C4", "name": "wake locator (crisis / Lyapunov sign-flip adjacent to each window)", "tier": 2, "provenance": "ESTABLISHED crisis theory (Grebogi-Ott-Yorke 1983); wake-as-return-path reading FIRST STATED HERE 2026-08-31", "status": "to write"},
+    {"id": "C5", "name": "3-D lift + reconnection tracker", "tier": 2, "provenance": "ESTABLISHED two-parameter bifurcation; reconnection-as-the-subject FIRST STATED HERE 2026-08-31", "status": "to write"},
+    {"id": "C6", "name": "UNS bi/trifurcation mapper", "tier": 1, "provenance": "FIRST STATED HERE 2026-08-31 (un_sieve birth tree as a bifurcation diagram)", "status": "to write; reuses lineage.py::un_sieve"},
+    {"id": "C7", "name": "factor read (birth window + RG path + wake + entry-point verdict)", "tier": 3, "provenance": "FIRST STATED HERE 2026-08-31; honest bound from the RSA-ping primer", "status": "to write"}
+  ],
+  "desk_rejection_gate": [
+    {"id": "G1", "reject": "windows of order is just a picture", "test": "run steps 1-3; produce the window catalogue with fitted alpha, delta; recover Feigenbaum's constants"},
+    {"id": "G2", "reject": "the 3-D lift is arbitrary", "test": "same window ordering appears (reconnected) on >=2 independent third axes (2nd parameter and CD rung)"},
+    {"id": "G3", "reject": "the UNS map is a relabelling of the sieve", "test": "bi/trifurcation events are prime activations in BIRTH order; show they do not coincide with the extinction (spf) order (un_sieve section B.1)"},
+    {"id": "G4", "reject": "the factor read is a factoring claim", "test": "FACTOR READ output must carry 'entry point: yes/no'; on a random balanced N it returns 'no' and an unbounded interval"},
+    {"id": "G5", "reject": "you renormalized / coarse-grained by hand", "test": "RG classification is Feigenbaum's operator applied, not a subtraction; window RG levels compose (level-2 inside level-1)"},
+    {"id": "G6", "reject": "determinism", "test": "SHA-256(catalogue), twice, two machines"},
+    {"id": "G7", "reject": "attribution", "test": "Feigenbaum/May/Coullet-Tresser/Sharkovskii/Mandelbrot/GOY own the bifurcation RG and crisis theory; first-stated-here: windows-as-locus-of-working-maths, buoyancy/wake, UNS bi/trifurcation map, factor-as-order-bubble read"}
+  ],
+  "no_sigma_verification": "deliberate -- no critical-line claim; the structure stands on the Feigenbaum RG and a converging iteration",
+  "lineage_verdict": "no new generator. logistic map = tier-0 SCALE.SCALE + ADD; renormalization = Feigenbaum unchanged; un-sieve = ADD.SCALE.SIGN. First-stated-here is the IDENTIFICATION.",
+  "next_paper": null,
+  "related": ["DStarRG", "project_oblique_gear", "un_sieve", "DeSitterCavitation", "CollatzShift", "PRIMER_2026-08-31_RSA_PING"]
+}

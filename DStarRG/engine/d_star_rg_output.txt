@@ -1,0 +1,35 @@
+==========================================================================
+d* RENORMALIZATION GROUP ENGINE
+  d0 = 8 (octonion)   D_TAUT = Omega_ZS/ln10 = 0.246307201473
+==========================================================================
+
+passes/seed = 17   final dimension = 1,048,576
+persistent core = 8 at EVERY pass, EVERY seed : True
+
+observable               mean limit        std   nearest target
+--------------------------------------------------------------------------
+relevant_fraction       1.000000000   0.00e+00   1  (|d| = 0.00e+00)
+void_coupling           0.000000000   0.00e+00   0  (|d| = 0.00e+00)
+dim_ratio               0.000007629   0.00e+00   0  (|d| = 7.63e-06)
+entropy_ratio           0.602523927   5.40e-02   Omega_ZS  (|d| = 3.54e-02)
+log_measure             0.000000000   1.28e-17   0  (|d| = 6.41e-18)
+
+approach exponent lambda' (relevant_fraction tail): n/a (fixed point reached instantly — no approach curve)
+
+--------------------------------------------------------------------------
+VERDICT
+--------------------------------------------------------------------------
+  DIMENSIONAL fixed point   : CONFIRMED — persistent core = 8 at
+                              every pass, every seed, to d = 2^20.
+                              dim_ratio 8/d -> 0 exact.
+  NUMERICAL  d*_RG          : OPEN. A naive iteration flows to the
+                              TRIVIAL fixed point (relevant_fraction
+                              -> 1, coupling -> 0). The non-trivial
+                              value needs the old<->new coupling
+                              evolved by the ACTUAL CD product, not
+                              a summary scalar — that is the open part.
+  entropy_ratio limit       : 0.6025 +/- 0.0540  (Omega_ZS = 0.5671; within ~1 sigma, NOT tight)
+  nat budget                : balanced every pass (asserted, never broke)
+  determinism               : SHA-256(trajectories) = c68fa38df36256f723422c224998efef...
+  self-consistency d*_RG*ln10 -> Omega_ZS : NOT MET (no converged d*_RG)
+==========================================================================

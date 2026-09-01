@@ -138,14 +138,86 @@ OUTPUT  d*_RG,  history[] (the flow trajectory),  the persistent-core basis
 
 ## 6. Engine
 
-`engine/d_star_rg.py` — **deferred build.** The protocol in §4 is the spec.
-CD doubler + classifier + phase projector + rescaler + fixed-point loop +
-the five fixed-point checks. Inputs: seed, `D`, `ε`. Outputs: `d*_RG`, the
-trajectory, the core bases, `λ'`, the nat ledger.
+`engine/d_star_rg.py` — **v0, runs.** CD doubler + classifier + phase-carrying
+projector + rescaler + fixed-point loop + the checks. Deterministic; 5 seeds;
+17 doubling passes to `d = 2²⁰`. Run under `ValaQuenta/.venv/bin/python3`.
+Output: `engine/d_star_rg_output.txt`.
 
 ---
 
-## 7. The desk-rejection gate
+## 7. Results
+
+| quantity | result |
+|---|---|
+| **dimensional fixed point** | **CONFIRMED** — persistent core = **8** at every pass, every seed, to `d = 2²⁰`. `dim_ratio = 8/d → 0` exact (7.6×10⁻⁶ at `d = 2²⁰`). `.clauderc` provenance's "persist ≡ 8" — now run, not asserted. |
+| **nat budget** (G5) | balanced every pass — `‖core‖² + ‖void‖² = ‖x‖²` asserted, never broke. The projection is a **resummation, not a subtraction**. |
+| **determinism** (G4/G6) | `SHA-256(trajectories)` reproducible: `c68fa38d…` |
+| **numerical `d*_RG`** | **OPEN — and the engine localises the openness.** A naive iteration, with the old↔new coupling carried as a *summary scalar* of the state, flows to the **trivial fixed point** (`relevant_fraction → 1`, `void_coupling → 0`). The non-trivial value needs the coupling evolved by the **actual CD product** — a data structure, not a number. That is the open part, now pinpointed. |
+| `entropy_ratio` limit | 0.6025 ± 0.0540 — the only non-trivial converging observable; within ≈ 1σ of `Ω_ZS = 0.5671`, **not tight**. Logged, not claimed. |
+| self-consistency `d*_RG·ln10 → Ω_ZS` (C7) | **not met** — there is no converged `d*_RG` to test. |
+| approach exponent `λ′` (C-check) | **n/a** — the trivial fixed point is reached instantly; no approach curve to fit. |
+
+**What the engine settles:** the *dimensional* half of `d*_RG` (= 8, exact,
+robust). **What it leaves open:** the *numerical* half (= 0.24631), and it
+says precisely why — a scalar coupling is not enough; the RG needs the whole
+CD product carried through. Consistent with `d*_RG` being an OPEN derivation
+across the framework.
+
+---
+
+## 8. Number-theory framing
+
+The CD doubling is `(ℤ/2)ⁿ` acting by XOR on `2ⁿ` basis indices — the
+permutation ladder of §2. The RG's **relevant sector is the persistent
+octonion**: `e₀` (the real / Telperion axis) plus the seven imaginary
+directions **in no zero-divisor plane**. That is the *"just primes" ground
+state* of the un-sieve made algebraic — the irreducible sector, the part a
+zero-divisor product can never reach. The **void** `= d − 8` is the composite
+sector (everything a ZD product hits), and `void/d → 1` exactly as
+`π(x)/x → 0`: composites swamp primes, primes are the fixed 8.
+
+`d*` is "the boundary below which no algebraic definition can occur" — the
+prime-desert floor. `d*_RG` as this flow's fixed point says: **the smallest
+natural unit is what the doubling cannot decimate — the 8-core.** The number
+`0.24631 = Ω_ZS/ln 10` is the self-consistency target (the Lambert-W entropic
+ceiling); the gap to the *measured* `d*_spec ≈ 0.24600` is the Yang–Mills
+mass-gap analogue `≈ 0.000707`. The engine confirms the 8; it does not close
+the 0.24631 — and neither does anything else in the framework yet.
+
+Windows of order in a bifurcation diagram are Feigenbaum RG fixed points
+(`HyperBifurcation`); `d*_RG` is the Cayley–Dickson analogue — the largest
+bubble of order, the prime sector, floating in the zero-divisor chaos.
+
+---
+
+## 9. CS framing
+
+This is **the renormalization group as a lossless coarse-graining
+algorithm**: block-decimate the CD algebra (`d → 2d`), keep the relevant 8,
+rescale, repeat — and *nothing is dropped*. The per-pass assertion
+`‖core‖² + ‖void‖² = ‖x‖²` is the machine-checkable form of "renormalization
+is the machine, not a move": the projection is an **exact resummation**
+(a pushforward onto the stored 8-core), not a subtraction of a counterterm.
+Lossy compression discards; hand-renormalisation subtracts; this balances the
+ledger.
+
+Cost: `O(d)` per pass, `O(log D)` passes → `O(D)` to reach dimension `D` — a
+**forward-propagating** algorithm (`feedback_forward_propagating_maths`): the
+state is pushed through a fixed map, no search, no gradient sweep; the fixed
+point is where the pushforward stops moving.
+
+The engine's honest failure is itself a CS result: **a scalar coupling flows
+to the trivial fixed point.** The non-trivial `d*_RG` needs the coupling
+carried by the full CD product — a structure, not a number. Same lesson as
+the semantic-hash round trip and the tape argument: the content is in the
+structure you keep, not the scalar you summarise it with. Determinism
+(`SHA-256` of the trajectories, reproducible across machines) makes the flow
+a pure function — the RG is a deterministic dynamical system, byte-for-byte
+replayable (G4/G6).
+
+---
+
+## 10. The desk-rejection gate
 
 | id | reject | test |
 |---|---|---|

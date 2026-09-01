@@ -6,8 +6,18 @@
   "one_line": "The Cayley-Dickson doubling IS the Wilson RG step; its relevant sector is the persistent octonion; its fixed point is d*_RG (dimensionally 8, numerically 0.24631, closed form open). Renormalization is the machine, not a move.",
   "given_not_claimed": "d*_RG = 'The Stability', one of the four canonical faces of d* (Ainulindale README section 8). Existence and role are taken as given; this paper engineers the engine that realizes it.",
   "engine": {
-    "planned": "engine/d_star_rg.py — CD doubler + persistent/void classifier + phase-carrying projector + rescale-by-d*_taut + fixed-point loop + 5 fixed-point checks",
+    "path": "engine/d_star_rg.py — v0, RUNS (deterministic, 5 seeds, 17 doubling passes to d=2^20, ValaQuenta venv). Output engine/d_star_rg_output.txt",
     "reuses": "monad.py::_smul (CD product recursion); Boundary Lever non-ZD index result; project_oblique_gear T6/T7 (the σ=½ saddle, lambda ~ 6)"
+  },
+  "results": {
+    "dimensional_fixed_point": "CONFIRMED -- persistent core = 8 at every pass, every seed, to d=2^20. dim_ratio 8/d -> 0 exact.",
+    "nat_budget_G5": "balanced every pass (||core||^2 + ||void||^2 = ||x||^2 asserted, never broke) -- projection is resummation not subtraction",
+    "determinism_G4_G6": "SHA-256(trajectories) reproducible: c68fa38d...",
+    "numerical_d_star_RG": "OPEN. Naive iteration with a SCALAR coupling flows to the TRIVIAL fixed point (relevant_fraction -> 1, void_coupling -> 0). The non-trivial value needs the coupling evolved by the ACTUAL CD product (a structure, not a number) -- open part localised.",
+    "entropy_ratio_limit": "0.6025 +/- 0.0540 -- only non-trivial converging observable; within ~1 sigma of Omega_ZS = 0.5671, NOT tight. Logged, not claimed.",
+    "self_consistency_C7": "NOT MET -- no converged d*_RG to test d*_RG*ln10 -> Omega_ZS",
+    "approach_exponent": "n/a -- trivial fixed point reached instantly, no approach curve",
+    "framings": "README sections 8 (number theory: relevant sector = persistent octonion = 'just primes' ground state; void/d -> 1 as pi(x)/x -> 0) and 9 (CS: the RG as a lossless coarse-graining algorithm; O(D) forward-propagating; scalar coupling insufficient = the tape lesson)"
   },
   "d_star_faces": {
     "d*":        "The Boundary — sigma=1/2 spectral coordinate — 0.24631",

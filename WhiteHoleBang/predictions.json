@@ -1,0 +1,37 @@
+{
+  "_status": "SKELETON — structural predictions committed 2026-09-01. Quantitative ranges are filled when engine/ is built, before any deciding data is read.",
+  "P1": {
+    "what": "a deconfinement mass exists above the Planck scale  (THE FALSIFIER)",
+    "structural": "M_dec = c^4 / (G^(3/2) * sqrt(B)),  B = MIT bag constant, B^(1/4) in [145, 235] MeV.  M_dec must exceed M_Planck ~ 2.18e-8 kg.",
+    "expect_order": "~1e31 kg, order 10 solar masses; committed band 1-100 M_sun over the B^(1/4) spread",
+    "kills_claim_if": "M_dec < M_Planck, OR the interior reaches stiff-matter (Zel'dovich) density before evaporation removes enough mass to reach M_dec"
+  },
+  "P2": {
+    "what": "energy released by the uncompression",
+    "structural": "E_bang ~ M_dec c^2  minus the gravitational binding already radiated away; order M_dec c^2",
+    "expect_order": "~1e48 J for M_dec ~ 10 M_sun  (~1e4 core-collapse supernovae, in one event)"
+  },
+  "P3": {
+    "what": "relic spectrum shape",
+    "structural": "Planckian (blackbody) after adiabatic expansion by R_final / R_dec; NOT a power law, NOT a line spectrum",
+    "expect": "spectral SHAPE matches the CMB; absolute temperature set by the model-determined expansion factor",
+    "kills_sub_claim_if": "the emergent spectrum is non-thermal"
+  },
+  "P4": {
+    "what": "angular distribution of the Bang radiation",
+    "structural": "anisotropic - collimated along the infall / boundary-crossing axis (the one-way portal)",
+    "expect": "dipole/monopole >~ 0.1, far above the CMB's ~1e-3",
+    "kills_sub_claim_if": "the radiation is isotropic"
+  },
+  "P5": {
+    "what": "the matching boundary is exactly flat",
+    "structural": "the effective curvature invariant (Kretschmann / effective Ricci) crosses zero at the interior/exterior matching surface, and that surface coincides with the photon sphere r = 3 G M_dec / c^2",
+    "expect": "curvature invariant = 0 at the seam; tangent cone at the lemniscate node = two straight lines (the hard cross); pi is the constant of that flat boundary (Ainulindale/wiki/22); conformal boundary sc = 1.0",
+    "kills_sub_claim_if": "the zero-curvature locus and the photon sphere do not coincide in the model"
+  },
+  "P6": {
+    "what": "state of the pocket cosmos one trillion years after the Bang",
+    "structural": "evolve the released de Sitter phase for 1e12 yr; report relic temperature, expansion state, and characteristic structure scale, against the CMB-derived history as the yardstick",
+    "expect": "committed as ranges when the engine runs (step 1)"
+  }
+}

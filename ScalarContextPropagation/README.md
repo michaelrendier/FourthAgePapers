@@ -407,7 +407,7 @@ chained end to end. Status: **ships, verified** — 300/300 exact round
 trips (spelling + full 19D context, recovered from one prime) on a live
 sample of `VAPMIP/PtolC/monad3_c.bin` (notebook 05).
 
-### 6.1 Sources of non-uniqueness — stated precisely
+### 7.1 Sources of non-uniqueness — stated precisely
 
 The combined address is **mostly, not fully, unique**, for two distinct
 and well-understood reasons, neither of which is a hashing defect:

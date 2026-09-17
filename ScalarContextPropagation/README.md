@@ -638,11 +638,10 @@ The box-kite context-hashing method and all code described in this
 paper — `pencil()`, the box-kite combinatorics module, the
 token→γ→pencil pipeline, `spelling_code`, `context_code`, the gamma fold,
 the combined-address construction, and every notebook in `notebooks/` —
-is released under the **GNU General Public License** (GPL; exact version
-to be confirmed before publication — GPLv3 is recommended for
-compatibility with the rest of this project's GNU-licensed engine code).
+is released under the **GNU General Public License, version 3 (GPLv3)**.
 Free to use, study, modify, and redistribute, for research and
-commercial purposes alike, under that license's terms.
+commercial purposes alike, under that license's terms. Full license
+text: `LICENSE` in this directory.
 
 This paper describes an address, not the whole system it is a component
 of. The broader system that address feeds relies on separate

@@ -1,8 +1,10 @@
 # 19 Dimensional Scalar WordNet Context Propagation
 
-**Cody Michael Allison**¹
+**Cody Michael Allison**¹ (Michael Rendier)
 
-¹ Independent researcher. Correspondence: the.wandering.god@gmail.com.
+¹ Independent researcher. Correspondence: the.wandering.god@gmail.com ·
+GitHub: [github.com/michaelrendier](https://github.com/michaelrendier) ·
+ORCID: [0009-0007-7239-6760](https://orcid.org/0009-0007-7239-6760).
 
 **Fourth Age Paper.** One Paper. One Structure. One Engine. One Wiki.
 

@@ -1,5 +1,9 @@
 # Add:Scale:Sign
 
+**Cody Michael Allison** (Michael Rendier) · the.wandering.god@gmail.com ·
+[github.com/michaelrendier](https://github.com/michaelrendier) ·
+ORCID: [0009-0007-7239-6760](https://orcid.org/0009-0007-7239-6760)
+
 **Fourth Age Paper.** One Paper. One Claim. One Engine. One Wiki.
 
 **Status: STUB.** Registered 2026-09-17. Not yet written.

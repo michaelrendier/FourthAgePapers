@@ -6,6 +6,17 @@
 
 ## Active
 
+[ ] AddScaleSign — ADD/SCALE/SIGN as the floor every programming language
+    returns to; programming (language-independent) vs. coding
+    (language-dependent). Registered 2026-09-17. STUB — claim, engine,
+    notebooks all still to be written. See AddScaleSign/README.md.
+
+[ ] TheInterface — L_(I|O) describes a boundary from both sides at once;
+    the circular inside-out inversion already in use elsewhere is one
+    special case of a more general Interface object, shaped by how its
+    two sides interact. Registered 2026-09-17. STUB — claim, engine,
+    notebooks all still to be written. See TheInterface/README.md.
+
 [ ] CMB_PlasmaBoundary — Part 3: H_hat_RB theoretical boundary comparison
     Engine: fractal_flames.py (complete)
     Data: Planck 70GHz SEVEM nside=1024 + WMAP synfast (complete)

@@ -18,7 +18,8 @@ difficulty of recovering interpretable, per-token structure from a
 transformer's internal representations (superposition, polysemantic
 features) is one symptom of a more basic absence: there is no explicit,
 multidimensional, per-word context representation that can be read,
-audited, or composed independently of the weights that produced it. We
+audited, or composed independently of the weights that produced it. With
+the help of Claude-Code as a coding, research and calculation tool; I
 present a fully implemented, deterministic alternative. Each word in the
 Open English WordNet (146,743 synsets) is mapped to a single prime number
 that jointly and losslessly encodes its exact spelling and its full
@@ -173,23 +174,110 @@ proven property of the implemented system, since `Φ(w)` itself is
 
 ## 3. The structure, corrected: read from the edges, not the struts
 
-A **box kite** (de Marrais, 2000) is a 6-vertex octahedron of Assessors
-in sedenion algebra — three struts, eight sails, held together by
-zero-divisor products, carrying an octonion's worth of independent
-structure (8 degrees of freedom). Zero divisors are, in the established
-literature, a *pitfall* of sedenion algebra — the property that breaks
-the division-algebra structure octonions still have (Moreno, 1997/98).
-This paper does not invoke that algebra's general behavior; the 16 basis
-labels are used as a fixed combinatorial index — which pairs of
-placeholder operators vanish against each other, and which don't — not
-as operands closed under open-ended multiplication.
+This section defines two things: the mathematical object (established,
+not this paper's), and one engineering move applied to it (not
+established — first done here). Kept deliberately separate, because they
+have different owners.
 
-The construction here does **not** build a box kite outward from its
-seven strut positions. It goes the other way: fix which box kite —
-its **pencil**, the seven ways to factor one relation into two others,
-pure combinatorics from `PG(3,2)` (§4.2) — and deform the kite's **outer
-edges** under a single scalar, the **wind speed** `w`. The strut
-relationships are then, from that one deformation:
+### 3.1 The box kite, established
+
+Sedenions are a 16-dimensional number system built by doubling the
+complex numbers three times over (ℝ → ℂ → ℍ → 𝕆 → 𝕊 — reals,
+complexes, quaternions, octonions, sedenions). Each doubling costs a
+property: complex numbers lose ordering, quaternions lose commutativity
+(`ab ≠ ba`), octonions lose associativity (`(ab)c ≠ a(bc)`). Sedenions
+lose one more: they are the first level with **zero divisors** — nonzero
+numbers `x` and `y` whose product `xy` is exactly zero, something that
+cannot happen for ordinary reals, complexes, or even octonions. In the
+established literature this is treated as a *defect* to characterize,
+not a feature to use (Moreno, 1997/98, showed the full set of these zero
+divisors forms a continuous shape).
+
+de Marrais (2000) found something sharper underneath that continuous
+shape: the zero divisors are not shapeless — they organize into an
+**exactly enumerable, finite combinatorial structure**. No sampling, no
+statistics, no approximation — a fixed, fully-listable fact about this
+one 16-dimensional number system, the same way a graph's edge list or a
+finite group's multiplication table is a fixed, fully-listable fact.
+Concretely: the 16 basis directions pair up into 42 planes (**Assessors**)
+that contain zero-dividing pairs; the 42 Assessors sort into 7 groups of
+6 (**box kites**, one per **strut**); each group of 6 forms the edge
+graph of an **octahedron** — the same six-vertex, twelve-edge solid as a
+d8 die. The exact object this reduces to is `PSL(2,7)`, a specific,
+well-known group of 168 symmetries (also written `GL(3,2)`, the
+invertible 3×3 grids of 0s and 1s) that is exactly the symmetry group of
+the **Fano plane** — the smallest possible projective plane, 7 points
+and 7 lines, 3 points per line.[^psl27] None of this — the zero-divisor count,
+the 7-octahedra structure, the identification with `PSL(2,7)` — is
+proposed here; it is computed directly from the sedenion multiplication
+table and checked against de Marrais's published counts (verified in
+`ValaQuenta/modules/box_kite/maths.py::verify_counts`).
+
+[^psl27]: The 7 box-kite charts have zero cross-strut edges — mutually
+    disconnected under zero-divisor adjacency, an open question in this
+    project's own earlier notes on whether any group action glues them
+    into one atlas (`ValaQuenta/wiki/box_kite.md`). Checked directly: of
+    the 168 elements of `PSL(2,7)`, exactly 21 preserve the zero-divisor
+    structure (not just the strut labeling) — and that 21-element subset
+    is itself a subgroup, still transitive across all 7 struts. Every
+    pair of charts is joined by a structure-preserving group element; the
+    atlas is connected by group action, not by any edge
+    (`ContextPlease/claude/scratchpad/2026-08-13_apex_path/psl27_strut_action.py`,
+    verified 2026-09-17).
+
+A **pencil**, in the classical, established sense used here, is simply
+*all the lines through one shared point*. Over the Fano plane's 15
+underlying relations, fixing one relation and asking "which pairs of the
+other relations combine to reconstruct it" always has exactly 7 answers
+— a pencil of 7. This too is checked directly, not asserted
+(`ValaQuenta/modules/box_kite/maths.py::pencil`, `verify_pencil_counts`).
+
+### 3.2 The engineering move: what happens if you attach a string?
+
+Everything in §3.1 is established mathematics, decades old. What is not
+established, and belongs to this project alone, is a much simpler
+question asked of it: a box kite is *named* after a real, physical kite
+— so what happens if a piece of that finite combinatorial structure is
+treated as if it really were one, and a string is tied to it?
+
+Suppose it can be. A physical kite string needs an anchor — one fixed
+point that does not move, so that wind passing the kite has something
+to pull *against*, which is what makes a kite fly rather than simply
+blow away. Attach that anchor to a single point of the box-kite
+structure, and immediately there is a problem a physical kite string
+never has: the structure it is anchored to is not one shape but seven
+simultaneous octahedra sharing that structure. A single string attached
+at one point does not reach the rest of the kite by one path — by
+necessity, reaching outward from one anchor into a structure this
+interconnected produces several routes at once, not one. Counting those
+routes precisely is exactly the classical pencil construction from
+§3.1: fixing one point and asking how many ways the rest of the
+structure combines to reach back to it. The answer, here as there, is
+7. Recognizing that count as a textbook pencil — rather than continuing
+to describe it from scratch as "the multiple paths from one point" — is
+the only place established terminology was borrowed in this section;
+the anchoring, the string, and the question that produced the count are
+not from that literature.
+
+With an anchor point identified, wind is a real, physical next question
+for a kite: does tension develop in the string, and does the kite's
+shape deform under that wind, the way a real airfoil does? Testing this
+directly against the finite structure gave a genuinely mixed answer —
+tension on some of the 7 pencil paths and not others, real deformation
+under some conditions and rigidity under others. That mixed result,
+rather than a clean yes or no, is what motivated treating the whole box
+kite as **one object** — a relationship
+snapshot — anchored at an unmoving point, with a single scalar, **wind
+speed**, standing in for however much tension and deformation that wind
+produces. The deformation law that would make **the strut relationships
+reconstructible from that one scalar** is `Φ(w)`, and is the subject of
+§5. Everything about the box kite itself is established; the anchor,
+the wind, and the reduction to one scalar are this paper's contribution.
+
+### 3.3 The collapse
+
+Given the anchor and the wind, the strut relationships are, from the one
+deformation:
 
 - **(A) constructed** — a specific set of strut positions is produced by
   the deformation law for a given `w`;
@@ -232,21 +320,18 @@ within a pencil is the wind speed's job.
 Provenance: `OURS`. Running today: `VAPMIP/monad.py` (`_word_zero_idx`,
 `_gamma_at`), `VAPMIP/monad_bin/SPEC.md §3`.
 
-### 4.2 The pencil: 7 factorisations of one relation
+### 4.2 The pencil, made callable
 
-The 15 points of `PG(3,2)` are the 15 nonzero XOR differences among the
-16 sedenion placeholders. A **pencil** is the 7 ways to factor one of
-them into two others:
+The pencil itself is defined in §3.1; concretely, for the anchor relation
+`1`:
 
     1 = 2⊕3 = 4⊕5 = 6⊕7 = 8⊕9 = 10⊕11 = 12⊕13 = 14⊕15
 
-exactly 7, because `105` incidences (`35` lines `× 3` points) `/ 15`
-points `= 7` lines per point.
-
 Provenance: `ESTABLISHED` (projective geometry) with the *edge* framing
-`OURS`. Status: **ships** — `pencil()`, `ValaQuenta/modules/box_kite/maths.py`,
-built and verified this pass (previously only checked combinatorially,
-with no callable accessor).
+and the anchor-and-string reading of it (§3.2) `OURS`. Status: **ships** —
+`pencil()`, `ValaQuenta/modules/box_kite/maths.py`, built and verified
+this pass. Before this, the pencil was checked only combinatorially, with
+no callable accessor anywhere in the codebase.
 
 ### 4.3 The known scale — WordNet
 
@@ -301,6 +386,38 @@ of the ordered product of the seven pencil-station generators — the
 quantity meant to be conserved along the string, falling out of the
 reconstruction as the check that the result sits on the zero-divisor
 surface.
+
+### 5.1 Earlier evidence: tension, deformability, and lift, measured
+
+The wind-and-tension question in §3.2 was tested once before this
+session, against real address data (`VAPMIP/monad_sedenion_addresses.pkl`,
+3,288 addresses), and documented in
+`VAPMIP/docs/wiki/Tuning-the-Engine/30_wind_lift_and_the_monads_original_gate.md`
+(2026-08-23). Three results from that pass, `THEORETICAL:CALCULATED`,
+carried forward here because they measure the same object `Φ(w)` still
+needs to reconstruct:
+
+- **The anchor, measured as immovable.** `e₀`'s commutator vanishes
+  against all 16 basis directions — total calm at the anchor — while all
+  210 ordered pairs among the 15 imaginary directions have a *nonzero*
+  commutator: full rotational flow the instant anything steps off that
+  one point. A single point of total calm, and full rotational flow
+  everywhere else, is not a gradual boundary; it is exact.
+- **Deformability, genuinely mixed, as anticipated in §3.2.** A wind
+  source built from the box kite's *own* symmetric diagonals gave the
+  same deformed spectrum on three different struts — rigid,
+  non-discriminating. Switching the wind source to three *real*
+  addresses' own energy split gave three genuinely different deformed
+  spectra — elastic. The lesson measured directly: a wind source drawn
+  from the kite's own structure is rigid; one drawn from real, asymmetric
+  content is not.
+- **Lift, tested across all 105 four-cycles on all 7 struts, split three
+  ways**: 53 positive, 31 negative, 21 zero. Not a continuum — a discrete
+  tri-state split, clustering at `±4, ±8, ±16, 0`. This is the same
+  *shape* of result the `Re(Π) ∈ {-1, 0, 1}` measurement below finds
+  again, independently, a session later.
+
+### 5.2 This session: `H = Re(Π)`, measured discrete
 
 **`THEORETICAL:CALCULATED`.** `H` was measured exactly as specified,
 under several explicit conventions for "which generator, what order"
@@ -600,6 +717,13 @@ established results, presented so that it can be run.
 ---
 
 ## 13. Conclusion
+
+Nothing about the box kite itself is new (§3.1) — the zero divisors, the
+7 octahedra, `PSL(2,7)`, the pencil, are de Marrais's and the wider
+literature's. What is new is a much smaller question asked of that
+established object: attach a string to it at one unmoving point, and ask
+what a wind passing through would do (§3.2). That question, not the
+mathematics it was asked of, is this paper's contribution.
 
 A word's context — its position in an explicit, 19-dimensional
 relational graph, together with its co-occurrence behavior — can be

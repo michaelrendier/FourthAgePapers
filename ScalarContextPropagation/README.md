@@ -49,126 +49,92 @@ proven.
 
 ---
 
-## Note on method and attribution
+## 1. The problem
 
-This method was built by direct engineering against the problem, without
-formal training in the mathematical fields it turns out to touch — the
-correspondences to projective geometry, Joukowsky-family transforms, and
-zero-divisor combinatorics documented throughout this paper were found
-*after* the method was built, not used to construct it. The author does
-not claim comparable depth to the originators of that established
-lineage, only that the process tree built here, independently, happens to
-land on structures they had already named. Every established result cited
-below is a **post-hoc isomorphism** — a correspondence discovered by
-checking this method's output against the literature, not a source the
-method was assembled from. The provenance labels used throughout this
-paper (`ESTABLISHED`, `OURS`, `FIRST STATED HERE`, `THEORETICAL`,
-`THEORETICAL:CALCULATED`) exist to keep that distinction auditable
-component by component, rather than asserted once in prose and forgotten.
+A transformer's representation of a word's context is a fixed-length
+array of floating-point numbers — a few thousand `float32`s per token,
+produced by a chain of matrix multiplications and set entirely by
+gradient descent during training. Nothing about that array is
+addressable the way an ordinary data structure is. There is no field you
+can name and read off independently — no `is_a`, no `part_of`, no
+`domain` you could log, assert against in a test, or diff between two
+runs. Every one of those thousands of numbers depends on every other
+one; changing what the vector "means" means retraining, not editing a
+field. It is a value with no schema.
 
-`THEORETICAL` marks a component that is conjectured, designed, or
-partially attempted but not yet reduced to running, verified code.
-`THEORETICAL:CALCULATED` is a stricter sub-label: it marks a
-`THEORETICAL` component for which our own code *has* computed a concrete,
-reportable result — a measurement, a boundary condition, a failed literal
-construction — without that result amounting to the component shipping.
-The distinction matters because a `THEORETICAL:CALCULATED` claim is
-falsifiable and reproducible today, even though the larger construction
-it belongs to is not yet complete.
+This is not a complaint about accuracy — the vectors work, in the sense
+that models trained on them perform well. It is a complaint about
+**engineering interface**: nothing about a token embedding is
+inspectable, versionable, or composable the way a struct, a database
+row, or a hash is. You cannot `grep` it. You cannot write
+`assert context.is_a("mammal")` and have it mean anything. You cannot
+cheaply diff two words' contexts and get back which of a fixed set of
+named relations differ.
 
----
-
-## 1. Introduction
-
-### 1.1 The problem: no multidimensional context per word
-
-A transformer's notion of a word's meaning lives inside a single dense
-vector — the token embedding, refined turn by turn through attention and
-feed-forward layers into a context-dependent representation that is
-learned end-to-end and not decomposed into named, independently
-checkable dimensions. This is closely related to a well-known difficulty
-in interpretability research: individual directions in a model's
-residual stream frequently encode many unrelated concepts at once
-(superposition), and recovering clean, monosemantic, per-token features
-from that representation is itself an active research problem, not a
-solved one. Whatever multidimensional structure a word's context
-*should* have — its taxonomic position, its part-whole relationships,
-its domain, its entailments — is not present as an inspectable object
-anywhere in a standard transformer's forward pass. It is implicit,
-distributed, and only recoverable, if at all, by further learned probes.
-
-### 1.2 The gap this paper addresses
-
-WordNet already names an explicit, human-curated, multidimensional
-relational structure for word meaning — 19 relation types per synset,
-covering hypernymy, meronymy, entailment, domain membership, and more.
-What is missing is not the structure but a **compact, composable
-address** for it: a way to carry a word's full relational signature
-forward through a computation as cheaply as a scalar or a small integer,
-without either (a) re-deriving it from a stored dictionary lookup at
-every step, or (b) collapsing it into an opaque learned vector that loses
-the fact that it has 19 named, independently auditable dimensions at
-all.
-
-### 1.3 Contribution
-
-We present a fully deterministic, non-learned procedure that:
-
-1. Maps a word's spelling alone to a **pencil** — one of a small number of
-   combinatorial classes of a zero-divisor structure called a **box
-   kite** (§3) — via a chain of established number-theoretic primitives
-   (§4.1).
-2. Maps a word's WordNet relational signature (19 relation counts) to a
-   single integer, and that integer to a single real number, by unique
-   factorisation and a bounded fold (§4.3, §7).
-3. Combines the two into **one prime number per word** that recovers both
-   the exact spelling and the full 19-dimensional relational signature,
-   verified exactly on live WordNet data (§7).
-4. States, honestly and separately, the still-open piece: a proposed
-   continuous deformation law, `Φ(w)`, that would reconstruct a box
-   kite's full internal structure from the single scalar alone (§5) —
-   attempted, measured, and reported as not yet complete, rather than
-   asserted.
-
-Every component below carries a provenance label (§0, "Note on method and
-attribution") so that what ships, what is measured-but-open, and what is
-purely conjectured never blur together.
+WordNet already has exactly the schema that's missing — 19 named
+relation types per synset (hypernym, meronym, entailment, domain, and
+the rest), curated by hand, stable across builds. What doesn't exist is
+a way to carry that schema forward *as an address*: something as small
+and portable as a hash or an integer, computed with no training step,
+exactly recoverable back into the 19 named fields it came from. That
+gap — a compact, deterministic, fully-recoverable address for a word's
+WordNet relational record, plus its exact spelling, in one value — is
+what the rest of this paper builds, one piece of code at a time.
 
 ---
 
-## 2. Why this is not the neural-network way
+## 2. Notation, disambiguation, and install
 
-The hypercomplex / geometric-algebra line — quaternion nets; octonion
-CNNs; Clifford Neural Layers (Brandstetter et al., 2022); Parametrized
-Hypercomplex Multiplication (Zhang et al., 2021) — is **materialised
-algebra**: the multiplication table lives in the weights, every product
-is computed explicitly, attention runs over a dense tensor, `O(d²)`–`O(d³)`
-per step. It stores the *generated*.
+### 2.1 Notation
 
-This is **addressed algebra**: one deterministic scalar per token; the
-box-kite relations are an index-structure function of the address,
-reconstructed on demand. It stores the *generating set*.
+Every component described in this paper carries one of five labels,
+applied consistently rather than asserted once in prose and forgotten:
 
-Decomposed against the operation domain (the project's internal
-generational-lineage decomposition, applied here purely as a bookkeeping
-device — see §0 on independent engineering):
+- **`ESTABLISHED`** — mathematics or computer science that predates this
+  project, cited to its source.
+- **`OURS`** — code or a specific design choice built for this project,
+  not published elsewhere.
+- **`FIRST STATED HERE`** — a specific claim or construction, dated, not
+  found stated this way anywhere else the author has checked.
+- **`THEORETICAL`** — designed, or partially attempted, but not yet
+  reduced to running, verified code.
+- **`THEORETICAL:CALCULATED`** — a `THEORETICAL` component for which
+  code has nonetheless computed a concrete, reportable result (a
+  measurement, a boundary condition, a failed literal construction)
+  without the component itself shipping. The distinction matters because
+  a `THEORETICAL:CALCULATED` claim is falsifiable and reproducible
+  today, even though the larger construction it belongs to is not.
 
-| object | tier | tree |
-|---|---|---|
-| the address; the wind speed `w` | 0 | the free identities / the generators |
-| `Φ(w)` — the scalar-gain inflation (**THEORETICAL**, §5) | 1 | oriented, see below |
-| **vector; box-kite chart; the 42 Assessors as a set** | 2 | composite |
-| **chirality; the 19-relation census** | 3 | composite |
+### 2.2 Disambiguation — the code came first
 
-Materialised approaches store tiers 2–3. This method propagates only
-tier 0 and (where `Φ(w)` is complete) regenerates 2–3 on demand: keep the
-generators and the address, drop everything they build, because — for
-the established components — it rebuilds exactly.
+Every piece of code in this paper was built directly against the
+problem in §1, without first consulting the literature it turns out to
+correspond to. Correspondences to established mathematics —
+projective-plane combinatorics, Gödel positional encoding,
+Miller–Rabin primality, sedenion zero-divisor structures — were noticed
+*after* the code already worked, by checking its output against the
+literature, not used to construct the code in the first place. Where a
+mathematical name appears below, it is a label applied after the fact
+for a reader who already knows that name; it played no role in how the
+code was written, and nothing in this paper requires knowing it to
+follow the code. The reverse is stated with the same care: the small
+number of pieces marked `FIRST STATED HERE` are exactly that — not
+found named this way anywhere else the author has checked, not claimed
+as more than that either.
 
-The orientation asserted in `Φ(w)`'s design — separating a magnitude
-channel from an angular one — is stated here as a design choice, not a
-proven property of the implemented system, since `Φ(w)` itself is
-`THEORETICAL` (§5).
+### 2.3 Install
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip3 install -r requirements.txt
+    python3 -c "import nltk; nltk.download('wordnet')"
+
+`requirements.txt` is in this directory and is short (`nltk`, `jupyter`)
+— it installs the same way on Linux, macOS, and Windows. The five
+notebooks under `notebooks/` are the executable form of every result in
+this paper; each runs directly once the venv above is active and this
+repository's sibling repos (`VAPMIP`, `ValaQuenta`) are checked out
+alongside it.
 
 ---
 

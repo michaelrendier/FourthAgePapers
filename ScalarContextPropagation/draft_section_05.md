@@ -99,13 +99,18 @@ calling both lines against `VAPMIP/wordnet_boxkite.py`.
 Position `i`'s prime is fixed regardless of which letter sits there;
 swapping two letters now swaps which *exponent* lands on which *base* —
 no longer a symmetric product, order survives (for words that don't
-reach the wraparound above):
+reach the wraparound above). A trailing `/` on a number below is a
+line-wrap mark only, not part of the value — join the digits across
+the break to get the real integer back; the same convention is used
+everywhere a number this long appears again in this paper:
 
 ```
 'cat'     spelling_code = 2288818359375000
 'act'     spelling_code = 5149841308593750
-'listen'  spelling_code = 77805891137496681806187293144874121384823203125000000000000
-'silent'  spelling_code = 305601935552050069509298342748495166804755637888000000000000
+'listen'  spelling_code = 778058911374966818061872931448741213/
+                          84823203125000000000000
+'silent'  spelling_code = 305601935552050069509298342748495166/
+                          804755637888000000000000
 
 cat == act now?    False
 listen == silent?  False

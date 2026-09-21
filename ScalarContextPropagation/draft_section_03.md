@@ -79,14 +79,21 @@ symbol — is the pencil selector every later section of this paper
 reads off of.
 
 ```python
->>> for w in ["accretion", "pile", "toroidal", "condensate", "narrative", "dissertation"]:
+>>> for w in ["accretion", "pile", "toroidal",
+...           "condensate", "narrative", "dissertation"]:
 ...     trace(w)
-   'accretion'  H=    435952031571538408  next_prime=  7933  idx= 1002  gamma=1439.015472
-        'pile'  H=              69256114  next_prime= 49043  idx= 5042  gamma=5548.516421
-    'toroidal'  H=      5924746544723326  next_prime= 13513  idx= 1601  gamma=2117.754191
-  'condensate'  H=  42756310149759033674  next_prime=  3761  idx=  523  gamma=853.143566
-   'narrative'  H=    522068046232455314  next_prime=  1847  idx=  283  gamma=522.366924
-'dissertation'  H=391207708623858272995283  next_prime= 46919  idx= 4847  gamma=5365.310518
+   'accretion'  H=    435952031571538408  next_prime=  7933  idx= 1002  /
+                gamma=1439.015472
+        'pile'  H=              69256114  next_prime= 49043  idx= 5042  /
+                gamma=5548.516421
+    'toroidal'  H=      5924746544723326  next_prime= 13513  idx= 1601  /
+                gamma=2117.754191
+  'condensate'  H=  42756310149759033674  next_prime=  3761  idx=  523  /
+                gamma=853.143566
+   'narrative'  H=    522068046232455314  next_prime=  1847  idx=  283  /
+                gamma=522.366924
+'dissertation'  H=391207708623858272995283  next_prime= 46919  idx= 4847  /
+                gamma=5365.310518
 ```
 (`notebooks/01_semantic_prime_hashing.ipynb`, cell 3, run live against
 the unmodified function.) Determinism holds — the same word produces the

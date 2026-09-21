@@ -3,7 +3,11 @@
 The executable form of every result in this paper. Not the `repo_appendix`
 generally — this section is the curated path through it: what to run, in
 what order, to reproduce §3 through §11 from nothing but this repository
-and its two sibling repos (`VAPMIP`, `ValaQuenta`).
+and its two sibling repos (`VAPMIP`, `ValaQuenta`). `repo_appendix/README.md`
+is the full index — every mechanism this paper's prose touches, even in
+passing, copied in whole, with one deliberate exclusion (the Two Trees
+engine, §4.1, kept as a pointer into `ValaQuenta`/`VAPMIP` since it's an
+explainer this paper reads, not something this paper builds).
 
 ### 13.1 The notebooks
 

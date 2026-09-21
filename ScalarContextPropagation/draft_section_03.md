@@ -28,6 +28,8 @@ cropped out: this is what "the first attempt at semantic hash" actually
 looked like, the honest starting point before any of the rest of this
 paper existed.
 
+*Shoutout to Max Cohen's computer — Euclid.*
+
 **Figure 3b.** `SpaceClaude/TheExtractor.png` — the first real question
 put to the running system, asked two ways. `ptolemy -h 'what is your
 name'` prints the per-word state table (`z#`, `γ`, `σ=0.5`, `E`,
@@ -55,6 +57,8 @@ def _word_zero_idx(w: str) -> int:
     idx = _prime_pi_table[min(p, _PRIME_CAP + 1)]   # pi(p) -- count of primes <= p
     return max(1, idx)
 ```
+Live, runnable: `notebooks/01_semantic_prime_hashing.ipynb`, cell 3 —
+the same function, unmodified, wrapped for tracing.
 
 Per [`cs-paper-code-conventions`](../../.claude/skills/cs-paper-code-conventions/SKILL.md)
 §1: this is `OURS`, short, and *is* the paper's contribution at this
@@ -93,11 +97,14 @@ idx range: [1, 6543]  distinct buckets used: 6543/6542
 words per bucket: min 1  max 395  mean 53.1
 most-populated buckets: [(3386, 395), (3645, 338), (4523, 310), ...]
 ```
+Live, runnable: `notebooks/01_semantic_prime_hashing.ipynb`, cells 7–8
+(the collision-rate and bucket-distribution pass over the live
+vocabulary).
 
 Read that second number twice: `6543/6542`. Not a typo — the code's own
 count of distinct buckets used *exceeds* the paper's previously-stated
-bucket count. Chased rather than rounded away (`notebooks/01...ipynb`,
-cells 11–13):
+bucket count. Chased rather than rounded away
+(`notebooks/01_semantic_prime_hashing.ipynb`, cells 11–12):
 
 ```python
 >>> print("pi(65536) =", monad._prime_pi_table[65536],
@@ -133,6 +140,7 @@ horner(U+200B) = 8171   horner('v!') = 8171
 ...       f"   idx('v!') = {monad._word_zero_idx('v!')}")
 idx(U+200B) = 1026   idx('v!') = 1026
 ```
+Live, runnable: `notebooks/01_semantic_prime_hashing.ipynb`, cell 10.
 
 `VAPMIP/prime_hash.py` (2026-08-18) names what's actually wrong here — a
 category error, not an off-by-one: whitespace and invisible control
@@ -196,7 +204,7 @@ later, in `wordnet_boxkite.py`'s own in-source history comment: an
 earlier version of that file's collision test checked whether a synset
 and its hypernym produced *small prime gaps* — which, read back later,
 was quietly testing semantic relatedness rather than what was actually
-wanted. Cody's own note, kept in the file rather than edited away: *"twin
+wanted. The author's own note, kept in the file rather than edited away: *"twin
 primes were to illustrate the idea of contextual neighborhood... not
 semantic neighborhood."* What the retest actually turned up: synsets with
 an **exactly identical 19-relation shape** collide on address every

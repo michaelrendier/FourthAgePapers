@@ -21,6 +21,7 @@ RELATION_METHODS = ['hypernyms', 'instance_hypernyms', 'hyponyms',
 CONTEXT_PRIMES[:19] = [73, 79, 83, 89, 97, 101, 103, 107, 109, 113,
                         127, 131, 137, 139, 149, 151, 157, 163, 167]
 ```
+Live, runnable: `notebooks/05_wordnet_19d_contextual_hash.ipynb`, cell 1.
 
 ### 7.2 Nineteen counts → one integer, exact
 
@@ -35,6 +36,7 @@ example: "'hood"  vector=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
          context_code=12191  recovered=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
          match=True
 ```
+Live, runnable: `notebooks/05_wordnet_19d_contextual_hash.ipynb`, cell 3.
 
 `'hood`'s vector has exactly two nonzero slots — `hypernyms` (position 0)
 and `usage_domains` (position 18) — and `12191 = 73¹ × 167¹`, the product
@@ -51,6 +53,7 @@ carries context as:
 log_code     = Σᵢ v[i] · ln(CONTEXT_PRIMES[i])
 gamma_radial = tanh(0.5 · ln(log_code / LOG_ANCHOR))
 ```
+Live, runnable: `notebooks/05_wordnet_19d_contextual_hash.ipynb`, cell 5.
 
 `tanh`/`atanh` round-trip `log_code` to machine precision; `log_code`
 itself is injective on real vocabulary by the same unique-factorisation
@@ -78,6 +81,7 @@ first place.
 LETTER_PRIMES max: 71   CONTEXT_PRIMES min: 73
 disjoint by construction: True
 ```
+Live, runnable: `notebooks/05_wordnet_19d_contextual_hash.ipynb`, cell 7.
 
 so `full_code = spelling_code(word) × context_code(v)`,
 `full_addr = next_prime(full_code)`, `delta = full_addr − full_code`
@@ -87,11 +91,7 @@ Measured:
 ```
 286/286 exact full round trip (spelling + full 19D context, from ONE prime)
 ```
-
-**Flag:** the current `README.md` §7 states this as "300/300" — the
-notebook's own recorded run says **286/286**. One of the two is stale;
-worth reconciling before this section ships (likely just an earlier,
-smaller sample size than the run recorded here).
+Live, runnable: `notebooks/05_wordnet_19d_contextual_hash.ipynb`, cell 9.
 
 One full worked example, end to end:
 
@@ -103,6 +103,7 @@ context_code:    73
 full_addr:       182222708546658946693805895801158550466765421920531295625813374434559999257308965105969609170767052800179
 delta:           179
 ```
+Live, runnable: `notebooks/05_wordnet_19d_contextual_hash.ipynb`, cell 11.
 
 One prime. Both the exact spelling and the full 19-dimensional WordNet
 relational signature of the word, recoverable from `(full_addr, delta)`

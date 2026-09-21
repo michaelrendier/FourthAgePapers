@@ -25,8 +25,9 @@ def naive_phonetic_hash(word: str) -> int:
             prod *= LETTER_PRIME[ch]
     return prod
 ```
+Live, runnable: `notebooks/03_phonetic_prime_hashing.ipynb`, cell 2.
 
-Run against real words (`notebooks/03...ipynb`, cell 2):
+Run against real words:
 
 ```
 'cat'  ->  710
@@ -47,6 +48,7 @@ naive_phonetic_hash('listen') == 1914801911
 naive_phonetic_hash('silent') == 1914801911
 equal: True
 ```
+Live, runnable: `notebooks/03_phonetic_prime_hashing.ipynb`, cell 4.
 
 Every anagram pair in English collides. A prime-per-letter product is an
 excellent hash of the *multiset* of a word's letters and a total failure
@@ -70,6 +72,9 @@ def spelling_code(word: str) -> int:
         code *= p ** exp
     return code
 ```
+Live, runnable: `VAPMIP/wordnet_boxkite.py::spelling_code` (the actual
+shipped function; imported and run directly, not restated, in
+`notebooks/03_phonetic_prime_hashing.ipynb`, cell 6).
 
 The 20 primes are one **per position**, not one per letter — the
 alphabet is not truncated. All 26 letters are fully carried, at every
@@ -87,6 +92,9 @@ distinct 21-letter words, position 0 and position 20 sharing base prime
 >>> spelling_code('b' + 'x'*19 + 'b')   # pos 0='b'(2), pos 20='b'(2) -> 2+2=4 on base 2
 True   # genuine collision — not because a letter is missing, because a position repeated
 ```
+Runnable directly against the shipped `spelling_code` above — a
+constructed worked example, not a stored notebook cell, reproducible by
+calling both lines against `VAPMIP/wordnet_boxkite.py`.
 
 Position `i`'s prime is fixed regardless of which letter sits there;
 swapping two letters now swaps which *exponent* lands on which *base* —
@@ -102,6 +110,7 @@ reach the wraparound above):
 cat == act now?    False
 listen == silent?  False
 ```
+Live, runnable: `notebooks/03_phonetic_prime_hashing.ipynb`, cell 6.
 
 Exact, order-sensitive spelling as a prime, recoverable — position `i`'s
 prime is known in advance, so factoring the code back at each of those
@@ -113,6 +122,7 @@ prime is known in advance, so factoring the code back at each of those
 'windspeed'        -> decoded 'windspeed'        match: True
 'reconstructible'  -> decoded 'reconstructible'  match: True
 ```
+Live, runnable: `notebooks/03_phonetic_prime_hashing.ipynb`, cell 8.
 
 ### 5.3 Measured, not asserted — live 30,000-word sample
 
@@ -123,6 +133,7 @@ words  >20 alpha chars: 432  (position cycle wraps at 20 -> exponents
                               add on the reused prime -> lossy, by
                               construction)
 ```
+Live, runnable: `notebooks/03_phonetic_prime_hashing.ipynb`, cell 10.
 
 The failure mode is exact and predicted, not mysterious: the tier is 20
 primes, cycling. A word over 20 letters reuses a base prime at two

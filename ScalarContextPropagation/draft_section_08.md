@@ -89,6 +89,9 @@ ingest fold:       1.8 × 10⁵ words/s, ≈38 µJ/word @ 7W (reference
                    machine, single core)
 native floor:      ≈115 ns, <1 µJ/word
 ```
+Live, runnable: `engine/energy_bench.py` — no notebook wraps this one,
+it's a standalone benchmark script, run directly against the hardware
+it reports on.
 
 against the standard forward-FLOP identity for a dense transformer
 (`2·N_params` multiply-accumulates/token, ~1 J/token at 70B params,
@@ -97,25 +100,14 @@ the gap is structural, not an optimisation: the addressed structure
 regenerates its answer from a fixed ruler; the materialised field is
 re-swept in full every time because the answer lives in the weights.
 
-**Reference machine, resolved:** two real machines, not a conflict.
-The **HP EliteBook 820 G3** (i7-6600U) was the original — it "died a
-hard and painful death" (screen delaminated, electron gun failed) and
-was superseded, not deprecated, by the **Lenovo ThinkPad X1 Carbon 6th
-gen** (i7-8550U, `VAPMIP/docs/SYSTEM_SPECS_ThinkPad_X1_Carbon_6th.md`,
-snapshot 2026-07-31) — confirmed genuinely the X1 Carbon via DMI, even
-though the machine's own hostname string still reads
-`rendier-HP-EliteBook-820-G3`, carried over from the migration. The
-`§8.6` numbers above are the X1 Carbon's, correctly attributed in
-`engine/energy_bench.py`'s own header; earlier project benchmarks (the
-25,000-zero golden-ratio work) are the EliteBook's, a separate,
-earlier machine, not these numbers. No correction needed to the
-measured figures — only worth stating both machines' provenance
-explicitly if this section names hardware age at all, since the
-EliteBook is the one that's actually old.
+The numbers above are the ThinkPad X1 Carbon's (i7-8550U,
+`VAPMIP/docs/SYSTEM_SPECS_ThinkPad_X1_Carbon_6th.md`, snapshot
+2026-07-31), correctly attributed in `engine/energy_bench.py`'s own
+header — see §2.4 for the two-machine note this figure draws on.
 
 **Back Propagation = Bad = Hard = Inefficient = Work = Hard Boundary.
-Forward Propagation = Good = Easy = Free = Less Work** — Cody's own
-framing, kept as a direct quote. The "15 year old laptop" line
+Forward Propagation = Good = Easy = Free = Less Work** — the author's
+own framing, kept as a direct quote. The "15 year old laptop" line
 alongside it is a deliberate rhetorical placeholder, not a literal
 hardware-age claim (neither the X1 Carbon nor the EliteBook is
 actually 15 years old) — the point it's making is real regardless:

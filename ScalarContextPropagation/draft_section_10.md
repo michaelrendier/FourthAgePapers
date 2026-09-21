@@ -8,8 +8,8 @@ spelling, with no separate WordNet lookup. `context_vector`→`context_code`
 factors back exact on the full 146,743-word store (§7.2). The combined
 `(spelling, context)` address round-trips exact, 286/286, on a live sample
 (§7.4). And read the other direction — the one this paper is actually
-about — **`windspeed` (`gamma_radial`) recovers out of `(full_addr, delta)`
-and the word's own text alone**, dividing out the spelling component
+about — **the Gamma-Radial Windspeed (`gamma_radial`) recovers out of
+`(full_addr, delta)` and the word's own text alone**, dividing out the spelling component
 computed fresh from the letters, with no context stored anywhere except in
 that one scalar (§9.1). That is the proof of concept: the single scalar
 number *does* recreate the exact structure that leads to the 19D context
@@ -35,35 +35,39 @@ reproducible from the notebooks cited throughout.
   process, both corrections kept in the record — genuinely continuous once
   represented in this project's own native coordinates rather than a
   Cartesian or basis-vector-quantized stand-in.
-- A real, non-trivial conservation law (§9.4): `H` exactly conserved along
-  one specific, non-arbitrary path through the pencil, on 3 of 7 struts.
+- A real, non-trivial Noether current (§9.4): `H` exactly conserved,
+  in Emmy Noether's own precise sense — a continuous symmetry of the
+  motion holding the quantity fixed — along one specific, non-arbitrary
+  path through the pencil, on 3 of 7 struts.
 - The cost claim (§8): measured, `10⁴`–`10⁶`× cheaper per query, structural
   not optimisation.
 
 ### What needs work — named honestly, not hidden
 
 - **`Φ_w`, the full deformation law**, is still open. What §9 adds is real
-  progress — the object is continuous, not discrete, and conservation holds
-  on a real subset of struts under a specific ordering — but the complete
-  map from `(H, w)` to all six Assessor coordinates, for every strut, is not
-  built.
-- **Why struts `{1,3,6}` conserve and `{2,4,5,7}` don't** is unresolved.
-  Checked and ruled out the obvious candidate (a Fano-plane line); the real
+  progress — the object is continuous, not discrete, and a Noether current
+  holds on a real subset of struts under a specific ordering — but the
+  complete map from `(H, w)` to all six Assessor coordinates, for every
+  strut, is not built.
+- **Why struts `{1,3,6}` carry that Noether current and `{2,4,5,7}` don't**
+  is unresolved. Checked and ruled out the obvious candidate (a Fano-plane
+  line); the real
   answer likely lives in the pencil's own `(a,b)` pairing structure, not the
   index set, and needs a properly-targeted test this pass didn't finish.
-- **Cody's own sail-pressure-to-strut-angle mechanics** — deformable sails
+- **The author's own sail-pressure-to-strut-angle mechanics** — deformable sails
   fixing two struts' relative position at the crossing — remains unbuilt.
   Everything in §9.3–§9.4 is a spectral/algebraic proxy for that geometry,
   not the geometry itself.
-- **The C port.** The windspeed recovery is exact arithmetic, verified in
-  Python, and has no dependency that would block porting it into `ptol.c`
-  directly — it just hasn't been done yet. Today's live C touchpoint stays
-  at `-M`'s read of the stored vector, not a computed reconstruction.
+- **The C port.** The Gamma-Radial Windspeed recovery is exact arithmetic,
+  verified in Python, and has no dependency that would block porting it
+  into `ptol.c` directly — it just hasn't been done yet. Today's live C
+  touchpoint stays at `-M`'s read of the stored vector, not a computed
+  reconstruction.
 - **The Scale engine's contextual flow**, and the sentence-construction
-  windspeed ("the Newton basin locus contextual flow") this paper
-  deliberately excluded, are both real, both wanted, and both separate,
-  later engineering — not gaps in this paper's own claim, but named here so
-  the boundary is visible. See §11.
+  windspeed (the **A-Matrix Basin Windspeed**) this paper deliberately
+  excluded, are both real, both wanted, and both separate, later
+  engineering — not gaps in this paper's own claim, but named here so the
+  boundary is visible. See §11.
 
 ### The honest shape of it
 
@@ -71,5 +75,6 @@ This paper proves the *address* half of its own claim completely: context
 propagates forward, exactly, from one scalar and a spelling, with nothing
 stored in between. It proves a *real, structured* opening piece of the
 *geometry* half — continuous where earlier passes found (wrongly) discrete,
-conserved on a genuine subset of the structure — without proving the whole
-geometry. That is a true, checkable, and useful place to stop a first paper.
+carrying a genuine Noether current on a subset of the structure — without
+proving the whole geometry. That is a true, checkable, and useful place to
+stop a first paper.

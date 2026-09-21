@@ -103,6 +103,19 @@ to *also* satisfy `lineage_hash.py`'s Fermat-generation-window framing —
 was **wrong**; Cody: "313 was not ever in the planning." Drop that
 connection entirely.
 
+**Restructured, Cody (2026-09-21): §4 split into 5 subsections.** 4.1
+introduces the Two Trees Engine (names only, no wider-scope claim); 4.2
+defines Laurelin as the factors domain, with the Fermat/Riemann
+distinction stated as reported fact ("Fermat defines the primes by
+extinction of every possible factor; Zeta only describes their order of
+arrival") — no claim about 313 itself, that correction above still
+stands; 4.3 defines Telperion as *this paper's* Riemann prime-zeta-zero
+tree (the ≤313 letters that address via π(p)→γ, §3), explicitly not the
+same-named zero-divisor tree used elsewhere in the project (§9–§11); 4.4
+is the original 313 derivation; 4.5 is the composite/factoral-primes
+closing content, unchanged. PDF not regenerated yet — holding per Cody's
+instruction until editing is finished.
+
 **Terminology, now precisely defined and verified exactly (not
 approximately) against `_spf_gpf_tables(100_000)`:** Cody's correction —
 "factoral primes are the ones that contribute to Laurelin. composite
@@ -221,6 +234,11 @@ in the boxkite section later" — so §7 stops at `gamma_radial`/
 output against the current prose README: the notebook's own cell 9 run
 says **286/286** exact combined round trips; `README.md` §7 currently
 states "300/300" — stale, needs reconciling.
+
+**Resolved (2026-09-21):** `README.md`'s three "300/300" mentions
+(§7, §9 notebook table, G1 gate) corrected to **286/286** to match the
+notebook's own recorded run, which is authoritative. §7's `Flag` note
+removed from `draft_section_07.md` now that the two agree.
 
 **`notebooks/05_wordnet_19d_contextual_hash.ipynb` — 13 cells, checked.**
 This is the paper's actual shipped result. `context_vector`→`context_code`

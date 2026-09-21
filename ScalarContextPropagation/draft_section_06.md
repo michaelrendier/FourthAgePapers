@@ -26,6 +26,8 @@ typedef struct {
     float    depth_weight;         /* default 1.0 */
 } BoxKiteEntry;
 ```
+Live, runnable: `VAPMIP/PtolC/boxkite_bin.h` — no notebook wraps this one,
+it's a C header; the actual live struct, not a restatement of it.
 
 `VAPMIP/PtolC/dump_boxkite_bin.c` builds `c_monad_wordnet.bin` from that
 struct — reading WordNet's own `index.noun/verb/adj/adv` files directly
@@ -55,6 +57,8 @@ cm = CombinedMonad(english=<monad.bin state>,
                     phonetic=read_phonetic())
 write_c(cm, path)   # -> monad3_c.bin
 ```
+Live, runnable: `VAPMIP/monad_combine.py` — no notebook wraps this one
+either; the build step itself runs once, at combine time, not per query.
 
 `write_c` takes the **union** of all three sources' vocabularies
 (`sorted(set(eng.words) | set(cm.wordnet) | set(cm.phonetic))`) and emits
@@ -83,12 +87,37 @@ this section by design (§ note above); its role here is just this:
 **the file this section built keeps growing**, it isn't a one-time
 export.
 
+What it grows *into* is worth stating precisely, because it is not a
+larger version of the same table — it is a different kind of structure
+altogether. Every pass of ingestion pushes a word's entry one level
+deeper: from a bare WordNet lookup, to a lookup confirmed by real usage,
+to a fully weighted composite of three separate layers — **context**
+(which other words this one keeps company with), **semantics** (how it
+is actually used, not merely what its dictionary sense claims), and
+**static grammar rules** (the part of its behaviour that doesn't move).
+Each layer is granular, weighted, and kept separately, so a later read
+can ask any one of the three questions independently instead of getting
+one blended number back.
+
+This is not a novel or magical claim about what a vocabulary can hold.
+A person's entire education — everything they were ever taught, read,
+or told, across a lifetime of exchanges with other people and with
+pieces of paper — is stored the same way: as a vocabulary, deepened by
+use, not as a separate ledger kept alongside it. Nobody finds it
+mysterious that a fluent speaker's word choices carry the weight of
+their whole education; that a person who has read widely says things
+differently from one who hasn't, without consulting a separate archive
+of what they've read. `monad3_c.bin`'s deepening is the same storage
+mechanism, applied to the same kind of accumulation, mechanised: what
+has been ingested is not appended somewhere else, it is folded into the
+vocabulary that will be used to speak about it next.
+
 ### 6.5 The update mechanism itself, in C
 
 `notebooks/06.5_monad3c_update_mechanism.ipynb` — a genuine C-kernel
 notebook (`jupyter-c-kernel`, each cell standalone, compiled and run
 with `gcc`, not a Python restatement), covering §6.4's "continuing
-growth" claim at the level Cody asked for: the real update law
+growth" claim at the level asked for: the real update law
 (`monad_learn_ex`'s β-deepening, `prose_seen` ladder, A-matrix 2D
 inverse-distance coupling — `PtolC/monad.c`, real constants from
 `PtolC/ptolemy.h`), and only what the daemon *sends* to trigger it
@@ -106,14 +135,3 @@ flagged rather than fixed:
   only reaches `2`, silently losing the earlier prose sighting — the
   `NS_FT_WORDNET` branch overwrites unconditionally rather than checking
   prior state.
-
----
-
-**Production note (Cody, 2026-09-20):** `boxkite_bin.h`/
-`dump_boxkite_bin.c`/`wntest.c` are native C, and per Cody: "the Monad
-and the Monad Harness [are] strictly C these days" — the Python monads
-(`monad.py`, `rotary_rerun_boxkite_monad.py`) are for testing and CS-
-paper enumeration, not the live system. Notebook 06 should be a genuine
-**C-kernel notebook** (Cling/Clang-style, as done before for other
-notebooks in this project) running this section's actual C, not a Python
-restatement of it.

@@ -1,4 +1,4 @@
-## 9. The Pencil — windspeed, and what it takes to run the box kite today
+## 9. The Pencil — the Gamma-Radial Windspeed, and what it takes to run the box kite today
 
 Scoped deliberately narrow, per the paper's own rule: only what's necessary
 to run the box-kite mechanism as the current monad actually uses it. The
@@ -6,13 +6,18 @@ fuller exploration this pencil work opened up — recorded in full in
 `VAPMIP/Boxkite-Catalog.txt` — is real, substantial, and explicitly **not**
 developed here; it closes the paper as "in development," §11.
 
-### 9.1 The windspeed, finalized
+### 9.1 The Gamma-Radial Windspeed, finalized
 
 Two real candidate windspeeds were tested side by side this pass (weighted-
-operator probe, all 7 struts) before this section could be written honestly.
+operator probe, all 7 struts) before this section could be written
+honestly, and it's worth naming both now, precisely, so neither is ever
+confused for the other again: the **Gamma-Radial Windspeed** and the
+**A-Matrix Basin Windspeed**.
+
 **`gamma_radial`, recovered from a word's own stored address, is the
-windspeed for this paper** — exact, deterministic, needs nothing but the
-word's text and its `(full_addr, delta)`:
+windspeed for this paper — the Gamma-Radial Windspeed** — exact,
+deterministic, needs nothing but the word's text and its `(full_addr,
+delta)`:
 
 ```python
 full_code = full_addr - delta                          # exact, §7
@@ -21,16 +26,19 @@ context_code_recovered = full_code // spelling          # exact integer division
                                                           #   disjoint prime tiers, §7.4
 windspeed = gamma_radial(context_code_recovered)         # the real-valued fold, §7.3
 ```
+Live, runnable:
+`repo_appendix/windspeed_reconstruction/01_windspeed_recovery.py` (§13.4).
 
 Verified live against a real word: `windspeed("tree") = −0.151155`.
 
-The other real candidate — A-matrix basin drift — is **not** this paper's
-windspeed. It needs a live, mutating, corpus-dependent store, which is
-exactly wrong for a claim about forward propagation from an address alone.
-It has a real, separate home: renamed "the Newton basin locus contextual
-flow," it's the windspeed for sentence *construction* — a different,
-later engineering pass (Mind's Eye), out of scope here. One name, two
-genuinely different jobs; kept apart on purpose.
+The other real candidate — the **A-Matrix Basin Windspeed** (A-matrix
+basin drift) — is **not** this paper's windspeed. It needs a live,
+mutating, corpus-dependent store, which is exactly wrong for a claim
+about forward propagation from an address alone. It has a real, separate
+home: the windspeed for sentence *construction* — a different, later
+engineering pass (the Mind's Eye, VAPMIP's short-term-memory subsystem —
+introduced properly in §11), out of scope here. Two names, two genuinely
+different jobs; kept apart on purpose.
 
 ### 9.2 The pencil, attached
 
@@ -41,6 +49,9 @@ box_kite/maths.py`, built and verified this project. For strut 1:
 >>> bk.pencil(1)
 [(2,3), (4,5), (6,7), (8,9), (10,11), (12,13), (14,15)]
 ```
+Live, runnable: `ValaQuenta/modules/box_kite/maths.py::pencil` — no
+notebook wraps this call directly; ValaQuenta is this project's root
+authoritative engine repo, called here exactly as shown.
 
 Each station is a pair of PG(3,2) points XORing to the anchor. This is the
 minimal slice needed here — just enough that a windspeed has something to
@@ -81,26 +92,35 @@ hard way a third time: track *which coordinate frame* (orientation) and
 *how much of the structure, at what resolution* (aperture) a result was
 taken from before trusting it.
 
-### 9.4 `H`, conserved — a real, partial result
+### 9.4 `H`, conserved — a Noether current, a real and partial result
+
+Every quantity this paper calls "conserved" — this one included — is a
+**Noether current** in the precise sense Emmy Noether's 1918 theorem
+establishes: a continuous symmetry of the motion is what holds the
+quantity fixed along it, not a coincidence found by scanning candidates
+until one happened to stay flat. Stated explicitly here, once, because
+it is true of every conservation claim in this paper and should not be
+read as a looser, informal use of the word.
 
 Once the aperture is opened, `H` is not merely continuous — it is **exactly
-conserved** along one specific, non-arbitrary path: each pencil station's
-phase advancing at a rate proportional to its own position in the pencil
-(`φ_k ∝ (k+1)/7`), moving through all seven stations *in pencil order*.
-Checked against three other joint-motion rules (uniform rate, reversed
-order, random per-station rates) — none of them conserve `H`; only the
-pencil's own order does. Not a trivial fact about any coordinated motion —
-a specific one.
+conserved**, a genuine Noether current, along one specific, non-arbitrary
+path: each pencil station's phase advancing at a rate proportional to its
+own position in the pencil (`φ_k ∝ (k+1)/7`), moving through all seven
+stations *in pencil order*. Checked against three other joint-motion rules
+(uniform rate, reversed order, random per-station rates) — none of them
+conserve `H`; only the pencil's own order does, i.e. only that specific
+rate law is the symmetry `H`'s conservation is attached to. Not a trivial
+fact about any coordinated motion — a specific one.
 
 Checked across all 7 struts, and here the honest result is a real, partial
-one, not a closed law: **`H` conserves exactly on struts 1, 3, and 6, and
-drifts on struts 2, 4, 5, and 7** — confirmed against two different
-generator conventions (which endpoint of each station pair is taken
-"first"), so it's a fact about the strut, not an artifact of that choice.
-*Why* those three specifically is open — checked and ruled out that they
-form a closed Fano-plane line (`1⊕3=2`, not `6`) — kept honest as an
-unresolved structural question for the Catalog, §11, not forced to a
-premature answer here.
+one, not a closed law: **`H` conserves exactly, as a Noether current, on
+struts 1, 3, and 6, and drifts on struts 2, 4, 5, and 7** — confirmed
+against two different generator conventions (which endpoint of each
+station pair is taken "first"), so it's a fact about the strut, not an
+artifact of that choice. *Why* those three specifically is open — checked
+and ruled out that they form a closed Fano-plane line (`1⊕3=2`, not `6`)
+— kept honest as an unresolved structural question for the Catalog, §11,
+not forced to a premature answer here.
 
 ### 9.5 The crossing, precisely — `J_2`, not `J_N`
 
@@ -134,8 +154,9 @@ itself is the next, separate step.
 
 ### What this section is not
 
-Not the full sail-pressure-to-strut-angle mechanics Cody's own model
-describes (unbuilt — the spectral checks above are a proxy, not that
-geometry). Not the fuller pathway/portal exploration, the Blackjack
-subgroup, or the `{1,3,6}` question's resolution — all Catalog material,
-named and pointed at, §11, not developed here.
+Not the full sail-pressure-to-strut-angle mechanics the author's own
+model describes (unbuilt — the spectral checks above are a proxy, not
+that geometry). Not the fuller pathway/portal exploration, the Blackjack
+(21-member) subgroup connecting all 7 hyper-boxkite structures, or the
+`{1,3,6}` question's resolution — all Catalog material, named and
+pointed at, §11, not developed here.

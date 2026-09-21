@@ -10,6 +10,11 @@ ORCID: [0009-0007-7239-6760](https://orcid.org/0009-0007-7239-6760).
 
 ---
 
+*To Emmy Noether. I would have none of this work without you.
+Emmy Noether wins.*
+
+---
+
 ## Abstract
 
 Large language models represent a word's context as a single dense
@@ -122,7 +127,38 @@ number of pieces marked `FIRST STATED HERE` are exactly that — not
 found named this way anywhere else the author has checked, not claimed
 as more than that either.
 
-### 2.3 Install
+### 2.3 A production note on C versus Python
+
+`boxkite_bin.h`, `dump_boxkite_bin.c`, and `wntest.c` (§6) are native
+C, and that is a deliberate choice, not an artefact of this paper: the
+Monad and its harness are strictly C in production. The Python monads
+this repository also contains (`monad.py`,
+`rotary_rerun_boxkite_monad.py`) exist for testing and for the
+readability this paper's code blocks need — they are not the live
+system. Where a notebook's job is to demonstrate the system's actual
+behaviour rather than illustrate an idea in a more readable language,
+it is written as a genuine C-kernel notebook (`jupyter-c-kernel`,
+compiled and run with `gcc`) rather than a Python restatement — see
+notebook 06.5.
+
+### 2.4 A note on the two machines
+
+Two real laptops appear in this paper's benchmarks, not one, and not a
+discrepancy. The **HP EliteBook 820 G3** was the original — the machine
+this whole project started on — and it did not retire gracefully: the
+author has described it, more than once, as having "died a hard and
+painful death" (screen delaminated, electron gun failed), after what
+the author put down to several occasions of the machine having "thrown
+itself on the ground off the side of [their] truck." It earned the
+rest it got. The **Lenovo ThinkPad X1 Carbon** (6th gen) is the current
+machine and the one §8's actual cost numbers are measured on; the
+EliteBook's own earlier benchmarks (the 25,000-zero golden-ratio work)
+belong to it alone, not these numbers. One loose end from that
+migration has already been fixed rather than left as a footnote: the
+new machine briefly carried the old one's name in its own shell prompt,
+purely cosmetic, corrected once noticed.
+
+### 2.5 Install
 
     python3 -m venv .venv
     source .venv/bin/activate
@@ -486,7 +522,7 @@ half separately.
 
 Provenance: `OURS` — this specific combination is new to this paper; the
 two halves were each verified independently before, not previously
-chained end to end. Status: **ships, verified** — 300/300 exact round
+chained end to end. Status: **ships, verified** — 286/286 exact round
 trips (spelling + full 19D context, recovered from one prime) on a live
 sample of `VAPMIP/PtolC/monad3_c.bin` (notebook 05).
 
@@ -566,7 +602,7 @@ All five notebooks below are executed against live data, not sketched:
                                                                attempted, measured,
                                                                reported open
     notebooks/05_wordnet_19d_contextual_hash.ipynb            the combined address,
-                                                               §7, 300/300 exact
+                                                               §7, 286/286 exact
 
 `construction.json` is the machine-readable component manifest matching
 §8.
@@ -605,7 +641,7 @@ pre-empting one likely rejection, with current status marked.
 
 **G1 — "Lossless of what? Show a bit-exact round trip on real data."**
 **Passed**, for the arithmetic layers: `context_code → factor → v` and
-the combined address are 100.000% and 300/300 exact respectively on live
+the combined address are 100.000% and 286/286 exact respectively on live
 data (§7, §12). The `Φ(w) → assessor coordinates` half is `THEORETICAL`
 and not yet dischargeable.
 

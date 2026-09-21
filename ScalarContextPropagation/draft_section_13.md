@@ -86,7 +86,10 @@ Live, runnable: `PtolC/ptol.c`, the `-M` flag directly.
 
 ### 13.4 The Gamma-Radial Windspeed recovery, exact
 
-`VAPMIP/wordnet_boxkite.py` + `repo_appendix/windspeed_reconstruction/01_windspeed_recovery.py`:
+```
+VAPMIP/wordnet_boxkite.py
+repo_appendix/windspeed_reconstruction/01_windspeed_recovery.py
+```
 
 ```python
 full_code = full_addr - delta
@@ -96,7 +99,13 @@ log_code = sum(v[i] * math.log(CONTEXT_PRIMES[i]) for i in range(19))
 gamma_radial = math.tanh(0.5 * math.log(log_code / LOG_ANCHOR))
 ```
 Live, runnable: `repo_appendix/windspeed_reconstruction/01_windspeed_recovery.py`
-directly.
+directly, or the shipped function itself, `wordnet_boxkite.gamma_radial()`
+/ `recover_gamma_radial()` (promoted out of the notebook into the real
+module this pass, 2026-09-21 — it only ever lived in a notebook cell
+before). Also live in C now: `monad3_gamma_radial()`,
+`PtolC/ptol.c`, exposed via `ptol -M <word>` and `ptol -say <prompt>`
+(§9.6, §10) — checked against this exact Python function's own output
+before anything was built on it.
 
 ### 13.5 The box kite itself
 

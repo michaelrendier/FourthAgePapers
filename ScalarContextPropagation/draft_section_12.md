@@ -50,7 +50,9 @@ no role in how the code was written.
   trip.
 - **Gamma-Radial Windspeed recovery**
   (`(full_addr,delta,spelling)→gamma_radial`) — **OURS**,
-  `FIRST STATED HERE` 2026-09-20 — verified, not yet in `ptol.c`.
+  `FIRST STATED HERE` 2026-09-20 — verified in Python and, as of
+  2026-09-21, ported into and verified in `ptol.c` (`-M`, `-say`); not
+  yet wired into `-w`'s live interactive console (§9.6).
 - **the box kite** — 42 Assessors, 7 octahedra, `PSL(2,7)` —
   **ESTABLISHED**, de Marrais (2000) — cited, not re-derived.
 - **the pencil** — 7 factorisations of one relation — **ESTABLISHED**,

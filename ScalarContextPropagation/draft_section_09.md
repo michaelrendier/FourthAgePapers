@@ -143,17 +143,33 @@ such symmetry would not.
 
 ### 9.6 What runs today, in the current monad
 
-Honest status, not aspirational: the windspeed recovery (§9.1) is exact
-arithmetic, verified in Python, portable to C directly — not yet ported.
-What genuinely runs in `ptol.c` today is narrower: `monad3_lookup()` mmaps
-`monad3_c.bin` and reads a word's real 19-dimensional relation vector
-straight out of the packed store by raw pointer arithmetic (`-M`,
-byte-exact against `boxkite_bin.h`, §6) — the box-kite object is real and
-live in the C binary, but the windspeed-driven deformation this section
-derives is Python-verified `THEORETICAL:CALCULATED`, not yet the thing
-`ptol.c` runs. Stated plainly rather than implied otherwise: this section's
-centerpiece is the *mechanism*, checked and ready to port; the porting
-itself is the next, separate step.
+Honest status, not aspirational, updated since the recovery was first
+written up: the windspeed recovery (§9.1) **is now ported into `ptol.c`**
+(`monad3_gamma_radial()`, 2026-09-21), checked against this paper's own
+recorded value before anything was built on it —
+`windspeed("tree") = -0.151155` in both Python and C, to 6 decimal
+places. `monad3_lookup()` mmaps `monad3_c.bin` and reads a word's real
+19-dimensional relation vector straight out of the packed store by raw
+pointer arithmetic (`-M`, byte-exact against `boxkite_bin.h`, §6); `-M`
+and `-say` now also print that word's real, live Gamma-Radial Windspeed
+alongside it — `ptol -M tree` and `ptol -say "the engine runs"` are both
+real, scriptable, offline-testable entry points today, not a plan.
+
+What is still exactly where it was: the **windspeed-driven deformation**
+this section derives — `Φ_w`, the pencil/strut-angle geometry actually
+moving in response to the windspeed — remains Python-verified
+`THEORETICAL:CALCULATED` in neither language; §9.3–§9.4 measure a
+spectral proxy for it, not the mechanics, and that hasn't changed. And
+one further honest boundary, drawn on purpose rather than blurred: the
+new C computation is wired into `-M`/`-say`, both offline/scriptable, but
+**not yet into `-w`'s live interactive console** — `console_speak()` now
+computes the report, but `mh_send_chat`'s wire protocol to the curses UI
+is untouched this pass, since that is the one recently-verified live
+interactive path and extending it needs its own tested pass, not a
+same-sitting add-on. Stated plainly rather than implied otherwise: the
+*recovery* is real, checked, and in C now; the *deformation* is not; the
+*live console display* of the recovery is computed but not yet visible
+to someone actually sitting at `-w`.
 
 ### What this section is not
 

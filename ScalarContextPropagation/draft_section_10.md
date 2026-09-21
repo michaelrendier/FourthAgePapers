@@ -58,11 +58,16 @@ reproducible from the notebooks cited throughout.
   fixing two struts' relative position at the crossing — remains unbuilt.
   Everything in §9.3–§9.4 is a spectral/algebraic proxy for that geometry,
   not the geometry itself.
-- **The C port.** The Gamma-Radial Windspeed recovery is exact arithmetic,
-  verified in Python, and has no dependency that would block porting it
-  into `ptol.c` directly — it just hasn't been done yet. Today's live C
-  touchpoint stays at `-M`'s read of the stored vector, not a computed
-  reconstruction.
+- **The C port — done, one piece short.** The Gamma-Radial Windspeed
+  recovery is now ported into `ptol.c` (`monad3_gamma_radial()`,
+  2026-09-21), checked against this paper's own recorded value first
+  (`windspeed("tree") = -0.151155`, both languages, to 6 decimal
+  places), and live via `-M`/`-say` — both real, scriptable, offline
+  entry points. What's still open is narrower than "the port": wiring
+  that same computation into `-w`'s live interactive console
+  (`mh_send_chat`'s wire protocol to the curses UI) — computed today,
+  not yet transmitted, left for its own tested pass rather than
+  extended in the same sitting as the port itself (§9.6).
 - **The Scale engine's contextual flow**, and the sentence-construction
   windspeed (the **A-Matrix Basin Windspeed**) this paper deliberately
   excluded, are both real, both wanted, and both separate, later

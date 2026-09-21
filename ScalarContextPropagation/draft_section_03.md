@@ -69,8 +69,14 @@ a word's spelling into one integer; a sieve of Eratosthenes, run once at
 import, supplies both a fast `next_prime` and a precomputed `π` table
 (count of primes ≤ *k*, for every *k* up to 65536); composing them sends
 a word to **which of up to 6,543 non-trivial Riemann zeros indexes its
-address** — the pencil selector every later section of this paper reads
-off of.
+address**. (The non-trivial zeros of the Riemann zeta function are a
+fixed, established, precomputable sequence of real numbers, indexed
+1, 2, 3, ...; nothing in this paper depends on why they're
+mathematically significant, only that they're a real, ordered,
+infinite, freely-computable sequence to index into — a fact table, not
+a proof step.) That index — call it `γ` from here on, its usual
+symbol — is the pencil selector every later section of this paper
+reads off of.
 
 ```python
 >>> for w in ["accretion", "pile", "toroidal", "condensate", "narrative", "dissertation"]:

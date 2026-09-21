@@ -25,12 +25,14 @@ features) is one symptom of a more basic absence: there is no explicit,
 multidimensional, per-word context representation that can be read,
 audited, or composed independently of the weights that produced it. With
 the help of Claude-Code as a coding, research and calculation tool; I
-present a fully implemented, deterministic alternative. Each word in the
-Open English WordNet (146,743 synsets) is mapped to a single prime number
-that jointly and losslessly encodes its exact spelling and its full
-19-dimensional WordNet relational signature — hypernymy, meronymy, and
-the sixteen other relation types WordNet defines — with no learned
-parameters and no training step. The encoding is recovered exactly from
+present a fully implemented, deterministic alternative. Each word-sense
+in the Open English WordNet (146,743 *synsets* — WordNet's own term for
+a set of words interchangeable in one specific meaning, e.g. `{car,
+automobile}`) is mapped to a single prime number that jointly and
+losslessly encodes its exact spelling and its full 19-dimensional
+WordNet relational signature — hypernymy, meronymy, and the sixteen
+other relation types WordNet defines — with no learned parameters and
+no training step. The encoding is recovered exactly from
 the prime: 146,743/146,743 synsets round-trip exact (100.000%) against
 the current build, with one deliberate, quantified lossy step affecting
 1.1% of individual relation counts. The method was engineered
@@ -158,7 +160,60 @@ migration has already been fixed rather than left as a footnote: the
 new machine briefly carried the old one's name in its own shell prompt,
 purely cosmetic, corrected once noticed.
 
-### 2.5 Install
+### 2.5 The objects this paper uses, defined plainly
+
+This paper assumes no prior familiarity with WordNet's own vocabulary,
+or with the sedenion/box-kite structure §9–§11 generalize to. Defined
+here, once, in plain terms, so nothing later has to stop and explain
+itself:
+
+- **Synset.** WordNet's basic unit: a set of words interchangeable in
+  one specific meaning — `{car, automobile}` is one synset, distinct
+  from `{car, railcar}` (a train carriage). This build has 146,743 of
+  them; every "word" this paper addresses is, more precisely, one
+  synset.
+- **Sedenion.** A 16-dimensional extension of the real numbers, built by
+  the same doubling procedure (the Cayley–Dickson construction) that
+  turns the reals into complex numbers (2D), then quaternions (4D), then
+  octonions (8D), then sedenions (16D). Each doubling trades away an
+  algebraic guarantee; sedenions are the first step in that chain where
+  ordinary multiplication stops being fully reliable, in the specific
+  sense below.
+- **Zero divisor.** A nonzero number that can be multiplied by some
+  other nonzero number to get exactly zero — impossible for ordinary
+  real or complex numbers, but a real, structural feature of sedenions.
+  Sedenions contain many of them, in a specific, countable combinatorial
+  pattern, not scattered randomly.
+- **Box kite.** The name (de Marrais, 2000) for that pattern: the
+  sedenions' zero divisors organize into 7 interlocking octahedra
+  (**struts**, one per octahedron) sharing 42 specific zero-divisor
+  pairs (**Assessors**) between them — established mathematics this
+  paper builds on, not something it derives. "Box kite" names the shape
+  the whole arrangement makes; this paper reads one small, specific fact
+  off of it (§9) without re-deriving the rest.
+- **Pencil.** One strut's own internal structure: its zero-divisor pairs
+  factor into 7 stations, each a pair of points from a much smaller
+  discrete geometry, **PG(3,2)** (15 points total — a "projective space"
+  built over a 2-element number system instead of the reals) —
+  established combinatorics, used directly in §9.
+- **Involution.** A function that undoes itself: applying it twice
+  returns the original input exactly (§9.5 uses this precisely, to
+  distinguish two different symmetries this project has on record).
+- **The Generational Lineage engine.** A general-purpose tool (a
+  separate, GNU/GPL-licensed repository, `GenerationalLineage`), used in
+  §4 for one specific job — finding exactly where a sieve of primes
+  stops needing new primes to strike composites with — but built to do
+  something broader: given any large countable domain, it sorts every
+  member into "cannot be built from anything smaller in this domain"
+  (that domain's own primes, in the general sense) versus "built up from
+  those," and tracks the generation-by-generation history of how each
+  composite one was assembled. That is a useful lens on a lot of
+  higher-dimensional mathematics well beyond this paper's own use of it.
+  The engine is free to install and run standalone today (a proper
+  install script is planned; for now it's a venv and the repository,
+  same shape as this paper's own install, §2.6).
+
+### 2.6 Install
 
     python3 -m venv .venv
     source .venv/bin/activate

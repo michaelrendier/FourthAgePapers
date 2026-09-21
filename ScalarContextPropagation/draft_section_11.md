@@ -15,11 +15,13 @@ four-cycles); portal/transition dynamics (confirmed discrete, not
 continuous, two independent ways); the connectivity of all seven charts at
 exactly `e₀`/`e₈`; and the group that ties it together —
 
-**The Blackjack subgroup.** The 21-element subgroup of `PSL(2,7)` that
-preserves zero-divisor structure while staying transitive across all seven
-struts (`2026-08-13_apex_path/psl27_strut_action.py`, verified
-2026-09-17). Named here for the first time as such; the atlas of seven
-charts is connected by this group action, not by any edge.
+**The Blackjack subgroup.** `PSL(2,7)` is a specific, well-known finite
+group of 168 symmetries (the automorphisms of the Fano plane, §9.4). The
+Blackjack subgroup is the 21-element subgroup of it that preserves
+zero-divisor structure while staying transitive across all seven struts
+(`2026-08-13_apex_path/psl27_strut_action.py`, verified 2026-09-17).
+Named here for the first time as such; the atlas of seven charts is
+connected by this group action, not by any edge.
 
 ### The Pencil's own open questions
 

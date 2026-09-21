@@ -118,9 +118,12 @@ struts 1, 3, and 6, and drifts on struts 2, 4, 5, and 7** — confirmed
 against two different generator conventions (which endpoint of each
 station pair is taken "first"), so it's a fact about the strut, not an
 artifact of that choice. *Why* those three specifically is open — checked
-and ruled out that they form a closed Fano-plane line (`1⊕3=2`, not `6`)
-— kept honest as an unresolved structural question for the Catalog, §11,
-not forced to a premature answer here.
+and ruled out that they form a closed Fano-plane line — the Fano plane
+is the smallest possible projective geometry, 7 points and 7 lines,
+3 points per line, the same small structure the 7 struts themselves are
+already indexed by — checked directly (`1⊕3=2`, not `6`) and ruled out
+as the explanation. Kept honest as an unresolved structural question for
+the Catalog, §11, not forced to a premature answer here.
 
 ### 9.5 The crossing, precisely — `J_2`, not `J_N`
 

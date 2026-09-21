@@ -4,12 +4,13 @@
 
 Two names recur through this section: **Laurelin** and **Telperion**.
 They are not this paper's invention — they name a general-purpose
-component (`GenerationalLineage`'s Two Trees engine) already used
-elsewhere in this project to split a domain of primes into two disjoint
-sub-domains and track what crosses between them. Nothing in this section
-depends on that engine's wider scope; the two names are used here purely
-as fixed labels for the two domains §4.4 derives, so that later sections
-(and this paper's own code) have one word each instead of a clause.
+component (`GenerationalLineage`'s Two Trees engine, defined plainly in
+§2.5) already used elsewhere in this project to split a domain of primes
+into two disjoint sub-domains and track what crosses between them.
+Nothing in this section depends on that engine's wider scope; the two
+names are used here purely as fixed labels for the two domains §4.4
+derives, so that later sections (and this paper's own code) have one
+word each instead of a clause.
 
 Live, runnable: this paper's own
 `notebooks/02_the_313_sieve_and_49999_unsieve.ipynb` demonstrates the

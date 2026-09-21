@@ -21,6 +21,18 @@ notebook per engine, `VAPMIP/notebooks/`), is
 Two Trees engine at a depth this paper doesn't need and isn't developed
 here; named only as a pointer.
 
+Worth stating plainly why Tolkien's vocabulary is used for this at all,
+rather than left as unexplained flavour: the author's own reason is that
+Tolkien's Ainulindalë — the creation account in his legendarium — reads
+as a language-structural-constant calibration check, told the same way
+regardless of which of Tolkien's own constructed languages is telling
+it. That property — one invariant, checkable for reading the same across
+otherwise-independent representations — is the actual design principle
+behind a real structural constant the author engineered elsewhere in
+this project, out of scope here and not developed further in this
+paper. The names are kept because that analogy is load-bearing to that
+other design, not for atmosphere.
+
 ### 4.2 Laurelin — the factors domain
 
 A prime is, by the classical sieve reading, exactly what survives
@@ -53,12 +65,37 @@ non-trivial Riemann zeta zero. Telperion's domain, in this paper, is the
 alphabet whose addresses *are* Riemann zeros. That is what "Riemann
 prime-zeta-zero tree" means here, concretely, not evocatively.
 
-This is a different object from a same-named "zero divisor tree" used
-elsewhere in this project (the sedenion zero-divisor / box-kite
-machinery this paper mentions only briefly, in §9–§11). The two share a
-name and nothing else — no code path, no data, no domain overlap — and
-are not to be conflated; this paper's Telperion is the ≤313 letter
-alphabet, full stop.
+That is this paper's own, local, narrow reading of the name — worth
+distinguishing clearly from the fuller object Telperion names elsewhere
+in this project, so a reader who goes looking finds a consistent
+picture rather than a collision. Stated once, plainly, without
+developing it further here: elsewhere, **Telperion is the Prime Number
+Tree** — the Cayley–Dickson tower read top to bottom, with the primes as
+the leaves that survive every level intact and the composites as the
+ones that fall. Its spectral nodes are **the Riemann zeros**, read as a
+**Zeta Zero Lattice** — a genuine lattice (an ordered, countable,
+indexable structure) built from a sequence of numbers that are each
+individually continuous-valued, not integers; the "lattice" is in how
+the sequence is used and indexed, not a claim that the zeros themselves
+are discrete. That object is a conjugate pair with Laurelin, the same
+partition this paper's own §4.2/§4.5 draws locally, just at the scale of
+the whole Cayley–Dickson tower rather than one sieve boundary. It is
+built and run as its own engine in `ValaQuenta/zero_lattice.py`
+(`ZLNode`; the same file computes both the tree and the 42-class
+zero-divisor lattice, §9's box kite among them) and fleshed out far more
+fully in a dedicated repository,
+[`AbrikosovTree`](https://github.com/michaelrendier/AbrikosovTree) — the
+Riemann zeros there are identified with an Abrikosov vortex lattice (the
+2003 Nobel-winning superconductor structure), the primes with the
+un-extinctable condensate they pin. Worth naming honestly rather than
+quietly resolved: testing elsewhere in this project has suggested — not
+re-verified in this paper, not developed here — that the zero-divisor
+lattice this paper's own §9 later uses may actually *contain* this same
+Telperion as a substructure, which would make "different object, no
+overlap" too strong a claim; that relationship is a real, open thread
+for the Catalog (§11), not settled either way here. This paper's own
+Telperion — the ≤313 letter alphabet — is the one narrow, local slice of
+all of that this section actually needs.
 
 ### 4.4 The boundary itself
 
@@ -132,9 +169,26 @@ spelling can be hashed into primes in an orderly way, mostly collision-
 independent rather than colliding by accident — which is exactly where
 §5 picks up.
 
-Reported for completeness, not developed further: the mirror question
-(when does a composite's *largest* prime factor finish switching new
-composites on) doesn't resolve until 49999 — a genuinely different,
-much larger number, left here as one honest line for whichever number
-theorist or physicist wants to run with it, not part of this paper's
-argument.
+Reported for completeness, not developed further, but defined properly
+rather than waved at: **the sieve run forward, extinction-first, is not
+the same process as its construction-side counterpart, recursive
+sieving** — not "the sieve undone in reverse order," a real, separate
+pathway. Recursive sieving starts from the true ground state, *just the
+primes, nothing built yet*, and turns primes on one at a time in
+ascending order; a composite is **born** — enters the construction — the
+moment its *largest* needed prime factor is switched on, not its
+smallest, because every one of its factors has to be available before it
+can exist as their product, and the biggest one is necessarily the last
+to arrive. That boundary — when the last composite finishes being born —
+doesn't resolve until 49999, not 313: a genuinely different, much larger
+number, because birth-order and death-order are not mirror images of the
+same statistics. Measured directly, not assumed: the birth-order
+histogram carries roughly four times the entropy of the death-order one
+(`+7.19` bits, engine
+`GenerationalLineage/engine/lineage.py::un_sieve`) — extinguishing a
+composite is cheap (its smallest factor alone convicts it), constructing
+one is expensive (every factor has to show up), and that cost asymmetry
+is a real, intrinsic fact about the domain, not an artefact of which
+direction the sieve is read in. Left here as one honest, properly
+defined line for whichever number theorist or physicist wants to run
+with it, not part of this paper's own argument.

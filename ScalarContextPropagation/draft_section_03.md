@@ -226,4 +226,4 @@ building on the second. Everything from §9 onward (the pencil, the box
 kite, the WordNet relational vector) exists because that density was
 followed rather than argued with. That's the sense in which this section
 is a foothold, not a result: it's the on-ramp, not the destination — "the
-entrance to the freeway" of getting the maths to speak English.
+entrance to the freeway" of Teaching the Maths how to speak English.

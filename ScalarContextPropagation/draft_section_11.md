@@ -27,12 +27,41 @@ connected by this group action, not by any edge.
 
 Why `H`'s Noether current conserves on struts `{1,3,6}` and not
 `{2,4,5,7}` (§9.4/§10) — the most immediate open thread from this paper's
-own work, likely resolved in the pencil's `(a,b)` pairing structure rather
-than the strut index. And the
-deformation law itself, `Φ_w` — the author's own model: deformable sails
-connecting to the ends of the struts deform in a constant way, placing pairs
-of struts in a fixed relationship to one another at the crossing. Not yet
-built; §9.3–§9.4 measure a spectral proxy for it, not the mechanics.
+own work. A candidate structural answer, found this session (2026-09-21)
+and properly caveated, not yet a resolution: on `{1,3,6}`, `Im(Π)` stays
+**exactly zero** through the whole continuous sweep — not just `H`, the
+entire pencil product never leaves the real axis. On `{2,4,5,7}`,
+`|Im(Π)|` genuinely grows from `0` toward `1` as the sweep advances — the
+product is visibly *ascending* out of the reals into the full sedenion,
+norm-preserving the whole way (`|Π|=1` holds exactly on every strut,
+already established). Worth being exact about what part of this is new:
+since `Re(Π)² + |Im(Π)|² = |Π|² = 1`, `H` pinned at `±1` *forces*
+`|Im(Π)|=0` algebraically — that part is a direct consequence of the
+original result, not independent evidence. What's genuinely new is the
+qualitative shape it gives the two strut sets: `{1,3,6}` sit at a fixed
+real endpoint, already arrived and staying there; `{2,4,5,7}` are struts
+where the ascent from real to sedenion is actually still in progress.
+Read against this project's own real/sedenion current-directionality —
+the ordinary Noether current runs real→sedenion; the *Noether
+Information Current* (a separate, distinct, `CONJECTURE`-tier
+construction, `ValaQuenta/modules/noether_information/`, not the same
+object as `J_blue`) is framed elsewhere in this project as running the
+opposite way, sedenion→real, information propagating backward — `{1,3,6}`
+reads as the destination of an already-completed descent, `{2,4,5,7}` as
+the current still climbing. Still not a proof: this characterizes the
+*shape* of the split once observed, it does not yet derive why `{1,3,6}`
+specifically, over any other pinned-triple. One route checked and ruled
+out along the way: whether `J_red`/`J_blue`'s own Dirichlet-series
+difference (`ValaQuenta/code/hypercomplex_zeta.py`) tracked the same
+split — it can't, for any input, struts or otherwise: that module's
+`j_red`/`j_blue` differ only in the order terms are summed, and vector
+addition is always commutative, so the two come out numerically identical
+by construction — a real, previously undocumented design gap in that
+module, not a finding about the box kite. And the deformation law
+itself, `Φ_w` — the author's own model: deformable sails connecting to
+the ends of the struts deform in a constant way, placing pairs of struts
+in a fixed relationship to one another at the crossing. Not yet built;
+§9.3–§9.4 measure a spectral proxy for it, not the mechanics.
 
 ### The Mind's Eye, and Paper's Hands, named properly
 

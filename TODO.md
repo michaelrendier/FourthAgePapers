@@ -6,6 +6,18 @@
 
 ## Active
 
+[ ] EventHorizonCrossingSimulation — 0_RB (e0/e8, the already-verified
+    fixed anchor) + L_(I|O) (TheInterface's crossing operator) used to
+    build a real 3D (SCAD geometry, Blender render) simulation of a
+    horizon crossing into a gravastar's de Sitter interior, Israel-
+    junction-matched to the Schwarzschild exterior, with separate
+    external/local-proper-frame render modes for the equivalence-
+    principle "no drama" requirement. GPU-bound (per-pixel geodesic ray
+    tracing, cf. Interstellar's published methodology) — a Google Colab
+    project, later. Registered 2026-09-24. STUB — physics/build
+    requirements written, nothing built. See
+    EventHorizonCrossingSimulation/README.md.
+
 [ ] CMB_PlasmaBoundary — Part 3: H_hat_RB theoretical boundary comparison
     Engine: fractal_flames.py (complete)
     Data: Planck 70GHz SEVEM nside=1024 + WMAP synfast (complete)

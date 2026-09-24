@@ -6,28 +6,12 @@
 
 ## Active
 
-[ ] TheInterface — L_(I|O) describes a boundary from both sides at once;
-    the circular inside-out inversion already in use elsewhere is one
-    special case of a more general Interface object, shaped by how its
-    two sides interact. Registered 2026-09-17. STUB — claim, engine,
-    notebooks all still to be written. See TheInterface/README.md.
-
-[ ] FastInverse — the costly (ascent) direction of an otherwise-hard
-    operation has one recurring shape, checked in three unrelated
-    structures (digit-multiplication carry, RSA/Wiener, Smith chart
-    Gamma's source-sink field): it collapses to free exactly when the
-    object's own representation already encodes the answer, in a
-    nameable regime. Derivation out of the 2026-09-21 gauge-field
-    experiment (.claude/scratchpad/2026-09-21_smith_apollonian_uft_probe/
-    — Gamma's Schwarzian derivative exactly zero, no classical gauge
-    curvature; the gasket's curvature ladder discrete, not a Mexican-hat
-    potential well — both readings tested negative, and the harmonic
-    source-sink structure found in their place is this paper's actual
-    claim). Registered 2026-09-21. STUB — claim, engine, notebooks all
-    still to be written. See FastInverse/README.md. NOTE: its own scope
-    note cross-links AddScaleSign, which lives on the add-scale-sign
-    branch, not here — that link won't resolve on main until/unless
-    AddScaleSign lands here too.
+[ ] AddScaleSign — ADD/SCALE/SIGN as the floor every programming language
+    returns to; programming (language-independent) vs. coding
+    (language-dependent). Registered 2026-09-17. STUB — claim, engine,
+    notebooks all still to be written. See AddScaleSign/README.md.
+    In-progress work large enough to warrant its own branch, per the
+    refined FourthAgePapers branch policy — lives here, not on main.
 
 [ ] CMB_PlasmaBoundary — Part 3: H_hat_RB theoretical boundary comparison
     Engine: fractal_flames.py (complete)

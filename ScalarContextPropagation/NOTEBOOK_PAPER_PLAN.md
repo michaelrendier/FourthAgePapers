@@ -419,6 +419,20 @@ same discipline as this project's forward-propagating-maths rule — never
 reconstruct backward from what was perceived, the generative direction is
 fixed independent of arrival order.
 
+**Correction, tested 2026-09-25 (`repo_appendix/windspeed_reconstruction/
+08_rate_conservation_all_struts.py`, already-built code, run for real —
+not new maths): `H = Re(Π)` conservation is NOT universal across the
+box-kite.** It holds exactly (spread `~1e-16`, machine precision) on struts
+**1, 3, 6** under the correct pencil-ordered rate law — and genuinely fails
+(spread `0.4`–`1.8`) on struts **2, 4, 5, 7**, same rate law. A uniform-rate
+control conserves on none of the seven. So "Method 1 = `J_red`, conserved"
+overstated it: conservation is real but **conditional on which strut**, not
+a blanket property of the method. Which three struts hold, and why `1,3,6`
+specifically — no obvious parity or XOR pattern found at a glance — is a
+genuine open question this run surfaces, not one it answers. The `J_red`
+identification stands for those three struts; it does not stand as stated
+for the other four, and the paper should say exactly that, not round up.
+
 **3) The dual scalar box-kite structure — de Marrais's and Cody's, both
 present, one object not two (2026-09-25).** Per §10 above: de Marrais's
 box-kite is the static skeleton (42 Assessors, 7 octahedra, established,

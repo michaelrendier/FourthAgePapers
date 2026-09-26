@@ -434,10 +434,19 @@ against §10's own wording, not asserted fresh — flag for correction if a
 different pairing was meant; the source message trailed off before
 specifying one.)
 
-**Method 2 (stub, 2026-09-25) — collapsing a 15-channel system monitor
-into a single scalar that reconstructs the pencil-attached box-kite
-location. "The box-kite grabbing the anchor side."** Named but not
-developed, same discipline as the rest of this section. Method 1 (this
+**Method 2 (BUILT — first pass, 2026-09-25) — collapsing a 15-channel
+system monitor into a single scalar that reconstructs the pencil-attached
+box-kite location. "The box-kite grabbing the anchor side."** Real code,
+run against live system data, not just named:
+`PtolemyDesktop/Aule/system_boxkite.py`. Two real bugs caught and fixed by
+running it — counters fed in raw instead of as rates (windspeed read as
+frozen for hours against real activity), and process/thread-count
+reference scales saturated regardless of load. One real degeneracy found
+and left open, not smoothed over: the first-pass `e₀ := RMS(15 imaginary
+channels)` formula makes `fixed_point_weight` **algebraically constant at
+exactly 1/16** for any nonzero input (`e0²=Σxᵢ²/15 ⟹ e0²/(e0²+Σxᵢ²)=1/16`
+identically) — not a live signal under this formula, a genuine open item
+for whichever formula replaces it. Method 1 (this
 paper's actual content) runs content → scalar → pencil: a word/token is
 the input, the box-kite is built forward from it. Method 2 runs the
 opposite direction: a live system-monitoring vector (15 channels — CPU,
@@ -473,10 +482,62 @@ collapse genuinely and irreversibly discards. Overclaiming "reconstructs
 the multidimensional information" would not survive the same scrutiny
 this paper already applies to its own Method 1 claims.
 
-Status: conversation-stage design (`VAPMIP` box-kite/HyperWebster
-discussion, 2026-09-25), not yet an engine. Belongs here exactly like the
-Blackjack subgroup above it — named so the direction isn't lost, scoped
-out of this paper's actual claims.
+### Aulë Face report specification — "system boxkite"
+
+Aulë's reports for this method are two shapes, both real, both drawn
+directly from the running code, not designed on paper first.
+
+**Channel map** (the 15 imaginary components, `e₁..e₁₅`, `PtolemyDesktop/
+Aule/system_boxkite.py::CHANNELS`):
+
+| index | channel | note |
+|---|---|---|
+| 1 | `cpu_percent` | instantaneous |
+| 2 | `mem_used_percent` | instantaneous |
+| 3 | `mem_available_percent` | instantaneous |
+| 4 | `swap_used_percent` | instantaneous |
+| 5 | `disk_read_bps` | rate — delta'd against previous sample, not the raw counter |
+| 6 | `disk_write_bps` | rate |
+| 7 | `disk_iops` | rate |
+| 8 | `net_recv_bps` | rate — **excluded from every Assessor** (`e₈` is the CD doubling generator, box_kite.md); invisible to `chart_energy`/`nearest_assessor` though it still counts toward `norm()` and `local_curvature`'s candidate pool |
+| 9 | `net_sent_bps` | rate |
+| 10 | `process_count` | instantaneous |
+| 11 | `thread_count` | instantaneous |
+| 12–14 | `load1`/`load5`/`load15` | normalized by core count |
+| 15 | `ctx_switches_per_sec` | rate |
+
+`e₀`: derived, never measured — see the RMS degeneracy above.
+
+**Live State Report** (poll interface, `get_live_state()` — instant,
+never triggers new sampling; the watcher thread updates it continuously,
+default 1s interval):
+
+    {
+      "timestamp": <float, unix time>,
+      "raw":       {<channel name>: <rate-converted value>, ... 15 entries},
+      "vector":    [e0, e1, ..., e15]   # 16 floats
+    }
+
+**Collapse Report** (Aulë event, channel `"system_boxkite"`, type
+`"collapse"`, fired when `|z_score| >= 3.0` against a 30-sample rolling
+window of `local_curvature` — first-pass threshold, not tuned against
+real incident data, OPEN the same way the windspeed-regime finding it's
+built on is OPEN):
+
+    {
+      "point":              <int, 1..15 — nearest discrete point>,
+      "pencil":             [[a, b], ... 7 pairs] | null,
+      "windspeed":          <float — local_curvature reading that triggered this>,
+      "z_score":            <float>,
+      "fixed_point_weight": <float — currently always 0.0625, see degeneracy above>,
+      "nearest_assessor":   [a, b]
+    }
+
+Status: **BUILT, first pass, self-tested against live data** — not a
+conversation-stage design anymore, unlike the Blackjack subgroup entry
+above it. Two bugs fixed, one degeneracy found and left honestly open;
+next real step is a replacement `e₀` formula and a validated (not
+first-guess) collapse threshold, not a rewrite of what's here.
 
 **Closing image (Cody, 2026-09-20): `SpaceClaude/OMFG.png` goes at the
 very end of §11**, the paper's last real content before §12. Real

@@ -1,10 +1,23 @@
 # FourthAgePapers — TODO
 
-**Rule:** One Paper. One Claim. One Engine. One set of notebooks. One wiki page (written last).
+**Rule:** One Paper. One Claim. One Prediction (Ptolemy/0_RB). One Engine. One set of notebooks. One wiki page (written last).
+*Prediction pillar added 2026-09-25 (Cody). Engines designed inside ValaQuenta first, propagated to their eventual home by copying.*
 
 ---
 
 ## Active
+
+[ ] HyperindexingSystem — "The Hyperindexing System: Data With No Physical
+    Location." STUB, started 2026-09-25. Plain Horner bijection (no CD-tower
+    fold — that's `DataStorageNoLocation`'s job, this is its sibling, not a
+    duplicate), extended to a day/month/year hierarchical index for lossless
+    constant-per-chunk conversational memory. Baseline benchmark done:
+    `VAPMIP/README.md` + `VAPMIP/benchmarks/hyperwebster_baseline_bench.py`.
+    TODO: chunk-size/minimal-charset engine work, day/month/year aggregator
+    (reuse `Callimachus/HyperWebster-Data-Storage/hypergallery.py`'s
+    `VectorAddress`/`master_address` rollup shape, don't reinvent), 0_RB
+    prediction run, engine in `ValaQuenta/modules/hyperwebster/`, wiki page
+    (last).
 
 [ ] TheInterface — L_(I|O) describes a boundary from both sides at once;
     the circular inside-out inversion already in use elsewhere is one

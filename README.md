@@ -1,6 +1,11 @@
 # Fourth Age Papers
 
-**One Paper. One Claim. One Engine. One Wiki.**
+**One Paper. One Claim. One Prediction (Ptolemy/0_RB). One Engine. One Wiki.**
+
+*Prediction added to the rule 2026-09-25 (Cody): each paper now also carries
+one prediction generated from Ptolemy/0_RB itself, alongside the falsifiable
+claim. Engines are designed inside ValaQuenta first and propagated to their
+eventual home by copying — ValaQuenta keeps a canonical copy of every engine.*
 
 Each paper makes a single falsifiable claim. The engine derives and tests it.
 The notebooks record the derivation. The wiki page is written last.
@@ -11,6 +16,8 @@ The notebooks record the derivation. The wiki page is written last.
 
 | Paper | Claim |
 |-------|-------|
+| The Hyperindexing System: Data With No Physical Location | **TODO — stub.** Started 2026-09-25. The plain (non-Cayley-Dickson-folded) HyperWebster bijection — string ↔ integer address, exact, no hashing — extended to a day → month → year hierarchical index for lossless, constant-per-chunk conversational memory. Baseline benchmark: `VAPMIP/README.md` §"HyperWebster Indexing — Baseline Benchmark". Sibling, not duplicate, of `DataStorageNoLocation` (the Cayley-Dickson-folded variant). Engine home: `ValaQuenta/modules/hyperwebster/`. Prediction: pending first 0_RB run. |
+| The Birth of Chirality and the Nature of a Black Hole | **TODO — stub.** Started 2026-09-25. Chirality = parity-of-order-count (already established, `box_kite.md`); a Schwarzschild horizon's `r`/`t` role-swap is an odd-parity operation — a `SIGN` flip, not analogous to one — making chirality's dynamical birth (at a horizon) and its static birth (the Fano-plane orientation choice underneath `PSL(2,7)`) the same fact twice. Includes the exact-not-metaphorical statement that a black hole's singularity is a future moment, not a location, once `r` becomes timelike inside the horizon. Engine: not yet built, candidates in `ValaQuenta/modules/box_kite/` and `modules/add_scale_sign/`. Prediction: pending first 0_RB run. |
 | CMB Fractal Boundary | The CMB fractal boundary dimension is D_f = φ−1. The Noether Information Current (SMMIP) runs in opposition to the Noether Current (Planck). Power law exponent is −√5. |
 | CMB Scale Invariance | D_f = φ−1 holds locally at every scale. The running spectral index is exactly zero because a conserved Noether current cannot run. |
 | CMB Plasma Boundary | The 2D CMB temperature boundary has fractal dimension D_f = φ = 1.618 at characteristic angular scale θ* ≈ 7–10°. φ is the critical dimension separating fractal plasma sheet (D_f > φ) from fractal plasma flame (D_f < φ). **P2 (scale invariance) falsified — D_f runs strongly with angular scale.** |

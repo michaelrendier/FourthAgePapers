@@ -7,6 +7,20 @@
 
 ## Active
 
+[ ] ChirpTaxonomy — "Chirp Taxonomy: A Black Hole Merger Chirp is One
+    Species of a General Genus." Branch `chirp-taxonomy` (earned, expected
+    to grow — not a main-branch stub like the other two same-day papers).
+    Claim: LIGO's inspiral chirp and the Riemann-Siegel theta chirp are the
+    same ADD:SCALE:SIGN generator (SCALE) on opposite sides of the J_N
+    inversion boundary; resonance is the other generator (SIGN), measured
+    directly via theta'(t)'s power spectrum (no resonance, slope -14.3) vs
+    the zero-spacing fluctuation (resonates at log(p), classical explicit
+    formula). Prediction: a real merger's inspiral-to-ringdown transition
+    should show the same SCALE->SIGN signature, checkable against public
+    LIGO/Virgo strain data (GWOSC) -- not yet run, the actual next step.
+    Engine: ValaQuenta, reusing RiemannHypothesisProof/ADDENDUM_toroidal_
+    theta_structure_2026-09-25.md's already-run code.
+
 [ ] HyperindexingSystem — "The Hyperindexing System: Data With No Physical
     Location." STUB, started 2026-09-25. Plain Horner bijection (no CD-tower
     fold — that's `DataStorageNoLocation`'s job, this is its sibling, not a

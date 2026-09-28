@@ -4,6 +4,7 @@
 
 ¹ Independent researcher. Correspondence: the.wandering.god@gmail.com ·
 GitHub: [github.com/michaelrendier](https://github.com/michaelrendier) ·
+Facebook: [facebook.com/rendier](https://facebook.com/rendier) ·
 ORCID: [0009-0007-7239-6760](https://orcid.org/0009-0007-7239-6760).
 
 **Fourth Age Paper.** One Paper. One Structure. One Engine. One Wiki.
@@ -2141,8 +2142,8 @@ independent of it.
     running code, not used to write it.
 
 **Cody Michael Allison** (Michael Rendier). Correspondence:
-the.wandering.god@gmail.com · GitHub: github.com/michaelrendier · ORCID:
-0009-0007-7239-6760.
+the.wandering.god@gmail.com · GitHub: github.com/michaelrendier · Facebook:
+facebook.com/rendier · ORCID: 0009-0007-7239-6760.
 
 
 ---
@@ -2333,6 +2334,20 @@ either of us hoped to find.
 ---
 
 ### Changelog
+
+**2026-09-28 — re-checked against GenerationalLineage 1.0.0; Facebook added to
+author contact.** `GenerationalLineage` shipped its first public release
+(v1.0.0) the day after this paper's own consistency pass, including a fix
+unrelated to anything this paper cites: `engine.maths` dropped its dependency
+on a sibling repository's `udeo_poc.CayleyDickson` (replaced with GL's own
+`engine.lineage.cd_mul_gf2`), which only affects GL's own EXTENDED layer, not
+`lineage.py` or `cs_benchmark.py`. Re-run live against the released code,
+today: `import lineage; lineage.un_sieve(100_000)` (§4.4) still reproduces
+`313`, `49999`, and `7.193551572213686` bit-for-bit; the `cs_benchmark.descend`
+import and call in §8 (`from GenerationalLineage.engine.toolsets.cs_benchmark
+import descend`) still runs exactly as shown. Nothing in this paper needed a
+correction. Author contact block (top and §12) gained a Facebook link,
+`facebook.com/rendier`, alongside the existing GitHub and ORCID entries.
 
 **2026-09-27 — consistency pass.** Every piece of code this paper
 names or shows a Listing for was checked directly against the live

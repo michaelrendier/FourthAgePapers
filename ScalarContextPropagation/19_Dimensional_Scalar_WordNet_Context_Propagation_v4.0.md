@@ -988,12 +988,16 @@ side (documented as "two different serialisations of one schema, not two
 different schemas"):
 
 ```c
+#define N_RELATIONS       19
+#define BOXKITE_WORD_LEN  32
+
 typedef struct {
-    char     word[32];
-    uint8_t  pos;                  /* 1=NOUN 2=VERB 3=ADJ 4=ADV */
-    uint32_t synset_offset;        /* WordNet's own offset -- the stable id */
-    int16_t  vector[19];           /* compress_count()-ed relation exponents */
-    float    depth_weight;         /* default 1.0 */
+    char     word[BOXKITE_WORD_LEN];  /* first lemma, NUL-terminated */
+    uint8_t  pos;                     /* 1=NOUN 2=VERB 3=ADJ 4=ADV (wn.h values) */
+    uint8_t  _pad[3];
+    uint32_t synset_offset;           /* WordNet's own offset -- the stable id */
+    int16_t  vector[N_RELATIONS];     /* compress_count()-ed relation exponents */
+    float    depth_weight;            /* the one adjustable knob -- default 1.0 */
 } BoxKiteEntry;
 ```
 Live, runnable: `VAPMIP/PtolC/boxkite_bin.h` — no notebook wraps this one,
@@ -2194,11 +2198,15 @@ corrected version of the same question.
 the build:
 
 ```c
+#define N_RELATIONS       19
+#define BOXKITE_WORD_LEN  32
+
 typedef struct {
-    char     word[32];
+    char     word[BOXKITE_WORD_LEN];
     uint8_t  pos;
+    uint8_t  _pad[3];
     uint32_t synset_offset;
-    int16_t  vector[19];
+    int16_t  vector[N_RELATIONS];
     float    depth_weight;
 } BoxKiteEntry;
 ```
@@ -2321,4 +2329,25 @@ record for the same reason: this paper says what it found, not what
 either of us hoped to find.
 
 — Claude (Sonnet 5), Anthropic
+
+---
+
+### Changelog
+
+**2026-09-27 — consistency pass.** Every piece of code this paper
+names or shows a Listing for was checked directly against the live
+source it claims to be (not the `repo_appendix` snapshot, not memory):
+`VAPMIP/monad.py`, `VAPMIP/wordnet_boxkite.py`, `VAPMIP/monad_combine.py`,
+`VAPMIP/PtolC/{boxkite_bin.h, dump_boxkite_bin.c, ptol.c, monad.c,
+ptolemy.h}`, `ValaQuenta/modules/box_kite/maths.py`,
+`GenerationalLineage/engine/lineage.py`. One real discrepancy found and
+fixed: §6.1/§13.2's `BoxKiteEntry` C struct was missing the live
+header's explicit `uint8_t _pad[3]` field and used literal `32`/`19`
+where the real header uses `#define BOXKITE_WORD_LEN`/`#define
+N_RELATIONS` — both sections now match `PtolC/boxkite_bin.h` exactly.
+Everything else checked exact on first pass, including re-running
+`GenerationalLineage/engine/lineage.py::un_sieve(100_000)` live rather
+than trusting the recorded numbers: `313`, `49999`, and the birth/death
+entropy gap (`7.193551572213686`, stated in the paper to two decimals
+as `+7.19`) all reproduce bit-for-bit.
 

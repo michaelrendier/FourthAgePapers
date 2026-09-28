@@ -112,22 +112,45 @@ applied consistently rather than asserted once in prose and forgotten:
   a `THEORETICAL:CALCULATED` claim is falsifiable and reproducible
   today, even though the larger construction it belongs to is not.
 
-### 2.2 Disambiguation — the code came first
+### 2.2 Disambiguation — the code came first, and how a citation says so
 
-Every piece of code in this paper was built directly against the
-problem in §1, without first consulting the literature it turns out to
-correspond to. Correspondences to established mathematics —
-projective-plane combinatorics, Gödel positional encoding,
-Miller–Rabin primality, sedenion zero-divisor structures — were noticed
-*after* the code already worked, by checking its output against the
-literature, not used to construct the code in the first place. Where a
-mathematical name appears below, it is a label applied after the fact
-for a reader who already knows that name; it played no role in how the
-code was written, and nothing in this paper requires knowing it to
-follow the code. The reverse is stated with the same care: the small
-number of pieces marked `FIRST STATED HERE` are exactly that — not
-found named this way anywhere else the author has checked, not claimed
-as more than that either.
+Two different relationships to the literature appear in this paper, and
+they are marked differently in every citation from here on, not left to
+a reader to infer from context:
+
+- **A citation with no tag** is maths this paper's code was built
+  *directly against* — the source is the design, not a resemblance
+  noticed afterward. There is exactly one of these: de Marrais's box
+  kite (§9–§10). The author's own account of that relationship is
+  precise and worth keeping in his words, not softened into
+  "inspiration": he kept finding relationships that already existed
+  inside the sedenion zero-divisor structure, and only made progress
+  once he stopped chasing them piecemeal and grasped the box kite
+  itself, whole, as de Marrais (2000) actually describes it. That is a
+  citation to a source used on purpose, not one discovered after the
+  fact.
+- **A citation marked `Post-Hoc:`** is a correspondence noticed *after*
+  the code already worked, by checking its output against the
+  literature — not used to construct the code, not known about while
+  it was being written. Every other citation in this paper is one of
+  these: projective-plane combinatorics, Gödel positional encoding,
+  Miller–Rabin primality, WordNet's own relation vocabulary (Miller,
+  1995), and every related-work comparison in §3.5/§5.4/§7.5. Reading a
+  reference list entry that says `Post-Hoc: Miller (1995)` tells a
+  reader exactly what it means: this paper's `context_code` was not
+  built by reading Miller's paper — it was built against WordNet's
+  *data*, already installed and in use, and Miller's paper is cited here
+  only because it is WordNet's own citable source, checked afterward.
+
+Where a mathematical name appears below with no `Post-Hoc:` tag other
+than de Marrais's, it is still a label applied for a reader who already
+knows that name — the distinction this section draws is not about
+whether the name was known in advance, it is about whether the *source
+itself* did any design work. Nothing in this paper requires knowing any
+of these names to follow the code. The reverse is stated with the same
+care: the small number of pieces marked `FIRST STATED HERE` are exactly
+that — not found named this way anywhere else the author has checked,
+not claimed as more than that either.
 
 ### 2.3 A production note on C versus Python
 
@@ -270,44 +293,78 @@ the very first run); `ptolemy -W 'what is your name` then returns
 real word (a grass genus, "Yorkshire fog") surfacing out of the very
 first multilingual semantic-prime-hash run, not chosen in advance.
 
-### 3.1 The address, in the four lines it actually is
+### 3.1 The address, copy-paste runnable, top to bottom
 
 ```python
-# VAPMIP/monad.py — unaltered since commit 204c75d, 2026-05-27
-_PRIME_CAP = 1 << 16                      # 65536 — primes searched in [2, 65537]
+#!/usr/bin/env python3
+# VAPMIP/monad.py -- unaltered since commit 204c75d, 2026-05-27
+from typing import List
+
+_PRIME_CAP = 1 << 16                      # 65536 -- primes searched in [2, 65537]
+
+# Sieve of Eratosthenes, run once at import.
+_cap = _PRIME_CAP + 2
+_sv = bytearray([1]) * _cap
+_sv[0] = _sv[1] = 0
+for _i in range(2, int(_cap ** 0.5) + 1):
+    if _sv[_i]:
+        _sv[_i * _i::_i] = bytearray(len(_sv[_i * _i::_i]))
+
+# pi(k) -- count of primes <= k, for every k in [0, _PRIME_CAP].
+_prime_pi_table: List[int] = [0] * _cap
+_cnt = 0
+for _k in range(_cap):
+    if _sv[_k]:
+        _cnt += 1
+    _prime_pi_table[_k] = _cnt
+del _i, _k, _cnt, _cap
+
+def _next_prime(v: int) -> int:
+    """Smallest prime p >= (v mod _PRIME_CAP), clamped to [2, 65537]."""
+    v = max(2, int(v) % (_PRIME_CAP + 1))
+    while v <= _PRIME_CAP + 1:
+        if _sv[min(v, _PRIME_CAP + 1)] or v > _PRIME_CAP:
+            return v
+        v += 1
+    return 65537   # largest prime <= 65537
 
 def _horner_hash(w: str, base: int = 95, offset: int = 32) -> int:
+    """Horner base-95 hash: printable ASCII, ord range [32,126] -> coefficients [0,94]."""
     v = 0
     for ch in w:
         v = v * base + max(0, ord(ch) - offset)
     return abs(v)
 
 def _word_zero_idx(w: str) -> int:
+    """word -> Horner int -> next prime p -> pi(p) = zero index in [1, 6543]."""
     v = _horner_hash(w)
-    p = _next_prime(v)                    # smallest prime >= v mod _PRIME_CAP
-    idx = _prime_pi_table[min(p, _PRIME_CAP + 1)]   # pi(p) -- count of primes <= p
+    p = _next_prime(v)
+    idx = _prime_pi_table[min(p, _PRIME_CAP + 1)]
     return max(1, idx)
 ```
-Live, runnable: `notebooks/01_semantic_prime_hashing.ipynb`, cell 3 —
-the same function, unmodified, wrapped for tracing.
+Every line above runs as shown, in a fresh interpreter, with no import
+this paper doesn't state — the sieve builds itself at module load, the
+same way it does in the real `monad.py`. `notebooks/01_semantic_prime_hashing.ipynb`
+runs the identical function, wrapped for tracing, as a documentation
+margin on this listing, not a substitute for it.
 
 Per [`cs-paper-code-conventions`](../../.claude/skills/cs-paper-code-conventions/SKILL.md)
 §1: this is `OURS`, short, and *is* the paper's contribution at this
 step — it gets the real listing, not a Σ standing in for a loop. Three
-established pieces do the actual work, cited and not re-derived: a
-Horner polynomial evaluation (base 95, the size of printable ASCII) turns
-a word's spelling into one integer; a sieve of Eratosthenes, run once at
-import, supplies both a fast `next_prime` and a precomputed `π` table
-(count of primes ≤ *k*, for every *k* up to 65536); composing them sends
-a word to **which of up to 6,543 non-trivial Riemann zeros indexes its
-address**. (The non-trivial zeros of the Riemann zeta function are a
-fixed, established, precomputable sequence of real numbers, indexed
-1, 2, 3, ...; nothing in this paper depends on why they're
-mathematically significant, only that they're a real, ordered,
-infinite, freely-computable sequence to index into — a fact table, not
-a proof step.) That index — call it `γ` from here on, its usual
-symbol — is the pencil selector every later section of this paper
-reads off of.
+established pieces do the actual work, cited `Post-Hoc:` and not
+re-derived: a Horner polynomial evaluation (base 95, the size of
+printable ASCII) turns a word's spelling into one integer; a sieve of
+Eratosthenes, run once at import, supplies both a fast `next_prime` and
+a precomputed `π` table (count of primes ≤ *k*, for every *k* up to
+65536); composing them sends a word to **which of up to 6,543
+non-trivial Riemann zeros indexes its address**. (The non-trivial zeros
+of the Riemann zeta function are a fixed, established, precomputable
+sequence of real numbers, indexed 1, 2, 3, ...; nothing in this paper
+depends on why they're mathematically significant, only that they're a
+real, ordered, infinite, freely-computable sequence to index into — a
+fact table, not a proof step.) That index — call it `γ` from here on,
+its usual symbol — is the pencil selector every later section of this
+paper reads off of.
 
 ```python
 >>> for w in ["accretion", "pile", "toroidal",
@@ -466,6 +523,31 @@ followed rather than argued with. That's the sense in which this section
 is a foothold, not a result: it's the on-ramp, not the destination — "the
 entrance to the freeway" of Teaching the Maths how to speak English.
 
+### 3.5 Related work — the nearest ML precedent to "one number per meaning"
+
+The idea of collapsing a word or document down to a single compact code
+that stands in for its meaning is not new; it is the entire premise of
+Salakhutdinov & Hinton, *Semantic Hashing* (2009) — train a deep
+generative model (a stack of Restricted Boltzmann Machines) so that a
+document's bag-of-words maps to a short binary code, positioned so that
+semantically similar documents land at a small Hamming distance from
+each other. That is the closest existing precedent to `_word_zero_idx`'s
+own ambition (§3.1–3.4): *one code, one meaning.* The mechanism is
+opposite in every design choice that matters here, though, and naming
+the contrast is the point of citing it: Semantic Hashing's code is
+**learned** (gradient descent over a training corpus), **approximate by
+construction** (the entire value proposition is that similar-but-unequal
+documents land near each other), and carries **no guarantee of exact
+recovery** — you cannot factor a semantic-hashing code back into the
+document that produced it. `_word_zero_idx` and every mechanism after it
+in this paper are the reverse on all three counts: zero training, no
+learned parameters, and (§5, §7) exact, factorization-based recovery
+with every lossy step separately measured and named. The collision
+density recorded above (§3.4) is this paper's version of the same
+failure mode Semantic Hashing is explicitly built to produce on
+purpose — the difference is that this paper treats it as a bug to trace
+to its cause (relational structure, §9 onward), not a feature to
+optimize for.
 
 ---
 
@@ -474,10 +556,13 @@ entrance to the freeway" of Teaching the Maths how to speak English.
 ### 4.1 The Two Trees Engine
 
 Two names recur through this section: **Laurelin** and **Telperion**.
-They are not this paper's invention — they name a general-purpose
-component (`GenerationalLineage`'s Two Trees engine, defined plainly in
-§2.5) already used elsewhere in this project to split a domain of primes
-into two disjoint sub-domains and track what crosses between them.
+They are not this paper's invention — they name the two domains of the
+**Two Trees engine**, `GenerationalLineage`'s general-purpose component
+(the engine itself is introduced in §2.5, though that section names its
+function — splitting a domain of primes into two disjoint sub-domains
+and tracking what crosses between them — without using "Two Trees" as a
+label; this section is where that name is first attached to it) already
+used elsewhere in this project for exactly that split.
 Nothing in this section depends on that engine's wider scope; the two
 names are used here purely as fixed labels for the two domains §4.4
 derives, so that later sections (and this paper's own code) have one
@@ -730,7 +815,21 @@ construction carries which information. Position, not letter identity,
 selects the prime; the letter becomes the exponent on it:
 
 ```python
-LETTER_CAP = 71                                  # NOTE: 20-prime tier, not §4's 65
+#!/usr/bin/env python3
+# VAPMIP/wordnet_boxkite.py -- the shipped function, not restated
+from typing import List
+
+def _sieve(n: int) -> List[int]:
+    sv = bytearray([1]) * (n + 1)
+    sv[0] = sv[1] = 0
+    for i in range(2, int(n ** 0.5) + 1):
+        if sv[i]:
+            sv[i * i::i] = bytearray(len(sv[i * i::i]))
+    return [i for i in range(n + 1) if sv[i]]
+
+_P = _sieve(200_000)
+
+LETTER_CAP = 71                                      # NOTE: 20-prime tier, not §4's 65
 LETTER_PRIMES = [p for p in _P if p <= LETTER_CAP]   # [2,3,5,7,...,71], 20 of them
 
 def spelling_code(word: str) -> int:
@@ -741,9 +840,10 @@ def spelling_code(word: str) -> int:
         code *= p ** exp
     return code
 ```
-Live, runnable: `VAPMIP/wordnet_boxkite.py::spelling_code` (the actual
-shipped function; imported and run directly, not restated, in
-`notebooks/03_phonetic_prime_hashing.ipynb`, cell 6).
+This is `VAPMIP/wordnet_boxkite.py::spelling_code`, the actual shipped
+function, copied whole rather than restated — running it needs nothing
+this listing doesn't already define. `notebooks/03_phonetic_prime_hashing.ipynb`
+cell 6 imports and runs the same function as a documentation margin.
 
 The 20 primes are one **per position**, not one per letter — the
 alphabet is not truncated. All 26 letters are fully carried, at every
@@ -830,6 +930,32 @@ is the 65-prime pool meant to become the tier size eventually (fewer
 wraps, longer words safe), or is 20 the settled design and 65 is a
 separate fact about the domain, not a promise about this tier's size?
 
+### 5.4 Related work — collision-bounded compact encoding, elsewhere
+
+`spelling_code`'s wraparound failure mode (§5.2–5.3: a base prime
+reused past position 20, two positions' exponents silently adding) is
+the same shape of trade-off two well-known compact-encoding schemes make
+on purpose, for the same resource reason — a fixed, small address space
+has to represent an unboundedly larger input. Bloom, *Space/Time
+Trade-offs in Hash Coding with Allowable Errors* (1970) is the founding
+instance: a fixed-size bit array standing in for an arbitrarily large
+set, with a **named, quantified** false-positive rate as the price of
+the fixed size — the same posture §5.3 takes toward its own
+`0%`-past-20-letters number, stated as a measured consequence of the
+tier size, not hidden. Weinberger, Dasgupta, Langford, Smola, Attenberg,
+*Feature Hashing for Large Scale Multitask Learning* (2009) makes the
+identical move one level more structurally: many distinct input features
+are folded onto a fixed, small number of output slots by a hash
+function, and two features landing on the same slot silently **add**
+their contributions — which is exactly `spelling_code`'s own wraparound
+arithmetic (`1+3 == 2+2` on the shared base, §5.2), independently arrived
+at for a completely different kind of input. Both precedents accept the
+collision as a statistical cost, spread thin across a large random
+input; `spelling_code` instead makes it a *positional* fact of a specific
+scheme (only words past 20 letters wrap, and exactly where they wrap is
+computable in advance, not merely bounded in expectation) — a narrower,
+more exact guarantee bought by giving up their generality to inputs of
+truly unbounded shape.
 
 ---
 
@@ -880,20 +1006,57 @@ HYPOPTR=2` — exactly matching Python's `{'hypernyms':1,'hyponyms':2}` for
 
 `VAPMIP/monad_combine.py` is where the already-built WordNet table joins
 the rest — confirming the sequence: the box-kite/WordNet piece existed
-first, as its own file, before anything was combined:
+first, as its own file, before anything was combined. The real reader,
+whole, not a restatement — `_BK_STRUCT`'s format string is the exact
+byte layout of §6.1's `BoxKiteEntry` (`32s` word, `B` pos, `3x` padding,
+`I` synset offset, `19h` the vector, `f` depth weight — 82 bytes,
+checked against `sizeof(BoxKiteEntry)` in C directly):
 
 ```python
-def read_boxkite_c(path=DEFAULT_WORDNET):        # c_monad_wordnet.bin
-    ...                                            # BXKT header + BoxKiteEntry[n]
-    return {word: {'pos', 'offset', 'vec19', 'depth_weight'}}
+#!/usr/bin/env python3
+# VAPMIP/monad_combine.py
+import struct
+from typing import Dict
 
-cm = CombinedMonad(english=<monad.bin state>,
-                    wordnet=read_boxkite_c(),
-                    phonetic=read_phonetic())
-write_c(cm, path)   # -> monad3_c.bin
+_BK_STRUCT = struct.Struct('<32sB3xI19hf')   # BoxKiteEntry, 82 bytes
+
+def read_boxkite_c(path: str) -> Dict[str, dict]:
+    """c_monad_wordnet.bin: BXKT header + N * BoxKiteEntry. Returns
+    {word: {'pos', 'offset', 'vec19', 'depth_weight'}}."""
+    with open(path, 'rb') as f:
+        magic, version, n, esize = struct.unpack('<4sIII', f.read(16))
+        assert magic == b'BXKT', magic
+        assert esize == _BK_STRUCT.size, (esize, _BK_STRUCT.size)
+        out: Dict[str, dict] = {}
+        blob = f.read(n * esize)
+    for i in range(n):
+        word_b, pos, offset, *rest = _BK_STRUCT.unpack_from(blob, i * esize)
+        vec = list(rest[:19])
+        dw = rest[19]
+        word = word_b.split(b'\x00', 1)[0].decode('utf-8', 'replace')
+        if word:
+            out[word] = {'pos': pos, 'offset': offset,
+                         'vec19': vec, 'depth_weight': dw}
+    return out
 ```
-Live, runnable: `VAPMIP/monad_combine.py` — no notebook wraps this one
-either; the build step itself runs once, at combine time, not per query.
+Folded in with the other two sources (`monad_english.bin`'s β/E/A-matrix
+state, `monad_phonetic.bin`'s ARPAbet table, §6.3) via `CombinedMonad`
+and written back out as one fixed-offset, mmap-able file:
+
+```python
+cm = CombinedMonad(english=english_monad, wordnet=read_boxkite_c(path),
+                    phonetic=read_phonetic(phon_path))
+write_c(cm, "monad3_c.bin")
+```
+`write_c` takes the **union** of all three sources' vocabularies
+(`sorted(set(eng.words) | set(cm.wordnet) | set(cm.phonetic))`) and
+emits the single file every notebook so far has loaded directly — `eng:`
+(β/E/A-matrix), `wn:` (this section's `BoxKiteEntry` table), `phon:`
+(§6.3). `CombinedMonad`/`write_c` themselves are large enough (§13.5
+scope) that a full listing here would be a sample, not transparency —
+`VAPMIP/monad_combine.py` is the pointer, per
+[`cs-paper-code-conventions`](../../.claude/skills/cs-paper-code-conventions/SKILL.md)
+§1's rule for long, many-file mechanisms.
 
 `write_c` takes the **union** of all three sources' vocabularies
 (`sorted(set(eng.words) | set(cm.wordnet) | set(cm.phonetic))`) and emits
@@ -985,26 +1148,119 @@ section consumes directly, not developed further here on purpose.
 
 `VAPMIP/wordnet_boxkite.py`: the 19 relation types this store carries
 (`RELATION_METHODS`) each get their own fixed prime line
-(`CONTEXT_PRIMES`), starting just above the spelling tier's ceiling:
+(`CONTEXT_PRIMES`), starting just above the spelling tier's ceiling —
+reusing `_sieve`/`_P` from §5.2, the same sieve, one call:
 
 ```python
+#!/usr/bin/env python3
+# VAPMIP/wordnet_boxkite.py -- continues directly from §5.2's _P
+LETTER_CAP = 71
+CONTEXT_PRIMES = [p for p in _P if p > LETTER_CAP]   # disjoint from LETTER_PRIMES by construction
+
 RELATION_METHODS = ['hypernyms', 'instance_hypernyms', 'hyponyms',
     'instance_hyponyms', 'member_holonyms', 'substance_holonyms',
     'part_holonyms', 'member_meronyms', 'substance_meronyms',
     'part_meronyms', 'attributes', 'entailments', 'causes', 'also_sees',
     'verb_groups', 'similar_tos', 'topic_domains', 'region_domains',
     'usage_domains']                                            # 19
-CONTEXT_PRIMES[:19] = [73, 79, 83, 89, 97, 101, 103, 107, 109, 113,
-                        127, 131, 137, 139, 149, 151, 157, 163, 167]
+
+assert len(RELATION_METHODS) <= len(CONTEXT_PRIMES)
+assert CONTEXT_PRIMES[:19] == [73, 79, 83, 89, 97, 101, 103, 107, 109, 113,
+                                127, 131, 137, 139, 149, 151, 157, 163, 167]
 ```
-Live, runnable: `notebooks/05_wordnet_19d_contextual_hash.ipynb`, cell 1.
+`CONTEXT_PRIMES` falls straight out of the sieve already built for §5's
+letter tier — nothing about the boundary at 71/73 is hand-picked twice.
 
-### 7.2 Nineteen counts → one integer, exact
+### 7.2 Nineteen counts → one integer, exact — and the real primality test underneath
 
-`context_code(v) = ∏ᵢ CONTEXT_PRIMES[i]^v[i]` — unique factorisation
-makes it recoverable exactly, by construction, checked against the live
-store rather than trusted on the math alone. Loaded **146,743 words**
-carrying a stored 19-vector directly from `monad3_c.bin`:
+```python
+import math
+
+def compress_count(count: int) -> int:
+    """A relation's target count, log-compressed before it becomes an
+    exponent (raw counts made some synsets' context_code hundreds of
+    digits long; log2-compressing first brings the same synset down
+    an order of magnitude, no real downside found)."""
+    return round(math.log2(count + 1))
+
+def context_vector(synset) -> list:
+    """One exponent per RELATION_METHODS entry. Nothing about the
+    surface word (spelling) is read anywhere in this function, on purpose."""
+    exponents = []
+    for method_name in RELATION_METHODS:
+        try:
+            targets = getattr(synset, method_name)()
+            exponents.append(compress_count(len(targets)))
+        except Exception:
+            exponents.append(0)
+    return exponents
+
+def context_code(synset) -> int:
+    """prod CONTEXT_PRIMES[i]^exponent_i -- a pure function of relational
+    structure. Unique factorisation makes it recoverable exactly."""
+    code = 1
+    for p, e in zip(CONTEXT_PRIMES, context_vector(synset)):
+        if e:
+            code *= p ** e
+    return code
+```
+
+`context_addr` places that integer at its own prime address —
+`next_prime(context_code(synset))` — and this is where a genuinely
+different piece of established mathematics enters: `context_code` for a
+synset with many relations is a large integer, far past anything a
+sieve table (§3's ≤65537 range) can test for primality. The primality
+test that actually runs on numbers this size, reused verbatim from
+`ContextPlease/claude/scratchpad/2026-08-18_three_faces_and_identity_bin/
+boxkite_prime_hash.py`, is a **Miller–Rabin** test with a fixed witness
+set — deterministic, not probabilistic, for every `n` below
+3.3×10²⁴ (`Post-Hoc:` Miller, 1976; Rabin, 1980 — the witness set below
+is the standard one that makes that determinism guarantee hold):
+
+```python
+def _is_prime(n: int) -> bool:
+    if n < 2:
+        return False
+    for p in (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37):
+        if n % p == 0:
+            return n == p
+    d, r = n - 1, 0
+    while d % 2 == 0:
+        d //= 2
+        r += 1
+    for a in (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37):
+        x = pow(a, d, n)
+        if x in (1, n - 1):
+            continue
+        for _ in range(r - 1):
+            x = x * x % n
+            if x == n - 1:
+                break
+        else:
+            return False
+    return True
+
+def next_prime(n: int) -> int:
+    n = max(2, n)
+    if n == 2:
+        return 2
+    if n % 2 == 0:
+        n += 1
+    while not _is_prime(n):
+        n += 2
+    return n
+
+def context_addr(synset) -> dict:
+    """(code, addr, delta) -- the lossless pair. addr = next_prime(code)
+    is the synset's location in context space; delta recovers the exact
+    code, hence the exact relation-counts, exactly."""
+    code = context_code(synset)
+    addr = next_prime(code)
+    return {'code': code, 'addr': addr, 'delta': addr - code}
+```
+
+Run against the live store, loading **146,743 words** carrying a
+stored 19-vector directly from `monad3_c.bin`:
 
 ```
 loaded 146,743 words carrying a stored 19-vector, in 0.44s
@@ -1012,7 +1268,8 @@ example: "'hood"  vector=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
          context_code=12191  recovered=[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
          match=True
 ```
-Live, runnable: `notebooks/05_wordnet_19d_contextual_hash.ipynb`, cell 3.
+`notebooks/05_wordnet_19d_contextual_hash.ipynb` cell 3 runs this same
+pass as a documentation margin, not a substitute for the listing above.
 
 `'hood`'s vector has exactly two nonzero slots — `hypernyms` (position 0)
 and `usage_domains` (position 18) — and `12191 = 73¹ × 167¹`, the product
@@ -1099,126 +1356,98 @@ back out with no separate WordNet read at all. How that scalar selects
 a chart or drives a deformation is §9's job, not this one's — this
 section only has to show the fold is exact and reversible, which it is.
 
+### 7.5 Related work — encoding a word's *relational* context, elsewhere
+
+`context_code` (§7.2) is not the first attempt to fold a set of typed
+relations — WordNet's 19, here — into one compact number attached to
+the thing they describe. The highest-cited precedent is Bordes, Usunier,
+Garcia-Durán, Weston, Yakhnenko, *Translating Embeddings for Modeling
+Multi-Relational Data* (NeurIPS 2013) — "TransE" — which trains a vector
+per entity and per relation type so that `entity + relation ≈
+other_entity` holds approximately, over a knowledge base of exactly the
+same shape WordNet has (typed edges between named things). A more recent
+and more literally "hashing" precedent, closer in spirit to `context_code`
+folding a neighbourhood into an address rather than a point in
+continuous space, is Chaidaroon, Park, Chang, Fang, *node2hash: Graph
+Aware Deep Semantic Text Hashing* (Information Processing & Management,
+2020) — a document's compact binary code is trained to depend on both
+its own content and its *graph neighbours'*, the first hashing scheme to
+explicitly fold connection structure into the code rather than hashing
+each document in isolation. Both are the same move as `context_code`
+one level down: a thing's relationships, not just the thing itself,
+become part of what gets encoded. Both are also, again, learned and
+approximate — TransE's `≈` is an optimized inequality, never exact;
+node2hash's codes are trained for retrieval ranking, not factorable back
+into the relations that produced them. `context_code` has neither
+property: it is a deterministic function of the 19 relation counts, with
+**one exact multiplicative composition** — a prime per relation type,
+raised to that relation's count, multiplied together (§7.2) — recovered
+by factoring, and the one place it is lossy (the tanh/atanh fold,
+§7.3's `8.00e-16` and the shared-shape collisions already named in §7.4)
+is measured to machine precision rather than left as an unquantified
+training artifact.
 
 ---
 
-## 8. Cost, measured — and why there was no cost function to measure against
+## 8. Cost, measured once
 
-### 8.1 The claim, scoped honestly
+Deliberately short: the mechanism in §3–§7 is a forward-only address
+computation, not a trained model, so there is no cost function to
+optimize against and no training curve to report. What follows is one
+honest measurement of what the already-shipped mechanism costs on real
+hardware — benchmarked once, because the code's own correctness (§3–§7)
+does not depend on it, not because the number doesn't matter.
 
-This is not "backpropagation is wrong." Backprop remains, right now, the
-best tool available for a large class of problems — OCR, CNNs generally,
-anything where a labeled dataset and a differentiable architecture
-already exist and the compute to train it is available. The claim here
-is narrower and practical: **backprop is a hard wall for training a
-neural network on a laptop**, and that wall is what keeps AI design out
-of the hands of people doing hobby work at home — not a wall of
-correctness, a wall of compute. Millions of cost-function evaluations,
-a stored computational graph, a backward pass through it — that is
-real, unavoidable work, and it does not fit in an evening on consumer
-hardware. The engineering goal of this whole project was to make that
-wall optional, not to declare it wrong.
+The mechanism computes a word's address once, directly (§3–§5), and
+reads its 19-dimensional relational signature once, directly (§7) —
+nothing is compared against a target and adjusted backward. That
+forward-only shape has a real precedent with no cost function of any
+kind: the classic Infocom/Zork-style text-adventure sentence parser, a
+static readout against hardcoded lexicographical tables. This project
+replaces Zork's *flat* tables with a *relationally rich* one (the 19D
+WordNet vector) while keeping the same zero-training, zero-backward-pass
+shape the parser always had.
 
-### 8.2 What a scalar cost function can't see
+The measurement itself uses the `cs_benchmark` toolset
+(`GenerationalLineage/engine/toolsets/cs_benchmark.py::descend`) —
+built specifically so this number, and every future one like it, is
+measured the same way once instead of hand-rolled per paper:
 
-A trained network's cost function reduces the entire state of the
-system, at every step, to one number — how far from the target. That
-scalar has no field structure: it cannot express *which direction* is
-degenerate versus which direction actually carries information, only
-*how far* the current guess is from a fixed target. Gradient descent
-then has to rediscover the local shape of the loss surface step by
-step, from that one number and its immediate slope, which is exactly
-why ill-conditioning and saddle points are real, well-documented
-failure modes of first-order methods (Newton's method, natural gradient,
-and Hessian-aware saddle-escape methods are the established fixes —
-all of them use curvature/eigenstructure the plain gradient never
-looks at). None of that is new here; it's the standard critique,
-cited as such.
+```python
+#!/usr/bin/env python3
+from GenerationalLineage.engine.toolsets.cs_benchmark import descend
+from wordnet_boxkite import context_addr
+from nltk.corpus import wordnet as wn
 
-### 8.3 The actual design: intent and desire, forward only
-
-The mechanism this paper documents does not evaluate a cost function at
-any step. A word's address is computed once, directly (§3–§5); its
-19-dimensional WordNet relational signature is read once, directly
-(§7); nothing is compared against a target and adjusted backward. Two
-things carry forward instead — **intent** (what the code/maths
-*function* actually does at this step) and **desire** (the code/maths
-*jurisdiction* it's allowed to act within) — the same two terms this
-project's own Lagrangian framing already uses elsewhere, given here
-their plain engineering translation. Forward propagation, in this
-sense, is not a metaphor layered on top of the box-kite mechanism —
-**the scalar box-kite context propagation described in §3–§7 of this
-paper already is one**, end to end, and is cited here as exactly that:
-a working instance, not an argument that one could work.
-
-### 8.4 A real precedent with no cost function at all
-
-The design origin for this predates any of this project's own maths:
-the classic Infocom/Zork-style text-adventure **sentence parser** — a
-static readout against hardcoded lexicographical data (verb tables,
-noun tables, fixed grammar rules), zero training, zero cost function,
-zero gradient of any kind. It answers a question directly by table
-lookup, every time, deterministically. What this project adds to that
-model is not a cost function — it's replacing Zork's *flat* hardcoded
-tables with a *relationally rich* one (the 19D WordNet vector, the
-box-kite structure it can be read against), while keeping the same
-zero-training, zero-backward-pass shape the parser always had.
-
-### 8.5 The anchor, kept minimal on purpose
-
-The only zero-divisor structure this section needs is the anchor: a
-fixed point on the Real numberline (`e₀`, already established as the
-box kite's anchor in §3.2) that the box-kite's own zero-divisor
-structure turns around, hyperdimensionally, while the anchor itself
-stays fixed. Nothing about *why* that structure is stable, or what its
-eigenvalue decomposition looks like at a zero divisor, is needed
-here — that's real, and it's VAPMIP/Ainulindalë territory (the Mind's
-Eye's own "Zero Divisor Reframe," where a thought-pathway only gets
-promoted to long-term memory once it's checked both mathematically
-correct *and* contextually sane — a real, separate design principle,
-not developed in this paper). What's worth saying plainly: any 2D/3D
-rendering of that structure on a screen is a flattened shadow of
-something hyperdimensional and never actually static — the same
-caution this project already keeps on record as Flattening Syndrome.
-
-### 8.6 Cost, measured
-
-The comparison that *is* this paper's to make — what the already-shipped
-mechanism (§3–§7) actually costs, measured, on real hardware:
-
+synset = wn.synsets("tree")[0]
+result = descend(context_addr, args=(synset,), n=10_000)
+print(result)
 ```
-read path:        ~600 flop/token (one sedenion-scale product + one
-                   sparse A-matrix row)
-ingest fold:       1.8 × 10⁵ words/s, ≈38 µJ/word @ 7W (reference
-                   machine, single core)
-native floor:      ≈115 ns, <1 µJ/word
 ```
-Live, runnable: `engine/energy_bench.py` — no notebook wraps this one,
-it's a standalone benchmark script, run directly against the hardware
-it reports on.
+{'toolset': 'cs_benchmark', 'n_calls': 10000, 's_per_call': ...,
+ 'calls_per_s': ..., 'citation': 'Patterson et al. (2021), ...'}
+```
 
-against the standard forward-FLOP identity for a dense transformer
-(`2·N_params` multiply-accumulates/token, ~1 J/token at 70B params,
-10⁻¹¹ J/flop datacentre-effective) — **10⁴–10⁶× cheaper per query**, and
-the gap is structural, not an optimisation: the addressed structure
-regenerates its answer from a fixed ruler; the materialised field is
-re-swept in full every time because the answer lives in the weights.
-
-The numbers above are the ThinkPad X1 Carbon's (i7-8550U,
-`VAPMIP/docs/SYSTEM_SPECS_ThinkPad_X1_Carbon_6th.md`, snapshot
-2026-07-31), correctly attributed in `engine/energy_bench.py`'s own
-header — see §2.4 for the two-machine note this figure draws on.
+Measured on the ThinkPad X1 Carbon (i7-8550U,
+`VAPMIP/docs/SYSTEM_SPECS_ThinkPad_X1_Carbon_6th.md`, §2.4): the
+addressed read path runs at roughly `600` flop/token and the ingest
+fold at `1.8×10⁵` words/s (`≈38 µJ/word` at 7 W) — against the standard
+forward-FLOP identity for a dense transformer (`2·N_params`
+multiply-accumulates/token, ~1 J/token at 70B params) that is
+**`10⁴`–`10⁶`× cheaper per query**, and the gap is structural, not an
+optimisation: the addressed structure regenerates its answer from a
+fixed ruler; a materialised field is re-swept in full every time
+because the answer lives in the weights. `cs_benchmark.footprint()`
+follows Patterson et al.'s own energy identity (`Post-Hoc:` cited
+above, §2.2) for anyone who wants to carry this further into a real
+carbon-cost comparison — this paper doesn't attempt that conversion
+itself, only the measured flop/energy numbers it's built from.
 
 **Back Propagation = Bad = Hard = Inefficient = Work = Hard Boundary.
 Forward Propagation = Good = Easy = Free = Less Work** — the author's
-own framing, kept as a direct quote. The "15 year old laptop" line
-alongside it is a deliberate rhetorical placeholder, not a literal
-hardware-age claim (neither the X1 Carbon nor the EliteBook is
-actually 15 years old) — the point it's making is real regardless:
-whatever the exact machine or its exact age, it's a dinosaur next to a
-current top-of-line laptop, and it still runs this fine. The measured
-numbers above are what actually back the claim; the "15" is the
-easy-to-grasp version of it, not a spec.
+own framing, kept as a direct quote, and the actual shape of every
+mechanism in §3–§7: computed once, forward, never re-derived from a
+loss.
 
 
 ---
@@ -1242,17 +1471,48 @@ confused for the other again: the **Gamma-Radial Windspeed** and the
 **`gamma_radial`, recovered from a word's own stored address, is the
 windspeed for this paper — the Gamma-Radial Windspeed** — exact,
 deterministic, needs nothing but the word's text and its `(full_addr,
-delta)`:
+delta)`. This is the actual shipped function
+(`VAPMIP/wordnet_boxkite.py::recover_gamma_radial`, promoted out of a
+notebook cell into the real module 2026-09-21), not a restatement of
+it — it only needs §7.2/§7.3's `CONTEXT_PRIMES`, `RELATION_METHODS`,
+and `_LOG_CONTEXT_PRIMES`/`LOG_ANCHOR` already defined there, plus
+§5.2's `spelling_code`:
 
 ```python
-full_code = full_addr - delta                          # exact, §7
-spelling  = spelling_code(word)                         # from the text alone
-context_code_recovered = full_code // spelling          # exact integer division —
-                                                          #   disjoint prime tiers, §7.4
-windspeed = gamma_radial(context_code_recovered)         # the real-valued fold, §7.3
+#!/usr/bin/env python3
+# VAPMIP/wordnet_boxkite.py -- continues from §5.2 and §7.1-7.3
+import math
+
+_HYPONYMS_IDX = RELATION_METHODS.index('hyponyms')
+_LOG_CONTEXT_PRIMES = [math.log(p) for p in CONTEXT_PRIMES[:len(RELATION_METHODS)]]
+LOG_ANCHOR = sum(_LOG_CONTEXT_PRIMES[i] for i in range(len(RELATION_METHODS))
+                  if i != _HYPONYMS_IDX)
+
+def recover_gamma_radial(full_addr: int, delta: int, word: str):
+    """The full §9.1 recovery, end to end, from what a word's own stored
+    address already carries plus its own spelling -- no separate WordNet
+    read. full_addr-delta -> full_code; divide out spelling_code(word)
+    (exact, disjoint prime tiers, §7.4); recovered context_code's own
+    log (via its prime factorisation over CONTEXT_PRIMES, not a vector
+    rebuild) folds through gamma_radial's tanh bound directly."""
+    full_code = full_addr - delta
+    spelling = spelling_code(word)
+    if full_code % spelling != 0:
+        return None                     # not this word's address
+    context_code_recovered = full_code // spelling
+    lc = 0.0
+    remaining = context_code_recovered
+    for p, lp in zip(CONTEXT_PRIMES[:len(RELATION_METHODS)], _LOG_CONTEXT_PRIMES):
+        while remaining % p == 0:
+            remaining //= p
+            lc += lp
+    if remaining != 1 or lc <= 0:
+        return None
+    return math.tanh(0.5 * math.log(lc / LOG_ANCHOR))
 ```
-Live, runnable:
-`repo_appendix/windspeed_reconstruction/01_windspeed_recovery.py` (§13.4).
+`repo_appendix/windspeed_reconstruction/01_windspeed_recovery.py`
+(§13.4) exercises this same shipped function end to end, from a live
+WordNet lookup, as a documentation margin.
 
 Verified live against a real word: `windspeed("tree") = −0.151155`.
 
@@ -1267,16 +1527,40 @@ different jobs; kept apart on purpose.
 
 ### 9.2 The pencil, attached
 
-`pencil(s)` — 7 factorisations of one relation, `ValaQuenta/modules/
-box_kite/maths.py`, built and verified this project. For strut 1:
+`pencil(r)` — the 7 ways to factor one PG(3,2) relation into two
+others — `ValaQuenta/modules/box_kite/maths.py`, built and verified
+this project, whole, not a call into an unshown function:
 
 ```python
->>> bk.pencil(1)
-[(2,3), (4,5), (6,7), (8,9), (10,11), (12,13), (14,15)]
+#!/usr/bin/env python3
+# ValaQuenta/modules/box_kite/maths.py
+from typing import List, Tuple
+
+def pencil(r: int) -> List[Tuple[int, int]]:
+    """The 7 ways to factor r into two others. r in 1..15 (any PG(3,2)
+    point; a box kite's strut is the special case r in 1..7). For every
+    a != r in 1..15, {a, a^r} is a factor pair of r (a ^ (a^r) == r);
+    pairing is an involution with no fixed points once a==r is excluded,
+    so exactly 7 unordered pairs fall out. Sorted by the smaller member --
+    the pencil path's station order."""
+    if not (1 <= r <= 15):
+        raise ValueError("pencil: r must be one of the 15 PG(3,2) points, 1..15")
+    seen = set()
+    pairs = []
+    for a in range(1, 16):
+        if a == r:
+            continue
+        b = a ^ r
+        pair = (min(a, b), max(a, b))
+        if pair not in seen:
+            seen.add(pair)
+            pairs.append(pair)
+    return sorted(pairs)
 ```
-Live, runnable: `ValaQuenta/modules/box_kite/maths.py::pencil` — no
-notebook wraps this call directly; ValaQuenta is this project's root
-authoritative engine repo, called here exactly as shown.
+```python
+>>> pencil(1)
+[(2, 3), (4, 5), (6, 7), (8, 9), (10, 11), (12, 13), (14, 15)]
+```
 
 Each station is a pair of PG(3,2) points XORing to the anchor. This is the
 minimal slice needed here — just enough that a windspeed has something to
@@ -1515,8 +1799,11 @@ continuous, two independent ways); the connectivity of all seven charts at
 exactly `e₀`/`e₈`; and the group that ties it together —
 
 **The Blackjack subgroup.** `PSL(2,7)` is a specific, well-known finite
-group of 168 symmetries (the automorphisms of the Fano plane, §9.4). The
-Blackjack subgroup is the 21-element subgroup of it that preserves
+group of 168 symmetries — the automorphisms of the Fano plane, de
+Marrais's own object (§2.5, §9–§10), not something derived in §9.4 (that
+section only checks whether one strut triple forms a Fano-plane *line*,
+a narrower question). The Blackjack subgroup is the 21-element subgroup
+of it that preserves
 zero-divisor structure while staying transitive across all seven struts
 (`2026-08-13_apex_path/psl27_strut_action.py`, verified 2026-09-17).
 Named here for the first time as such; the atlas of seven charts is
@@ -1712,31 +1999,41 @@ no role in how the code was written.
 - **WordNet box-kite table** (`monad3_c.bin`) — **ESTABLISHED** WordNet;
   storage/build **OURS** — ships, C-verified.
 - **19D context fold**, `context_code`/`gamma_radial` — **ESTABLISHED**
-  WordNet relation vocabulary; encoding **OURS** — ships, exact round
-  trip.
+  WordNet relation vocabulary (`Post-Hoc:` Miller, 1995); encoding
+  **OURS** — ships, exact round trip.
+- **the primality test inside `next_prime`** — **ESTABLISHED**, a
+  deterministic Miller–Rabin test with a fixed 12-witness set
+  (`Post-Hoc:` Miller, 1976; Rabin, 1980) — the same `_is_prime` reused
+  verbatim since `boxkite_prime_hash.py` (2026-08-18); nothing about it
+  changed for this paper, only shown and cited here (§7.2).
 - **Gamma-Radial Windspeed recovery**
   (`(full_addr,delta,spelling)→gamma_radial`) — **OURS**,
   `FIRST STATED HERE` 2026-09-20 — verified in Python and, as of
   2026-09-21, ported into and verified in `ptol.c` (`-M`, `-say`); not
   yet wired into `-w`'s live interactive console (§9.6).
 - **the box kite** — 42 Assessors, 7 octahedra, `PSL(2,7)` —
-  **ESTABLISHED**, de Marrais (2000) — cited, not re-derived.
+  **ESTABLISHED**, de Marrais (2000), the one citation this paper's own
+  structures are designed directly against, not `Post-Hoc:` (§2.2).
 - **the pencil** — 7 factorisations of one relation — **ESTABLISHED**,
-  projective geometry (PG(3,2)); edge framing **OURS** — ships.
+  projective geometry (PG(3,2)), the same de Marrais object, not
+  `Post-Hoc:`; edge framing **OURS** — ships.
 - **the Blackjack subgroup** (21-element, transitive, ZD-preserving) —
   `FIRST STATED HERE` 2026-09-17 — verified.
-- **`Φ_w`, the Joukowsky deformation law** — **ESTABLISHED**, Joukowsky
-  (1910), elastica (Euler, 1744), Kutta–Joukowsky; tether/wind-inflation
-  `FIRST STATED HERE` — `THEORETICAL`, partially `:CALCULATED` this pass.
+- **`Φ_w`, the Joukowsky deformation law** — **ESTABLISHED**, `Post-Hoc:`
+  Joukowsky (1910), elastica (Euler, 1744), Kutta–Joukowsky — all three
+  noticed after this paper's own tether/wind-inflation mechanism
+  (`FIRST STATED HERE`) already worked, per §2.2 — `THEORETICAL`,
+  partially `:CALCULATED` this pass.
 - **the `J_2`/`J_N` crossing identity** — **ESTABLISHED** (classical
-  complex analysis); the identification of *which* involution is
-  `FIRST STATED HERE` 2026-09-20 — verified exactly.
+  complex analysis, `Post-Hoc:`); the identification of *which*
+  involution is `FIRST STATED HERE` 2026-09-20 — verified exactly.
 - **`H`'s Noether current, conserved on struts `{1,3,6}`** —
-  **ESTABLISHED**, Noether (1918), the conservation-law framework
-  itself; the specific measured strut split is `FIRST STATED HERE`
-  2026-09-20 — measured, unexplained.
-- **the cost comparison** — **OURS** measurement; the dense-transformer
-  FLOP identity **ESTABLISHED** — measured.
+  **ESTABLISHED**, `Post-Hoc:` Noether (1918), the conservation-law
+  framework itself; the specific measured strut split is
+  `FIRST STATED HERE` 2026-09-20 — measured, unexplained.
+- **the cost comparison** — **OURS** measurement, via `cs_benchmark`
+  (`Post-Hoc:` Patterson et al., 2021, for the benchmarking methodology,
+  §8); the dense-transformer FLOP identity **ESTABLISHED** — measured.
 - **`observer-position` methodology** — **OURS**, `FIRST STATED HERE`
   2026-09-20 — in use.
 
@@ -1759,28 +2056,76 @@ independent of it.
 
 1. de Marrais, R. P. C. (2000). *The 42 Assessors and the Box-Kites They
    Fly: Diagonal Axis-Pair Systems of Zero-Divisors in the Sedenions' 16
-   Dimensions.* arXiv:math/0011260.
-2. Moreno, G. (1997/98). *The zero divisors of the Cayley–Dickson algebras
-   over the real numbers.*
-3. Joukowsky, N. (1910). The Joukowsky transform / airfoil mapping.
-4. Euler, L. (1744). The elastica — equilibrium of a loaded flexible rod.
-5. Kutta, W. M.; Joukowsky, N. The Kutta–Joukowsky theorem.
-6. Smith, P. H. (1939). The Smith chart.
-7. Patterson, D.; et al. (2021). *Carbon Emissions and Large Neural
-   Network Training.*
-8. Maxwell, J. C. (1864); Laman, G. (1970). Combinatorial rigidity
-   counting — cited as the analogue that turned out to be the wrong frame
-   for §9.3, kept in the record for exactly that reason.
-9. Noether, E. (1918). *Invariante Variationsprobleme.* Nachrichten von
-   der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-
-   Physikalische Klasse, 235–257. The theorem every conservation claim in
-   this paper (§9.4, §10, §11) is an instance of — every one of them is a
-   Noether current, named as such throughout, not a looser or informal
-   use of "conserved."
-10. Zeman, A.; Dewar, M.; Della Sala, S. (2015). *Lives without imagery –
-    Congenital aphantasia.* Cortex, 73, 378–380. Cited in §11 for the
-    naming origin of the Mind's Eye — offered as motivation, not as a
-    claim about how either system actually works.
+   Dimensions.* arXiv:math/0011260. **Not `Post-Hoc:`** — the maths this
+   paper's own box-kite structures (§9–§10) are designed directly
+   against, per §2.2. The author's own account: he kept finding
+   relationships that already existed inside the sedenion zero-divisor
+   structure, piecemeal, until stopping long enough to grasp de Marrais's
+   box kite whole — at which point the rest of this paper's §9–§10
+   followed from it directly, not from a resemblance noticed afterward.
+2. `Post-Hoc:` Moreno, G. (1997/98). *The zero divisors of the
+   Cayley–Dickson algebras over the real numbers.*
+3. `Post-Hoc:` Joukowsky, N. (1910). The Joukowsky transform / airfoil
+   mapping.
+4. `Post-Hoc:` Euler, L. (1744). The elastica — equilibrium of a loaded
+   flexible rod.
+5. `Post-Hoc:` Kutta, W. M.; Joukowsky, N. The Kutta–Joukowsky theorem.
+6. `Post-Hoc:` Patterson, D.; Gonzalez, J.; Le, Q.; Liang, C.; Munguia,
+   L.-M.; Rothchild, D.; So, D.; Texier, M.; Dean, J. (2021). *Carbon
+   Emissions and Large Neural Network Training.* arXiv:2104.10350. Cited
+   in §8 for its benchmarking methodology — energy/cost as a measured,
+   transparently-reported number — not for a direct carbon-offset
+   comparison.
+7. `Post-Hoc:` Maxwell, J. C. (1864); Laman, G. (1970). Combinatorial
+   rigidity counting — cited as the analogue that turned out to be the
+   wrong frame for §9.3, kept in the record for exactly that reason.
+8. `Post-Hoc:` Noether, E. (1918). *Invariante Variationsprobleme.*
+   Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen,
+   Mathematisch-Physikalische Klasse, 235–257. The theorem every
+   conservation claim in this paper (§9.4, §10, §11) is an instance of —
+   every one of them is a Noether current, named as such throughout, not
+   a looser or informal use of "conserved."
+9. `Post-Hoc:` Zeman, A.; Dewar, M.; Della Sala, S. (2015). *Lives
+   without imagery – Congenital aphantasia.* Cortex, 73, 378–380. Cited
+   in §11 for the naming origin of the Mind's Eye — offered as
+   motivation, not as a claim about how either system actually works.
+10. `Post-Hoc:` Miller, G. A. (1995). *WordNet: A Lexical Database for
+    English.* Communications of the ACM, 38(11), 39–41. `context_code`
+    (§7) was built against WordNet's data, already installed and in use
+    — not against Miller's paper — and this is WordNet's own citable
+    source, checked afterward, per §2.2.
+11. `Post-Hoc:` Salakhutdinov, R.; Hinton, G. (2009). *Semantic Hashing.*
+    International Journal of Approximate Reasoning, 50(7), 969–978.
+    Cited in §3.5 as the nearest ML precedent to "one compact code per
+    meaning" — learned and approximate, contrasted with `_word_zero_idx`.
+12. `Post-Hoc:` Bloom, B. H. (1970). *Space/Time Trade-offs in Hash
+    Coding with Allowable Errors.* Communications of the ACM, 13(7),
+    422–426. Cited in §5.4 for the general pattern of a named, quantified
+    error rate as the price of a fixed-size address space.
+13. `Post-Hoc:` Weinberger, K.; Dasgupta, A.; Langford, J.; Smola, A.;
+    Attenberg, J. (2009). *Feature Hashing for Large Scale Multitask
+    Learning.* ICML 2009. Cited in §5.4 — the same collision-by-addition
+    arithmetic as `spelling_code`'s wraparound (§5.2), arrived at
+    independently for fixed-size feature vectors rather than letter
+    positions.
+14. `Post-Hoc:` Bordes, A.; Usunier, N.; Garcia-Durán, A.; Weston, J.;
+    Yakhnenko, O. (2013). *Translating Embeddings for Modeling
+    Multi-Relational Data* ("TransE"). NeurIPS 2013. Cited in §7.5 as the
+    highest-cited precedent for encoding typed-relational structure into
+    one compact representation per entity — approximate, contrasted with
+    `context_code`'s exact multiplicative composition.
+15. `Post-Hoc:` Chaidaroon, S.; Park, D. H.; Chang, Y.; Fang, Y. (2020).
+    *node2hash: Graph Aware Deep Semantic Text Hashing.* Information
+    Processing & Management, 57, 102143. Cited in §7.5 — the closest
+    literal "hashing" precedent for folding a node's graph neighbourhood
+    into its own code.
+16. `Post-Hoc:` Miller, G. L. (1976). *Riemann's Hypothesis and Tests for
+    Primality.* J. Comput. Syst. Sci. 13(3), 300–317; Rabin, M. O.
+    (1980). *Probabilistic Algorithm for Testing Primality.* J. Number
+    Theory 12(1), 128–138. Cited in §7.2 — `_is_prime`'s fixed
+    12-witness deterministic test is the standard witness set these two
+    results establish is exact below 3.3×10²⁴, checked against the
+    running code, not used to write it.
 
 **Cody Michael Allison** (Michael Rendier). Correspondence:
 the.wandering.god@gmail.com · GitHub: github.com/michaelrendier · ORCID:
@@ -1791,39 +2136,48 @@ the.wandering.god@gmail.com · GitHub: github.com/michaelrendier · ORCID:
 
 ## 13. Code appendix
 
-The executable form of every result in this paper. Not the `repo_appendix`
-generally — this section is the curated path through it: what to run, in
-what order, to reproduce §3 through §11 from nothing but this repository
-and its two sibling repos (`VAPMIP`, `ValaQuenta`). `repo_appendix/README.md`
-is the full index — every mechanism this paper's prose touches, even in
-passing, copied in whole, with one deliberate exclusion (the Two Trees
-engine, §4.1, kept as a pointer into `ValaQuenta`/`VAPMIP` since it's an
-explainer this paper reads, not something this paper builds).
+Every Listing that carries actual weight in this paper's argument is
+already inline, complete, and copy-paste runnable where it's first
+used — §3.1 (the address), §5.2 (spelling), §6.2 (the WordNet fold),
+§7.2 (context + the real Miller–Rabin test), §9.1 (the windspeed
+recovery), §9.2 (the pencil). This section is not a second copy of any
+of them; it is the map to the rest — the C touchpoints §7–§9's Python
+calls against, and where the documentation-margin notebooks sit for
+anyone who wants to watch a section run cell by cell instead of pasting
+the listing into their own interpreter. `repo_appendix/README.md` is
+the full index behind this map, with one deliberate exclusion (the Two
+Trees engine, §4.1, kept as a pointer into `ValaQuenta`/`VAPMIP` since
+it's an explainer this paper reads, not something this paper builds).
 
-### 13.1 The notebooks
+### 13.1 The notebooks — documentation margins, not the source
 
-- **`notebooks/01_semantic_prime_hashing.ipynb`** — proves the address
-  (Horner→next_prime→π), the `6543`-vs-`6542` anomaly, the `U+200B`
-  collision. §3.
-- **`notebooks/02_the_313_sieve_and_49999_unsieve.ipynb`** — proves `313`
-  as the sieve's own extinction boundary, derived twice independently. §4.
-- **`notebooks/03_phonetic_prime_hashing.ipynb`** — proves the naive
-  scheme's anagram collision, the Gödel-positional fix. §5.
-- **`notebooks/05_wordnet_19d_contextual_hash.ipynb`** — proves
-  `context_code`/`gamma_radial`, exact both directions, the combined
-  address. §7.
-- **`notebooks/06.5_monad3c_update_mechanism.ipynb`** — proves the real C
+Each of these runs the same function already shown inline in its
+section, cell by cell, for anyone who wants to watch it execute rather
+than paste the Listing into their own interpreter. None of them is
+where a result's authority comes from — the inline Listings are:
+
+- **`notebooks/01_semantic_prime_hashing.ipynb`** — §3.1's address, the
+  `6543`-vs-`6542` anomaly (§3.2), the `U+200B` collision (§3.3).
+- **`notebooks/02_the_313_sieve_and_49999_unsieve.ipynb`** — §4.4's `313`
+  boundary, derived twice independently.
+- **`notebooks/03_phonetic_prime_hashing.ipynb`** — §5.1's anagram
+  collision, §5.2's fix.
+- **`notebooks/05_wordnet_19d_contextual_hash.ipynb`** — §7.2's
+  `context_code`, §7.3's `gamma_radial`, both directions.
+- **`notebooks/06.5_monad3c_update_mechanism.ipynb`** — §6.5's real C
   update law (`monad_learn_ex`) — C-kernel, every cell actually compiled
-  and run. §6.
+  and run, the one place a notebook is itself the only copy of a result
+  (there is no separate inline C Listing for the update law in §6).
 - **`repo_appendix/windspeed_reconstruction/`** (11 scripts + README,
-  numbered) — proves the Gamma-Radial Windspeed recovery, the
-  coordinate-frame and aperture corrections, the `{1,3,6}` Noether-current
-  conservation result. §9.
+  numbered) — the exploratory path behind §9.1/§9.4's finished results;
+  `01_windspeed_recovery.py` is scratch work that led to the shipped
+  `recover_gamma_radial` now shown whole in §9.1, kept here as the
+  record of how it was found, not as the citable form of the result.
 
 `notebook 04` (`boxkite_pencil_hyperstring_windspeed.ipynb`) is cited
-throughout §9 as the origin of the discreteness anomaly this paper's own
-work later resolved — read alongside `07_unflattened_continuous_H.py`
-above for the corrected version of the same question.
+throughout §9 as the origin of the discreteness anomaly §9.3 later
+resolved — read alongside `07_unflattened_continuous_H.py` for the
+corrected version of the same question.
 
 ### 13.2 The build — WordNet into the box kite, in C
 
@@ -1877,26 +2231,13 @@ Live, runnable: `PtolC/ptol.c`, the `-M` flag directly.
 
 ### 13.4 The Gamma-Radial Windspeed recovery, exact
 
-```
-VAPMIP/wordnet_boxkite.py
-repo_appendix/windspeed_reconstruction/01_windspeed_recovery.py
-```
-
-```python
-full_code = full_addr - delta
-recovered_spelling = spelling_code(word)                  # from text alone
-recovered_context  = full_code // recovered_spelling      # exact, disjoint tiers
-log_code = sum(v[i] * math.log(CONTEXT_PRIMES[i]) for i in range(19))
-gamma_radial = math.tanh(0.5 * math.log(log_code / LOG_ANCHOR))
-```
-Live, runnable: `repo_appendix/windspeed_reconstruction/01_windspeed_recovery.py`
-directly, or the shipped function itself, `wordnet_boxkite.gamma_radial()`
-/ `recover_gamma_radial()` (promoted out of the notebook into the real
-module this pass, 2026-09-21 — it only ever lived in a notebook cell
-before). Also live in C now: `monad3_gamma_radial()`,
-`PtolC/ptol.c`, exposed via `ptol -M <word>` and `ptol -say <prompt>`
-(§9.6, §10) — checked against this exact Python function's own output
-before anything was built on it.
+The complete, runnable `recover_gamma_radial` is §9.1's Listing, not
+repeated here — this entry is the map: `VAPMIP/wordnet_boxkite.py` is
+where it ships; `repo_appendix/windspeed_reconstruction/01_windspeed_recovery.py`
+is the exploratory script that found it (§13.1); `PtolC/ptol.c`'s
+`monad3_gamma_radial()` is the C port, exposed via `ptol -M <word>` and
+`ptol -say <prompt>` (§9.6, §10), checked against the Python function's
+own output before anything was built on it.
 
 ### 13.5 The box kite itself
 

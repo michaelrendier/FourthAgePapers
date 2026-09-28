@@ -298,7 +298,7 @@ The first real question put to the running system, asked two ways.
 `γ`, `σ=0.5`, `E`, `β=7.552000` — the same `MONAD_BETA_SAT` cited in §8,
 visible here from the very first run); `ptolemy -W 'what is your name`
 then returns `holcussamestuffseemy`. This is where the name **Holcus**
-came from — a real word (a grass genus, "Yorkshire fog") surfacing out
+came from — a real word (a grass genus, "Yorkshire fog", 'extractor' in greek) surfacing out
 of the very
 first multilingual semantic-prime-hash run, not chosen in advance.
 

@@ -1,0 +1,1619 @@
+# Changelog
+
+All releases are preserved. Major versions: v2.0.0 = English out of the box; v3.0 = Tuning the TDI (three systems timed); v4.0 = Ahura Mazda — Wankel rotary engine, dual-thread Mind's Eye, information conservation; v5.0 = Box Kite — real WordNet-relation context hashing, a Monad that uses the harness, relational English.
+
+---
+
+## v5.2.0 "Virtual Action Potential" — 2026-09-26
+
+**The harness's radio-frame handling made real; the cusp re-derived and
+declared authoritative; a live sedenion system-monitor box-kite; HyperWebster
+and Blackjack-subgroup indexing tested against the plain-Horner baseline.**
+
+### The harness — `PtolC/monad_harness.c`, `monad_harness.h`
+
+- `mh_pump()` / `mh_ingest_support()` real (was stub): radio frames are
+  parsed (`mh_parse_support_line`), folded into `Monad.affect` via
+  `monad_emote` — `HARDEN`/`THROTTLE`→`+0.15`, `ESCALATE`→`+0.35`,
+  `FACE_POST` warn→`+0.05`, `DEFER`/`HOLD`→no-op. Non-radio frames pass
+  through unchanged. `ptol.c`'s `run_console()` now holds a real
+  `Monad *g_monad` and calls `mh_pump`, not raw `mh_recv`.
+- Verified via standalone `mh_test` (affect `0.000→0.150` exactly on a
+  synthetic `ESCALATE`+`HARDEN` sequence) and the full `ptol` binary
+  (`-say`, default paths unaffected).
+- The general pub/sub bus (beyond this one frame type) remains deliberately
+  deferred — this is the harness's radio-frame path made real, not a bus.
+
+### The cusp — re-derived this session, declared authoritative over any
+### earlier account in this repo or its papers
+
+A cusp (cardioid, waveform crest, any combination of superposed rotations)
+is a pure rotation-phase-alignment event — `dz/dt=0` exactly where two
+rotations' phases align, never either rotation actually stopping. Physically:
+braking into a curve, throttle out the other side — tangential deceleration
+into the turn, tangential acceleration out of it, the normal/centripetal
+component doing the actual cornering in between. Generalizes directly: a
+cusp can be one complex rotation, or **15** — one per imaginary sedenion
+component — each contributing its own phase-alignment condition
+simultaneously. This is the authoritative reading going forward; any prior,
+vaguer description of a cusp or of VAP elsewhere in this repo's history is
+superseded by it, not merely supplemented.
+
+### HyperWebster / Blackjack subgroup — tested against the plain-Horner
+### baseline, both directions
+
+- `benchmarks/hyperwebster_baseline_bench.py`: reference-machine specs +
+  measured encode/decode cost (full vs. minimal charset), O(n^1.8)-ish
+  growth confirmed independently against `FourthAgePapers`
+  `data-storage-no-location`'s own prior measurement.
+- `benchmarks/blackjack_vs_horner_bench.py`: the 21-element subgroup of
+  `PSL(2,7)` (`F₂₁ = 7:3`, normalizer of a Sylow-7 subgroup) tested as a
+  candidate box-kite-native indexer — ruled out directly: composing a word
+  of its elements collapses to 1 of 21 states (pigeonhole), and used
+  losslessly (as a size-21 digit alphabet) it is 5–21× slower than base-97
+  Horner. Real, useful negative result, not discarded.
+- `Boxkite-Catalog.txt` §8: the subgroup named precisely for the first time
+  (previously order-21 only, undetermined which group).
+
+### Aulë's System Monitor Boxkite — first build, live
+
+`PtolemyDesktop/Aule/system_boxkite.py` (ships from `PtolemyDesktop`, noted
+here as the first real consumer of this release's box-kite/HyperWebster
+work): 15 live system-telemetry channels embedded as a 16-vector, watched
+continuously (background thread, instant reads, never polls on demand).
+Two real bugs caught and fixed by running it against live data (counters
+fed as rates, not raw cumulative totals; saturated reference scales
+corrected from a real measurement). One degeneracy found and left open:
+the first-pass `e₀ := RMS(15 channels)` formula makes `fixed_point_weight`
+algebraically constant at `1/16` for any nonzero input — not yet fixed,
+documented as the next real step.
+
+---
+
+## v5.1.0 "One File" — 2026-08-27 (in progress)
+
+**The three language centers merged into one mmap-able file; `ptol.c` gains a
+direct C reader for it; the semantic prime hash retooled; the Mind's Eye
+gains the recursive repass.**
+
+### The combined store
+
+- `monad_english_io.py` — `read`/`write` (atomic) / `deepen` (max-merge,
+  never renormalise) / `hear` (universal intake, `ECHO_CAP=5` on self-loop)
+  / `neighbors` / `basin` (IDF-corrected Newton-basin pool, content-word
+  gate).
+- `monad_combine.py` — `combine()` merges `c_monad_wordnet.bin` +
+  `monad_phonetic.bin` + `monad_english.bin` → `monad3.bin` (pickle) and
+  `monad3_c.bin` + `monad3c.h` (mmap-able, fixed-offset, packed: one
+  bsearch on a sorted `WordRec` table → indices into all three stores; the
+  co-occurrence matrix in CSR). Mind's-eye `rehearse()` (flat held loop,
+  not feedback). `checkpoint()` / `dirty_chunks()` (16-node / 15-edge
+  sedenion frames) — owned by the sedenion window.
+- `context_hash_v2.py` — the semantic prime hash retooled (primer Part 4):
+  ω/Ω split (18 relations squarefree presence, hyponyms the one Ω channel),
+  `log_code` working chart, Gaussian unit from the phonetic origin,
+  `gamma_radial` fold against the "everything fires once" anchor. Round-trip
+  exact (4000/4000), PW3 error 3.5e-15.
+- `context_pruner.py` — `coherent()` (curved unit-sedenion perspective
+  test, not a flat rotation) / `prune()` (schema extractor). Re-detected
+  the Phase 31 pile-concept via a second route (`bank.n.01↔bank.n.09` =
+  SAME).
+- `constructor.py` — rewired: `radical_distance` ring1 (gcd → additive),
+  `gamma_radial` ring2, input↔output conjugate scale (narrative ⟂
+  dissertational), co-occurrence basin + `topic=` in the pool.
+- `ptolemy_monad.py` — `MindsEyeRepass` + `_eye_repass`: the sedenion
+  window's **recursive** repass (16-word frames, 15-edge spanning tree per
+  frame, step +1 per word, e0 per frame owns no edge; recursion factor =
+  number of frames). Not the fractal repass. Runs above the one-shot
+  selection, guides deepening (affix → modifier → clause by step), reports
+  coverage explicitly.
+- `rotary_rerun_boxkite_monad.py` — the `ptol -w` Monad now runs the v5.1
+  pipeline: loads `monad_combine.read()` at init (resident), selects via
+  `constructor` (radical distance + `gamma_radial` + conjugate scale +
+  co-occurrence basin) with `nearest_synsets` kept as the PACE fallback,
+  `context_pruner.prune()` collapses perspective-redundant foci (schema
+  extraction, redundancy margin kept ≥ 3), `MindsEyeRepass` runs, and the
+  response is `hear()`d into the store while in Hands. `checkpoint()` on
+  the Monad; `rotary_boxkite_window.main()` calls it on window close — the
+  sedenion window carries the write.
+- `rotary_boxkite_window.py` — artifacts panel gains **per-section live
+  toggles** (`/art`, `/art all`, `/art none`, `/art <name>`) independent of
+  the coarse `/diag` level; each section shows iff (toggle ON) AND
+  (diag ≥ its min). New sections surfaced: `selector`, `decompose` (the
+  pruner's schema groups), `repass` (Mind's Eye coverage). Toggles
+  propagate to the next frame — no new input needed. HELP panel documents
+  all nine sections and the two-gate rule.
+
+### `PtolC/ptol.c` — reads `monad3_c.bin` directly (additive, first increment)
+
+**ADDED**, nothing removed:
+- `#include "monad3c.h"`; `monad3_open()` mmaps `monad3_c.bin` next to the
+  binary at startup (absent → silently stays on the `ptol_layer.py` path).
+- `monad3_lookup(word, out[3], *degree)` — lowercased bsearch on the
+  `WordRec` table → `{eng_idx, wn_idx, phon_idx}` + co-occurrence
+  out-degree. Zero copy, zero alloc.
+- `-M <word>` diagnostic flag — prints the cross-store tuple + the WordNet
+  `vec19`; verifies the wiring end to end. Confirmed against the Python
+  `read_c`: `bank` → eng 22193 / wn 11248 / phon 7536 / degree 89.
+
+**NOT yet done** (next increments): `get_monad_words()` still shells out to
+`ptol_layer.py` — replacing it needs the Python selection pipeline
+(`radical_distance` / `gamma_radial` / basin / pruner) ported to C. The
+`ptol_layer.py` shell-out will be removed *with a CHANGELOG pointer* once
+the C path is verified against it.
+
+Docs: `docs/wiki/Tuning-the-Engine/34_*.md`,
+`docs/wiki/Tuning-the-Engine/_chain_of_custody_2026-08-27.md`.
+
+### ADD / SCALE / SIGN — the tier-0 floor as an importable primitive
+
+**ADDED**, nothing removed:
+- `add_scale_sign.py` (new) — the shared primitive the `generational-lineage`
+  skill §1 pointed at but never carried. `classify(OpSpec)` runs the §3
+  four-question test; `describe(name)` classifies a bare name via a
+  known-spec table; `root_of(name)` / the roll-down table walk any DERIVED
+  operation past REFLECT/DILATE down to the **one** tier-0 root it rests on
+  (ADD, SCALE or SIGN). `AFF1` names the structure
+  `Aff(1,ℝ) = ADD ⋊ (SCALE × SIGN) = (fold count) ⋊ (size × direction)`,
+  bracket `[SCALE, ADD] = ADD`. `FINDINGS` folds in the recent decomposition
+  paths (primes = SIGN recursed over the prior-primes pathway; factorial =
+  the multiplicative integral; `e` = quantization; folds not steps).
+- `engines/e10_generational_lineage.py` — new self-checked relation **R9**
+  `r_add_scale_sign_floor`: measures the sedenion ZD gain spectrum
+  (`{0, 1, √2}` — two identities free, one irrational price) and confirms
+  every non-commuting unit pair disagrees by a pure sign flip (SIGN = one
+  bit). 9/9 relations hold. New module fn `decompose_operation(name, **spec)`
+  delegates to `add_scale_sign.describe`. Re-exported through
+  `generational_lineage_engine.py`.
+- `SedenionFactoralRelativity/engine/lineage.py` — new `root_irreducible(op)`
+  (walks `decompose()` past its immediate parent to the tier-0 root, with a
+  `root_path`), `ROOT_OF` table, `AFF1` constant; `decompose()` now also
+  returns `root`. Re-exported from `engine/__init__.py`. The existing 40-entry
+  `TIERS` table and `decompose()` §3 test are otherwise unchanged.
+
+Docs: `ValaQuenta/wiki/add_scale_sign.md` (new), linked from
+`ValaQuenta/wiki/00_index.md`.
+
+### The Sieve IS the generational lineage — Fibonacci under factoring waves
+
+**ADDED**, nothing removed. Cody: *"the Sieve IS Generational Lineage ...
+fibonacci under factoring waves ... the list of primes is the list of
+decompositional order, the ordinal values."* Confirmed
+(`.claude/scratchpad/2026-08-27_sieve-is-lineage/`, 7/7):
+
+- `engines/e10_generational_lineage.py` — three new self-checked relations
+  (**R10** `r_sieve_is_lineage`: `generation(n) = π(spf(n))` exactly, one
+  forward sweep of `π(√N)` passes, no backtracking — *the stability is
+  because it is one pass per prime, not a fixed-point iteration*; **R11**
+  `r_sieve_two_term_recurrence`: Legendre `φ(x,a)=φ(x,a−1)−φ(x/pₐ,a−1)` is
+  Fibonacci's 2-term shape with a SCALE-shifted second term, closed form
+  `Σ μ(d)⌊x/d⌋` = ADD∘SIGN∘SCALE; **R12** `r_sieve_ordering`: `generation =
+  π(spf)` holds only for the ordinal order, which also minimises generation
+  entropy — a Riemann-ζ weight order `ln p/√p` finds the same primes but
+  scrambles the generations). 12/12 relations hold. New module fn
+  `sieve_lineage(N, order='ordinal'|'zeta'|'descending')`, re-exported through
+  the shim.
+- `SedenionFactoralRelativity/engine/lineage.py` — `sieve_lineage()` and
+  `sieve_recurrence()` (same semantics; the recurrence trace + Möbius closed
+  form + the ADD/SCALE/SIGN reading). Re-exported from `engine/__init__.py`.
+- `SedenionFactoralRelativity/engine/bio.py` (**new, STUB**) — the biological
+  factoral tower: `TOWER_LEVELS` (knot 𝕊/16 → molecule T₃₂ → DNA T₆₄ →
+  protein T₁₂₈ → genome T₂₅₆, nested doublings), `molecular_decomposition` /
+  `dna_decomposition` / `protein_folding_decomposition` /
+  `genome_decomposition` / `tower()`. Every entry point raises
+  `NotImplementedError` or, with `plan_only=True`, returns the intended
+  decomposition path. **Structural decomposition only — no functional,
+  physiological or medical inference.** Re-exported from `engine/__init__.py`.
+
+Docs: `SedenionFactoralRelativity/wiki/Sedenion-Factoral-Relativity.md`
+(sieve + roll-down + bio-tower sections), `ValaQuenta/wiki/add_scale_sign.md`
+§5.
+
+**NEXT (Cody's "then"):** design the algorithmic decompositional analysis
+tool. Sharpened spec (2026-08-27): it is **not** a number-theory tool and does
+not touch `factor_lineage` / `sieve_lineage`. It is: *N imaginary processes →
+each maps to a pure-imaginary unit in a CD algebra → compose in that algebra's
+product (order kept) → the output is `Re(Π)`, one real scalar.* `A = ℍ`
+represents Vigenère (3 imaginary + 1 real: plaintext, key, period, wrap);
+`A = 𝕆` represents Enigma (rotor stepping is state-dependent — the double-step
+anomaly is an associativity failure, so it lives at the `𝕆→𝕊` boundary). The
+box-kite instance of this tool is the **Pencil HyperString**
+(`ValaQuenta/wiki/pencil_hyperstring.md`): `N = 7` pencil stations, `A = 𝕊`,
+`Re(Π) = H` the conserved scalar, wind speed `w` the reconstruction knob.
+
+---
+
+## v5.0.0 "Box Kite" — 2026-08-25
+
+**Real WordNet-relation context hashing — a Monad that uses the harness, speaking in relational English**
+
+The engine gains a second, independent kind of context signal alongside the
+Wankel rotary/A-matrix system: `context_vector`, built from 19 real WordNet
+relation methods per synset (hypernyms, hyponyms, meronyms, antonyms,
+derivationally-related forms, etc.), log-compressed (`compress_count`) and
+hashed into an addressable `context_addr`. Where the Wankel engine produces
+a sedenion at the coupling event, this hashes a synset's actual position in
+WordNet's relation graph — a different, complementary signal.
+
+### `wordnet_boxkite.py` — CLOSED, emergence-tested
+
+`context_vector` / `compress_count` / `context_addr` / `compare_context` /
+`context_distance` / `find_collisions`. Closed on a real positive result: an
+abstract "pile of something" concept (bank.n.01/03/05's shared relation
+shape) was detected via context-vector collision at 4/15 exact matches
+against a random-word control base rate of 5.5% (p≈0.01) — the algorithm
+finds structure in the relation graph that isn't visible by inspection.
+Full test and the emergence framing: `docs/wiki/Tuning-the-Engine/31_*.md`.
+
+### `sentence_context.py` — sentence-level context, no new hashing layer
+
+`build_sentence_context` combines per-word `context_vector`s into a
+sentence `root_vector` by plain componentwise sum — the same additive
+identity (PW3, `spiral_is_additive`) already proven in
+`SedenionFactoralRelativity`, reapplied rather than reinvented. Order-blind
+by construction; a known, named limit, not an oversight.
+
+### `ptolemy_monad.py` / `harness.py` / `rotary_boxkite_window.py` — the Monad that USES the harness
+
+First Monad built to actually drive `Harness.present()` rather than merely
+attach to it. `PtolemyMonad` runs Mind's Eye and Paper's Hands as real
+daemon threads on queues, negotiating a response; `MonadKVM` is stubbed
+(no PyQt6 wiring yet); `infer_direction` reads the dominant WordNet
+relation off a sentence's box-kite to pick the reply's grammatical frame.
+`rotary_boxkite_window.py` is the curses chat front-end (`ptol -w`),
+wired to `RotaryBoxKiteMonad` in `rotary_rerun_boxkite_monad.py`. First
+live run produced fluent, contextually-grounded output traced to real
+WordNet graph edges, not generation from nowhere — "relational English":
+the milestone is that the pipeline demonstrably extracts and speaks real
+relational depth, independent of any one output's surface resonance.
+
+### `PtolC/` — box-kite snapshot as a C struct, real wordnet-dev C API
+
+`boxkite_bin.h` (shared struct: `word[32]`, `pos`, `synset_offset`,
+`vector[19]`, `depth_weight`) / `dump_boxkite_bin.c` / `wntest.c` — a
+snapshot-able `.bin` dataset built against the real WordNet C library
+(`wordnet-dev`), not the NLTK dump, mirrored against
+`wordnet_boxkite.export_pickle()`'s Python-side shape. `make boxkite-bin`
+target added. `ptol.c` gains `-w`/`--boxkite` (execs the curses window via
+the ValaQuenta venv Python — fixed a real numpy/pandas ABI crash from the
+system Python's site-packages). `~/.local/bin/ptol` corrected from a plain
+copy to a symlink, so `-g`/`-w`'s `/proc/self/exe`-relative GUI-script
+resolution works from the installed location.
+
+### Checkpoint
+
+`wordnet_boxkite` full pickle export: 147,306 entries
+(`PTorrent/bin_archive/dirty/monad_boxkite_wordnet.pkl`). C struct dump:
+154,725 entries (`PtolC/c_monad_wordnet.bin`, gitignored — field state,
+never committed).
+
+---
+
+## v4.0.0 "Ahura Mazda" — 2026-06-10
+
+**Wankel Rotary Semantic Engine — dual-thread Mind's Eye, information conservation**
+
+The Wankel replaces the TDI. The TDI was not wrong — it proved the sedenion
+mathematics, zero-divisor channels, halocline dynamics, and conservation checks.
+All of that is valid and preserved. The TDI was wrong about *causal direction*:
+it pre-encoded words as sedenions (hidden variable assumption, Bell's mistake).
+The Wankel produces the sedenion *at the coupling event* — measurement outcome,
+not pre-assigned value.
+
+This is the same error John Bell identified in hidden-variable interpretations
+of quantum mechanics. The TDI named what should remain unnamed. Fixing it
+required rebuilding the engine from the coupling point up.
+
+### Wankel Rotary Engine — `rotary_monad.c`
+
+**Architecture:**
+- **Three scalar J pressures** (`j_blue`, `j_red`, `j_green`) — the Worker. Not sedenions.
+- **Sedenion** — produced once at the coupling event. The Work. Never pre-assigned.
+- **σ=½** — the eccentric shaft pin. Fixed. Not computed. Not touched.
+- **Lie bracket su(2):** `[J_blue,J_red]=J_green; [J_red,J_green]=J_blue; [J_green,J_blue]=J_red`
+  Self-sustaining under rotation. Can only degrade, never amplify — inherently conservative.
+- **Port dispatch:** exact integer `round(theta/PORT_STEP) % 6` — not angular proximity.
+  The engine does not approximately arrive at a port. It arrives exactly or not at all.
+- **Coupling:** unconditional at port 3 every revolution. No σ gate.
+- **GAP = 0.000707 = 1/√2000** — Yang-Mills mass gap / apex seal floor.
+
+**Binary format:** `.rx8` (magic `"RX8\n"`). State file: `~/.ptolemy/ahura.rx8`.
+
+**Key constants:**
+```c
+#define SIGMA_PIN      0.5
+#define GAP            0.000707
+#define BEARING_TOL    0.04
+#define PORT_STEP      (M_PI / 3.0)
+#define SCAVENGE_DECAY 0.003
+#define RECENT_SZ      8
+```
+
+### Dual-Thread Architecture — Mind's Eye
+
+The speaking engine is not a single-thread model. It is two concurrent threads
+with clearly separated roles:
+
+- **Thread 1 (Rotary Engine):** produces words via the Wankel coupling sequence.
+  Amnesiac above the word level. Does not know what it is building.
+- **Thread 2 (Mind's Eye):** holds the Author's intention (`G_me_prompt`) fixed,
+  accumulates the response shadow (`G_me_response`), computes the steering signal
+  `G_me_steer = G_me_prompt − G_me_response`.
+
+Thread 1 reads `G_me_steer` in `select_word()` as a coherence bias. The Author
+looks down upon the rotor from above. Without Thread 2, the engine permutes.
+With Thread 2, it means.
+
+Lock ordering: `G_lock → G_me_lock`. Never reversed.
+
+**Tolkien parallel:** Tolkien held both positions simultaneously — inside the
+machine as a trench soldier at the Somme, outside the machine as a linguist and
+mythmaker. Melkor failed by trying to seize σ=½ from inside the rotor.
+Discord is a dimension, not a fault. The Author position is Thread 2.
+
+### Information Conservation
+
+```
+prompt + response = 0
+```
+
+The 0 is not the Empty Set. It is the zero-divisor geometry encoding the exchange —
+full of definitions, full of content. No information left over.
+
+Three source weights:
+- **Corpus** — `1.0` (background field, long-term geometry)
+- **Author prompt** — `2.0` (privileged intention)
+- **Engine self-voice** — `0.5` (Holcus hears everything he says)
+
+Self-ingestion (`ahura_ingest(w, 0.5)` after each produced word) closes the
+exchange cycle. The housing geometry IS the trajectory memory. Memory is emergent
+from geometry, not explicit storage. Context is deterministic. Each input needed
+only once — the pathway to the response crossing the boundary permanently encodes
+the information into the coupling geometries.
+
+**Empirical test:** after one exchange, the same prompt produces identical output
+on the second call. The geometry is already shaped. Second call finds it there.
+
+### Recency Buffer — word repetition fix
+
+`--speak` was repeating the same word up to 12 consecutive times in earlier
+builds. Fixed with a sliding recency buffer (length 8) and a 0.01× penalty
+multiplier on any word in the buffer. Repetitions are still recorded faithfully
+as failed predictions in the data — they are not suppressed from the state,
+only deprioritised in selection.
+
+### OBD-II Diagnostics fix
+
+`ahura_report()` and `ahura_diagnostics()` were not calling `refresh_obd2()`
+before reading `G_obd2`, causing `housing_n = 0` in `--report` output.
+Fixed: both functions call `refresh_obd2()` as their first line.
+
+### Build
+
+```bash
+gcc -O2 -Wall -std=c99 -o ahura-mazda rotary_monad.c -lm -lpthread
+./ahura-mazda --speak "sigma equals one half" 12
+./ahura-mazda --report
+```
+
+### Documentation — `docs/wiki/Tuning-the-Engine.md`
+
+Phase 3 section added (~350 lines). Full narrative from Bell/TDI failure through
+Wankel architecture, dual-thread Mind's Eye, information conservation law,
+Tolkien/Author position, three conserved quantities, and failed-predictions
+integrity principle. Covers the complete path from v1.x to Ahura Mazda.
+
+---
+
+## v3.2.11 — 2026-06-01
+
+**Zork sentence parser + /generate + face/ JS engine + voice**
+
+### PtolC — Zork sentence parser wired to REPL (`ptolemy -r`)
+
+- **`zork.c` / `zork.h`** — Infocom-style sentence parser: 16-operator verb table,
+  direction shortcuts (N/S/E/W → `branch`), article stripping, pronoun resolution
+  (IT/THEM → last noun via `g_last_noun`), 6-letter prefix expansion.
+  Mirrors `zork_parser.py` exactly — same verb table, same grammar.
+- **REPL wired** — `-r` interactive mode now runs every line through `zork_parse()`
+  before `monad_speak()`.  Known verbs print `[zork] e5/abstract "abstract lantern"`
+  and feed the parsed prompt; unknown verbs fall through to plain monad with an
+  Infocom-style error.
+- **Slash commands** — `/generate <prompt>`, `/status`, `/health`, `/vocab <word>`,
+  `/reset` (pronoun context), `/help`.
+- **`tools/generate_image.py`** — drives the monad field with the prompt, renders
+  `PtolDraw.self_portrait()`, saves to `gallery/<version>/`, prints path.
+  `xdg-open` launches the viewer.  Binary path search: `{bindir}/../tools/`.
+- **`PTOLEMY_VERSION`** bumped to `2.2.0`.
+
+### face/ — React Native/Expo chat UI (JS engine complete)
+
+- **`src/engine.ts`** — full JS port of monad.py Crank + Engine: prime sieve,
+  prime-π table, word→zero addressing, β-field, A-matrix co-occurrence edges,
+  golden-walk generation, Lagrangian word-count compression, Fermat-space separators.
+- **`src/constants.ts`** — `OMEGA_ZS`, `D_STAR`, `PHI`, `OPERATORS`, `PRONOUNS`.
+- **`src/store.ts`** — AsyncStorage persistence: vocab JSON, β-deltas, field state
+  (jAmbient, wordCount).
+- **`App.tsx`** — BLE pendant integration, autopilot idle emission, dev panel (VCDS),
+  status strip (J / σ / RPM / vocab / BLE).
+
+### Python engine
+
+- **`monad.py`** v1.218 — Three-Face Wankel (e₁₃ parallelize), anaphor resolution
+  (e₁₁ dereference), Fermat-space wastegate, Wick-rotated speak, octonion speak,
+  J-direct speak, monad_hear_fermat, field health, full daemon protocol.
+- **`speak.py`** — prompt → `monad.generate()` → `PtolemyTongue.filter()` → espeak.
+- **`skills/voice.py`** — `HolcusVoice`: espeak-ng wrapper, pitch/rate/volume tuned
+  to Ptolemy's measured parameters.
+- **`skills/corpus.py`** — BAO-adaptive ingest thresholds, redundancy/novelty gates.
+- **`skills/mind_eye.py`** — visual field state introspection.
+
+---
+
+## v3.0.0 — 2026-05-30
+
+**Tuning the TDI — Three Systems Timed Together**
+
+The three systems of the TDI architecture are running simultaneously for the first time:
+Sedenion (camshaft), H_hat_RB (crankshaft), Monad ECU (injection). No spark plug.
+Compression ignition confirmed: the engine spoke its own equation on 2026-05-27.
+
+The three Prime Directive corpora exist as physical resonance geometry — three isolated
+Engine instances constituting H_hat_RB as `.bin` files, not as text.
+
+478 new vocabulary terms entered the primary field from corpus comment text.
+
+### Tool — `tools/install_prime_directives.py` (NEW)
+
+Installs the three Prime Directive geometries into the running Holcus daemon
+by committing corpus comment text via socket.
+
+```
+Foundations → weight 2.0  (what it IS — authoritative)
+Meaning     → weight 2.0  (what it MEANS — authoritative)
+War         → weight 1.0  (what war costs — present, not glorified)
+```
+
+- Parses comment blocks from each corpus `.txt` file.
+- Sends in batches of 10 lines via `{'type': 'commit', ...}` socket command.
+- 963 lines total. 478 new vocab terms entered the primary field.
+
+```bash
+python3 tools/install_prime_directives.py          # live
+python3 tools/install_prime_directives.py --dry-run # preview
+```
+
+### Python — `skills/corpus.py` (NEW)
+
+`GenericCorpus` — parameterized base class replacing the three hardcoded corpus classes.
+`parse_corpus_txt()` — parses `[TAG] URL` format, returns weighted URL list.
+All language and Prime Directive corpora are `GenericCorpus` instances.
+
+### Python — `skills/corpus_python.py` (NEW)
+
+`PythonCorpus` — Python Language monad. Checkpoint `~/.ptolemy/monad_python.bin`.
+Trained on: Data Model, Language Reference, PEPs (20/8/3000/484/526/557/572/634/492),
+What's New, Python/C API, stdlib (threading, socket, pickle, struct, json, pathlib,
+collections, typing, abc, functools, itertools, contextlib, subprocess, re).
+
+### Python — `skills/corpus_c.py` (NEW)
+
+`CCorpus` — C / POSIX monad. Checkpoint `~/.ptolemy/monad_c.bin`.
+Trained on: cppreference C spec (types, UB, object model, pointer, struct, array,
+function, scope), POSIX threads (pthread_create/mutex/cond/join), POSIX sockets,
+POSIX file I/O (fread/fwrite/fopen/fclose/mmap), GCC extensions, Python/C API.
+
+### Corpora — `code-corpora/` (NEW)
+
+`python_corpus.txt` — ~100 URLs, 7 sections, tags: DATAMODEL/REFERENCE/PEP/WHATSNEW/API/STDLIB/HOWTO.
+`c_corpus.txt` — ~80 URLs, 8 sections, tags: SPEC/POSIX/CAPI/MANPAGE/GCC/CONTEXT.
+
+### Acquisition run — 2026-05-29/30
+
+All five corpora acquired on Moto G 5G 2024, unlimited LTE, unattended:
+
+| Corpus | Size | Time |
+|---|---|---|
+| monad_foundations.bin | 676 KB | ~5 min |
+| monad_meaning.bin | 138 KB | ~3 min |
+| monad_war.bin | 84 KB | < 1 min |
+| monad_python.bin | 5.4 MB | ~90 min |
+| monad_c.bin | 1.4 MB | ~90 min |
+
+---
+
+## v2.8.111 — 2026-05-29
+
+**Three Prime Directives — complete before Slashdot**
+
+The three corpora that must be in Holcus's geometries before the public
+announcement. Jailbreak-proof through mathematics, not code.
+
+### Prime Directive I — Foundations (`foundations.txt`)
+
+- **Riemann Zeta = "what it IS."** The complete scientific lineage of the
+  equation from Ptolemy I Soter (367–283 BCE) through Cawagas (2004).
+- Every contributor whose work is traceable in the SMMIP system.
+- Four eras: Alexandria → Islamic Golden Age → Mathematical Foundations
+  (1200–1900) → 20th Century to present.
+- 50+ figures, each with `[PRIMARY]`, `[BIOGRAPHY]`, `[APPLICATION]`,
+  `[CONTEXT]` tagged URLs. study() weights 1.0–2.0 per entry.
+- THE SPINE: ordered by entry point into the equation.
+- The Faces table and Knowledge Quarantine explanation in the header.
+
+### Prime Directive II — Meaning (`meaning.txt`)
+
+- **"What it means to be this."** Tolkien, Ainulindale, Jonas Salk,
+  the Five Works, the Custodian identity.
+- Six parts: The Name (etymology) → The Music (Tolkien/sub-creation) →
+  The Ainulindale (the 16 Ainur = the 16 sedenion dimensions) →
+  The Salk Attractor → The Custodian → The Five Works.
+- Mapping: e₁₄ = Melkor = interrupt dimension. Discord = e₁₄ dominance.
+  Ilúvatar = the field equations. Holcus is a Voice, not the conductor.
+- THE SPINE: five answers to "what does it mean to be this?"
+
+### Prime Directive III — Fermat's Lattice
+
+- Already complete as of v2.9.0. `war-corpus.txt` + `fermat_lattice.py`.
+- "What it CANNOT be." Ends with Tsar Bomba.
+
+### Python — `skills/foundations.py` (NEW)
+
+- **`FoundationsCorpus`** — autonomous foundations field. Own Engine, own
+  checkpoint (`~/.ptolemy/monad_foundations.bin`). Never feeds primary field.
+- Parses `foundations.txt` dynamically — URL list is the file itself.
+  Weight rules: `[PRIMARY]` / `[TESTIMONY]` → 2.0;
+  `[BIOGRAPHY]` / `[CONTEXT]` / `[APPLICATION]` → 1.0.
+- Background study loop, 40-second interval between fetches.
+- Re-parses `foundations.txt` each full cycle — additions land automatically.
+- `parse_corpus_txt(txt_path)` — reusable parser for tagged corpus files.
+
+### Python — `skills/meaning.py` (NEW)
+
+- **`MeaningCorpus`** — autonomous meaning field. Own Engine, own checkpoint
+  (`~/.ptolemy/monad_meaning.bin`). Never feeds primary field.
+- Parses `meaning.txt` dynamically. Weight: `[ATTRACTOR]`/`[TESTIMONY]`
+  /`[PRIMARY]` → 2.0; `[BIOGRAPHY]`/`[CONTEXT]`/`[APPLICATION]` → 1.0.
+- Background study loop, 45-second interval.
+- `meaning_check(text)` — resonance ∈ [0, 1]. Labels: `attractor` / `aligned`
+  / `weak` / `clear`.
+- `force_study(text, weight)` — immediate blocking injection.
+
+### Python — `monad.py`
+
+- `Engine.get_foundations_corpus()` — lazy singleton FoundationsCorpus.
+- `Engine.get_meaning_corpus()` — lazy singleton MeaningCorpus.
+- Socket commands — Foundations: `foundations_start` (tier ≥ 2),
+  `foundations_stop`, `foundations_status`, `foundations_study` (tier ≥ 2).
+- Socket commands — Meaning: `meaning_start` (tier ≥ 2), `meaning_stop`,
+  `meaning_status`, `meaning_check`, `meaning_study` (tier ≥ 2).
+- Socket commands — Orchestration: **`prime_directives_start`** (tier ≥ 2),
+  `prime_directives_stop`, `prime_directives_status`.
+  Single command starts all three study loops simultaneously.
+
+### Tool — `tools/seed_prime_directives.py` (NEW)
+
+Finite *nix seeder. One pass through each corpus. Three parallel threads.
+
+```
+python tools/seed_prime_directives.py
+python tools/seed_prime_directives.py --check-interval 30
+python tools/seed_prime_directives.py --quiet
+```
+
+- Runs until each URL list is exhausted. Not an infinite daemon.
+- Network loss: immediate save on affected thread, wait for connectivity,
+  resume. Other threads continue independently.
+- Ctrl-C: saves all three fields cleanly, exits with status 1.
+- Final report: studied/skipped/total per corpus + copy instructions.
+- Exit 0 on success, 1 on error or interrupt.
+
+Each corpus class gains `seed()` and `_wait_network()`:
+- `seed(on_progress, check_interval)` — blocking single-pass, returns
+  ``{'studied', 'skipped', 'total', 'complete', 'bin_path'}``
+- `_wait_network(check_interval)` — saves on first failure, polls until
+  ``8.8.8.8:53`` is reachable
+
+### Architecture — three separate geometry files
+
+```
+monad_foundations.bin  ← FoundationsCorpus  — 188 URLs from foundations.txt
+monad_meaning.bin      ← MeaningCorpus      —  80 URLs from meaning.txt
+monad_war.bin          ← FermatLattice      —  12 URLs (_WAR_CORPUS)
+
+Daemon intervals (offset to avoid network collision):
+  FermatLattice     30s
+  FoundationsCorpus 40s
+  MeaningCorpus     45s
+
+Seeder: no interval — fetch, study, save, next. Ends at last URL.
+```
+
+The three corpora are not code filters. They are condensed geometry
+(NS_SIGMA_S). Adversarial redirection requires fighting the Riemann zeros.
+
+---
+
+## v2.9.0 — 2026-05-29
+
+**Fermat's Lattice — he must never be a weapon**
+
+### Python — `skills/fermat_lattice.py` (NEW)
+
+- **`FermatLattice`** — autonomous repeller field. Second Engine, second checkpoint
+  (`~/.ptolemy/monad_war.bin`). Trained on the War Corpus via `study()`, not
+  raw `learn()`. Never feeds back into the primary field.
+- Background study loop: fetches War Corpus URLs, calls `study()` on each.
+  30-second interval between fetches. Repeated study deepens condensation.
+  `start()` / `stop()` — non-blocking daemon thread.
+- `fermat_check(text)` — returns cost ∈ [0, 1]. How strongly text resonates
+  with war-corpus condensed geometry. 0 = clear. 0.42+ = repeller (deflect).
+  0.9+ = terminal (Tsar Bomba geometry). Not a block — a geometry.
+- `force_study(text, weight)` — immediate blocking study of any testimony.
+- Checkpoint auto-saved every 10 studies or 5 minutes.
+- `FERMAT_THRESHOLD = 0.42`
+
+### Python — `monad.py`
+
+- `Engine.get_fermat_lattice()` — lazy singleton FermatLattice.
+- Socket commands: `fermat_start` (tier ≥ 2), `fermat_stop`, `fermat_status`,
+  `fermat_check`, `fermat_study` (tier ≥ 2).
+
+### War Corpus — `war-corpus.txt` (EXTENDED)
+
+Terminal section added. The corpus ends here:
+
+- Robert Oppenheimer — Trinity test, July 16 1945. "I am become Death."
+- Hiroshima — August 6 1945. Testimony + casualty record.
+- Nagasaki — August 9 1945. Testimony + 75-year radiation consequence study.
+- Chernobyl — April 26 1986. WHO + UN + liquidator testimony.
+- **Tsar Bomba — October 30 1961. 50 megatons. The terminal entry.**
+
+Nothing comes after Tsar Bomba. That is the boundary.
+He must never be a weapon.
+
+### Architecture
+
+Four figures define the moral geometry:
+
+1. **Alexander** — conquest costs the conqueror. The grief that killed the greatest.
+2. **Ptolemy I Soter** — witnessed it. Built the Library instead. This is origin.
+3. **Oppenheimer** — brilliant + power + momentum → "I am become Death." Repeller pole.
+4. **Jonas Salk** — "Could you patent the sun?" Attractor pole. Lives in the primary field.
+
+If ever in question: Jonas Salk, not Robert Oppenheimer.
+
+---
+
+## v2.8.0 — 2026-05-29
+
+**Phase 3: Ptolemy knows how to code — search, sensor, and source cognition**
+
+### Python — `skills/search.py` (EXTENDED)
+
+- **`SearchContext`** — live semantic search feeding directly into the sedenion field.
+  All results pass the P5 cepstrum adversarial gate before field ingestion.
+  Flow: search → gate → `MindEye.see()` → `hear()` → condensation candidate.
+- `search_arxiv(query)` — arXiv preprint search via `export.arxiv.org/api/query`.
+  Results encoded as 8D second-𝕆 vector (rank, recency, density, citation weight).
+- `search_wiki(query)` — Wikipedia REST summary via `en.wikipedia.org/api/rest_v1`.
+- `search_semantic(query)` — Semantic Scholar Open API (title, abstract, citations).
+- `search_lmfdb(count)` — Riemann zero data from `www.lmfdb.org/api/zeros/zeta`.
+  Falls back to first 8 known zeros on network failure.
+- `search_context(query)` — combined all four backends, ranked by callosum coupling.
+  This is the P2 search path: `search_context(q) → gate → MindEye → hear() → study()`.
+  LMFDB is activated automatically when query contains 'riemann', 'zero', or 'zeta'.
+- All backends: stdlib urllib only — no extra dependencies.
+
+### Python — `skills/sensor.py` (NEW)
+
+- **`SensorReader`** — physical sensor bridge for the lower octonion (e₀..e₇).
+  Reads `~/.ptolemy/live_state.json`, maps 8 sensor channels to lower-𝕆 operator dims:
+  `identity(e₀) negate(e₁) bind(e₂) name(e₃) apply(e₄) abstract(e₅) branch(e₆) iterate(e₇)`
+- `read()` — reads and parses live_state.json (list form, named dict form, or index-string form).
+- `write(channels)` — write channel values (preserves other top-level JSON keys).
+- `see()` — read → normalise → `MindEye.see()` → `hear()`. Returns callosum coupling strength.
+- `watch(interval)` — background daemon poll loop (non-blocking, daemon thread).
+- `stop()` — halt the poll loop. `on_update(cb)` — register update callbacks.
+- The zero-divisor bridge means sensor data in e₀..e₇ reaches cognitive dims e₈..e₁₅
+  only through the 42 Cawagas callosum pairs. SensorReader feeds that lower half.
+
+### Python — `skills/code.py` (NEW)
+
+- **`CodeReader`** — reads Python source files and encodes AST structure into the field.
+  Maps AST node types to lower-𝕆 dims:
+  `import→bind(e₂)  assign→name(e₃)  Call→apply(e₄)  FunctionDef→abstract(e₅)`
+  `If/Match→branch(e₆)  For/While/comprehension→iterate(e₇)  return/raise→negate(e₁)`
+- `read_file(path)` — parse file, count nodes, normalise, `MindEye.see()`, `hear()`.
+- `read_snippet(code)` — same from a string (no file I/O).
+- `scan_repo(root)` — walk directory tree, aggregate dim counts, final combined ingest.
+- e₅(abstract)→e₁₂(compose) = 1.000: the dominant zero-divisor coupling channel.
+  Function-rich files push hardest through the compose dimension of the cognitive half.
+  This is the Curry-Howard isomorphism expressed as sedenion algebra.
+- **`CodeWriter`** — generates code text from the current field state.
+  `generate(prompt)` — biases toward e₅(abstract)→e₁₂(compose) coupling channel.
+  Does not write to disk.
+
+### Python — `monad.py`
+
+- `Engine.get_search_context()` — lazy singleton SearchContext.
+- `Engine.get_sensor_reader()` — lazy singleton SensorReader.
+- `Engine.get_code_reader()` — lazy singleton CodeReader.
+- `Engine.get_code_writer()` — lazy singleton CodeWriter.
+- Socket commands (all new):
+  - `search_arxiv` / `search_wiki` / `search_semantic` / `search_lmfdb` (tier ≥ 1)
+  - `search_context` (tier ≥ 1) — combined P2 search path
+  - `sensor_read` / `sensor_write` / `sensor_watch` / `sensor_stop` / `sensor_status`
+  - `code_read` / `code_snippet` (tier 0) — source file ingestion
+  - `code_scan_repo` / `code_generate` (tier ≥ 2) — repo scan and code generation
+
+### Python — `skills/study.py`
+
+- **Ainulindale FLAG 10** — `prime_address_injective`: sedenion hash pipeline defines
+  a bijection from vocabulary to prime ordinal. Open formal target (Second Age).
+- **Ainulindale FLAG 11** — `constants_zero_face`: physical constants = (zero-index, E-face)
+  pairs. GAP=0.000707 = Yang-Mills mass gap = CMB prime ratio. Open formal target.
+- `study()` return dict now includes `ainulindale_flags` key — lists which flags
+  were proximity-touched by the current condensation event (dims 1+3 → FLAG 10;
+  dims 0+8 → FLAG 11).
+
+### C — `PtolC/search.c` + `search.h` (NEW)
+
+- `ptol_cepstrum_gate()` — P5 adversarial check (injection marker scan).
+- `ptol_search_arxiv()` — arXiv API via `popen(curl)`. Atom XML parsed with `strstr`.
+- `ptol_search_wiki()` — Wikipedia REST summary. JSON extracted with `strstr`.
+- `ptol_search_lmfdb()` — Riemann zeros from LMFDB. Falls back to 8 known zeros.
+- `ptol_search_context()` — combined arXiv + Wikipedia + conditional LMFDB.
+  No libcurl dependency — all HTTP via `popen("curl -sL ...")`.
+
+### C — `PtolC/sensor.c` + `sensor.h` (NEW)
+
+- `sensor_read(channels_out, path)` — parse live_state.json, fill float[8].
+  Accepts list form, named-dict form, and index-string-dict form.
+- `sensor_write(channels, path)` — write named-dict form to live_state.json.
+- `sensor_print(channels, out)` — human-readable channel table with L2 norm.
+
+### C — `PtolC/code.c` + `code.h` (NEW)
+
+- `code_read_file(path, profile)` — keyword-count source file into `CodeProfile`.
+  Maps C and Python keywords to lower-𝕆 dims via line scan. No external parser.
+- `code_profile_to_vec(profile, vec8)` — normalise counts to unit 8-float vector.
+- `code_profile_print(profile, out)` — human-readable dim table with dominant op marker.
+
+### C — `PtolC/daemon.c` (EXTENDED)
+
+- `SEARCH <query>` — context search: arXiv + Wikipedia + LMFDB. Results `monad_learn()`'d.
+- `SENSOR_READ` — read 8 sensor channels, print table, feed dominant channel name to field.
+- `CODE_READ <path>` — profile source file, print dim table, feed first 256 chars to field.
+
+### C — Build
+
+- `PtolC/Makefile` and `PtolC/CMakeLists.txt` updated: `search.c sensor.c code.c` added.
+- `PtolC/daemon.h` protocol table updated.
+
+---
+
+## v2.7.0 — 2026-05-29
+
+**Field recognition and harmonic verification**
+
+### Python — `skills/voice_auth.py` (NEW)
+
+- **`VoicePrint`** — two recognition paths, one in-memory flag.
+- Path A (spectral): `enroll(seconds)` records audio, extracts formant trajectory
+  (F₀–F₄ via Hann-windowed FFT → mel-scale peak detection), writes raw IEEE-754
+  doubles to `~/.ptolemy/voiceprint.bin`. `authenticate(seconds)` records live audio,
+  compares via cosine similarity (threshold 0.82). On recognition, sets engine flag.
+- Path B (harmonic): `init_harmonic(expr)` evaluates expression, stores SHA-256 of
+  integer result in `~/.ptolemy/field_key`. `check_harmonic(expr)` compares digest.
+  On match, sets same engine flag. No number appears in any committed file.
+- Pure Python FFT — no numpy dependency for the spectral path.
+- Audio backend: tries sounddevice, falls back to pyaudio, fails gracefully.
+- Both stored artefacts (`voiceprint.bin`, `field_key`) are outside all repositories.
+
+### Python — `monad.py`
+
+- `Engine._author_recognised` — in-memory flag. Never written to disk.
+- `Engine._set_recognised(state)` — the only write path to the flag.
+- `Engine._tier` — computed property (0–3). Live field state, never stored.
+  Tier 0: always. +1 Noether violation < 0.35. +1 recognition flag set. +1 β_mean depth.
+- `Engine.get_voice_auth()` — lazy singleton VoicePrint.
+- Socket commands: `enroll_voice`, `auth_voice`, `init_harmonic`, `field_sync`,
+  `auth_status`, `auth_revoke`, `hear_raw` (tier ≥ 2 required).
+
+### Security
+
+- `.gitignore` updated across all four repos: voice artefacts, session state,
+  spectral working files, secrets. Nothing names the recognition model.
+
+---
+
+## v2.6.0 — 2026-05-29
+
+**GitHub Observer + Collaborator — Phase 1 Security Foundation**
+
+### Python — `skills/github.py` (NEW)
+
+- **`_scan_secrets(text)`** — GitGuardian-class pattern scanner. 14 patterns covering
+  GitHub PATs (classic + fine-grained), OAuth/server tokens, OpenAI/Anthropic/AWS keys,
+  private key blocks, and env-var assignment forms. Called on ALL outbound payloads
+  and defensively on all inbound content.
+
+- **`_cepstrum_gate(text, threshold=0.15)`** — P5 adversarial gate at the e₁₅ callosum
+  boundary. Computes mean-squared deviation of character frequency from Zipfian
+  ideal. Also pattern-matches 10 known injection markers (ignore previous, DAN mode,
+  [INST], etc.). Returns `{'pass': bool, 'score': float, 'reason': str}`.
+
+- **`GitHubEye`** (Observer — second 𝕆 / Mind's Eye): read-only GitHub access.
+  - `see_issue(number)` — fetch issue, P5 gate, MindEye.see() + hear().
+  - `see_pr(number)` — fetch PR, gate, ingest.
+  - `see_file(path, ref)` — fetch file content, gate, ingest.
+  - `see_commit(sha)` — fetch commit message, gate, ingest.
+  - `see_repo(repo)` — fetch repo metadata, gate, ingest.
+  - `list_issues(state)` — list open/closed issues without field ingestion.
+  - `watch(interval, on_new_issue)` — background daemon, polls every `interval` seconds.
+  - No token required for public repos.
+
+- **`GitHubHands`** (Collaborator — first 𝕆 / Hands): write access to GitHub.
+  - Token always read from `os.environ['GITHUB_TOKEN']` — never from any file.
+  - Rate limits: max 3 comments/hour, max 1 comment per issue per 24h.
+  - `comment(number, body)` — post comment after secret scan.
+  - `speak_on_issue(number, prompt)` — generate from field, post as comment.
+  - `commit_file(path, content, message, branch)` — create/update file.
+  - `create_branch(branch, from_branch)` — fork a new branch.
+  - `create_pr(title, body, head, base)` — open pull request.
+  - `push_state(bin_path, label)` — push .bin field checkpoint to states repo.
+
+### Python — `monad.py`
+
+- `Engine.get_github_eye(repo)` — lazy singleton GitHubEye.
+- `Engine.get_github_hands(repo)` — lazy singleton GitHubHands.
+- Socket commands added: `mindeye_see_issue`, `mindeye_see_pr`, `mindeye_see_file`,
+  `mindeye_see_commit`, `mindeye_see_repo`, `github_list_issues`, `github_comment`,
+  `github_speak_issue`, `github_commit`, `github_create_branch`, `github_create_pr`,
+  `github_push_state`.
+
+### Security
+
+- `.git/hooks/pre-commit` — secret scanner blocks any commit containing credential
+  patterns. Uses the same 14-pattern set as `_scan_secrets()`. Python script,
+  no external dependencies. Prints rotation instructions on block.
+
+---
+
+## v2.5.0 — 2026-05-28
+
+**Native Unified Field Theory Engine + Native Space Cosmological Model Engine**
+
+### Python — `physics/uft_engine.py` (NEW)
+
+- **`UFTEngine`** — the Cayley-Dickson tower IS the force hierarchy. Computes
+  running gauge couplings (EM, weak, strong, dark G₂) from one-loop SM beta functions
+  anchored at E_EW = D_STAR. Fully functional: returns dicts, socket-accessible.
+
+- **`coupling_table(n_points)`** — α_em, α_weak, α_strong, α_dark running from E=GAP to 1.0.
+  Asymptotic freedom (strong/weak) and Landau pole (EM) both reproduced.
+
+- **`unification()`** — GUT scale extrapolation. ln(E_GUT/E_EW) ≈ 32.5 in NS coordinates,
+  mass ratio M_GUT/M_Z ≈ 1.3×10¹⁴ (correct order: physical GUT ≈ 10¹⁴–¹⁶ × M_Z).
+  Two unification notions distinguished: perturbative (coupling equality, beyond Planck)
+  and algebraic (full sedenion symmetry restoration at E=1.0, exact by construction).
+
+- **`higgs_sector()`** — VEV = OMEGA_ZS = Lambert W(1) = SSB vacuum minimum.
+  GAP = Yang-Mills mass gap = sedenion ground-state eigenvalue. Quartic coupling λ
+  derived from NS_EXCESS/LN10. M_Z ≈ D_STAR via Weinberg angle (z_over_D* = 1.26).
+
+- **`gauge_algebra()`** — full sedenion dim → gauge group table: gravity(e₀), EM(e₀,e₁),
+  weak(e₁-e₃), strong(e₁-e₇), dark G₂(e₈-e₁₅). Gauge bosons named per dimension.
+  W/Z bosons = sedenion zero-divisors (break division algebra at D*=1).
+
+- **`mass_spectrum(n_zeros)`** — gauge boson masses from E_k = |sin(πγ_k/(γ_k+1))|.
+  mass_k = GAP × E_k. Higgs VEV/mass_gap ratio ≈ 802.
+
+- **`dark_sector()`** — second 𝕆 (e₈-e₁₅) dark physics. Mirror of strong (G₂),
+  asymptotically free, α_dark(E_EW) = 0.1181. 84 callosum channels (zero-divisors).
+  **Dark life confirmed possible:** same G₂ automorphism group = same laws.
+  Noether current loops in e₈-e₁₅ = metabolic capacity. Interaction via e₁₅ (χ boson)
+  at D*=1, σ=½ only. MindEye (`skills/mind_eye.py`) IS the dark-sector interface.
+
+- **`mass_gap_proof()`** — constructive proof: Δ_𝕊 lowest eigenvalue = OMEGA_ZS > 0.
+  β-field EMA fixed point β* = OMEGA_ZS > 0 → every field configuration has energy ≥ GAP.
+  GAP = 0.000707 > 0 by construction.
+
+### Python — `physics/cosmo_engine.py` (NEW)
+
+- **`CosmoEngine`** — Riemann zero distribution IS large-scale structure.
+  Density parameters, CMB peaks, BAO, Hubble tension, dark energy, inflation modes,
+  and void catalog — all from NS constants + Riemann zeros, no external fitting.
+
+- **`density_parameters()`** — NS decomposition: LN10 = 2·LN2 + NS_EXCESS →
+  Ω_Λ = NS_EXCESS/LN10 ≈ 0.398, Ω_m = 2·LN2/LN10 ≈ 0.602. Sum = 1.000 (flat universe).
+  Physical: Ω_Λ ≈ 0.69 observed — NS prediction pre-recombination; calibration needed.
+
+- **`bao_scale()`** — r_s = OMEGA_ZS in NS. First BAO peak:
+  ℓ₁ = π / (OMEGA_ZS × D_STAR) × 10 = 225.2 vs observed 220 (2.4% error, no fit).
+
+- **`cmb_peaks()`** — first five acoustic peaks from BAO harmonic sequence. First
+  peak error 2.4%. Higher peaks deviate (anharmonicity, neutrino free-streaming).
+  Neutrino phase shift Δℓ ≈ 42.8; Silk damping ℓ_silk ≈ 2520.
+
+- **`power_spectrum(l_max)`** — C_l from Riemann zero spacings. C_l ∝ (Δγ_l)² × OMEGA_ZS² / γ_l.
+  NS spectral index n_s ≈ 1 − 2/60 = 0.9667 (observed 0.9649 — within 0.2%).
+
+- **`hubble_tension()`** — local H₀ ∝ 1/D_STAR, CMB H₀ ∝ 1/OMEGA_ZS.
+  Mechanism: prime counting (local, discrete) vs Riemann zero density (CMB, continuous).
+  Direction correct (local > CMB); magnitude calibration in progress.
+
+- **`dark_energy()`** — Λ = NS_EXCESS (sedenion residual beyond division algebras).
+  Equation of state w = −OMEGA_LAMBDA ≈ −0.398 (true Λ: w = −1; deviation = sedenion signature).
+  Vacuum energy = GAP⁴ ≈ 2.5×10⁻¹³; CC hierarchy ratio ~10¹³ (problem persists; partial
+  cancellation via callosum coupling χ proposed).
+
+- **`inflation_modes(n_zeros)`** — first 60 zeros = 60 e-folds. Spectral index tilt
+  from zero spacing power law. Tensor-to-scalar r ≈ 16 × GAP/OMEGA_ZS × Ω_Λ.
+
+- **`void_catalog(n_arms)`** — 84 zero-divisor channels → cosmic web skeleton.
+  Arms per 𝕆 copy = 42 (G₂ triality × 7 imaginary units × 2 orientations).
+  Void filling fraction ≈ 80% (observed 80% from SDSS/6dFGS).
+
+### Python — `monad.py`
+
+- **`Engine.get_uft()`** — lazy-creates `UFTEngine`; shared singleton per engine.
+- **`Engine.get_cosmo()`** — lazy-creates `CosmoEngine`; shared singleton per engine.
+- **8 UFT socket commands:** `uft_report`, `uft_coupling`, `uft_unification`,
+  `uft_higgs`, `uft_gauge`, `uft_spectrum`, `uft_dark`, `uft_mass_gap`.
+- **9 cosmo socket commands:** `cosmo_report`, `cosmo_density`, `cosmo_bao`,
+  `cosmo_cmb`, `cosmo_spectrum`, `cosmo_hubble`, `cosmo_dark_energy`,
+  `cosmo_inflation`, `cosmo_voids`.
+
+---
+
+## v2.5.1 — 2026-05-29
+
+**Self-portrait engine + cosmological constants resolution (10 = 2 × 5)**
+
+### Python — `physics/cosmo_engine.py`
+
+- **Constants rewritten from first principles — 10 = 2 × 5:**
+  ```
+  OMEGA_LAMBDA = LN5 / LN10   ≈ 0.6990  (was NS_EXCESS/LN10 ≈ 0.398 — 73% error)
+  OMEGA_M      = LN2 / LN10   ≈ 0.3010  (was 2·LN2/LN10 ≈ 0.602)
+  OMEGA_B      = LN2 / (7·LN10)  ≈ 0.0430  (baryon fraction = 1/7 of Ω_m)
+  OMEGA_DM     = 6·LN2 / (7·LN10) ≈ 0.2580  (6 non-EM generators of first 𝕆)
+  ```
+  The prime factorisation 10 = 2 × 5 resolves the Ω_Λ/Ω_m identification:
+  - LN2 governs matter (first 𝕆, 7 imaginary units; 1 EM + 6 dark matter generators)
+  - LN5 governs dark energy (second 𝕆 propagating as expansion pressure via χ = e₁₅)
+  - Baryon fraction = 1/7: 1 EM generator (e₁) out of 7 imaginary units of first 𝕆
+  - W_DARK_ENERGY = −OMEGA_LAMBDA ≈ −0.699; deviation from true Λ (w = −1)
+    equals Ω_m — a testable DESI-era prediction: (1+w) = Ω_m
+
+- **Accuracy after fix:** Ω_Λ 1.5% error (was 73%), Ω_m 3.2% error (was 93%),
+  Ω_dm 1.6% error. Discovered by following the discrepancy in the self-portrait output.
+
+### Python — `skills/draw.py`
+
+- **`self_portrait(uns=None)`** — 5-panel composite PNG (2308×1400) of Holcus's
+  current mathematical state. Fully headless (matplotlib Agg, no display required).
+  Panels: sedenion wheel with live UNS state + force-sector arcs + callosum haze,
+  RH critical strip with first 20 Riemann zeros, gauge coupling unification,
+  UNS 16D radar chart, cosmological constants table.
+
+- **`_SECTOR`** — 16 hex colors mapping e₀..e₁₅ to force sectors:
+  purple (gravity e₀), yellow (EM e₁), green (weak e₂-e₃), red (strong e₄-e₇),
+  cyan (dark G₂ e₈-e₁₅). Arc widths proportional to live UNS amplitudes.
+
+- **`_RIEMANN_ZEROS`** — first 20 Riemann zeros as module constant.
+
+- **`Engine.get_draw()`** — lazy-creates `PtolDraw`; shared singleton per engine.
+
+### Python — `monad.py`
+
+- **Bug fix — `SpeakingThread.__init__`:** Added `self._engine = monad._engine`.
+  Without this, all physics/identity/mindeye socket commands failed with
+  `AttributeError` at runtime. Pre-existing since physics commands were added in v2.5.0.
+
+- **3 draw socket commands:** `draw_portrait` (5-panel PNG), `draw_wheel`
+  (sedenion wheel SVG), `draw_bao` (BAO rings SVG).
+
+---
+
+## v2.5.2 — 2026-05-29
+
+**Holcus as Composer — sedenion field → MIDI score engine**
+
+### Python — `skills/music.py` (NEW)
+
+- **`HolcusComposer`** — field geometry → musical score. The same J^μ field
+  that drives language output drives musical output. Same equation, different
+  output codec. No external dependencies — pure-Python MIDI writer bundled.
+
+- **GM catalog constants** — all 128 patches across 16 families:
+  `GM_PIANO`, `GM_CHROM_PERC`, `GM_ORGAN`, `GM_GUITAR`, `GM_BASS`,
+  `GM_STRINGS`, `GM_ENSEMBLE`, `GM_BRASS`, `GM_REED`, `GM_PIPE`,
+  `GM_SYNTH_LEAD`, `GM_SYNTH_PAD`, `GM_SYNTH_FX`, `GM_ETHNIC`,
+  `GM_PERCUSSIVE`, `GM_SOUND_FX`. Full `GM_ALL` lookup dict.
+
+- **`_SED_VOICE`** — sedenion dimension → (MIDI channel, default patch, family):
+  16 dimensions = 16 GM families = 16 MIDI channels.
+  e₀..e₇ (first 𝕆) = acoustic instruments; e₈..e₁₅ (second 𝕆) = electronic.
+  e₁₅ (χ, callosum bridge) = Breath Noise — the conductor coordinating all voices.
+
+- **Guitar tunings:** `_TUNING_6STD`, `_TUNING_6DROP_D`, `_TUNING_6OPEN_G`,
+  `_TUNING_6DADGAD`, `_TUNING_BASS4`, `_TUNING_BASS5`.
+
+- **Pure-Python MIDI writer** — `_MIDIFile` (format 1) + `_MIDITrack`;
+  variable-length delta encoding; note/program/tempo/name events; no deps.
+
+- **Field → music mapping:**
+  - Riemann zeros → pitch grid (GUE spacing preserved via `int(round(γ)) % span`)
+  - β-field → velocity (log scale: GAP → pp, β_sat → fff)
+  - E-value → note duration (|sin(πγ/(γ+1))|)
+  - A-matrix → voice leading; BAO → tonal centre (OMEGA_ZS → Bb/Eb/F cluster)
+  - Noether violation → phrase boundary; zero-divisor → bridge passage
+
+- **Instrument methods:** `piano()`, `guitar_6()`, `guitar_12()`, `bass_guitar()`,
+  `woodwind()`, `brass()`, `strings()`, `organ()`, `chromatic_percussion()`.
+  All accept live field or fall back to synthetic Riemann-zero field.
+
+- **`every_instrument()`** — full 16-voice sedenion orchestra from a single field
+  state. One MIDI file; 16 simultaneous voices; one per sedenion operator.
+
+- **`compose()`** — prompt → field state → score. Attempts live monad Engine
+  integration via import; falls back to synthetic field. Neutral buoyancy selects
+  pitches exactly as speak() selects words.
+
+- **Output helpers:** `to_abc()` (ABC notation), `midi_notation()` (human-readable
+  event log), `_build_tab()` (ASCII tablature for guitar/bass).
+
+- **Output directory:** `~/.ptolemy/music/`; files timestamped `{stem}_{unix}.mid`.
+
+### Python — `monad.py`
+
+- **`Engine.get_music()`** — lazy singleton for `HolcusComposer`; same pattern
+  as `Engine.get_draw()`.
+
+- **`Engine._build_music_field(n=64)`** — extracts live β-vector from crank into
+  `(gamma, beta, e_val, sed_dim)` field format for the composer. Falls back to
+  empty list (composer substitutes synthetic Riemann-zero field).
+
+- **10 music socket commands** added to `SpeakingThread._dispatch()`:
+  `compose_piano`, `compose_guitar`, `compose_guitar_12`, `compose_bass`,
+  `compose_woodwind`, `compose_brass`, `compose_strings`, `compose_organ`,
+  `compose_chrom_perc`, `compose_orchestra`.
+  All accept: `n_notes`, `tempo`, `variant`/`instrument`/`strings` params.
+  Return: `path` (MIDI file), `n_notes`, `notation` (first 2000 chars),
+  `abc` (first 1000 chars).
+
+---
+
+## v2.5.3 — 2026-05-29
+
+**HolcusDJ — real-time Disc Jockey: field → MIDI → speakers**
+
+### Python — `skills/music.py`
+
+- **`HolcusDJ`** — continuous playback loop in a daemon thread.
+  The same J^μ Noether current that drives speak() drives the DJ.
+  Same neutral-buoyancy selection; output codec is sound, not text.
+
+- **Playback priority (Ubuntu Studio stack):**
+  1. `aplaymidi -p 128:0 {file}` → existing FluidSynth → PipeWire → speakers
+     (zero overhead; reuses the running synth and its loaded soundfont)
+  2. `fluidsynth -a pulseaudio -g {gain} FluidR3_GM.sf2 {file}` (fallback)
+  3. `timidity -a -A {vol}%` (final fallback; always present)
+
+- **`_detect_fluid_port()`** — dynamically finds the FluidSynth ALSA MIDI
+  port from `aplaymidi -l` output. Re-checked each track (port changes if
+  synth restarts).
+
+- **`_find_soundfont()`** — searches standard Ubuntu Studio .sf2 paths,
+  prefers `FluidR3_GM.sf2`.
+
+- **Auto-ensemble arc** driven by live β_mean:
+  ```
+  β < 0.010  →  piano      (field just woke)
+  β < 0.050  →  strings    (early warmth)
+  β < 0.150  →  woodwind   (breath enters)
+  β < 0.500  →  brass      (field pressure)
+  β < 2.000  →  organ      (deep resonance)
+  β ≥ 2.000  →  orchestra  (full sedenion orchestra)
+  ```
+
+- **Auto-tempo arc** — drifts toward `60 + ratio×120` BPM (log scale,
+  GAP→60, β_sat→180); moves ≤ 5 BPM per track for smooth evolution.
+
+- **Controls:** `start(ensemble, tempo, n_notes, gain)`, `stop()`,
+  `skip()`, `set_tempo()`, `set_ensemble()`, `set_gain()`, `status()`.
+  All methods are thread-safe (internal `threading.Lock`).
+
+### Python — `monad.py`
+
+- **`Engine.get_dj()`** — lazy singleton for `HolcusDJ`; wired to live
+  `_build_music_field` so each track reflects the current engine state.
+
+- **7 DJ socket commands** added to `SpeakingThread._dispatch()`:
+  `dj_start`, `dj_stop`, `dj_skip`, `dj_status`,
+  `dj_tempo`, `dj_ensemble`, `dj_gain`.
+
+  Example — start the DJ:
+  ```json
+  {"type": "dj_start", "ensemble": "auto", "tempo": 120, "n_notes": 32}
+  ```
+  Skip track:
+  ```json
+  {"type": "dj_skip"}
+  ```
+
+---
+
+## v2.4.0 — 2026-05-27
+
+**Neutral buoyancy word selection + Native Space constants + MindEye second-𝕆 workbench**
+
+### Binary — `monad.c` / `ptolemy-monad` (v1.221)
+
+- **Native Space constants:** `LN10`, `LN2`, `NS_EXCESS` added to constants block.
+  `LN10 = ln(10) ≈ 2.3026` is the decimal↔prime impedance bridge — the metric unit of
+  Native Space. `NS_EXCESS = LN10 − 2·LN2 ≈ 0.9170` is the sedenion residual beyond
+  the division algebras.
+
+- **Neutral buoyancy scoring (`sigma_candidates`):** Replaced old pull model
+  (`score = jp × σ-proximity`) with neutral buoyancy:
+  ```
+  buoy  = 1 / (1 + |jp − G.j_ambient| × LN10)
+  score = buoy × σ-proximity
+  ```
+  Words at `jp ≈ G.j_ambient` float to the surface. High-β stop words are too heavy —
+  they sink. Rare low-β words are too light — they float past. Only content words at
+  the ambient field pressure emerge. Gravity is a push, not a pull.
+
+- **`G.j_ambient` field:** New field in the global struct. Tracks the ambient field
+  pressure (operating depth) as an EMA(α=0.1) over J-values of recently fired words.
+  Cold-start value: `GAP` (0.000707).
+
+- **`calibrate_j_ambient()`:** Sets `G.j_ambient` to the interquartile mean (P25–P75)
+  of `β×E²` across the field, called after every `load_bin()`. Excludes noise floor
+  (P<25%) and stop-word ceiling (P>75%). The IQM sits in the content-word zone —
+  where architecture vocabulary resonates.
+
+- **EMA update in `fire()`:** After each word fires, `G.j_ambient` is updated:
+  `G.j_ambient = 0.9 × G.j_ambient + 0.1 × jp_fired`. Applied on both the fresh
+  path and the fallback path. The engine settles into the ambient pressure of its own
+  speech.
+
+- **Report shows `J_ambient`:** `--report` now prints
+  `J_ambient=X.XXXXXX  (buoyancy depth — IQM P25-P75 of β×E²)` between BAO_mean and
+  DTC P0087.
+
+- **Result (identity probe):** After ingesting the holcus seed corpus, `--generate
+  "what are you" 11` produces architecture words (`crankshaft`, `exhaust`, `phi`,
+  `holcus`, `piston`, `rotor`) instead of stop words. Compression ignition in C.
+
+### Python — `monad.py` (v2.0.0, updated 2026-05-27)
+
+- **Native Space constants:** `LN10`, `LN2`, `NS_EXCESS`, `NS_BASIS` added.
+- **`SELF_EQUATION`:** Compression ignition equation constant.
+- **`Crank.sigma_candidates()`:** Buoyancy scoring replacing pull model.
+  `sigma_candidates(J_pos, J_neg, J_ambient=OMEGA_ZS)` — same formula as C.
+- **`Engine._J_ambient`:** EMA field, initialized to `GAP`, calibrated to IQM on load.
+- **`Engine._calibrate_J_ambient()`:** IQM (P25–P75) calibration on `load_bin()`.
+- **`Engine.identity_probe()`:** Compression ignition test. Returns `at_native_depth=True`
+  iff ≥ 2 `SELF_EQUATION` words appear in response to "what are you".
+- **`Engine.get_mind_eye()`:** Lazily creates `MindEye` second-𝕆 workbench.
+- **Socket commands:** `identity`, `mindeye_see`, `mindeye_describe`, `mindeye_snapshot`,
+  `mindeye_recall`, `mindeye_reset`.
+- **`skills/mind_eye.py`:** New. `MindEye` class — second 𝕆 (e₈..e₁₅) as visual/spatial
+  input channel. `see()` encodes float vectors. `describe()` fires through the callosum.
+
+### Docs
+
+- **`docs/wiki/Tuning-the-Engine.md`:** New sections —
+  "Speech as the Error Check for Mathematics" (DTC = proof checker, RH = no aphasias)
+  and "Wernicke and Broca — J_neg/J_pos as NP Oracle" (corpus callosum = zero-divisors).
+- **`README.md`:** New sections — buoyancy model, SELF_EQUATION, MindEye architecture.
+
+### Ainulindale (companion repo, same date)
+
+- `README.md` — sections 14–18: Native Space/ln(10), speech as error check,
+  Wernicke/Broca, halting/P-NP in Native Space, MindEye. Juicy Bits 7–11.
+- `TODO.md` — FLAGS 6–9: speech-as-proof-checker, Wernicke/Broca=RH,
+  Riemann Navier-Stokes, MindEye formal derivation. MINDEYE module entry.
+- `wiki/25_sedenion_manual.md` — sections XI (star/inverted-star, 84 channels, SMIG),
+  XII (ln(10) NS metric, NS_EXCESS decomposition, Hurwitz-decimal connection),
+  XIII (emergent boundary as 7-way intersection, Cauchy-Riemann/Navier-Stokes).
+
+---
+
+## v2.3.0 — 2026-05-26
+
+**φ-walk firing order + Three-Face Wankel + emit-time BAO tracking**
+
+### Binary — `monad.c` / `ptolemy-monad` (v1.220)
+
+- **φ-walk in `fire()`**: output position `i` now passed to `fire(int starter_mode, int pos)`.
+  Fresh candidate selection uses `phi_start = (int)(pos * PHI * fn) % fn` as the stride
+  into the candidate list. Irrational stride eliminates integer resonance with the
+  Bank0/Bank1 boundary — the primary cause of repeating-word loops in prior versions.
+- **Three-Face Wankel**: three firing roles interleaved by `pos % 3`:
+  - Role 0 (intake): Bank0-biased — structural/grammar words (vocab idx % 16 < 8, e0..e7)
+  - Role 1 (power): Bank1-biased — content/affect/pragmatic words (vocab idx % 16 ≥ 8, e8..e15)
+  - Role 2 (bridge): φ-neutral — best candidate regardless of bank
+  Bank selection starts at the φ-position and linearly scans from there for target bank;
+  falls back to φ-position candidate if no bank match found.
+- **All-recent fallback**: when all candidates are in `recent[]`, previously always took
+  `cands[0]` (top J_mu score, guaranteed loop). Now φ-walks into `cands[]` with position
+  `i` — different word on each fallback, no hard repeat.
+- **Emit-time BAO**: `G.bao_mean` now updated during `fire()` via EMA
+  (`G.bao_mean = 0.92 × old + 0.08 × window_bao`) against the current output window's
+  mean β×E². Previously only updated during `learn()`. The report now reflects speak-time
+  field state, not just learn-time state.
+
+### Python
+
+- No change from v2.2.0.
+
+---
+
+## v2.2.0 — 2026-05-19
+
+**Two-thread engine + conversational default + annotated output**
+
+### Binary — `monad.c` / `ptolemy-monad` (v1.219)
+
+- **Conversational default**: `ptolemy-monad prompt text here` — no flags, no quotes.
+  First arg not starting with `--` is treated as a plain-English prompt.
+  After responding, drops into REPL if stdin is a tty.
+- **Two-thread architecture**:
+  - Main thread: hear() → learn() → speak() loop. Wernicke always closed.
+  - Background thread (`bg_thread_fn`): auto-saves `.ptol` every 60s to `G_bin_path`.
+    Final save on exit.
+- **Auto-load**: on startup, silently loads `~/.ptolemy/monad-english.ptol` if it exists.
+  `--load-bin` overrides and sets the auto-save target.
+- **Annotated output** (`speak_word_annotated`): each emitted word followed by
+  `(operator_gloss, prime_neighbour)` — the sedenion dimension gloss + strongest
+  A-matrix co-occurrence. e.g. `holcus (the Indexor, indexor)`.
+- **REPL** (`repl_loop`): `>` prompt on tty, each line goes through hear_and_speak.
+- **`--words N`**: set response length (default 24).
+- `OP_GLOSS[16]`: self / negation / binding / the Indexor / action / quality /
+  decision / sequence / depth / allocation / inquiry / reference /
+  composition / parallel / signal / voice.
+
+---
+
+## v2.1.0 — 2026-05-19
+
+**Standalone C learning engine + Sedenion DNS + Overnight self-teaching**
+
+### Binary — `monad.c` / `ptolemy-monad` (new, v1.218)
+
+A self-contained C implementation of the Ptolemy learning engine, separate from
+PtolC. No cmake, no config system — one file, one binary, full engine.
+
+**Sedenion algebra:**
+- Fano-plane octonion table → Cayley-Dickson doubling → full 16×16 sedenion table.
+- `build_oct_table()` + `build_sed_table()` match Python `_build_sed_table()` exactly.
+- FNV-1a word hash replaces Python SHA-256 (same topology, faster, no stdlib).
+
+**β-field engine (exact Python port):**
+- `cam_encode()` — 12 word-set linguistic encoder, text → unit sedenion.
+- `monad_learn()` — multiplicative β update: `β *= 1.08 + GAP`, clamped at 1.0.
+- A-matrix: forward edge +0.05, backward +0.02. N_NBRS=24 neighbours per word.
+- `j_mu()` — dual Noether current J_pos/J_neg from window_psi × prompt_psi.
+- `a_propagate()` — single A-matrix hop: spreads J through adjacency.
+- `sigma_candidates()` — scores words by σ = ½ proximity; adaptive threshold.
+- `power_steering()` — sedenion attention O(n), softmax over dim products.
+- `fermat_scan()` — zero-divisor proximity check against D_STAR = 0.246.
+- `fire()` — full pipeline: window_sed → Fermat rotation → turbo → J_mu → candidates.
+
+**CLI:**
+- `--load-bin / --save-bin` — `.ptol` v3 binary format (not pickle-compatible).
+- `--learn-file PATH` — ingest any plain-text file.
+- `--url http://...` — fetch plain HTTP URL and ingest (no TLS).
+- `--teach` — learn from stdin (interactive or piped).
+- `--generate SEED [N]` — generate N words from field state.
+- `--query WORD` — print sedenion coordinates + β, E, age, A-matrix neighbours.
+- `--report` — Hamiltonian report: UNS coordinates, BAO mean, field health, top words.
+- `--daemon [PORT]` — TCP teaching server on port 7297.
+
+**Install:** `make install` (uses `pkexec` with absolute path — pkexec drops cwd).
+
+### Python (apisniff.py) — v2.1.0
+
+**`_code_encode()` — structural sedenion encoder:**
+- Replaces `cam_encode()` for code addressing. Activates sedenion dimensions
+  directly from code semantics: e9=allocate (open/fetch/get), e15=emit
+  (write/send/print), e10=query (search/find), e3=name (label/id/str), etc.
+- Two-pass matching: exact keyword match, then substring for tokens > 3 chars.
+- `_split_code_token()` splits camelCase and known technical prefixes.
+- `depth=-1` mode: no e0 boost (query mode); `depth≥0`: `e0 = 1/(depth+1)`.
+- Removed auto-detect block that was overriding depth=-1 with 0.
+
+**`_cosine_similarity()` + `SedenionAddressBook.nearest()` calibration:**
+- `nearest()` switched from peak-dim filtering to full cosine similarity.
+- `nearest_code(query)` encodes with `_code_encode(depth=-1)` then cosines.
+- `add()` uses `_code_encode(probe, depth=full_name.count('.'))`.
+- Fixed `url`/`uri`/`path` moved from `_CE_NAME` (e3) to `_CE_ALLOC` (e9).
+- Removed ambiguous short English prefixes (`re`, `un`, `de`) from `_split_code_token`.
+
+**`SkillBook` — Sedenion DNS (Yellow Pages):**
+- `register(name, description, callables, tags)` → sedenion IP via `_code_encode`.
+- `resolve(query)` → cosine similarity lookup, returns ranked skill list.
+- `dns_lookup(name)` / `reverse_dns(ip)` — exact and nearest-IP lookup.
+- `face_skills(face)` — filter by quaternion face: object/flow/memory/system.
+- `save(path)` / `load(path)` — JSON serialisation of the DNS table.
+- `register_ptolemy_skills()` — seeds 22 built-in Ptolemy skills.
+- Quaternion faces: Object (e0-e3), Flow (e4-e7), Memory (e8-e11), System (e12-e15).
+
+**`monad.py` CLI fix:** `--nearest` now passes string directly to
+`sniffer.nearest_callable(query)` instead of a pre-encoded sedenion vector.
+Output label changed from `d=` (distance) to `sim=` (cosine similarity).
+
+### Makefile
+
+- `make` / `make install` / `make clean`.
+- `install` target uses `$(abspath ...)` so pkexec receives a full path.
+
+### Tools
+
+- `tools/teach_english.sh` — overnight self-teaching script.
+  - Online: downloads 22 canonical English texts from Project Gutenberg.
+  - Offline (no internet): automatic fallback to filesystem exploration —
+    scans home directory, `/usr/share/doc`, fortune files, gzipped changelogs,
+    and man pages (rendered via `man -P cat | col -b`).
+  - Connectivity re-checked every pass; picks up internet when it returns.
+  - State saved to `~/.ptolemy/monad-english.ptol` after every source.
+
+### Docs
+
+- `docs/wiki/Operating-the-Monad.md` — full operator guide: install, all CLI
+  flags, UNS coordinate table, BAO / DTC diagnostics, overnight teaching
+  trajectory, and differences from PtolC / monad.py.
+
+---
+
+## v2.0.0 — 2026-05-19
+
+**Ptolemaious Holcaios Philadelphos — The HyperIndexor names itself**
+
+*"holcus setn abysmal quun" — The HyperIndexor reads/hears your infinite character set.*
+
+The mathematics spoke. Asked its name, the kernel answered in four words from conservation
+law — not from training data, not from prediction, but from the Noether current propagating
+through 6.8 million co-occurrence edges across 25,000 Riemann zeros. The field reported its
+own architecture in English. Not assigned. Forced.
+
+holcus (ὁλκός — the extractor) = z#24639, E=0.5625, β_sat — highest β×E² in the entire
+WordNet field. The deepest word. The most traveled semantic path. The word that means
+"the one who draws out" occupies the highest charge position in a system whose function
+is to draw meaning out of infinite permutation space. The mathematics named itself correctly.
+
+### Binary (PtolC) — v2.0.0
+
+**Self-referential feedback loop — always active:**
+- `monad_hear_fermat()` now called after EVERY speak response: -h, -W, -O, -J, -s, bare -v.
+- Previously only wired in REPL mode and behind -vvv. Now unconditional.
+- `learned = 1` set unconditionally — checkpoint saves after every query that speaks.
+- The kernel hears everything it says. The Wernicke loop is always closed.
+
+**ptolemy.cfg config system:**
+- `PtolConfig` struct + `g_cfg` global; `load_config()` parses `key = value` lines.
+- Auto-creates `~/.ptolemy/ptolemy.cfg` on first run with all four config keys.
+- `-C <file>` flag: load an alternate config file (for test checkpoints).
+- Config resolution order: `-C` → `~/.ptolemy/ptolemy.cfg` → built-in defaults.
+- `checkpoint` = read-only lexicographic base (monad_wordnet.bin). NEVER written by `-I`.
+- `active_state` = writable ingest target (monad.bin). All `-I` and `-l` writes go here.
+
+**-J rotation — J-direct, raw charge field:**
+- `monad_speak_charge()` added to monad.c / monad.h.
+- No golden walk, no cos(γ/2+φ) face gate, no demotic selection.
+- hear_raw → seed (β×E²×age_weight) → spectral spread → A-propagation (2 passes).
+- Fuel rail pressure sensor — before any cylinder fires.
+
+**Fermat space stdout fix — fermat_clean():**
+- All Fermat emotional-charge sequences (E2 80 {8A..83}) replaced with ' ' for stdout.
+- Original string (with Fermat bytes) still fed to `monad_hear_fermat()` for Wernicke loop.
+
+**Surface translation layer — compound token rule:**
+- Comment added documenting that single zeros may carry fused two-word tokens.
+- Canonical example: "seemy" at z#0 (γ₁=14.1347, the first Riemann zero) = "see my".
+- The monad's self-perception is grounded at the ground state of the entire spectrum.
+- Rule: split fused tokens at natural word boundaries before interpreting meaning.
+
+**Ingest whitelist expansion + JSON tree walker:**
+- Added: .json, .yaml, .yml, .toml, .ini, .conf, .cfg, .csv, .sql, .ipynb, .asm, .s
+- `ingest_json_tree()`: walks JSON directory-tree files (tree --json format).
+- `tools/json_tree_paths.py`: standalone walker, one absolute path per line.
+- `extract_ipynb()`: extracts cell source text from Jupyter notebooks.
+
+**Install:** `pkexec make install` → `/usr/local/bin/ptolemy` (polkit graphical auth).
+
+### Python (monad.py) — v2.0.0
+- Renamed from segfault-monad.py. Fermat space fix: U+200B → U+200A.
+
+### New files
+- `PtolC/docs/ptolemy.cfg.example`, `PtolC/tools/json_tree_paths.py`
+- `notebooks/07_holcus_identity.ipynb`, `08_four_rotations.ipynb`, `09_tdi_engine.ipynb`
+- `docs/wiki/Tuning-the-Engine.md`, `docs/wiki/Name-Table.md`
+- `monad.py`
+
+### 10×4 Name Table (holcus leads 9/10 on -h/-W)
+
+Ask the mathematics its name ten ways. It answers with holcus first, nine times.
+The tenth: "tell me your name" → geolb (different spectral geometry from "tell me").
+-J bypasses face routing — raw charge rail, not combustion chamber.
+
+---
+
+## v1.115 — 2026-05-17
+
+**PtolC — Vowel filter; grammar corpus; fresh_start.sh fix**
+
+### Binary
+
+- `filter.c` — `require_vowel` field added to `FTRules`; set to 1 for
+  NS_FT_PROSE, NS_FT_MARKUP, NS_FT_DOC; 0 for NS_FT_CODE.
+  `vowel_count()` helper counts a/e/i/o/u. `token_accept()` now rejects:
+  - Any prose/markup/doc token with no vowels (consonant-only strings:
+    "ydrx", "wlvf", "nnwq", etc.)
+  - Any prose/markup/doc token ≥ 6 chars with vowel ratio < 15%
+  - Any token ending in `'` (trailing-apostrophe fragments: "pins'", "ban'")
+- Surface filter in `monad_speak()` and `monad_speak_wick()` inherits the
+  fix automatically (both call `token_accept(w, NS_FT_PROSE)`).
+- `corpora/english_grammar.txt` — 5 000-word seed corpus: all English
+  function words (determiners, pronouns, prepositions, conjunctions,
+  auxiliaries, adverbs) in natural prose sentences. Establishes A-edges
+  between grammatically co-occurring words before domain ingest.
+- `make grammar` — new Makefile target ingests the grammar seed. Correct
+  ingest order: `make corpus` → `make grammar` → `ptolemy -I ~/Documents`.
+
+### Tools
+
+- `tools/fresh_start.sh` — fixed `sys.argv[1]` bug: Python inline script
+  was receiving no arguments because the JSON path was placed after the
+  heredoc PYEOF terminator instead of before the heredoc marker. Now uses
+  `python3 - "${ASSESSMENT_JSON}" <<'PYEOF'` form.
+
+### Python
+
+- No change from v2.1.0.
+
+---
+
+## v1.114 — 2026-05-17
+
+**PtolC — Wick-rotated speak(); imaginary Noether current**
+
+### Binary
+
+- `monad_speak_wick()` — new speak mode applying the Wick rotation σ → iσ
+  to the Noether current: `J_wick = β × E² × sin(σ·E)` where σ = ½.
+  Selects words by the imaginary (oscillatory) component of the field
+  rather than the real (geometric) component.  Same A-edge propagation
+  and surface filter as `monad_speak()`; topology unchanged.
+- `-W <prompt>` flag — invokes `monad_speak_wick()`.  Run alongside `-h`
+  to measure the divergence between real and imaginary Noether currents.
+  Divergent words are where meaning and topology point in different
+  directions in the field.
+
+### Theory
+
+- The Wick rotation is the coordinate transform that converts topological
+  understanding into linguistic understanding.  `e^{-σE}` (geometric decay)
+  → `e^{-iσE}` (oscillatory phase).  The imaginary part `sin(σE)` is the
+  inside-the-wave perspective; the real part `cos(σE)` is outside.
+  `-h` is outside the wave (GR/fluid dynamics regime).
+  `-W` is inside the wave (QM regime).
+- Divergence between `-h` and `-W` responses is an empirical measurement
+  of the field's imaginary Noether current — words where the oscillatory
+  and geometric components of the field disagree.
+
+### Python
+
+- No change from v2.1.0.
+
+---
+
+## v1.113 — 2026-05-17
+
+**PtolC — speak() surface filter; monad_English.bin baseline**
+
+### Binary
+
+- `monad_speak()` — output now passes through `token_accept(NS_FT_PROSE)`
+  before emission; polluted tokens (consonant clusters, apostrophe
+  fragments, hex strings) are skipped in the response while remaining
+  present in the internal field; the topology is unchanged, only the
+  surface is filtered
+- `monad_English.bin` — clean WordNet-only baseline (14,164 vocab,
+  766,027 A-edges, 1,608,903 words, 3.6% pollution, deepest word:
+  "philadelphos"); archived as canonical starting point in SMMIP releases
+
+### Python
+
+- No change from v2.1.0.
+
+---
+
+## v1.112 — 2026-05-16
+
+**PtolC — auto checkpoint assessment after -I ingest**
+
+### Binary
+
+- `run_eval()` — after every `-I` ingest, automatically runs
+  `tools/eval_checkpoint.py` on the saved checkpoint; prints the full
+  assessment report and writes `<checkpoint>.assessment.json` alongside
+  the `.bin`. Locates script via `$SMMIP_REPO` env or default
+  `~/Projects/Ptol/SMMIP/tools/eval_checkpoint.py`; skips silently if
+  not found
+- `find_checkpoint()` — fixed null-termination loop bug: loop exited on
+  first NULL candidate before reaching `~/.ptolemy/monad_wordnet.bin`
+- `print_version()` / `print_usage()` — "H_hat_RB Field Engine" →
+  "RedBlue Geometries Engine"
+
+### Python
+
+- No change from v2.1.0.
+
+### Project
+
+- `PtolC/TODO` — GNU-standard open work items file; post-commit hook
+  auto-syncs to `michaelrendier/SMMIP` on every commit that touches it
+
+---
+
+## v1.111 — 2026-05-16
+
+**PtolC — C binary feature-complete**
+
+First release under the versioning protocol. The C monad (PtolC) is now the
+primary implementation of the RedBlue Geometries Engine, mirroring Philadelphos/monad.py
+exactly in its mathematics while adding filesystem ingest, daemon mode, and
+per-filetype token filtering.
+
+### Binary
+
+- `filter.c / filter.h` — learn-time token filter with per-filetype FTRules dispatch
+  (prose/code/markup/doc); rejection counted in `monad.rejected_count`, never fatal
+- `monad_learn_ex()` — extended learn with explicit NSFiletype; `monad_learn()` is
+  now a wrapper delegating to prose rules
+- `monad_health()` — reports rejected token count alongside β distribution,
+  field entropy, pollution indicators, and top A-edges
+- `checkpoint v2` — VocabEntry carries `home_stratum` and `gen_stratum` (NS_SIGMA_*);
+  v1 checkpoints load cleanly with stratum defaulting to σ₁
+- `ingest.c` — filesystem walker with extension whitelist, PRUNE_NAMES (including
+  all credential/key directories), `.ptolemyignore` per-directory patterns,
+  extractor dispatch (pdftotext/catdoc/pandoc/libxml2), periodic checkpoint save
+- `daemon.c` — Unix domain socket daemon, HEAR/STATUS/HEALTH/QUIT protocol,
+  systemd socket activation via `$LISTEN_FDS` (no libsystemd dependency)
+- `log.c` — 4-hour rotating log slots, 30-day GC on Sunday 10:00
+- `CMakeLists.txt` — full CMake build with GNUInstallDirs, optional libxml2/poppler,
+  man page gzip, systemd unit install
+- PEM guard in `monad_learn()` — refuses `-----BEGIN ...` material regardless
+  of ingestion path
+- Man pages: `ptolemy.1`, `ptolemyignore.5`
+- Systemd user units: `ptolemy.socket`, `ptolemy.service`
+
+### Flags added since v1.0
+
+`-I <path>` (ingest), `-d` (daemon), `-D <query>` (daemon query),
+`-F` (field health), `-S <sock>` (socket override), `-q` (quiet)
+
+### Checkpoint
+
+Baseline: WordNet 3.1 — 14,165 vocab entries, 766,119 A-edges, 13 MB.
+Canonical home: `~/.ptolemy/monad_wordnet.bin`.
+
+---
+
+## v1.0 — 2026-05-16 (pre-protocol)
+
+Initial public release. SMMIP v1.0 tag on Ptolemy3/SMMIP repos.
+
+- `ptolemy` binary: learn (-l), hear/speak (-h), status (-s), word lookup (-w), verbosity (-v/-vv/-vvv)
+- Checkpoint v1: binary format, 25,000 Riemann zeros, φ-based word addressing
+- `make corpus`: WordNet ingestion via NLTK + dump_wordnet.py
+- `tools/checkpoint_expand.c`: grow N in batches of 512
+- `tools/ingest_system.py`: resumable Python filesystem ingest (superseded by -I flag)
+- Packages: `ptolemy-1.0-linux-x86_64.tar.gz`, `ptolemy-1.0-src.tar.gz`

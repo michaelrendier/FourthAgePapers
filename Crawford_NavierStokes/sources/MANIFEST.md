@@ -1,0 +1,74 @@
+# sources/ manifest
+
+Copies made 2026-09-28 from the repositories under `ThePlace/`. Originals untouched. `sha256` is the first 12 characters of the original at copy time.
+
+| original path | bytes | sha256 |
+|---|---|---|
+| `Ainulindale/wiki/106_the_navier_stokes_problem.md` | 9988 | 4b8074100aa7 |
+| `Ainulindale/wiki/14_redblue_hamiltonian.md` | 7595 | 17d47903473f |
+| `Ainulindale/wiki/33_gyroscope_compressibility.md` | 7416 | 66aa6f22811d |
+| `Ainulindale/wiki/88_the_paper_trail.md` | 14429 | e3b8276d42d3 |
+| `Ainulindale/wiki/29_witches_hat_paper.md` | 15994 | 90de31847337 |
+| `Ainulindale/wiki/39_every_singularity_the_void.md` | 12271 | e9fb4fcc7b46 |
+| `Ainulindale/wiki/31_cavitation_causality_fermat.md` | 19462 | 0ae3db6d7059 |
+| `Ainulindale/wiki/83_the_archimedes_screw.md` | 23131 | d3f9d6c575a7 |
+| `Ainulindale/wiki/85_the_apex_path.md` | 16588 | f414dc689012 |
+| `Ainulindale/wiki/45_t_transformer_the_circle_itself.md` | 9925 | b5353c592165 |
+| `Ainulindale/wiki/34_hypercomplex_spectral_relativity.md` | 8330 | 4e06008ebc9b |
+| `Ainulindale/wiki/105_the_millennium_problems_in_ainulindale.md` | 6708 | 845b2e3c7f99 |
+| `Ainulindale/wiki/114_herrmann_apollonian_bearings_turbulence.md` | 2201 | 71f08b8cc7d3 |
+| `Ainulindale/wiki/115_necas_ruzicka_sverak_self_similar.md` | 2534 | c288ed7a643e |
+| `Ainulindale/wiki/98_provenance_and_citations.md` | 30322 | d3d5517be994 |
+| `Ainulindale/AgeSecond/Second_Age_Ainulindale_Conjecture.md` | 48098 | 07e00264be40 |
+| `Ainulindale/AgeThird/D-P_section1_opening.md` | 18465 | fa28a6b2802d |
+| `Ainulindale/AgeThird/D-CS_Paper.md` | 84379 | 5ea7642010bd |
+| `Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md` | 118690 | 8bbf4f0c2916 |
+| `Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md` | 104859 | 9ded4e7b6e66 |
+| `Ainulindale/SIGMA_VALUATION_FULL.md` | 33904 | a36650b76761 |
+| `Ainulindale/wiki/CS_SIGMA_EVALUATION.md` | 24747 | cf4a821ddf9e |
+| `Ainulindale/README.md` | 75509 | 70825ab76e83 |
+| `Ainulindale/PROVENANCE.md` | 57904 | cfd550e19e3f |
+| `VAPMIP/TODO.md` | 99334 | 0c971ae1ca18 |
+| `VAPMIP/docs/wiki/Tuning-the-Engine/02b_the_halocline_j_blue_j_red_h_hat_rb.md` | 5685 | 2c3e1a89aa08 |
+| `VAPMIP/docs/wiki/Tuning-the-Engine/35_the_spider_web_composition_cycle.md` | 17275 | c143879e7a41 |
+| `VAPMIP/docs/wiki/Tuning-the-Engine/24_the_archimedes_screw_the_machine_not_the_medium.md` | 17846 | 3a3b01786f35 |
+| `VAPMIP/notebooks/10_revised_navier_stokes.ipynb` | 39124 | 8f2b319016da |
+| `VAPMIP/notebooks/11_language_as_navier_stokes.ipynb` | 35051 | 8119ef18ed23 |
+| `VAPMIP/docs/outreach/crawford_email.txt` | 2339 | 55cbcdaae026 |
+| `VAPMIP/CHANGELOG.md` | 80217 | 750cf87a2a6d |
+| `Ainulindale/TODO.md` | 108813 | b1f5e2dc8c9e |
+| `SemanticWordEngine/docs/revised_navier_stokes.md` | 7463 | 447a34d75043 |
+| `SemanticWordEngine/notebooks/revised_navier_stokes.ipynb` | 21179 | 5e3cc45c65bb |
+| `SemanticWordEngine/README.md` | 12149 | 95ea9629d076 |
+| `ValaQuenta/modules/clay_millennium/maths.py` | 55131 | c3dc35426e36 |
+| `ValaQuenta/modules/h_rb_hat/maths.py` | 48078 | db432560b03b |
+| `ValaQuenta/modules/derivation_chain/maths.py` | 56935 | 9afe1221f79a |
+| `ValaQuenta/modules/tier7_cosmos/maths.py` | 188991 | d257f64f4704 |
+| `ValaQuenta/notebooks/tier7/navier_stokes_sedenion.ipynb` | 3213 | b328910c9f82 |
+| `ValaQuenta/notebooks/tier7/halocline_ns_surface.ipynb` | 5143 | 1ce8b6f63986 |
+| `ValaQuenta/wiki/clay_millennium.md` | 5546 | 9a4462ed3e98 |
+| `ValaQuenta/wiki/tier7_cosmos.md` | 5647 | 114d50827c9b |
+| `ValaQuenta/wiki/h_rb_hat.md` | 7332 | b64dbbee7dbc |
+| `ValaQuenta/wiki/derivation_chain.md` | 4587 | f311be7c030b |
+| `GenerationalLineage/engine/valaquenta_calibration.py` | 44962 | ffd0b1254623 |
+| `GenerationalLineage/engine/clay.py` | 21256 | 610009663e26 |
+| `GenerationalLineage/engine/shape.py` | 9048 | d8f1c5df301d |
+| `GenerationalLineage/README.md` | 156347 | c67003f9bd5c |
+| `PtolemyDesktop/Archimedes/Maths/researcher/physics/fluid_dynamics.py` | 21682 | 98db473059ca |
+| `PtolemyDesktop/wiki/RedBlueHamiltonian.md` | 12900 | 042ae6ef6dcd |
+| `PtolemyDesktop/Archimedes/CANONICAL_MATHS.md` | 35948 | 4b97a72d6c51 |
+| `FourthAgePapers/UmbrellaNoether/mode3_code/DR_CRAWFORD_rotating_fluids.ipynb` | 17002 | 2c7a95ef2852 |
+| `FourthAgePapers/UmbrellaNoether/mode3_code/01_crawford_rotation_curves.ipynb` | 19972 | 157baf7377e2 |
+| `FourthAgePapers/UmbrellaNoether/mode3_code/04_CRAWFORD_COSMIC_unified_turbulence.ipynb` | 20508 | 44fcd11d8141 |
+| `FourthAgePapers/UmbrellaNoether/RESEARCHER_NOTEBOOKS.md` | 11781 | 7ec687fc808c |
+| `FourthAgePapers/UmbrellaNoether/mode2_academic/UMBRELLA_NOETHER_PAPER.md` | 23986 | 8ba5dc9fbedb |
+| `FourthAgePapers/UmbrellaNoether/mode3_code/README_CODE.md` | 8023 | 92899b887a2d |
+| `RiemannHypothesisProof/ADDENDUM_generational_lineage_2026-08-28.md` | 13232 | 1c1b7905abc3 |
+| `RiemannHypothesisProof/TODO.md` | 11261 | 3c1ef79823f3 |
+| `RiemannHypothesisProof/papers/Third_Age_CS_Draft_v1.md` | 76465 | e0473c334d46 |
+| `Ainulindale/outreach/outreach_challenges.txt` | 18706 | 43ee710ebc68 |
+| `Ainulindale/outreach/NATURE_SUBMISSION_GUIDE.md` | 19118 | 267978fe4552 |
+| `FourthAgePapers/TODO.md` | 15692 | 3da863e91c99 |
+| `ContextPlease/claude/.clauderc_citations` | 12981 | 244ebf687645 |
+| `Ainulindale/references/CITATION_DOWNLOADS.md` | 18553 | da49ac23163c |
+| `CITABLE_WORK_INDEX.md` | 8096 | 165b6d8b8f75 |

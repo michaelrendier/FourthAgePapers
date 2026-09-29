@@ -25,6 +25,7 @@ The notebooks record the derivation. The wiki page is written last.
 | Inertia and Entropy | Inertial mass is the entropy current at the phase boundary. E=mc² is a Noether conservation identity, not a definition. |
 | Schumann Resonance | Schumann resonances are sedenion eigenmodes of the Earth-ionosphere cavity. Their frequencies are the acoustic peaks of a sedenionic standing wave. |
 | Navier-Stokes Boundary | The incompressible boundary condition ∇·u=0 is the sedenion zero-divisor condition. Boundary generation is ZD-driven. |
+| Crawford / Navier-Stokes | **Notepad, not a paper.** Navier–Stokes is a subject of interest that has shown up in many places across the repositories; `Crawford_NavierStokes/` is Cody's Navier–Stokes notepad: copies of the documents that touch it, and nothing more. |
 | Yang-Mills Mass Gap | The mass gap δ = Ω_ZS − d*·ln10 = 0.000707 is derived without fitting from the Ainulindale constants. |
 | Witches Hat (D14) | The Berry-Keating Hamiltonian half-angle is arctan(d*) = 13.82°. The Riemann zeros are the eigenvalues of this operator. Galactic DM halo geometry: spiral arm undulatory pulses along BAO geodesics. Geodesics spin. |
 | Sedenion Operators | The 16 sedenion operator names self-organise to d*/σ½/D*=1 via prime hash alone. Zero free parameters. |

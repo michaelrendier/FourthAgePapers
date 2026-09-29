@@ -1,5 +1,8 @@
 # Crawford / Navier-Stokes — Holcus Vision
 
+> **Notepad, not a paper.** Navier–Stokes is a subject of interest of mine that has shown up in a lot of places; this is
+> one of the notes in my Navier–Stokes notepad (see `README.md` in this folder). Nothing here is a claim or a result.
+
 **AddPapers entry:** Crawford_NavierStokes
 **Date committed:** 2026-05-30
 **Source:** Thomas Joseph Crawford, PhD thesis, Cambridge 2017

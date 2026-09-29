@@ -1,5 +1,8 @@
 # Crawford / Navier–Stokes — The Laplacian Tail
 
+> **Notepad, not a paper.** Navier–Stokes is a subject of interest of mine that has shown up in a lot of places; this is
+> one of the notes in my Navier–Stokes notepad (see `README.md` in this folder). Nothing here is a claim or a result.
+
 **Companion to** `00_holcus_vision.md`. Full treatment:
 `Ainulindale/wiki/106_the_navier_stokes_problem.md` §"The Laplacian tail".
 **Status: THEORETICAL.** A structural note on *where* a singularity's

@@ -47,8 +47,21 @@ what it says, including the one that's flawed.
     and because silently deleting a wrong turn breaks the project's own
     "RTFM" discipline.
 
+12. **`12_seven_ordered_pairs.py`** — added 2026-10-13. The structure of the seven
+    ordered pairs of `pencil(r)`: three axes, a pivot, three shadows; de Marrais's
+    chart `r` rebuilt from the Fano plane alone; none of the seven is an Assessor plane;
+    the one-signed-phase law `H = -cos(sum eps_k phi_k)` checked to 4.4e-16. §9.7–§9.8.
+13. **`13_bracketing_and_firing_order.py`** — added 2026-10-13. The real
+    order-sensitivity test that script 11 was meant to be: all 132 bracketings and 200
+    random firing orders of the seven-station product. The one-phase form survives every
+    bracketing and order for pencils 1-8 (the sign vector changes) and is
+    bracketing-/order-dependent on the Assessor-plane pencils 9, 10, 12, 15. §9.7.
+
 ## What's still open, honestly
 
-Why exactly `{1,3,6}` conserves and `{2,4,5,7}` doesn't is unresolved.
-Script 10 rules out the obvious candidate; script 11 is a false start at
-the real test, not an answer. See `draft_section_11.md`.
+Why exactly `{1,3,6}` conserves and `{2,4,5,7}` doesn't: explained *within the proxy* on
+2026-10-13 (§9.7, script 12: `H` depends on one signed phase; the signed rate sum is zero
+for their sign vector) as a fitted identity, not a proof. Open: re-deriving the sign
+vectors from the algebra, and why the one-phase form needs a particular grouping on the
+Assessor-plane pencils (script 13). Script 10 rules out the Fano-line candidate; script 11
+was a false start at the order question, which script 13 now asks properly.

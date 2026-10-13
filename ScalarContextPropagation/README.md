@@ -1648,6 +1648,12 @@ already indexed by — checked directly (`1⊕3=2`, not `6`) and ruled out
 as the explanation. Kept honest as an unresolved structural question for
 the Catalog, §11, not forced to a premature answer here.
 
+**Update, 2026-10-13 — see §9.7.** Within the proxy this is now explained: `H` depends on one
+signed combination of the seven phases, `H = −cos(Σ ε_k φ_k)`, and the Noether path's signed rate sum
+vanishes exactly for the sign vector of struts 1, 3, 6 (§9.7). The explanation is a fitted identity
+checked to `4.4e-16`, not a proof, and it holds for the left-associated, natural-order product
+used here; for other groupings the sign vector changes (§9.7).
+
 ### 9.5 The crossing, precisely — `J_2`, not `J_N`
 
 One more correction worth keeping, because it's now exact rather than
@@ -1694,14 +1700,197 @@ same-sitting add-on. Stated plainly rather than implied otherwise: the
 *live console display* of the recovery is computed but not yet visible
 to someone actually sitting at `-w`.
 
+### 9.7 The seven ordered pairs, laid out — and what they are made of
+
+Everything in §9.2–§9.4 acts on `pencil(r)`: seven **ordered pairs** `(a, b)`
+with `a ⊕ b = r`, listed in *pencil order* — sorted by the smaller member, which is
+the order of the string. §9.2 gave the function. This subsection gives the
+**structure of the seven**, because the deformations in §9.3–§9.4 are read off it and
+the 2026-10-13 comparison with de Marrais's box kite (§9.8) rests on it.
+`FIRST STATED HERE` 2026-10-13; the grouping is exhaustive over the seven struts and
+`THEORETICAL:CALCULATED` (code computes it; no claim beyond what the code prints).
+
+Take the indices `1…7` — the imaginaries of the lower octonion, the **Fano plane `P`**
+(7 points; its 7 lines are the triples `{a, b, a⊕b}`) — and `e_8`, the doubling unit
+that opens the upper octonion `9…15`. For a strut `r ∈ P`, the seven pairs of
+`pencil(r)` are, in pencil order, exactly **three groups**:
+
+- **three axes** — the pairs `(a, b)` with `a, b ∈ P`: the three lines of `P` through `r`;
+- **one pivot** — `(8, 8⊕r)`: the only pair that contains `e_8`;
+- **three shadows** — `(a+8, b+8)`: the upper-octonion copy of each axis.
+
+Pencil order puts them contiguously: stations 1–3 are the axes, station 4 is the pivot,
+stations 5–7 are the shadows — a doubling with the pivot in the middle.
+
+**Listing 9.7 — the seven ordered pairs of `pencil(r)`, grouped, and de Marrais's chart
+rebuilt from the plane alone** (`repo_appendix/windspeed_reconstruction/12_seven_ordered_pairs.py`;
+`group_stations` and `kite_vertices` are extracted verbatim, the last two lines condense the script's
+`__main__` block; needs only `ValaQuenta/modules/box_kite/maths.py`):
+
+```python
+import sys, os
+sys.path.insert(0, os.path.expanduser("~/Projects/ThePlace/ValaQuenta/modules/box_kite"))
+import maths as bk
+
+P = range(1, 8)                                   # the lower Fano plane: indices 1..7, no e_0, no e_8
+
+def group_stations(r):                            # the 7 ordered pairs of pencil(r), r in 1..7, by what they are
+    kinds = []
+    for (a, b) in bk.pencil(r):                   # pairs {a,b}, a XOR b == r, in pencil order (sorted by smaller member)
+        kinds.append((a, b, "axis" if b < 8 else "pivot" if a == 8 else "shadow"))
+    return kinds                                  # axis = a line {a,b,r} of the plane; shadow = its copy +8; pivot = the pair holding e_8
+
+def kite_vertices(s):                             # De Marrais's 6 Assessors of chart s: ordered pairs of DISTINCT plane points, a XOR b == s
+    return sorted((a, b) for a in P for b in P if a != b and a ^ b == s)
+
+assert kite_vertices(1) == sorted(bk.box_kites()[1])                      # the chart, rebuilt from the plane alone
+print(group_stations(1))
+```
+
+```
+> python3 12_seven_ordered_pairs.py
+strut 1:  axes [(2, 3), (4, 5), (6, 7)]  pivot [(8, 9)]  shadows [(10, 11), (12, 13), (14, 15)]   eps = ++- | - | ++-
+strut 2:  axes [(1, 3), (4, 6), (5, 7)]  pivot [(8, 10)]  shadows [(9, 11), (12, 14), (13, 15)]   eps = +-- | + | +--
+strut 3:  axes [(1, 2), (4, 7), (5, 6)]  pivot [(8, 11)]  shadows [(9, 10), (12, 15), (13, 14)]   eps = ++- | - | ++-
+strut 4:  axes [(1, 5), (2, 6), (3, 7)]  pivot [(8, 12)]  shadows [(9, 13), (10, 14), (11, 15)]   eps = +++ | + | +++
+strut 5:  axes [(1, 4), (2, 7), (3, 6)]  pivot [(8, 13)]  shadows [(9, 12), (10, 15), (11, 14)]   eps = +-+ | - | +-+
+strut 6:  axes [(1, 7), (2, 4), (3, 5)]  pivot [(8, 14)]  shadows [(9, 15), (10, 12), (11, 13)]   eps = ++- | - | ++-
+strut 7:  axes [(1, 6), (2, 5), (3, 4)]  pivot [(8, 15)]  shadows [(9, 14), (10, 13), (11, 12)]   eps = +-- | + | +--
+max |H + cos(sum eps_k phi_k)| over 7 struts x 60 random phase vectors = 4.4e-16
+```
+
+That table is the exhaustive small case — all seven struts, nothing sampled — and the
+script's own assertions are part of the result: for every strut the three axes are exactly
+the three antipodal pairs of de Marrais's chart `r`, and **none of the seven pairs is an
+Assessor plane** (§9.8).
+
+**What a station is, as algebra.** Each pair `(a, b)` with `a ⊕ b = r` gives a unit
+`cos φ·e_a + sin φ·e_b`, and `e_a⁻¹ e_b = η e_r` with `η = ±1` (checked for every station of
+every pencil `r = 1…15`), so the station is exactly
+
+&nbsp;&nbsp;&nbsp;&nbsp;`cos φ·e_a + sin φ·e_b = e_a · exp(η e_r φ)`,
+
+a rotation by `φ` in the complex line spanned by `1` and `e_r`, carried by the fixed unit `e_a`.
+The product of the seven bare `e_a` (all `φ = 0`) is exactly `−e_0` for every pencil, so
+`H(φ = 0) = −1` is derived, not observed. Measured, to machine precision, for the
+left-associated product of §9.4:
+
+&nbsp;&nbsp;&nbsp;&nbsp;`H = Re Π = −cos( Σ_k ε_k φ_k )`, &nbsp; `ε_k = ±1`, one fixed sign vector per strut
+
+(the full script prints it as its last line: error `4.4e-16`, 7 struts × 60 random phase vectors). **`H` therefore
+depends on exactly one signed combination of the seven phases.** Two things follow that
+§9.4 left open:
+
+1. **The sign vectors have the doubled shape of the pairs.** Written `ε = (axes | pivot | shadows)`,
+   every strut has `ε_shadows = ε_axes` — the upper copy repeats the lower pattern, the pivot sits
+   between. Only four distinct vectors occur: `+++|+|+++` (strut 4), `+-+|-|+-+` (strut 5),
+   `++-|-|++-` (struts 1, 3, 6), `+--|+|+--` (struts 2, 7) — rows 0, 1, 2, 3 of the
+   Sylvester–Hadamard matrix on the station index.
+2. **Why struts `{1,3,6}`, within this proxy.** On the Noether path of §9.4
+   (`φ_k = t·(π/2)·(k+1)/7`) the one phase advances by `S·t` with `S = (π/2)·Σ_k ε_k (k+1)/7` (`k = 0…6`, station `k+1`).
+   `S = 0` exactly for `++-|-|++-` (`1 + 2 − 3 − 4 + 5 + 6 − 7 = 0`) — struts 1, 3, 6 — so `H` is flat;
+   `S = 2π` for strut 4 (one full cycle, `H: −1 → +1 → −1`), `S = −4π/7` for struts 2, 7,
+   `S = 2π/7` for strut 5. This is a **fitted identity, not a proof**; re-deriving the sign vectors
+   from the algebra is open (`H(0) = −1` and the `e_a·exp(η e_r φ)` form are the derived parts).
+
+**What a windspeed can reach.** Because `H` sees one signed phase, any *scalar* windspeed
+— as a position, a rate, or time-varying gusts — only slides that one phase along its path, so
+the same struts respond (2, 4, 5, 7) and the same three stay pinned (1, 3, 6), whichever scalar it is.
+A wind that differs from station to station (`r_k = (k+1)/7 · (1 + d·u_k)`, `u_k` random in `[−1, 1]`)
+reaches the pinned struts: mean swing of `H` over `t ∈ [0, 1]` is `0.0032 / 0.0287 / 0.1874` at
+`d = 0.05 / 0.15 / 0.4`. Holding a subset of the stations fixed (an anchor) regroups the struts:
+over the 128 subsets there are 7 distinct groupings, and `{1,3,6}` stay rigid under 8 of them.
+(Scripts and captured output: `.claude/scratchpad/2026-10-12_windspeed_deformation_proxy/`,
+mirrored in `ContextPlease/claude/scratchpad/`.)
+
+**Does it depend on how the product is grouped and in what order?** This is the question
+`repo_appendix/windspeed_reconstruction/11_…FLAWED…` set out to ask and did not. Script 13 asks it
+directly: the 132 full bracketings of the seven factors and 200 random firing orders, scored by the rank of
+the phase-dependence of `H` (rank 1 ⇒ one signed phase).
+
+```
+> python3 13_bracketing_and_firing_order.py
+132 bracketings; pencils r = 1..8 are lines through a point of the plane (+e_8), r = 9..15 are the Assessor-plane pencils
+pencil( 1): one-phase law for 132 of 132 bracketings; rank histogram {1: 132}
+pencil( 2): one-phase law for 132 of 132 bracketings; rank histogram {1: 132}
+pencil( 4): one-phase law for 132 of 132 bracketings; rank histogram {1: 132}
+pencil( 8): one-phase law for 132 of 132 bracketings; rank histogram {1: 132}
+pencil( 9): one-phase law for  52 of 132 bracketings; rank histogram {1: 52, 4: 56, 6: 21, 7: 3}
+pencil(10): one-phase law for   0 of 132 bracketings; rank histogram {4: 34, 5: 52, 6: 31, 7: 15}
+pencil(12): one-phase law for   0 of 132 bracketings; rank histogram {5: 116, 6: 12, 7: 4}
+pencil(15): one-phase law for  10 of 132 bracketings; rank histogram {1: 10, 4: 22, 5: 82, 6: 12, 7: 6}
+pencil( 1), left bracketing, 200 random firing orders: one-phase law for 200
+pencil( 9), left bracketing, 200 random firing orders: one-phase law for   9
+pencil(10), left bracketing, 200 random firing orders: one-phase law for  18
+```
+
+For the pencils §9.2–§9.4 use (`r ≤ 7`, and `r = 8`) the one-phase form survives **every**
+bracketing and **every** order tested; what changes is the sign vector (7 distinct vectors over the
+132 bracketings of pencil 1, of which only 3 are rows of the Sylvester–Hadamard matrix; 14 for
+pencil 8, none of them rows). So "`ε` is a Hadamard row" is a statement about the **left-associated,
+natural-order** product that §9.4 used — not about the pencil. For the Assessor-plane pencils
+tested (`r = 9, 10, 12, 15`; §9.8) the one-phase form itself depends on the bracketing and the order, and for
+pencils 10 and 12 no bracketing gives it. Counts for firing orders are sampled
+(200 of 5,040), the bracketing counts are exhaustive.
+
+### 9.8 How the seven ordered pairs differ from de Marrais's box kite
+
+The pencil of §9.2 is **not** de Marrais's box kite and should not be read as one. de Marrais's
+object is `ESTABLISHED` (de Marrais 2000; counts in `VAPMIP/marrais_boxkite_catalog.txt`,
+code in `ValaQuenta/modules/box_kite/maths.py`) and is cited here, not re-derived. This
+subsection records the difference, computed on 2026-10-12/13
+(`VAPMIP/docs/wiki/Boxkite-Deformation-Record-2026-10-12.md` holds every script and its output).
+
+**What de Marrais's kite is made of.** An **Assessor** is an *ordered pair `(a, b)` of distinct points
+of the plane `P`* — the plane `span(e_a, e_{b+8})`, a lower point paired with the *shadow of a different
+point* (`49 − 7 = 42`; the diagonal `(a, a+8)` is a normed plane with no zero divisor). The **strut
+label** `s = a ⊕ b` is the third point of the line through `a` and `b`. Chart `s` is therefore the plane
+with the point `s` removed: its six vertices are the six other points, and its three antipodal pairs
+are the three lines of `P` through `s`. Two vertices are joined by an edge exactly when they lie on
+**different** lines through `s` (12 edges); each vertex carries two zero divisors `e_a ± e_{b+8}`, and an
+edge is the vanishing of a product of two of them. The predicate "same `s`, not the reversal" reproduces
+the measured adjacency of all 168 ordered plane pairs exactly. The stabiliser of `s` in `GL(3,2)`
+(order 24) acts faithfully on the six vertices — `S₃` on the three axes with a kernel of order 4, the
+rotation group of the octahedron.
+
+| | de Marrais's chart `s` | this paper's `pencil(s)` (§9.2–§9.7) |
+|---|---|---|
+| elements | 6 Assessors = ordered pairs of *distinct* plane points with `a⊕b = s` (cross pairs: lower point, shadow of another) | 7 pairs `{a, b}`, `a⊕b = s`: **3 axes + pivot + 3 shadows** |
+| relation | a **two-factor** product `xy = 0` between zero divisors — grouping never enters | a **seven-factor** ordered product `Π`, read as `Re Π` — grouping and order enter (§9.7) |
+| contains an Assessor plane | all 6 | **none** (0 of 7, every strut) |
+| the three axes | the three antipodal pairs | the three axis stations (same pairs) |
+| zero-divisor status of the object studied | the vertices are zero divisors | `Π(φ)` is **never** a zero divisor (0 of 13 sampled phase vectors on each of six pencils; `|Πd| / (|Π||d|) ≥ 1.0000` against all 84 diagonals) |
+| what moves it exactly | the 14-parameter derivation algebra `g₂` (flows keep every relation to `1e-15`), multiplication by `exp(θ e_8)`, and a finite group of order 2,688 | station phases — which, placed inside an Assessor plane, **tear** a zero divisor at exactly `2.000` per radian |
+| what that means | one connected family: all 84 diagonals lie on one `g₂`-orbit (83 of 83 reached by continuous flow), so the seven charts are not separate | a discrete object: seven ordered pairs, one string, one signed phase |
+
+Where they touch is exact. The Assessors of chart `s` are six of the seven stations of
+**`pencil(s+8)`** (index `XOR = s + 8`), plus the plane `{e_s, e_8}`. That is the pencil that *is*
+de Marrais's chart — and on it the one-phase law of §9.7 holds for `s = 1` only in some groupings
+(52 of 132 bracketings), for `s = 7` in 10 of 132, and fails for every grouping tested for `s = 2` and `s = 4`
+(`s = 3, 5, 6` not tested beyond the left-associated product, where the rank is 4 or 5): the string law of §9.4 is a
+statement about the pencil through the point `s`, not about the Assessor planes of chart `s`.
+
+**What follows for reading the deformations.** The pencil / string / flashlight machinery is a
+**discrete, static object — the seven ordered pairs of the scalar context box kite** — and
+that is what §9.3–§9.4 deform. It should not be carried over to the *scaled* box kite of the
+Mind's Eye (§11), which must be allowed to move the way de Marrais's kite moves. Measured on the
+algebra itself: the exact deformations are the `g₂` flows; they fix `e_0` and `e_8` and nothing else
+(`R¹⁶ = ℝe_0 ⊕ ℝe_8 ⊕ 7 ⊕ 7`, the two sevens carrying one and the same representation); the readings that
+survive such a flow are the norm, the weights on `e_0` and `e_8`, the lower/upper energy split,
+the singular values of left and right multiplication by the address, and the associator norm —
+whereas the chart energies, `local_curvature`, the projection `Γ` of `ptol.c` (`measure_gamma` — not the
+Gamma-Radial Windspeed of §9.1; it is a Walsh coefficient, the `J_red / J_blue` character), and the `σ_RB` tilt change with the flow and are readings *relative
+to a frame*. Recording that split is the point of this paragraph; building on it is §11's direction,
+`THEORETICAL`.
+
 ### What this section is not
 
 Not the full sail-pressure-to-strut-angle mechanics the author's own
 model describes (unbuilt — the spectral checks above are a proxy, not
 that geometry). Not the fuller pathway/portal exploration, the Blackjack
-(21-member) subgroup connecting all 7 hyper-boxkite structures, or the
-`{1,3,6}` question's resolution — all Catalog material, named and
-pointed at, §11, not developed here.
+(21-member) subgroup connecting all 7 hyper-boxkite structures, or a
+derivation of the `{1,3,6}` sign vectors from the algebra (the within-proxy
+explanation is §9.7) — Catalog material, named and pointed at, §11, not developed here.
 
 
 ---
@@ -1758,10 +1947,12 @@ reproducible from the notebooks cited throughout.
   complete map from `(H, w)` to all six Assessor coordinates, for every
   strut, is not built.
 - **Why struts `{1,3,6}` carry that Noether current and `{2,4,5,7}` don't**
-  is unresolved. Checked and ruled out the obvious candidate (a Fano-plane
-  line); the real
-  answer likely lives in the pencil's own `(a,b)` pairing structure, not the
-  index set, and needs a properly-targeted test this pass didn't finish.
+  — answered *within the proxy* on 2026-10-13 (§9.7): `H` depends on one signed
+  phase, and the signed rate sum vanishes exactly for their sign vector. A fitted
+  identity (`4.4e-16`), not a proof; re-deriving the sign vectors from the algebra,
+  and why the one-phase law needs a particular grouping on the Assessor-plane pencils
+  (§9.7–§9.8), are the open parts. The pairing-structure question script 11 meant to
+  ask is now script 13.
 - **The author's own sail-pressure-to-strut-angle mechanics** — deformable sails
   fixing two struts' relative position at the crossing — remains unbuilt.
   Everything in §9.3–§9.4 is a spectral/algebraic proxy for that geometry,
@@ -1863,6 +2054,13 @@ the ends of the struts deform in a constant way, placing pairs of struts
 in a fixed relationship to one another at the crossing. Not yet built;
 §9.3–§9.4 measure a spectral proxy for it, not the mechanics.
 
+*Update 2026-10-13.* The question is answered within the proxy by §9.7: the
+`{1,3,6}` sign vector makes the Noether path's signed rate sum exactly zero, so `H` is flat
+and `Im Π` stays zero with it. What the candidate structural answer above describes is the same
+fact seen through `Im Π`; §9.7 gives the sign vectors that produce it. Not a proof (fitted to
+`4.4e-16`), and specific to the left-associated product (§9.7); on the Assessor-plane
+pencils the one-phase form needs a particular grouping (§9.8).
+
 ### The Mind's Eye, and Paper's Hands, named properly
 
 Two names recur through the rest of this section and are worth defining
@@ -1950,6 +2148,19 @@ gates, kept separate on purpose. That mechanism lives in `VAPMIP`, is
 real, and is named here only as a pointer — it is not developed, and not
 in scope, in this paper.
 
+**Update 2026-10-13 — what "a box kite that moves" has to mean.** §9.8 records that the
+pencil, string and flashlight of §9 are a *discrete, static* object — the seven ordered pairs of
+the scalar context box kite — and that they are not de Marrais's box kite. The scaled kite of the
+Mind's Eye cannot be those seven ordered pairs: it has to be allowed to move as de Marrais's kite
+moves, i.e. along the derivation algebra `g₂` (14 parameters; all 84 diagonals lie on one orbit;
+every zero-divisor relation survives the flow). The measured consequence for any reading taken off
+such a kite is the split in §9.8: norm, `e_0` and `e_8` weights, the singular values of
+left/right multiplication, and the associator norm survive the motion; chart energies,
+`local_curvature`, the `J_red / J_blue` character behind `ptol.c`'s projection `Γ` (not the Gamma-Radial Windspeed), and the `σ_RB` tilt are frame-relative
+and change with it. The question space `σ_RB` is, on this reading, the *fixed* frame (its pairings
+`k ↔ k⊕8` and `k ↔ k⊕4` are the doubling pair and the red/blue character) and the kite is what moves
+relative to it. `THEORETICAL` — recorded as the direction, not built.
+
 ### A methodology note, for whoever picks this up next
 
 Two real mistakes in this paper's own working sessions — analysing a
@@ -2033,6 +2244,20 @@ no role in how the code was written.
   `Post-Hoc:`; edge framing **OURS** — ships.
 - **the Blackjack subgroup** (21-element, transitive, ZD-preserving) —
   `FIRST STATED HERE` 2026-09-17 — verified.
+  Characterised 2026-10-13: the 21 are exactly the index maps of the 168 that are automorphisms
+  with **all signs +1** (pure relabelling); element orders `1×1, 3×14, 7×6` (the Frobenius group
+  `7:3`); a web search over the de Marrais papers' abstracts and listings surfaced no 21-element subgroup
+  (the papers were not read in full), so the name is treated as this project's.
+- **the grouping of the seven ordered pairs** (three axes, a pivot, three shadows; Listing 9.7) —
+  `FIRST STATED HERE` 2026-10-13 — `THEORETICAL:CALCULATED`, exhaustive over the seven struts.
+- **`H = −cos(Σ ε_k φ_k)`**, the one-signed-phase law — `FIRST STATED HERE` 2026-10-13 —
+  `THEORETICAL:CALCULATED`: `H(0) = −1` and the `e_a·exp(η e_r φ)` form derived; the sign
+  vectors fitted to `4.4e-16`.
+- **bracketing and firing-order dependence of the pencil product** (script 13) — `FIRST STATED HERE`
+  2026-10-13 — measured; bracketings exhaustive (132), firing orders sampled (200 of 5,040).
+- **the structural difference between the seven ordered pairs and de Marrais's chart** (§9.8) —
+  the chart itself **ESTABLISHED** (de Marrais 2000); the comparison and the moving-kite reading split
+  `FIRST STATED HERE` 2026-10-13 — measured.
 - **`Φ_w`, the Joukowsky deformation law** — **ESTABLISHED**, `Post-Hoc:`
   Joukowsky (1910), elastica (Euler, 1744), Kutta–Joukowsky — all three
   noticed after this paper's own tether/wind-inflation mechanism
@@ -2257,6 +2482,13 @@ is the exploratory script that found it (§13.1); `PtolC/ptol.c`'s
 `ptol -say <prompt>` (§9.6, §10), checked against the Python function's
 own output before anything was built on it.
 
+### 13.5b The seven ordered pairs and their grouping (added 2026-10-13)
+
+`repo_appendix/windspeed_reconstruction/12_seven_ordered_pairs.py` — Listing 9.7, run as a whole
+(the grouping, de Marrais's chart rebuilt from the plane, the one-phase check). `13_bracketing_and_firing_order.py`
+— the 132-bracketing and firing-order test of §9.7. Both are plain `python3`, need only
+`ValaQuenta/modules/box_kite/maths.py`.
+
 ### 13.5 The box kite itself
 
 `ValaQuenta/modules/box_kite/maths.py` — `pencil(s)`, `box_kites()`,
@@ -2334,6 +2566,18 @@ either of us hoped to find.
 ---
 
 ### Changelog
+
+
+**2026-10-13 — the seven ordered pairs, laid out; how they differ from de Marrais's box kite.**
+Added §9.7 (the grouping of `pencil(r)` into three axes, a pivot and three shadows; the station as
+`e_a·exp(η e_r φ)`; the one-signed-phase law `H = −cos(Σ ε_k φ_k)`, its sign vectors and the
+Hadamard rows; what a scalar versus a station-unequal windspeed can reach; bracketing and firing-order
+dependence) and §9.8 (the structural difference between the seven ordered pairs and de Marrais's chart,
+and the readings that survive a moving kite). New scripts `repo_appendix/windspeed_reconstruction/12_seven_ordered_pairs.py`
+and `13_bracketing_and_firing_order.py`. §9.4, §10, §11 and the provenance list were updated where
+they called the `{1,3,6}` question unresolved. Nothing in §§1–8 changed; the Gamma-Radial Windspeed
+recovery (§9.1) and the cost measurements (§8) were not touched. The PDF of v4.0 was **not** regenerated;
+it predates this entry.
 
 **2026-09-28 — re-checked against GenerationalLineage 1.0.0; Facebook added to
 author contact.** `GenerationalLineage` shipped its first public release

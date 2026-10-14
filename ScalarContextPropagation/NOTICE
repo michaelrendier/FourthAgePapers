@@ -35,4 +35,4 @@ Infocom / Zork
 The verb-governed sentence parser follows the Infocom ZIL / Z-machine design (Blank, Lebling et al.; Nelson's Inform 6/7);
 it is built-against prior work, not a copy of any Infocom source.
 
-This project's own code and mathematics are released under the GNU GPL v3 (see LICENSE where present).
+The code and text in this directory are under the license in its LICENSE file (GNU GPL v3). The Monad itself (the VAPMIP repository) is proprietary and licensed separately; the mathematics is not copyrightable.

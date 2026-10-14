@@ -1,5 +1,10 @@
 # Collatz as the 2-adic Shift
 
+> **Update 2026-10-14. The paper is now a code paper.** *A Bit Shift Wearing A Disguise* (`paper/A_Bit_Shift_Wearing_A_Disguise.md` and `.pdf`) replaces the README as the paper. It is **not** a Fourth Age paper: it makes no prediction, nothing in it is pre-registered, and its labels are `ESTABLISHED`, `OURS`, `THEORETICAL`, `OPEN`, with a `:CALCULATED` suffix on results the code computes. It opens with a note on the assistant (Claude Sonnet 5.5, with the `cs-paper-code-conventions` skill) and the author's method, and ends with a section on the ContextPlease files used. New code: `engine/e_collatz_bl_replication.py` (re-computes the Bernstein–Lagarias tables; one block of printed entries disagrees with two independent computations) and `engine/e_collatz_gl_decomposition.py` (the map through GenerationalLineage, and a control that went wrong). New notebooks: `04_…`, `05_…`. Downloaded references: `references/`.
+> **Correction.** The statement `T = ADD ∘ SCALE ∘ SIGN` below took SIGN to be the parity bit that selects a branch. The engine's SIGN (a ±1 reflection) occurs in neither branch; see the paper's Section 5.7. This page is the original and is kept as written.
+
+
+
 Session origin: 2026-08-21. Cody, out of a run of pathway-mathematics reading:
 
 > *"multiple inputs to one small ordered loop… Collatz Conjecture… I see a
@@ -281,3 +286,10 @@ FourthAgePapers/CollatzShift/
 ```
 
 Working notes: `ContextPlease/claude/scratchpad/2026-08-21_collatz_shift_conjugacy/`.
+
+## Update 2026-10-14: what the rewrite added
+
+* **Literature.** The parity-vector conjugacy and the cycle structure of the conjugacy map mod 2^n are Bernstein–Lagarias (1996); the engine now re-computes their Tables 2.2–2.4. Every row of Table 2.2 we computed (n ≤ 16) agrees, the order 2^(n−4) is reproduced, and the odd fixed-point counts agree with 86 of the 99 entries of Table 2.3 and 99 of the 100 entries of Table 2.4. **One block disagrees** (Table 2.3, n = 66..78; Table 2.4, n = 70): the printed value is our value for n+1. Recorded as OPEN, not tidied.
+* **The SIGN statement.** See the correction above. The branches are SCALE(1/2) and ADD(1/2)∘SCALE(3/2); one bit selects.
+* **A control that went wrong.** A Lyndon-factor excess in Collatz parity streams was an artefact of unmatched controls (odd starts, forced approach to 1); recorded as a METHOD error.
+* Companion notebooks `04_bernstein_lagarias_replication.ipynb` and `05_generationallineage_reading.ipynb`; references in `references/`.

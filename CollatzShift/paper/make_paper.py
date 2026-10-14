@@ -150,7 +150,7 @@ def main() -> None:
     md = build()
     if '--check' in sys.argv:
         cur = OUT.read_text() if OUT.exists() else ''
-        strip = lambda s: re.sub(r'\*\*Date:\*\*[^\n]*\n', '', s)
+        strip = lambda s: re.sub(r'building the paper took about \d+ s', '', re.sub(r'\*\*Date:\*\*[^\n]*\n', '', s))
         print('paper matches a fresh build:', strip(cur) == strip(md))
         return
     OUT.write_text(md)

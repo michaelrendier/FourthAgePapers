@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Builds A_Bit_Shift_Wearing_A_Disguise.pdf from the markdown (pandoc + LuaLaTeX; DejaVu fonts with a Unifont fallback).
+# Builds ../CollatzShift.pdf (the ONLY PDF kept in the repo; Cody 2026-10-14) from the markdown (pandoc + LuaLaTeX; DejaVu fonts with a Unifont fallback).
 # The fallback definition must come BEFORE the font set-up, so the tex is generated, patched, then compiled twice.
 set -euo pipefail
 cd "$(dirname "$0")"
@@ -15,5 +15,5 @@ i = s.index('\\usepackage{fontspec}') if '\\usepackage{fontspec}' in s else s.in
 open(p, 'w').write(s[:i] + fb + s[i:])
 PY
 for i in 1 2; do lualatex -interaction=nonstopmode -output-directory=/tmp /tmp/bitshift.tex >/tmp/bitshift_$i.log 2>&1; done
-cp /tmp/bitshift.pdf A_Bit_Shift_Wearing_A_Disguise.pdf
-echo "pages: $(pdfinfo A_Bit_Shift_Wearing_A_Disguise.pdf | awk '/Pages/{print $2}'); missing glyph warnings: $(grep -c 'Missing character' /tmp/bitshift_2.log || true)"
+cp /tmp/bitshift.pdf ../CollatzShift.pdf
+echo "pages: $(pdfinfo ../CollatzShift.pdf | awk '/Pages/{print $2}'); missing glyph warnings: $(grep -c 'Missing character' /tmp/bitshift_2.log || true)"

@@ -2576,8 +2576,9 @@ dependence) and §9.8 (the structural difference between the seven ordered pairs
 and the readings that survive a moving kite). New scripts `repo_appendix/windspeed_reconstruction/12_seven_ordered_pairs.py`
 and `13_bracketing_and_firing_order.py`. §9.4, §10, §11 and the provenance list were updated where
 they called the `{1,3,6}` question unresolved. Nothing in §§1–8 changed; the Gamma-Radial Windspeed
-recovery (§9.1) and the cost measurements (§8) were not touched. The PDF of v4.0 was **not** regenerated;
-it predates this entry.
+recovery (§9.1) and the cost measurements (§8) were not touched. The PDF of v4.0 was regenerated
+2026-10-13 from this text (pandoc + LuaLaTeX, DejaVu fonts with a Unifont fallback for the
+multi-script "tree" examples; 42 pages), so it now includes §9.7 and §9.8.
 
 **2026-09-28 — re-checked against GenerationalLineage 1.0.0; Facebook added to
 author contact.** `GenerationalLineage` shipped its first public release

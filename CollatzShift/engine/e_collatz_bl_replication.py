@@ -153,6 +153,25 @@ def odd_fixed_points_dfs(N: int) -> dict[int, int]:
     return counts
 
 
+def window_audit(lo: int = 60, hi: int = 80) -> dict:
+    """Chase of the disagreement window. (1) SOUNDNESS: every odd fixed point listed at each n in [lo, hi] is checked by plain iteration of T
+    (Q_n(x) == x); completeness rests on the lifting lemma (a fixed point mod 2^(n+1) reduces to one mod 2^n), which both algorithms use.
+    (2) The printed Table 2.3 block against ours as multisets: a single deletion plus a single duplication would leave exactly one value only
+    in ours and one only in theirs."""
+    frontier, listed = [1], {}
+    for n in range(1, hi + 1):
+        fp = [x for x in frontier if parity_vector(x, n) == x]
+        listed[n] = fp
+        frontier = fp + [x + (1 << n) for x in fp]
+    unsound = [(n, x) for n in range(lo, hi + 1) for x in listed[n] if parity_vector(x, n) != x or x % 2 == 0]
+    ours = sorted(len(listed[n]) for n in range(66, min(hi, 80) + 1))
+    printed = sorted(TABLE_2_3[n] for n in range(66, min(hi, 80) + 1))
+    from collections import Counter
+    co, cp = Counter(ours), Counter(printed)
+    return {'n_residues_checked': sum(len(listed[n]) for n in range(lo, hi + 1)), 'unsound': unsound,
+            'only_in_ours': sorted((co - cp).elements()), 'only_in_printed': sorted((cp - co).elements())}
+
+
 def run(verbose: bool = True, n_cycles: int = 16, n_fixed: int = 100) -> dict:
     """n_cycles: largest n for the cycle table (Table 2.2 goes to 20; 18 takes about a minute). n_fixed: largest n for fixed points (200 compares Table 2.4 too)."""
     res = {'label': 'ESTABLISHED:CALCULATED (Bernstein-Lagarias 1996, re-computed)'}
@@ -193,6 +212,7 @@ def run(verbose: bool = True, n_cycles: int = 16, n_fixed: int = 100) -> dict:
     res['q_lineage_vs_printed_beyond_100'] = (
         [n for n in TABLE_2_4 if 100 < n <= n_fixed and fp[n] != TABLE_2_4[n]] if n_fixed > 100 else 'not run (use --full)')
     res['odd_fixed_points'] = {n: dfs[n] for n in (10, 20, 30, 40, 50, 100, 200, 500, 1000)}
+    res['window_audit'] = window_audit(60, 80)
     res['label'] = 'ESTABLISHED:CALCULATED (Bernstein-Lagarias 1996, re-computed), with ONE RECORDED DISCREPANCY WINDOW in the printed tables (see mismatch lists)'
     if verbose:
         print('Bernstein-Lagarias (1996) replication', '(' + res['label'] + ')')
@@ -207,6 +227,8 @@ def run(verbose: bool = True, n_cycles: int = 16, n_fixed: int = 100) -> dict:
         print(f"  Table 2.4 (n=10,20,...,1000, {res['table_2_4_checked']} values) vs DFS: mismatches at n = {res['table_2_4_mismatches'] or 'none'}")
         print(f"  every mismatching printed entry equals the computed value at n+1 (a one-cell shift in the printed table): {res['mismatch_is_a_one_cell_shift']}")
         print('  odd fixed points at n =', res['odd_fixed_points'])
+        wa = res['window_audit']
+        print(f"  window audit n=60..80: {wa['n_residues_checked']} listed odd fixed points re-checked by plain iteration of T, unsound: {wa['unsound'] or 'none'}; printed block n=66..80 vs ours as multisets: only in ours {wa['only_in_ours']}, only in the printed table {wa['only_in_printed']}")
     return res
 
 

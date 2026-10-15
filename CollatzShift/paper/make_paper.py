@@ -126,6 +126,8 @@ def build() -> str:
         'FP10': str(odd_fp[10]), 'FP100': str(odd_fp[100]), 'FP200': str(odd_fp[200]), 'FP500': str(odd_fp[500]), 'FP1000': str(odd_fp[1000]),
         'ORD_OK': 'holds for every n from 6 to 16' if B['order_is_2^(n-4)_for_n>=6'] else 'FAILS for some n',
         'SOL': str(B['solenoidal_violations']),
+        'WA_N': str(B['window_audit']['n_residues_checked']), 'WA_UNSOUND': 'none' if not B['window_audit']['unsound'] else str(len(B['window_audit']['unsound'])),
+        'WA_OURS': ', '.join(map(str, B['window_audit']['only_in_ours'])), 'WA_PRINTED': ', '.join(map(str, B['window_audit']['only_in_printed'])),
         'A_CLASSES': str(G['A_classes_checked']), 'A_BAD': str(G['A_mismatches']),
         'FIRST_COLL': '; '.join(f"n = {n}: {v[0]} steps to reach 1, first value to repeat is {v[3]:g}, at step {v[2]}" for n, v in sq.items()),
         'RM': '; '.join(f"(k,d) = {k}: {a} rotation-minimal vs {b} primitive" for k, (a, b) in G['C_rotation_minimal_vs_primitive'].items()),

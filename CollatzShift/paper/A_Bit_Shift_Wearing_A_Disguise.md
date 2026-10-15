@@ -391,11 +391,13 @@ Bernstein-Lagarias (1996) replication (ESTABLISHED:CALCULATED (Bernstein-Lagaria
   Table 2.4 (n=10,20,...,1000, 100 values) vs DFS: mismatches at n = [70]
   every mismatching printed entry equals the computed value at n+1 (a one-cell shift in the printed table): True
   odd fixed points at n = {10: 10, 20: 26, 30: 50, 40: 92, 50: 108, 100: 90, 200: 404, 500: 1150, 1000: 2308}
+  window audit n=60..80: 2514 listed odd fixed points re-checked by plain iteration of T, unsound: none; printed block n=66..80 vs ours as multisets: only in ours [102], only in the printed table [144]
 ```
 
 - The cycle table (their Table 2.2, the number of cycles of each length 2^j of Φ̂_n, the map on odd residues) agrees for every row we computed; the order of Q_n holds for every n from 6 to 16 and equals 2^(n−4); every cycle length is a power of two; the solenoidal property has 0 violations. These are theorems or tabulated facts in Bernstein–Lagarias; we only reproduce them.
 - The odd fixed-point counts (1-cycles) are computed by two independent algorithms that agree with each other. They agree with 86 of the 99 entries of Table 2.3 and 99 of the 100 entries of Table 2.4 (n up to 1000). Odd fixed points at n = 10, 100, 200, 500, 1000: 10, 90, 404, 1150, 2308.
 - **The disagreement.** The printed numbers differ from ours at n = 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78 (Table 2.3) and n = 70 (Table 2.4). In every one of them, the printed value for n equals our value for n+1: the block looks like a one-cell shift. We checked that our two algorithms agree with each other, that both agree with the printed tables at every other entry (including on both sides of the block), and that the retypeset 2022 version of the paper prints the same numbers as the 1996 preprint, so a layout or OCR error in our transcription is unlikely. We cannot exclude a fault in our code that happens to affect exactly these n, or a slip in the printed table or in the data it was built from. **We do not know which is right**; this is the first of the questions in Section 8.
+- **What the chase added.** (i) *Soundness:* each of the 2514 odd fixed points our code lists for n = 60..80 was re-checked by plain iteration of T (the parity vector of the residue, computed directly, equals the residue); none fail. So nothing in our lists is spurious; if we are wrong in the window, we are wrong by omission, and completeness rests on the lifting step (a fixed point mod 2^(n+1) reduces to one mod 2^n) that both of our algorithms use, which is the one assumption not tested independently here. (ii) *Shape:* compared as multisets over n = 66..80, the printed block and ours differ in exactly one value each way: 102 occurs only in ours and 144 only in the printed table, which is what a single deleted cell plus a single duplicated cell in a typeset table would produce. This is consistent with a slip in the printed table; it does not prove one. (iii) *Outside sources:* Rozier (2018) tabulates the counts N_k of odd ergodic sets for k ≤ 16, citing Bernstein–Lagarias Table 2.2; we read those values as consistent with the Table 2.2 columns, but we did not compare them entry by entry, and k ≤ 16 does not reach the window, and we found no published source for the counts at n = 66..78.
 
 ### 5.9 Parity streams, controls, and a recorded fault
 
@@ -453,12 +455,12 @@ python3 engine/e_collatz_gl_decomposition.py # about 7 s; needs GenerationalLine
 python3 paper/make_paper.py --check          # does this paper match a fresh build?
 ```
 
-Environment of this build: Python 3.12.3, a ThinkPad X1 Carbon (6th gen, Core i7-8550U); building the paper took about 32 s. SHA-256 prefixes of the engine files used:
+Environment of this build: Python 3.12.3, a ThinkPad X1 Carbon (6th gen, Core i7-8550U); building the paper took about 34 s. SHA-256 prefixes of the engine files used:
 
 | file | sha256 (first 12) |
 |---|---|
 | `engine/e_collatz_shift.py` | `852d73561a70` |
-| `engine/e_collatz_bl_replication.py` | `0749a916e353` |
+| `engine/e_collatz_bl_replication.py` | `014e3d8b300a` |
 | `engine/e_collatz_gl_decomposition.py` | `db01476f1905` |
 
 The original engine's own transcript (relations and provenance as the original paper labelled them):
@@ -497,7 +499,8 @@ collatz.drift_at_half   [tier 3 | KNOWN (Terras 1976; Everett 1977)]
 4. `Post-Hoc:` D. J. Bernstein, A non-iterative 2-adic statement of the 3x+1 conjecture, *Proc. Amer. Math. Soc.* **121** (1994), 405–408. (not downloaded; the publisher's site returned a bot-check page)
 5. `Post-Hoc:` D. J. Bernstein, J. C. Lagarias, The 3x+1 conjugacy map, *Canad. J. Math.* **48** (1996), 1154–1169. (`references/Bernstein_Lagarias_1996_retypeset.pdf`, preprint copy also included)
 6. `Post-Hoc:` J. C. Lagarias, The 3x+1 problem: an annotated bibliography (1963–1999), arXiv:math/0309224v13. (`references/Lagarias_annotated_bibliography_arXiv_math0309224.pdf`; read only for its existence and scope)
-7. (built-against; the author's own software, no tag) C. M. Allison, The Generational Lineage Engine, version 1.0.0 (2026), https://github.com/michaelrendier/GenerationalLineage.
+7. `Post-Hoc:` O. Rozier, Parity sequences of the 3x+1 map on the 2-adic integers and Euclidean embedding, arXiv:1805.00133v6. (`references/Rozier_2018_parity_sequences_arXiv_1805.00133.pdf`; used only for its table of N_k, k ≤ 16)
+8. (built-against; the author's own software, no tag) C. M. Allison, The Generational Lineage Engine, version 1.0.0 (2026), https://github.com/michaelrendier/GenerationalLineage.
 
 (Citation details for items 1–4 are from memory or from publisher listings and should be checked before this draft is circulated further. The paper's own code was executed; the cited papers' proofs were not re-derived.)
 

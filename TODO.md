@@ -9,8 +9,8 @@
 
 [ ] HyperindexingSystem — "The Hyperindexing System: Data With No Physical
     Location." STUB, started 2026-09-25. Plain Horner bijection (no CD-tower
-    fold — that's `DataStorageNoLocation`'s job, this is its sibling, not a
-    duplicate), extended to a day/month/year hierarchical index for lossless
+    fold — that's `datastorage/`'s job: the former `DataStorageNoLocation`,
+    merged into this project 2026-10-18), extended to a day/month/year hierarchical index for lossless
     constant-per-chunk conversational memory. Baseline benchmark done:
     `VAPMIP/README.md` + `VAPMIP/benchmarks/hyperwebster_baseline_bench.py`.
     TODO: chunk-size/minimal-charset engine work, day/month/year aggregator

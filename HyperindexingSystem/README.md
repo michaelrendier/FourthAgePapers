@@ -10,6 +10,10 @@
 > Mortar: "The Library of Babel" and the Dream of Totality*, is linked from
 > the same page (<https://jonathanbasile.com>).
 
+> **Merged 2026-10-18 (Cody): `DataStorageNoLocation` and this paper are the same project.** What was `DataStorageNoLocation/` lives in
+> [`datastorage/`](datastorage/) (its `README.md`, `construction.json`, `bench/`, `engine/bench_tower.py`); its three commits are in this
+> repository's history through the merge of the former `data-storage-no-location` branch.
+
 **Status: TODO — stub.** Started 2026-09-25. This is a placeholder for the
 paper, not the paper. Per the FourthAgePapers rule, work happens in the
 engine and notebooks first; this file grows as that work lands, and the
@@ -75,8 +79,8 @@ enough shape to give it something to predict against.
 
 Home: `ValaQuenta/modules/hyperwebster/` (existing `horner_encode`/
 `horner_decode` core is the right reusable piece; the module's
-`fano_encode`/`monad_address` Cayley-Dickson layer is `DataStorageNoLocation`'s
-territory, not this paper's — kept in place, not touched here). Per the
+`fano_encode`/`monad_address` Cayley-Dickson layer is the `datastorage/` part of this
+project (formerly `DataStorageNoLocation`), not the plain-Horner part — kept in place, not touched here). Per the
 "One Engine" rule, new work is designed inside ValaQuenta and copied to its
 eventual home (Monad-facing code in VAPMIP/PtolemyDesktop), not developed in
 place elsewhere first.
@@ -92,33 +96,19 @@ Open engineering questions, in order:
    blockchain gets a calendrical (day-keyed) side-index laid on top of its
    `prev_hash` chain, so retrieval stops being O(depth).
 
-## Sibling work — not a duplicate
+## The merged part — `datastorage/` (formerly `DataStorageNoLocation`)
 
-`../DataStorageNoLocation/` benchmarked the Cayley-Dickson-folded variant
-(fixed-size address per CD rung, `data-storage-no-location` branch,
-2026-08-30, unpushed) and measured its rung-0 Horner encode at ~O(n^1.8) on the
+`datastorage/` benchmarked the Cayley-Dickson-folded variant
+(fixed-size address per CD rung; it was the `data-storage-no-location` branch,
+2026-08-30, merged here 2026-10-18) and measured its rung-0 Horner encode at ~O(n^1.8) on the
 reference machine. This paper's baseline benchmark runs a different loop
 (`point_to_text`, `N ** i` per position) and grows at ~n^2.5; a forward Horner
 loop over the same class grows at ~n^1.8 and returns the identical address
-(wiki page 03). That paper folds the address down; this one keeps it exact and
+(wiki page 03). That part folds the address down; the plain part keeps it exact and
 manages its growth by chunking and hierarchy instead. Both are real,
-neither supersedes the other.
+neither supersedes the other, and they are one project.
 
 ## Licensing
 
-Falls under the same terms as `../DataStorageNoLocation/LICENSE.md` /
-`COMMERCIAL_TERMS.md` — same hyperindexer addressing paradigm, same
-carve-outs (Ptolemy / any Monad `.bin` state is never covered). Not
-duplicated here; those files are the source of record.
-
-## One Wiki
-
-[`wiki/00_index.md`](wiki/00_index.md): one page per distinct or successful
-version of the code (v00–v19, chronological), each with its notebook set in
-[`notebooks/`](notebooks/) (38 notebooks in 23 directories, plus the runner `_run.sh`), and
-three synthesis pages (taxonomy of kinds, permutation structure, Babel scale). Written
-2026-09-29; the paper text itself is still to be written from it.
-
-<div style="page-break-before: always; height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;">
-<p>This is what led to finding my Emmy Noether Sedenion<br>Emmy Noether Wins.</p>
-</div>
+GNU GPL v3.0, the repository's `../LICENSE`. Earlier draft licence notes that lived under the former `DataStorageNoLocation/` are no longer in
+the tree (2026-10-18 merge). As before: Ptolemy and any Monad `.bin` state are never covered.

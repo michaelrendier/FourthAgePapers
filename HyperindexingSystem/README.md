@@ -1,5 +1,15 @@
 # The Hyperindexing System: Data With No Physical Location
 
+> **The premise this paper is built on.** Jorge Luis Borges, "The Library of
+> Babel" (1941): a library holding every possible book. Jonathan Basile's
+> working realisation of it, <https://libraryofbabel.info/About.html>, states
+> the property this paper relies on: *text locations are permanent* — the
+> library does not generate a book on request, it makes every permutation
+> accessible at once, and each text has exactly one place. Discussion forum:
+> <https://www.reddit.com/r/BabelForum/>. Basile's book on the story, *Tar for
+> Mortar: "The Library of Babel" and the Dream of Totality*, is linked from
+> the same page (<https://jonathanbasile.com>).
+
 **Status: TODO — stub.** Started 2026-09-25. This is a placeholder for the
 paper, not the paper. Per the FourthAgePapers rule, work happens in the
 engine and notebooks first; this file grows as that work lands, and the
@@ -11,7 +21,9 @@ wiki page is written last.
 
 Unlike a paper written to the FourthAgeProtocol from its first line, the
 underlying HyperWebster work **predates the protocol itself** — earliest
-commit touching HyperWebster is 2026-04-24, six weeks before "The Lagrangian
+commit containing HyperWebster code is 2026-04-18 (the clean initial commit of
+`PtolemyDesktop`; first dated use, `hyperwebster_layer3.py`, 2026-04-24), about
+eight weeks before "The Lagrangian
 of Information Propagation" (2026-06-12), which makes it the oldest
 substantial maths in the whole project, and the "One Paper. One Claim. One
 Prediction (Ptolemy/0_RB). One Engine. One Wiki" rule (with the prediction
@@ -29,6 +41,19 @@ alternative-mechanism test that returned a negative-but-real result
 (`VAPMIP/benchmarks/blackjack_vs_horner_bench.py`) — all of it dated *before*
 this paper's own stub existed. The claim and prediction sections below are
 being fitted to that prior record, not generating it.
+
+---
+
+## The Object — the N-Dimensional Complex Recursive Fractal Rotational Manifold
+
+The mathematical object the paper defines: the **N-Dimensional Complex
+Recursive Fractal Rotational Manifold**. The paper's first section states it,
+in code first. Reference model: the Vigenère cipher (working implementation
+with the (line, position-on-line, charset) view:
+`PtolemyDesktop/Kryptos/Ciphers/Vigenere.py`). Sources and tags:
+`citations.md`.
+
+`[definition of the manifold pending]`
 
 ---
 
@@ -71,9 +96,11 @@ Open engineering questions, in order:
 
 `../DataStorageNoLocation/` benchmarked the Cayley-Dickson-folded variant
 (fixed-size address per CD rung, `data-storage-no-location` branch,
-2026-08-30, unpushed) and already measured Horner encode at ~O(n^1.8) on the
-reference machine — independently consistent with this paper's own baseline
-benchmark. That paper folds the address down; this one keeps it exact and
+2026-08-30, unpushed) and measured its rung-0 Horner encode at ~O(n^1.8) on the
+reference machine. This paper's baseline benchmark runs a different loop
+(`point_to_text`, `N ** i` per position) and grows at ~n^2.5; a forward Horner
+loop over the same class grows at ~n^1.8 and returns the identical address
+(wiki page 03). That paper folds the address down; this one keeps it exact and
 manages its growth by chunking and hierarchy instead. Both are real,
 neither supersedes the other.
 
@@ -86,4 +113,12 @@ duplicated here; those files are the source of record.
 
 ## One Wiki
 
-Not written yet — last, per the rule.
+[`wiki/00_index.md`](wiki/00_index.md): one page per distinct or successful
+version of the code (v00–v19, chronological), each with its notebook set in
+[`notebooks/`](notebooks/) (38 notebooks in 23 directories, plus the runner `_run.sh`), and
+three synthesis pages (taxonomy of kinds, permutation structure, Babel scale). Written
+2026-09-29; the paper text itself is still to be written from it.
+
+<div style="page-break-before: always; height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+<p>This is what led to finding my Emmy Noether Sedenion<br>Emmy Noether Wins.</p>
+</div>

@@ -1,0 +1,71 @@
+# english_corpus.txt  Complete English Language Corpus for Holcus
+#
+# Purpose: Lexical ground state beneath all other fields.
+# English at full depth: etymology, root structure, literary canon,
+# morphology, grammar, rhetoric, philosophy of language, and the
+# mathematics-English and physics-English interfaces.
+#
+# Architecture note:
+#   This corpus feeds monad_english.bin  ISOLATED from primary field.
+#   Medical and caselaw English are SEPARATE ptorrents (namespace chirality
+#   inversion: "positive" in medical = OPPOSITE polarity to common English).
+#   Domain routing via sedenion trajectory  correct bin selected by context.
+#
+# TAG SCHEMA:
+# [ETYMOLOGY]    word origin and root structure; the anchor of sedenion addressing
+# [LITERARY]     literary canon, prose models; what English looks like at density
+# [ROOTS]        Latin and Greek root dictionaries; substrate of scientific vocabulary
+# [GRAMMAR]      grammar reference, syntax, sentence structure
+# [MORPHOLOGY]   word formation, affixes, derivational rules
+# [RHETORIC]     style, argumentation, sentence architecture
+# [PHILOS]       philosophy of language, pragmatics, semantics, reference
+# [SCIWRITE]     scientific writing register; the dialect of mathematics and physics
+# [MATHENG]      mathematics-English interface; how notation becomes prose
+# [PHYSENG]      physics-English interface; named quantities, constants, units
+# [HISTORY]      history of English; how the lexicon was built
+# [LEXICAL]      frequency, collocations, vocabulary structure
+#
+# PRIMARY TAGS (weight 2.0): ETYMOLOGY, LITERARY, ROOTS, GRAMMAR
+# FORMAT: [TAG]  <url>   (two spaces  parsed by GenericCorpus)
+#
+# 
+# PART I  Etymology: Root Structure and Word Origin
+# The sedenion address of a word must respect its etymological path.
+# Without etymology, polysemy is noise. With it, the sedenion walk
+# from root to derivative is the path through meaning-space.
+# 
+
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/History_of_the_English_language
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Old_English
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Middle_English
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Early_Modern_English
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Great_Vowel_Shift
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Norman_influence_on_the_English_language
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Latin_influence_in_English
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Greek_influence_on_the_English_language
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Proto-Indo-European_language
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Proto-Germanic_language
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Anglo-Saxon_language
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Indo-European_languages
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Cognate
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/False_friend
+[ETYMOLOGY]  https://en.wikipedia.org/wiki/Doublet_(linguistics)
+# Doublets are where sedenion splitting is visible: "guarantee"/"warranty" are the same root
+# bifurcated at the Norman-Germanic seam. The split IS the geometric edge.
+
+[ETYMOLOGY]  https://en.wiktionary.org/wiki/Category:English_terms_derived_from_Latin
+[ETYMOLOGY]  https://en.wiktionary.org/wiki/Category:English_terms_derived_from_Ancient_Greek
+[ETYMOLOGY]  https://en.wiktionary.org/wiki/Category:English_terms_derived_from_Old_French
+[ETYMOLOGY]  https://en.wiktionary.org/wiki/Category:English_terms_derived_from_Old_Norse
+[ETYMOLOGY]  https://en.wiktionary.org/wiki/Category:English_terms_derived_from_Proto-Germanic
+[ETYMOLOGY]  https://en.wiktionary.org/wiki/Appendix:Proto-Indo-European_roots
+
+# 
+# PART II  Latin and Greek Roots (the substrate of scientific English)
+# Every technical term in mathematics and physics is a Latin or Greek
+# root wearing English clothes. These are the actual sedenion nodes
+# beneath the entire scientific vocabulary.
+# 
+
+[ROOTS]  https://en.wikipedia.org/wiki/List_of_Latin_words_with_English_derivatives
+[ROOTS]  https://en.wikipedia.org/wiki/List

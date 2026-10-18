@@ -1,0 +1,22 @@
+[
+  {
+    "core": {
+      "index": "0000000000000000000000000000000000000000000000000000000000000000",
+      "len": 4096,
+      "perm": "json",
+      "seen": 1791244800,
+      "title": "2026-10"
+    },
+    "navigation": {
+      "kind": "month",
+      "category": "hyperindexing",
+      "source": "claude",
+      "tags": ["horner", "json-layers"],
+      "note": "Rollup of Day.json for October 2026."
+    },
+    "relations": {
+      "up": null,
+      "ref": []
+    }
+  }
+]

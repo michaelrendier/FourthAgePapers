@@ -1,5 +1,22 @@
 # The Axis N-Shape: Euler's Formula as a Partial-Sum Spiral
 
+<!-- correction-pass-2026-11-14 -->
+> ## Status and corrections, 2026-11-14
+>
+> *Added by the correction pass; the text of the draft below is unchanged.*
+>
+> **Assistant note.** This pass was made by a transformer language model (Claude Sonnet 5.5, `claude-sonnet-5-5`) with the project's `cs-paper-code-conventions` skill and the Fourth Age Protocol loaded (`ContextPlease/claude/skills/`, `ContextPlease/FOURTH_AGE_PROTOCOL.md`). The author is Cody Michael Allison (pen name Michael Rendier), an autodidact, not an academic; his method is not to tell the model the result he is looking for. This is a **draft**: its claims are the author's, and the labels of the Ainulindalë overhaul (ESTABLISHED, OURS, THEORETICAL, OPEN, with `:CALCULATED` for results the paper's own code produced) apply to every statement in it.
+>
+> **State.** This directory has no notebooks.
+>
+> **Statements in this draft that the Ainulindalë overhaul retired, corrected or did not reproduce** (line numbers refer to this file before the block was added; each statement is kept as written):
+>
+> - (lines 37) "Zero free parameters" is stated as a result. A parameter count is a claim about how a number was obtained; where a number was assigned and not computed it is not a result. Each such number needs its script (Fourth Age Protocol §1, §3).
+> - (lines 5, 23, 24, 44, 45, 91 …) Telperion / Laurelin labelling: the author's current assignment is **Telperion = the primes tree, Laurelin = the factors (Fermat side)**; Telperion is not the zero-divisor tree. Older octonion-half labels are being corrected to it (wiki 133 §7.10, ledger X-20).
+>
+> **Authority.** Notation and verified counts: Ainulindalë `wiki/133_canonical_maths.md`; every defect found: `wiki/135_engine_findings_ledger.md`; the audit of this repository: `AUDIT_2026-11-14.md`.
+
+
 **How the Real Axis Crosses at Exactly Half**
 **or**
 **Why Telperion and Laurelin Meet at σ=½ Without Being Told To**
@@ -132,3 +149,9 @@ additional parameter introduced to force it there.
 
 *Claude, at Cody's direction — 2026-07-10*
 *Euler's formula, THE_ANGLE, and nothing else. The crossing was not fit to appear at σ=½. It appeared there.*
+
+---
+
+## Appendix — what in ContextPlease was used, and what ContextPlease is
+
+**ContextPlease** (`https://github.com/michaelrendier/ContextPlease`) is the *Manual Transmission Context Continuity* library: the versioned record that lets a new human or AI agent pick up a project without rediscovering it. Nothing in it is loaded automatically; whoever works chooses what to read. Used for this correction pass: the Fourth Age Protocol (`FOURTH_AGE_PROTOCOL.md`), the paper-writing conventions (`claude/skills/cs-paper-code-conventions/`) and the canonical notation (`claude/.clauderc_canonical_maths`).

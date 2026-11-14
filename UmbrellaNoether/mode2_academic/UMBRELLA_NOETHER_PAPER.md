@@ -1,5 +1,22 @@
 # A Unified Framework for Gravity, Fluid Dynamics, and Molecular Self-Organization via Noether's Theorem
 
+<!-- correction-pass-2026-11-14 -->
+> ## Status and corrections, 2026-11-14
+>
+> *Added by the correction pass; the text of the draft below is unchanged.*
+>
+> **Assistant note.** This pass was made by a transformer language model (Claude Sonnet 5.5, `claude-sonnet-5-5`) with the project's `cs-paper-code-conventions` skill and the Fourth Age Protocol loaded (`ContextPlease/claude/skills/`, `ContextPlease/FOURTH_AGE_PROTOCOL.md`). The author is Cody Michael Allison (pen name Michael Rendier), an autodidact, not an academic; his method is not to tell the model the result he is looking for. This is a **draft**: its claims are the author's, and the labels of the Ainulindalë overhaul (ESTABLISHED, OURS, THEORETICAL, OPEN, with `:CALCULATED` for results the paper's own code produced) apply to every statement in it.
+>
+> **State.** The notebooks in this directory have **no executed cell** (0 of 46 code cells carry outputs): nothing quoted below has been reproduced since the notebooks were generated.
+>
+> **Statements in this draft that the Ainulindalë overhaul retired, corrected or did not reproduce** (line numbers refer to this file before the block was added; each statement is kept as written):
+>
+> - (lines 18, 20, 56, 59, 79, 102 …) A Noether-current / Noether-balance statement for the σ = ½ map. **Retired as a conserved-current statement**: s ↦ 1 − s is a discrete involution, so there is no continuous symmetry and no Noether current (Ainulindalë wiki 133 §3, ledger X-4). The J_red + J_blue = J_green balance stands as a measured relation of the sedenion grading. The statement is kept as written, because the maths started here.
+> - (lines 201) d* has four faces (0.24631 Boundary; the RG face, numeric open; Ω/ln 10; d*·ln 10 = Ω) and 0.24600 is a measured value that is not one of them (wiki 133 §2.2).
+>
+> **Authority.** Notation and verified counts: Ainulindalë `wiki/133_canonical_maths.md`; every defect found: `wiki/135_engine_findings_ledger.md`; the audit of this repository: `AUDIT_2026-11-14.md`.
+
+
 **Authors:** Cody Michael Allison¹*, Thomas Joseph Crawford², Irena Cosić³, Rebecca Smethurst⁴
 
 ¹ Theoretical Physics, Independent  
@@ -529,3 +546,8 @@ If confirmed, this opens a new approach to fundamental physics: not deriving new
 **Preprint prepared:** 2026-05-30  
 **Status:** Ready for peer review and experimental validation
 
+---
+
+## Appendix — what in ContextPlease was used, and what ContextPlease is
+
+**ContextPlease** (`https://github.com/michaelrendier/ContextPlease`) is the *Manual Transmission Context Continuity* library: the versioned record that lets a new human or AI agent pick up a project without rediscovering it. Nothing in it is loaded automatically; whoever works chooses what to read. Used for this correction pass: the Fourth Age Protocol (`FOURTH_AGE_PROTOCOL.md`), the paper-writing conventions (`claude/skills/cs-paper-code-conventions/`) and the canonical notation (`claude/.clauderc_canonical_maths`).

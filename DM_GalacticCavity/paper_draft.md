@@ -1,4 +1,21 @@
 # Dark Matter as Galactic Resonant Cavity Modes
+
+<!-- correction-pass-2026-11-14 -->
+> ## Status and corrections, 2026-11-14
+>
+> *Added by the correction pass; the text of the draft below is unchanged.*
+>
+> **Assistant note.** This pass was made by a transformer language model (Claude Sonnet 5.5, `claude-sonnet-5-5`) with the project's `cs-paper-code-conventions` skill and the Fourth Age Protocol loaded (`ContextPlease/claude/skills/`, `ContextPlease/FOURTH_AGE_PROTOCOL.md`). The author is Cody Michael Allison (pen name Michael Rendier), an autodidact, not an academic; his method is not to tell the model the result he is looking for. This is a **draft**: its claims are the author's, and the labels of the Ainulindalë overhaul (ESTABLISHED, OURS, THEORETICAL, OPEN, with `:CALCULATED` for results the paper's own code produced) apply to every statement in it.
+>
+> **State.** The notebooks in this directory have **no executed cell** (0 of 7 code cells carry outputs): nothing quoted below has been reproduced since the notebooks were generated.
+>
+> **Statements in this draft that the Ainulindalë overhaul retired, corrected or did not reproduce** (line numbers refer to this file before the block was added; each statement is kept as written):
+>
+> - (lines 434) "Zero free parameters" is stated as a result. A parameter count is a claim about how a number was obtained; where a number was assigned and not computed it is not a result. Each such number needs its script (Fourth Age Protocol §1, §3).
+> - (lines 353, 363, 368, 370, 425) d* has four faces (0.24631 Boundary; the RG face, numeric open; Ω/ln 10; d*·ln 10 = Ω) and 0.24600 is a measured value that is not one of them (wiki 133 §2.2).
+>
+> **Authority.** Notation and verified counts: Ainulindalë `wiki/133_canonical_maths.md`; every defect found: `wiki/135_engine_findings_ledger.md`; the audit of this repository: `AUDIT_2026-11-14.md`.
+
 ## The Galaxy is a Leaf on the Surface of the Primordial BEC
 
 *Ainulindale Conjecture / PtolemyHolcus*
@@ -434,3 +451,9 @@ It is the medium singing.
 *Ainulindale Conjecture. Zero free parameters.*
 *"The galaxy is a leaf on the surface of the water that contains it.*
 *Not by interacting — by providing a bowl that rings at that frequency."*
+
+---
+
+## Appendix — what in ContextPlease was used, and what ContextPlease is
+
+**ContextPlease** (`https://github.com/michaelrendier/ContextPlease`) is the *Manual Transmission Context Continuity* library: the versioned record that lets a new human or AI agent pick up a project without rediscovering it. Nothing in it is loaded automatically; whoever works chooses what to read. Used for this correction pass: the Fourth Age Protocol (`FOURTH_AGE_PROTOCOL.md`), the paper-writing conventions (`claude/skills/cs-paper-code-conventions/`) and the canonical notation (`claude/.clauderc_canonical_maths`).

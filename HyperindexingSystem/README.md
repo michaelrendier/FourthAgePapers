@@ -1,5 +1,8 @@
 # The Hyperindexing System: Data With No Physical Location
 
+> **Division from the Ainulindalë paper, 2026-11-14.** `Ainulindale/AgeThird/D-CS_Memory.md` (*Data Storage With No Physical Location, and a New Method of Information Propagation*, rewritten 2026-11-14 as an engineering white paper) uses only the plain bijection and cites this paper for the longer treatment. **This paper** carries the claim, the prediction, the comparison with the published algorithm of the Library of Babel image archive and the hierarchy of indexes; **that paper** is the short engineering account with two worked examples. They are two papers and are not merged. Measured figures (address 0.825 of raw; a 256-bit address holds 38 characters; the layered index inflates about 1.7× per layer; `zlib` and `lzma` beat the address) are the ones in that paper's transcripts.
+
+
 > **The premise this paper is built on.** Jorge Luis Borges, "The Library of
 > Babel" (1941): a library holding every possible book. Jonathan Basile's
 > working realisation of it, <https://libraryofbabel.info/About.html>, states

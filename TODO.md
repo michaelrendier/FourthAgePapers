@@ -5,6 +5,16 @@
 
 ---
 
+## Standing items added 2026-11-14
+
+[ ] **Unified Field Theory paper (`UmbrellaNoether`).** Written on the Noether-current maths (J_R + J_B + J_3 = 0), a premise Ainulindalë has since retired (s ↔ 1 − s is a discrete involution; no Noether current). Update it to a **Standard Model / Schrödinger equation / general-relativity** type of object, from the Noether-current maths. Large project; **not started**; the Noether-framed papers stay as written until then, with the retired-premise note beside the claim.
+[ ] **CryptoVulnerability:** CVE application submitted to MITRE (legacy web interface); a public-facing link is required and the vulnerability is not to be shared before a CVE is assigned. Waiting on MITRE. Do not publish details.
+[ ] **Correction pass** on every paper in progress (cs-paper-code-conventions), committed and pushed per paper, PDF mirrored to `SpaceClaude/FinalPapers/FourthAgePapers/`. Order and findings: `AUDIT_2026-11-14.md`.
+[ ] **Overlapping papers** (CMB trio, chirality/horizon cluster, `HRB_RSA_Probe` / `CryptoVulnerability`, `SonificationEncoder` / UniversalSynth): do not merge; state the difference in both READMEs.
+[x] Huchra's Lens removed (2026-11-14).
+
+---
+
 ## Active
 
 [ ] HyperindexingSystem — "The Hyperindexing System: Data With No Physical

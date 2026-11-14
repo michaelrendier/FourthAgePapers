@@ -4,6 +4,9 @@
 **Git Status:** 3 commits, 31 files, ready for execution  
 **Next Phase:** SPARC test (20σ → 65σ cascade validation)
 
+
+> **Note, 2026-11-14.** This framework is built on the Noether-current maths (J_R + J_B + J_3 = 0), which the Ainulindalë overhaul retired as a conserved-current statement (s ↔ 1 − s is a discrete involution; wiki 133 §3, ledger X-4). The paper stays as written, because that is where the maths started. **TODO (large, not started): update this Unified Field Theory paper to a Standard Model / Schrödinger equation / general-relativity type of object.**
+
 ---
 
 ## TL;DR — What You Have

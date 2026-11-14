@@ -1,5 +1,22 @@
 # The φ-Spiral: Golden Ratio as the Magneto Operator and the Four Precessional Resonances of n*
 
+<!-- correction-pass-2026-11-14 -->
+> ## Status and corrections, 2026-11-14
+>
+> *Added by the correction pass; the text of the draft below is unchanged.*
+>
+> **Assistant note.** This pass was made by a transformer language model (Claude Sonnet 5.5, `claude-sonnet-5-5`) with the project's `cs-paper-code-conventions` skill and the Fourth Age Protocol loaded (`ContextPlease/claude/skills/`, `ContextPlease/FOURTH_AGE_PROTOCOL.md`). The author is Cody Michael Allison (pen name Michael Rendier), an autodidact, not an academic; his method is not to tell the model the result he is looking for. This is a **draft**: its claims are the author's, and the labels of the Ainulindalë overhaul (ESTABLISHED, OURS, THEORETICAL, OPEN, with `:CALCULATED` for results the paper's own code produced) apply to every statement in it.
+>
+> **State.** This directory has no notebooks.
+>
+> **Statements in this draft that the Ainulindalë overhaul retired, corrected or did not reproduce** (line numbers refer to this file before the block was added; each statement is kept as written):
+>
+> - (lines 68) A Noether-current / Noether-balance statement for the σ = ½ map. **Retired as a conserved-current statement**: s ↦ 1 − s is a discrete involution, so there is no continuous symmetry and no Noether current (Ainulindalë wiki 133 §3, ledger X-4). The J_red + J_blue = J_green balance stands as a measured relation of the sedenion grading. The statement is kept as written, because the maths started here.
+> - (lines 104, 106, 110, 175, 187) d* has four faces (0.24631 Boundary; the RG face, numeric open; Ω/ln 10; d*·ln 10 = Ω) and 0.24600 is a measured value that is not one of them (wiki 133 §2.2).
+>
+> **Authority.** Notation and verified counts: Ainulindalë `wiki/133_canonical_maths.md`; every defect found: `wiki/135_engine_findings_ledger.md`; the audit of this repository: `AUDIT_2026-11-14.md`.
+
+
 **Michael Rendier**  
 **2026-06-15**  
 **Draft — AddPapers/PhiSpiral**
@@ -190,3 +207,9 @@ The spring is not circular. The full rotation undershoots by (π−φ) ≈ 87°,
 ---
 
 *The math speaks when you let it. The spiral from above required two operators, not one. φ was always there.*
+
+---
+
+## Appendix — what in ContextPlease was used, and what ContextPlease is
+
+**ContextPlease** (`https://github.com/michaelrendier/ContextPlease`) is the *Manual Transmission Context Continuity* library: the versioned record that lets a new human or AI agent pick up a project without rediscovering it. Nothing in it is loaded automatically; whoever works chooses what to read. Used for this correction pass: the Fourth Age Protocol (`FOURTH_AGE_PROTOCOL.md`), the paper-writing conventions (`claude/skills/cs-paper-code-conventions/`) and the canonical notation (`claude/.clauderc_canonical_maths`).

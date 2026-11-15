@@ -1,0 +1,126 @@
+[
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/SPARC_Lelli2016c.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/SPARC_Lelli2016c.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/MassModels_Lelli2016c.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/MassModels_Lelli2016c.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/Bulges.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/Bulges.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/wise_ii.table1",
+  "dest": "/media/rendier/Telescope Data/SPARC/wise_ii.table1"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/BTFR_Lelli2019.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/BTFR_Lelli2019.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/BTFR_Lelli2016a.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/BTFR_Lelli2016a.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/CDR_Lelli2016b.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/CDR_Lelli2016b.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/RARbins.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/RARbins.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/RAR.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/RAR.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/WP50_M200.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/WP50_M200.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/HMF_NFW.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/HMF_NFW.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/HMF_Einasto.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/HMF_Einasto.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/HMF_DC14.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/HMF_DC14.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/ETG_Lelli2017.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/ETG_Lelli2017.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/MaximumDiskData.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/MaximumDiskData.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/MaximumDiskMassModels.mrt",
+  "dest": "/media/rendier/Telescope Data/SPARC/MaximumDiskMassModels.mrt"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/Rotmod_LTG.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/Rotmod_LTG.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/MassModels_LTG.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/MassModels_LTG.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/sfb_LTG.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/sfb_LTG.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/BulgeDiskDec_LTG.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/BulgeDiskDec_LTG.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/Rotmod_ETG.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/Rotmod_ETG.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/MassModels_ETG.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/MassModels_ETG.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/sfb_ETG.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/sfb_ETG.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/BulgeDiskDec_ETG.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/BulgeDiskDec_ETG.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/RARsnapshots.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/RARsnapshots.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/BayesLineFit.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/BayesLineFit.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/MaximumDiskPhytonCode.zip",
+  "dest": "/media/rendier/Telescope Data/SPARC/MaximumDiskPhytonCode.zip"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/MCMCfits.tar.gz",
+  "dest": "/media/rendier/Telescope Data/SPARC/MCMCfits.tar.gz"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/PXL/Compress_Fit.tar.gz",
+  "dest": "/media/rendier/Telescope Data/SPARC/PXL/Compress_Fit.tar.gz"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/PXL/Fits.tar.gz",
+  "dest": "/media/rendier/Telescope Data/SPARC/PXL/Fits.tar.gz"
+ },
+ {
+  "url": "https://astroweb.cwru.edu/SPARC/PXL/CornerPlot.tar.gz",
+  "dest": "/media/rendier/Telescope Data/SPARC/PXL/CornerPlot.tar.gz"
+ }
+]

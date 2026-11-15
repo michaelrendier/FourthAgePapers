@@ -1,0 +1,48 @@
+====================================================================================================
+error floor 5% of V_obs;  175 galaxies
+model       k median chi2/dof mean chi2/dof median BIC   BIC wins
+B           0        42.32        50.38      634.6          1
+RAR         0         4.91        11.43       79.4          8
+CAV         2         0.51         0.85       11.9         64
+CAVd        1         3.99        17.34       58.3         21
+B+CAV       2         0.41         1.57       11.3         33
+B+CAVd      1         1.98         3.41       29.1         22
+B+NFW       2         1.05         2.52       20.8         10
+B+PIS       2         0.41         1.58       11.6         16
+  restricted to Q = 1, 2 (163 galaxies): BIC wins {'B': 0, 'RAR': 8, 'CAV': 59, 'CAVd': 16, 'B+CAV': 33, 'B+CAVd': 22, 'B+NFW': 10, 'B+PIS': 15}
+  BIC(B+CAV) - BIC(B+NFW): median -4.9; B+CAV better in 153 of 175 galaxies
+  BIC(CAV) - BIC(B+NFW): median -4.1; CAV better in 133 of 175 galaxies
+  BIC(B+CAVd) - BIC(B+CAV): median +8.1; B+CAVd better in 46 of 175 galaxies
+  BIC(CAVd) - BIC(CAV): median +39.8; CAVd better in 32 of 175 galaxies
+  free r_t / r_last in CAV    median 0.125, 16-84% [0.014, 0.313]; d* = 0.246 inside
+  free r_t / r_last in B+CAV  median 0.190, 16-84% [0.062, 0.518]; d* = 0.246 inside
+  CAV    fitted r_t (kpc) vs last measured radius   N=135  Spearman 0.25  log-log slope 0.26
+  CAV    fitted r_t (kpc) vs disk scale length      N=135  Spearman 0.45  log-log slope 0.44
+  CAV    fitted r_t (kpc) vs HI radius              N=135  Spearman 0.29  log-log slope 0.32
+  B+CAV  fitted r_t (kpc) vs last measured radius   N=152  Spearman 0.52  log-log slope 0.54
+  B+CAV  fitted r_t (kpc) vs disk scale length      N=152  Spearman 0.56  log-log slope 0.69
+  B+CAV  fitted r_t (kpc) vs HI radius              N=152  Spearman 0.56  log-log slope 0.67
+====================================================================================================
+raw SPARC errors;  175 galaxies
+model       k median chi2/dof mean chi2/dof median BIC   BIC wins
+B           0        85.23       379.59     1431.7          1
+RAR         0        10.49        35.78      164.0          3
+CAV         2         0.77         4.21       14.1         60
+CAVd        1         5.18       148.23       65.5         20
+B+CAV       2         0.76         3.39       14.2         41
+B+CAVd      1         2.39        13.03       38.3         20
+B+NFW       2         1.90         5.82       27.4         12
+B+PIS       2         0.80         3.41       14.7         18
+  restricted to Q = 1, 2 (163 galaxies): BIC wins {'B': 0, 'RAR': 3, 'CAV': 55, 'CAVd': 16, 'B+CAV': 41, 'B+CAVd': 19, 'B+NFW': 12, 'B+PIS': 17}
+  BIC(B+CAV) - BIC(B+NFW): median -6.9; B+CAV better in 152 of 175 galaxies
+  BIC(CAV) - BIC(B+NFW): median -4.4; CAV better in 129 of 175 galaxies
+  BIC(B+CAVd) - BIC(B+CAV): median +10.8; B+CAVd better in 40 of 175 galaxies
+  BIC(CAVd) - BIC(CAV): median +40.8; CAVd better in 29 of 175 galaxies
+  free r_t / r_last in CAV    median 0.130, 16-84% [0.011, 0.313]; d* = 0.246 inside
+  free r_t / r_last in B+CAV  median 0.193, 16-84% [0.059, 0.505]; d* = 0.246 inside
+  CAV    fitted r_t (kpc) vs last measured radius   N=135  Spearman 0.24  log-log slope 0.25
+  CAV    fitted r_t (kpc) vs disk scale length      N=135  Spearman 0.42  log-log slope 0.43
+  CAV    fitted r_t (kpc) vs HI radius              N=135  Spearman 0.27  log-log slope 0.29
+  B+CAV  fitted r_t (kpc) vs last measured radius   N=152  Spearman 0.50  log-log slope 0.52
+  B+CAV  fitted r_t (kpc) vs disk scale length      N=152  Spearman 0.53  log-log slope 0.65
+  B+CAV  fitted r_t (kpc) vs HI radius              N=152  Spearman 0.54  log-log slope 0.64

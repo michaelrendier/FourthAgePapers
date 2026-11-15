@@ -23,7 +23,7 @@ The author's statement: the Witch's Hat, the galactic particle, the resonation c
 
 ## 3. Pre-registered predictions and what the data say (`:CALCULATED`, 2026-11-14)
 
-The predictions were committed in `Ainulindale` as `ac67bfa` (2026-05-30 11:52 −0700, notebooks 00 and 01); the first analysis commit is `dd86e87` (2026-05-30 20:42). So the pre-registration is real and precedes the analysis. The notebook gives no operational definition of its quantities; `DM_GalacticCavity/03_sparc_test.py` fixes them and prints every number below (output in `DM_GalacticCavity/results/03_sparc_test_output_2026-11-14.txt`). SPARC data in the repository: 175 curves; 135 have a flat V_flat and an NFW halo mass.
+The predictions were committed in `Ainulindale` as `ac67bfa` (2026-05-30 11:52 −0700, notebooks 00 and 01); the first analysis commit is `dd86e87` (2026-05-30 20:42). So the pre-registration is real and precedes the analysis. The notebook gives no operational definition of its quantities; `DM_GalacticCavity/03_sparc_test.py` fixes them and prints every number below (output in `DM_GalacticCavity/results/03_sparc_test_output_2026-11-14.txt`). SPARC data: the repository holds the main tables and all 175 curves, byte-identical to the official site (`DM_GalacticCavity/data/SPARC_DATA.md`); the complete set, 1.3 GB, is in `/media/rendier/Telescope Data/SPARC/`. Used here: 135 have a flat V_flat and an NFW halo mass.
 
 | # | Prediction | Result | Verdict |
 |---|---|---|---|
@@ -34,6 +34,29 @@ The predictions were committed in `Ainulindale` as `ac67bfa` (2026-05-30 11:52 �
 | — | detection signal zero | no experiment is ours; not a result of this paper | `OPEN` (falsifier, not a test) |
 
 The 2026-05-30 analysis in `dark_matter_cavity.py` is a different test from P1/P2: it fits a two-parameter arctan to each curve (v_max and r_last free per galaxy) and compares χ² with an NFW fit; its own commit message records P2 observed 0.508 ± 0.044 against 0.567, P1 median 0.296 against 0.246 "needs better transition detection", and P3 "contaminated". The wiki line "P1 confirmed against SPARC 97-galaxy sample" (`ValaQuenta/wiki/galactic_cavity.md`, `results_at_a_glance.md`) is not supported by that record and is to be corrected.
+
+
+## 3b. The whole-dataset retest (`:CALCULATED`, 2026-11-14): is the cavity a better model?
+
+`DM_GalacticCavity/04_sparc_retest.py` (numpy + scipy, 22 s, output in `results/04_sparc_retest_output_2026-11-14.txt`) fits **all 175** SPARC curves with eight models, baryons fixed at Lelli's 3.6 µm mass-to-light ratios, errors with a 5 % floor (the raw-error version is also in the output and agrees). BIC wins out of 175:
+
+| model | free parameters | median χ²/dof | BIC wins |
+|---|---|---|---|
+| baryons only | 0 | 42.3 | 1 |
+| baryons + RAR (McGaugh 2016) | 0 | 4.9 | 8 |
+| cavity arctan alone, r_t free | 2 | 0.51 | 64 |
+| cavity arctan alone, r_t = d* × r_last | 1 | 3.99 | 21 |
+| baryons + cavity halo, r_t free | 2 | 0.41 | 33 |
+| baryons + cavity halo, r_t = d* × r_last | 1 | 1.98 | 22 |
+| baryons + NFW | 2 | 1.05 | 10 |
+| baryons + pseudo-isothermal | 2 | 0.41 | 16 |
+
+What it says, and what it does not:
+- The cavity shape with its transition radius free beats NFW (better BIC in 153 of 175 galaxies for baryons + cavity; median χ²/dof 0.41 against 1.05). It **ties** the pseudo-isothermal halo (0.41 against 0.41; 33 against 16 wins is a split between two cored halos that differ by a few per cent in shape). So the data prefer a cored, saturating halo to a cusp; "cavity" is not separated from "cored isothermal sphere" by this test.
+- The author's assumption that r_t = d* × r_last, with one parameter less, is **worse** than the free r_t (median BIC +8, +40 for the shape alone) and still the best model in 21–22 galaxies each. The free r_t / r_last has median 0.125 (0.19 with baryons) and 16–84 % range [0.014, 0.31] ([0.06, 0.52]): d* lies inside both, which is not a test, the range is too wide to exclude anything near it.
+- r_last is the reach of the survey, not a property of the galaxy. The fitted r_t scales with it with log-log slope 0.26 (0.54 with baryons) and with the disk scale length with slope 0.44 (0.69); neither is a proportionality, so a constant fraction of either is not what the data show.
+- The cavity shape alone (no baryons) wins most often because a two-parameter smooth saturating curve fits most smooth curves; it carries no information about the baryons and predicts nothing about the diversity of the curves. The baryon-informed models are the fair comparison.
+- Not yet tested: a cavity with r_t set by a physical scale (disk length, HI radius) as one free multiplier; the RAR with a free acceleration scale; the mass-to-light ratio left free; the cavity's own prediction of the baryonic-to-total relation.
 
 ## 4. Claims in this family that no code in the repository reproduces
 

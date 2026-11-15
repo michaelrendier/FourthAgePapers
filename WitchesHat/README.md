@@ -21,7 +21,7 @@ The author's statement: the Witch's Hat, the galactic particle, the resonation c
 | G. The medium's origin | cavitation, Bang, black-hole scar | `DeSitterCavitation/` (branch stub), `WhiteHoleBang/`, `PiFromAbove/` | stubs / drafts |
 | H. Constants used | d*, Ω_ZS, the four d* faces | `Ainulindale/wiki/133_canonical_maths.md` §2.2 | ESTABLISHED arithmetic |
 
-## 3. Pre-registered predictions and what the data say (`:CALCULATED`, 2026-11-14)
+## 3. Pre-registered predictions (framework constants d* and Ω_ZS) and what the data say (`:CALCULATED`, 2026-11-14; kept as the record of a failed pre-registration; the model test of §3b does not use them)
 
 The predictions were committed in `Ainulindale` as `ac67bfa` (2026-05-30 11:52 −0700, notebooks 00 and 01); the first analysis commit is `dd86e87` (2026-05-30 20:42). So the pre-registration is real and precedes the analysis. The notebook gives no operational definition of its quantities; `DM_GalacticCavity/03_sparc_test.py` fixes them and prints every number below (output in `DM_GalacticCavity/results/03_sparc_test_output_2026-11-14.txt`). SPARC data: the repository holds the main tables and all 175 curves, byte-identical to the official site (`DM_GalacticCavity/data/SPARC_DATA.md`); the complete set, 1.3 GB, is in `/media/rendier/Telescope Data/SPARC/`. Used here: 135 have a flat V_flat and an NFW halo mass.
 
@@ -36,27 +36,29 @@ The predictions were committed in `Ainulindale` as `ac67bfa` (2026-05-30 11:52 �
 The 2026-05-30 analysis in `dark_matter_cavity.py` is a different test from P1/P2: it fits a two-parameter arctan to each curve (v_max and r_last free per galaxy) and compares χ² with an NFW fit; its own commit message records P2 observed 0.508 ± 0.044 against 0.567, P1 median 0.296 against 0.246 "needs better transition detection", and P3 "contaminated". The wiki line "P1 confirmed against SPARC 97-galaxy sample" (`ValaQuenta/wiki/galactic_cavity.md`, `results_at_a_glance.md`) is not supported by that record and is to be corrected.
 
 
-## 3b. The whole-dataset retest (`:CALCULATED`, 2026-11-14): is the cavity a better model?
+## 3b. The whole-dataset retest, mainstream models only (`:CALCULATED`, 2026-11-15)
 
-`DM_GalacticCavity/04_sparc_retest.py` (numpy + scipy, 22 s, output in `results/04_sparc_retest_output_2026-11-14.txt`) fits **all 175** SPARC curves with eight models, baryons fixed at Lelli's 3.6 µm mass-to-light ratios, errors with a 5 % floor (the raw-error version is also in the output and agrees). BIC wins out of 175:
+**Ruling (author, 2026-11-15): a "shape of gravity" model needs no d* and nothing outside established astrophysics.** The retest therefore contains no framework constant. `DM_GalacticCavity/04_sparc_retest.py` (numpy + scipy, under a minute; output `results/04_sparc_retest_output_2026-11-15.txt`) fits all 175 SPARC curves with literature models only: baryons (Lelli et al. 2016 3.6 µm), the McGaugh–Lelli–Schombert (2016) radial acceleration relation, the empirical arctan rotation curve (Courteau 1997), and baryons plus an NFW, Burkert, Einasto (α = 0.17) or pseudo-isothermal halo, each with fixed mass-to-light ratios and with them free under the prior of Li et al. (2020). The earlier version of this section (2026-11-14, `results/04_sparc_retest_output_2026-11-14.txt`) carried a d*-based variant; it is kept as the record and is **superseded**.
 
-| model | free parameters | median χ²/dof | BIC wins |
+Median χ²/dof and BIC wins among the eight fixed-M/L models, 5 % error floor (the raw-error run agrees):
+
+| model | parameters | median χ²/dof | BIC wins |
 |---|---|---|---|
 | baryons only | 0 | 42.3 | 1 |
-| baryons + RAR (McGaugh 2016) | 0 | 4.9 | 8 |
-| cavity arctan alone, r_t free | 2 | 0.51 | 64 |
-| cavity arctan alone, r_t = d* × r_last | 1 | 3.99 | 21 |
-| baryons + cavity halo, r_t free | 2 | 0.41 | 33 |
-| baryons + cavity halo, r_t = d* × r_last | 1 | 1.98 | 22 |
-| baryons + NFW | 2 | 1.05 | 10 |
-| baryons + pseudo-isothermal | 2 | 0.41 | 16 |
+| baryons + RAR | 0 | 4.9 | 6 |
+| arctan curve alone (no baryons) | 2 | 0.51 | 64 |
+| baryons + arctan halo | 2 | 0.41 | 19 |
+| baryons + NFW | 2 | 1.05 | 3 |
+| baryons + Burkert | 2 | 0.48 | 53 |
+| baryons + Einasto | 2 | 0.73 | 19 |
+| baryons + pseudo-isothermal | 2 | 0.41 | 10 |
 
-What it says, and what it does not:
-- The cavity shape with its transition radius free beats NFW (better BIC in 153 of 175 galaxies for baryons + cavity; median χ²/dof 0.41 against 1.05). It **ties** the pseudo-isothermal halo (0.41 against 0.41; 33 against 16 wins is a split between two cored halos that differ by a few per cent in shape). So the data prefer a cored, saturating halo to a cusp; "cavity" is not separated from "cored isothermal sphere" by this test.
-- The author's assumption that r_t = d* × r_last, with one parameter less, is **worse** than the free r_t (median BIC +8, +40 for the shape alone) and still the best model in 21–22 galaxies each. The free r_t / r_last has median 0.125 (0.19 with baryons) and 16–84 % range [0.014, 0.31] ([0.06, 0.52]): d* lies inside both, which is not a test, the range is too wide to exclude anything near it.
-- r_last is the reach of the survey, not a property of the galaxy. The fitted r_t scales with it with log-log slope 0.26 (0.54 with baryons) and with the disk scale length with slope 0.44 (0.69); neither is a proportionality, so a constant fraction of either is not what the data show.
-- The cavity shape alone (no baryons) wins most often because a two-parameter smooth saturating curve fits most smooth curves; it carries no information about the baryons and predicts nothing about the diversity of the curves. The baryon-informed models are the fair comparison.
-- Not yet tested: a cavity with r_t set by a physical scale (disk length, HI radius) as one free multiplier; the RAR with a free acceleration scale; the mass-to-light ratio left free; the cavity's own prediction of the baryonic-to-total relation.
+- **Cored halos beat NFW.** Arctan, Burkert and pseudo-isothermal halos are better than NFW in 153, 141 and 153 of 175 galaxies (Einasto 136), with median χ²/dof about 0.4 to 0.5 against 1.05. This is the known core–cusp result in SPARC (Li et al. 2020 and others), reproduced here.
+- **The arctan "shape" is not distinguished from the other cored halos.** Against pseudo-isothermal the median ΔBIC is 0.0; against Burkert 0.0 (arctan better in 121 and 92 of 175). Whatever the shape of the halo is, these data say "cored and saturating" and no more; they do not select the arctan over the standard cored profiles.
+- **Free mass-to-light ratio** (prior σ = 0.1 dex): the fitted disk ratios move off 0.5 in most galaxies (16–84 % range about 0.42 to 0.55 for the cored halos, 0.41 to 0.67 for NFW); with it free Burkert wins most galaxies (84 of 175 within that set) and NFW stays worst (median χ²/dof 0.92 against 0.38 to 0.41).
+- **The arctan curve alone wins BIC in 64 galaxies only because it has no baryons to explain**; as a descriptive fit it is not a model of gravity and predicts nothing about the diversity of the curves.
+- **The transition radius has no fixed ratio to anything measured.** Fitted r_t against the last measured radius has log-log slope 0.26 (0.54 with baryons), against the disk scale length 0.44 (0.69), against the HI radius 0.32 (0.67); neither is proportional. The last radius is the survey's reach, not a galaxy property.
+- Not yet tested: the Burkert/NFW/Einasto parameters against the halo-mass tables of the same data (`HMF_*.mrt`), the DC14 profile of Di Cintio et al. (2014), the baryonic Tully–Fisher and RAR scatter as secondary tests, and any prediction of the shape-of-gravity picture that is not already one of the standard forms.
 
 ## 4. Claims in this family that no code in the repository reproduces
 

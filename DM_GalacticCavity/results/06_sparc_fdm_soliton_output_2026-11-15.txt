@@ -1,0 +1,18 @@
+global boson mass scan (chi2 summed over 175 galaxies; baryons + NFW alone: 7704; baryons + Burkert alone: 5392)
+  m = 3.0e-24 eV: total chi2 = 9017
+  m = 1.0e-23 eV: total chi2 = 6158
+  m = 3.0e-23 eV: total chi2 = 6517
+  m = 1.0e-22 eV: total chi2 = 7179
+  m = 3.0e-22 eV: total chi2 = 7481
+  m = 1.0e-21 eV: total chi2 = 7624
+best global mass: m = 1.0e-23 eV
+
+model                              median chi2/dof median BIC
+baryons + NFW (2 par)                        1.05       20.8
+baryons + Burkert (2 par)                    0.48       12.4
+baryons + soliton + NFW (3 par)              0.62       17.1
+BIC wins among the three: {'NFW': 23, 'Burkert': 134, 'soliton+NFW': 18}
+soliton+NFW vs NFW: median dBIC +0.2, soliton better in 83 of 175
+soliton+NFW vs Burkert: median dBIC +3.3, soliton better in 34 of 175
+core-halo relation: fitted r_c vs fitted M200 over 147 galaxies: log-log slope -0.00 (the soliton-halo relation predicts -0.33), scatter 0.29 dex
+median fitted core radius 3.71 kpc

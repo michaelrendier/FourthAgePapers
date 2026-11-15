@@ -1,0 +1,13 @@
+galaxies with a rotation curve, a surface-brightness profile and R_d: 143 of 175
+unit check: median (last profile radius in kpc) / (last rotation-curve radius) = 0.77 (about 1 if the radius unit is arcsec)
+
+PART 1  kinematics
+  kappa/Omega median over radius and galaxies: 1.50 (1.41 = flat rotation curve, 2 = solid body)
+  corotation placed at 2.2 R_d: outer Lindblad resonance at 3.9 R_d (16-84% 3.5-4.6); inner Lindblad resonance exists in 26 of 139 galaxies at median 0.58 R_d
+
+PART 2  Toomre critical wavelength from the stellar surface density, at r = 2 R_d  (stars only, Y_d = 0.5; gas and dark matter ignored)
+  N = 134; lambda_crit / R_d: median 2.11, 16-84% [0.77, 6.27]  (lambda_crit in kpc: median 5.12)
+
+PART 3  radial undulations in the surface-brightness profiles
+  galaxies contributing per q: min 136, max 143; stacked power peaks at q = 1.36 (wavelength = 1.36 R_d)
+  peak prominence 0.0456; shuffled-size null mean 0.0303, 95th percentile 0.0435; fraction of shuffles >= observed 0.040

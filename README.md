@@ -14,6 +14,8 @@ The notebooks record the derivation. The wiki page is written last.
 
 ## Papers to Expect
 
+> **Moved 2026-11-14 (author's ruling).** The Witch's Hat / Galactic Particle papers and their siblings (`DM_GalacticCavity`, `CMB_FractalBoundary`, `CMB_PlasmaBoundary`, `Crawford_NavierStokes`, `WhiteHoleBang`) live together on the branch **`witches-hat`**, so that the telescope-data evaluation code stays in one place: `git checkout witches-hat`, parent register `WitchesHat/README.md`. They were removed from `main` by one commit; nothing was deleted from history.
+
 | Paper | Claim |
 |-------|-------|
 | The Hyperindexing System: Data With No Physical Location | **TODO — stub.** Started 2026-09-25. The plain (non-Cayley-Dickson-folded) HyperWebster bijection — string ↔ integer address, exact, no hashing — extended to a day → month → year hierarchical index for lossless, constant-per-chunk conversational memory. Baseline benchmark: `VAPMIP/README.md` §"HyperWebster Indexing — Baseline Benchmark". Merged 2026-10-18 with the former `DataStorageNoLocation` (the Cayley-Dickson-folded variant, now `HyperindexingSystem/datastorage/`): one project. Engine home: `ValaQuenta/modules/hyperwebster/`. Prediction: pending first 0_RB run. |

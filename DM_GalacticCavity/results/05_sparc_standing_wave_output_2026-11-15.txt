@@ -1,0 +1,34 @@
+CHECK  large-radius envelope: u * r^2 / (k^2) tends to a constant (1/2) for every l; centre value u(0)/u_max:
+  l=0  u x^2 at x = 30, 60, 120, 240: [1.011 0.99  0.992 0.997]   u(x=1e-3)/max u: 1
+  l=1  u x^2 at x = 30, 60, 120, 240: [0.987 1.011 1.008 1.003]   u(x=1e-3)/max u: 1
+  l=2  u x^2 at x = 30, 60, 120, 240: [1.027 0.989 0.992 0.998]   u(x=1e-3)/max u: 2.94e-07
+  l=3  u x^2 at x = 30, 60, 120, 240: [0.975 1.016 1.009 1.002]   u(x=1e-3)/max u: 2e-14
+
+PART A/B  fits, all 175 galaxies, 5% error floor, fixed mass-to-light
+model (2 parameters each)  median chi2/dof median BIC  BIC wins
+baryons + Burkert (reference)           0.48       12.4        83
+baryons + standing wave l=0           0.51       13.5        27
+baryons + standing wave l=1           0.52       12.9        26
+baryons + standing wave l=2           1.00       19.3        18
+baryons + standing wave l=3           1.43       25.9        21
+  l=0 vs Burkert: median dBIC +0.0, wave better in 87 of 175
+  l=1 vs Burkert: median dBIC -0.0, wave better in 88 of 175
+  l=2 vs Burkert: median dBIC +3.3, wave better in 54 of 175
+  l=3 vs Burkert: median dBIC +7.7, wave better in 45 of 175
+
+PART B  fitted wavelength (best of l = 0..3 per galaxy is NOT taken; l = 2, the gravitational-wave multipole, and l = 0 shown)
+  l=0  wavelength / HI radius: median 1.09, 16-84% [0.62, 2.19]; log-log slope vs HI radius 0.79; 157 of 175 fits are interior (not at a bound)
+       median wavelength 13.7 kpc = 45 thousand ly; wave period lambda/c = 45 thousand years
+  l=2  wavelength / HI radius: median 0.44, 16-84% [0.27, 0.77]; log-log slope vs HI radius 0.87; 133 of 175 fits are interior (not at a bound)
+       median wavelength 5.8 kpc = 19 thousand ly; wave period lambda/c = 19 thousand years
+
+PART C  residuals of the baryons + Burkert fit: is there a common radial wiggle with wavelength q x R_HI?
+  galaxies contributing at each q: min 4, max 107
+  stacked power S(q): maximum at q = 0.90; peak prominence (max - median over q) = 0.1644; shuffled-size null: mean 0.1403, 95th percentile 0.2313, fraction of shuffles >= observed: 0.340
+  S(q) at q = 0.25, 0.5, 0.67, 1.0: {0.25: 0.2498, 0.5: 0.3253, 0.67: 0.3257, 1.0: 0.2222}
+  (a first version permuted each galaxy's residuals; that null is white noise and any smooth misfit then looks like a signal, z = 11.5. It was wrong and is replaced by the shuffled-size null above.)
+
+PART D  orders of magnitude (a wave at speed c; Milky-Way-sized: wavelength = 100,000 ly = 30.7 kpc, V = 220 km/s)
+  period lambda/c = 1e+05 years; phase advanced in 76 years = 0.00076 of a cycle (0.27 degrees); wave cycles in 200,000 years = 2.00
+  strain whose averaged energy density equals a local halo density of 0.01 Msun/pc^3 at this wavelength: h = 0.0011
+  the galaxy's own potential depth (V/c)^2 = 5.4e-07, so the required wave amplitude exceeds it by a factor 1990

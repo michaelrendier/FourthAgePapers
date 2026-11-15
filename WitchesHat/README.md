@@ -60,6 +60,24 @@ Median χ²/dof and BIC wins among the eight fixed-M/L models, 5 % error floor (
 - **The transition radius has no fixed ratio to anything measured.** Fitted r_t against the last measured radius has log-log slope 0.26 (0.54 with baryons), against the disk scale length 0.44 (0.69), against the HI radius 0.32 (0.67); neither is proportional. The last radius is the survey's reach, not a galaxy property.
 - Not yet tested: the Burkert/NFW/Einasto parameters against the halo-mass tables of the same data (`HMF_*.mrt`), the DC14 profile of Di Cintio et al. (2014), the baryonic Tully–Fisher and RAR scatter as secondary tests, and any prediction of the shape-of-gravity picture that is not already one of the standard forms.
 
+## 3c. The standing-wave halo, tested on SPARC (`:CALCULATED`, 2026-11-15)
+
+`DM_GalacticCavity/05_sparc_standing_wave.py` (numpy + scipy, under a minute; `results/05_sparc_standing_wave_output_2026-11-15.txt`). Only established physics: the time- and angle-averaged energy density of a standing wave with multipole ℓ, u_ℓ(r) ∝ j_ℓ² + j_ℓ'² + ℓ(ℓ+1) j_ℓ²/x², x = kr, a scalar-wave template for the time-averaged stress-energy that gravitates (Isaacson 1968; Wheeler's geons). Derived and checked numerically: u ∝ 1/r² at kr ≫ 1 for every ℓ, so M(<r) ∝ r and the circular speed becomes constant (**a flat rotation curve follows from a standing wave**); ℓ = 0 and 1 have a finite central density (a core of size ~1/k), ℓ = 2 has a central hole. Birkhoff's theorem forbids a spherically symmetric gravitational wave, so for gravity the lowest multipole is ℓ = 2; ℓ = 0 is the scalar case.
+
+| result on all 175 curves, 2 parameters each, baryons fixed | |
+|---|---|
+| baryons + wave ℓ = 0 / 1 vs baryons + Burkert | median ΔBIC 0.0 / 0.0; χ²/dof 0.51 / 0.52 against 0.48: **equivalent fits** |
+| baryons + wave ℓ = 2 (the gravitational-wave multipole) | χ²/dof 1.00, median ΔBIC +3.3: worse than Burkert, still better than NFW (1.05 median, but a close call) |
+| fitted wavelength / HI radius (ℓ = 0) | median 1.09 (16–84 %: 0.62–2.2); wavelength rises with size, log-log slope 0.79 |
+| fitted wavelength / HI radius (ℓ = 2) | median 0.44 (0.27–0.77), slope 0.87 |
+| stacked radial wiggle in the residuals at a wavelength proportional to the HI radius | **no peak**: prominence 0.164 against a shuffled-size null of 0.140 (95th percentile 0.231), p = 0.34 |
+
+Orders of magnitude for a wave at speed c, wavelength 100,000 ly: period **10⁵ years**, phase advance in 76 years 0.27° (static to a human lifetime, yes), 2.0 cycles in 200,000 years (consistent with the author's "1 to 4 wavelengths"). **Not consistent with `DM_GalacticCavity/paper_draft.md` and `galactic_cavity.py`**, which state billion-year periods (22.7 Gyr): at speed c a billion-year period needs a wavelength of a billion light-years. The strain whose averaged energy density equals the local halo density at that wavelength is h ≈ 1.1 × 10⁻³, about 2000 times the galaxy's own potential depth (V/c)² = 5 × 10⁻⁷: the wave the halo needs is far larger than the field it is supposed to sit in.
+
+A first version of the wiggle test permuted residuals within each galaxy and reported z = 11.5; that null is white noise, so any smooth misfit looked like a signal. It was wrong, was replaced by the shuffled-size null, and is recorded here.
+
+Not yet done: tensor (spin-2) harmonics; the wave-equation dispersion (does the wave travel at c in the medium or slower); mixing ℓ modes; the stellar warp and the spiral pattern as the visible wave amplitude; DC14 and fuzzy-dark-matter soliton cores (Schive et al. 2014) as the standing-wave dark-matter models that are already in the literature.
+
 ## 4. Claims in this family that no code in the repository reproduces
 
 - The Bullet Cluster paragraphs of `DM_GalacticCavity/paper_draft.md` §1 (five "attacks") are arguments, not computations; the quantitative parts (Clowe et al. 2006 and Bradač et al. 2006 numbers, WIMP exclusion limits, angular-momentum figures) are TODO.

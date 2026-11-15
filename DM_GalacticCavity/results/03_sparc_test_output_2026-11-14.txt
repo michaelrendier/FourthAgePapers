@@ -1,0 +1,24 @@
+galaxies with a rotation curve, a flat Vflat and an NFW halo mass: 135 (of 175)
+
+P1  r_t / R200 (d* = 0.246)
+r_t(V_obs = 0.80 V_flat) / R200              median 0.020  16-84% [0.007, 0.038]  mean 0.023  N=135   target 0.246  -> target OUTSIDE 16-84%
+r_t(V_obs = 0.90 V_flat) / R200              median 0.028  16-84% [0.009, 0.050]  mean 0.032  N=135   target 0.246  -> target OUTSIDE 16-84%
+r_t(V_obs = 0.95 V_flat) / R200              median 0.034  16-84% [0.010, 0.064]  mean 0.039  N=135   target 0.246  -> target OUTSIDE 16-84%
+    for scale: median R200 = 130 kpc, median r_t(0.90) = 3.46 kpc, median disk scale length = 2.47 kpc
+    r_t(0.90) / R_disk, the other reading of "natural unit" (engine: r_t = d* x r_max_bar):
+r_t(0.90) / R_disk                           median 1.680  16-84% [0.540, 2.948]  mean 1.998  N=135   target 0.246  -> target OUTSIDE 16-84%
+r_t(0.90) / (last measured radius)           median 0.281  16-84% [0.070, 0.531]  mean 0.308  N=135   target 0.246  -> target inside 16-84%
+
+P2  V_flat / V_max,bar (Omega_ZS = 0.56714)
+V_flat / V_max,bar                           median 1.661  16-84% [1.000, 2.233]  mean 1.618  N=135   target 0.567  -> target OUTSIDE 16-84%
+    fraction of galaxies with V_flat < V_max,bar: 0.16   (the prediction needs V_flat below V_max,bar)
+
+P4  baryonic Tully-Fisher slope (log Mb = slope x log Vf + c), BTFR_Lelli2019.mrt, Vf > 0
+    N = 123, slope = 3.486 +/- 0.088 (unweighted least squares, y on x), intercept 2.759, scatter 0.225 dex
+    prediction 4 -> deviation (4 - slope)/err = 5.8 sigma
+    the fit regresses log M on log V; the inverse regression gives a steeper slope, so the number depends on that choice:
+    inverse regression slope (1/b) = 3.754
+
+P3  NFW scale radius: not testable here. The tables hold M200 only (WP50_M200.mrt, HMF_*.mrt); the fitted r_s sits in the
+    SPARC MassModels archive that was not copied into this repo. d* = 0.246 means concentration c = R200/r_s = 4.07;
+    the notebook says "c ~ 5-30 ... this is within the expected range": 4.07 is below 5, so that sentence is wrong.

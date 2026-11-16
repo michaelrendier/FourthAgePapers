@@ -1,0 +1,51 @@
+A  conjugation-by-axis pattern s_k(j) over j=0..15  (+ means (e_k e_j) e_k^-1 = +e_j)
+  e1  ++--------------
+  e2  +-+-------------
+  e3  +--+------------
+  e4  +---+-----------
+  e5  +----+----------
+  e6  +-----+---------
+  e7  +------+--------
+  e8  +-------+-------
+  e9  +--------+------
+  e10 +---------+-----
+  e11 +----------+----
+  e12 +-----------+---
+  e13 +------------+--
+  e14 +-------------+-
+  e15 +--------------+
+  axes whose pattern is the half-grading character: none
+
+B  doubling identity e_k x = x* e_k for lower x in e_0..e_7 (count of lower x out of 8)
+  e1  7/8
+  e2  7/8
+  e3  7/8
+  e4  7/8
+  e5  7/8
+  e6  7/8
+  e7  7/8
+  e8  8/8   all
+  e9  8/8   all
+  e10 8/8   all
+  e11 8/8   all
+  e12 8/8   all
+  e13 8/8   all
+  e14 8/8   all
+  e15 8/8   all
+
+C  circle reversal: directions u != k with (e_k u) e_k^-1 = -u  (out of the 14 other imaginary directions)
+  e1  14/14
+  e2  14/14
+  e3  14/14
+  e4  14/14
+  e5  14/14
+  e6  14/14
+  e7  14/14
+  e8  14/14
+  e9  14/14
+  e10 14/14
+  e11 14/14
+  e12 14/14
+  e13 14/14
+  e14 14/14
+  e15 14/14

@@ -1,0 +1,23 @@
+PART A  radial acceleration relation, 175 galaxies
+  3389 points; best g+ = 9.51e-11 m/s^2 (McGaugh et al. 2016 report 1.20e-10); rms scatter about the relation = 0.195 dex
+  per-galaxy mean offsets (N=171): rms 0.198 dex; median point-wise scatter inside a galaxy 0.088 dex
+  the relation is one-parameter and holds across 4 decades of g_bar: a halo fixed by an independent formation history would not give this;
+  a halo that depends on the baryons would (the standard reading of the RAR is exactly this dependence, not any one model)
+
+PART B  baryons + Burkert, per galaxy; halo against baryons
+  154 galaxies with Q <= 2, a bulge/disk scale length, a baryon mass and an interior core radius
+  log M_halo(<R_last)  vs  log M_bar(<R_last)    Spearman +0.94   log-log slope +0.86
+  log r0 (core radius)   vs  log R_disk          Spearman +0.61   log-log slope +0.64
+  log rho0 (central density) vs  log R_disk      Spearman -0.21   log-log slope -0.35
+  log M_halo(<R_last)  vs  log V_flat            Spearman +0.94   log-log slope +3.12
+  scatter of log M_halo at fixed log M_bar (about the fitted line, slope 0.88): 0.27 dex
+  both masses share the factor R_last (M = V^2 R / G), so the shared radius alone inflates the correlation; with log R_last removed (partial Spearman): +0.66; halo velocity vs baryon velocity at R_last: Spearman +0.88
+  size null: shuffling which R_disk belongs to which galaxy changes the r0-R_disk Spearman from +0.66 to 0.01 +- 0.09 (100 shuffles)
+
+PART C  age proxy: Hubble type T against dark-matter fraction
+  N = 163
+  f_DM at last measured radius     vs T: Spearman +0.15; partial (baryon mass removed) -0.12; median f_DM early (T<=3) 0.77, late (T>=7) 0.79
+  f_DM at 2.2 disk scale lengths   vs T: Spearman +0.54; partial (baryon mass removed) +0.22; median f_DM early (T<=3) 0.44, late (T>=7) 0.75
+  numbers of galaxies: T<=3 27, 4..6 49, T>=7 87
+  early types (S0..Sab) with f_DM at the last radius below 0.2: 0 of 27; late types with it below 0.2: 1 of 87
+  note: SPARC is late-type dominated; its 175 galaxies are spirals and irregulars (it has 0 true ellipticals), so 'no halo' ellipticals are not in this test.

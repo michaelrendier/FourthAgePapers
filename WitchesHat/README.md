@@ -84,6 +84,23 @@ Not yet done: tensor (spin-2) harmonics; the wave-equation dispersion (does the 
 
 **Disk density waves** (`07_sparc_disk_waves.py`, `results/07_sparc_disk_waves_output_2026-11-15.txt`): SPARC holds azimuthally averaged profiles and rotation curves, so a spiral wave cannot be seen in it; the script tests what can be. κ/Ω has median 1.50 (1.41 is flat rotation); with corotation at 2.2 R_d the outer Lindblad resonance sits at 3.9 R_d (3.5–4.6) and an inner one exists in only 26 of 139 galaxies; Toomre's critical wavelength from the stellar disk alone is 2.1 R_d (0.77–6.3), median 5.1 kpc. A common radial undulation in the surface-brightness profiles with wavelength proportional to R_d: peak at 1.36 R_d, shuffled-size p = 0.04, **not claimed**: it sits at the edge of the range tested (0.15–1.5 R_d) and the cubic baseline's own misfit has a size-linked scale, so the null is not clean at long wavelengths.
 
+## 3e. Three more tests: baryons and halo, vector harmonics, Gaia vertical motion (`:CALCULATED`, 2026-11-16)
+
+Scripts `DM_GalacticCavity/08_sparc_baryon_halo.py`, `09_sparc_vector_harmonics.py`, `10_gaia_vertical_wave.py`; outputs in `results/`. Gaia data: 974,732 DR3 stars with radial velocities
+(random subsample, public ESA TAP, re-fetch with `data/Gaia/fetch_gaia.py`; the 152 MB CSV is not committed). A first fetch silently stopped at the service's default 50,000 rows and covered one patch of sky; it was discarded and refetched with a row limit (failure recorded here).
+
+| Test | Result | Reading |
+|---|---|---|
+| 08 A radial acceleration relation | best g+ = 9.5e-11 m/s², rms scatter 0.195 dex over 3,389 points (literature: 1.2e-10, ~0.13 dex); this run has no quality or inclination cuts | relation holds as a one-parameter law; my numbers are looser than the paper's |
+| 08 B halo vs baryons | M_halo vs M_bar Spearman +0.94, slope 0.86; with the shared radius removed +0.66; halo vs baryon velocity at R_last +0.88; r0 vs R_disk +0.61 against 0.01 ± 0.09 in the shuffled-size null; scatter 0.27 dex | the fitted halo follows the baryons; consistent with 'not independent of the matter', and equally with any model in which halo and baryons are coupled |
+| 08 C age proxy (Hubble type) | f_DM at the last radius: early 0.77, late 0.79 (no trend, partial −0.12); at 2.2 R_d: early 0.44, late 0.75 (partial +0.22) | older-type galaxies have less dark matter inside the optical disk, not at the last point; type is a weak age proxy and SPARC has no ellipticals |
+| 09 vector harmonics | same large-radius envelope for all spins (u x² → 1); vector l=1 median χ²/dof 0.42 vs Burkert 0.48; BIC wins BUR 75, V1 35, S1 23, V3 22, V2 18, mix 2; the l=1+2+3 mix is not preferred (ΔBIC +3.8) and 140 of 175 mixing weights sit at a bound | spin-1 does not change the result of 05; no sign of a multipole mixture; spin-2 radial functions not derived |
+| 10 Gaia vertical motion | mean z rises from −37 pc (6–7 kpc) to +58 pc (11–12 kpc), mean V_z −1 to +2 km/s; pattern speed of the warp ≲ 4 km/s (floor 2 km/s systematic) | the plane moves slowly. For amplitudes 0.1 to 1 kpc the period is ≥ 1e8 to 1e9 years |
+
+Finding of 10: matter that followed a wave of period λ/c = 1e5 years with a 0.1–1 kpc vertical amplitude would move at 6e3–6e4 km/s (0.02–0.2 c); the measured vertical motion is more than three orders of magnitude slower.
+So the plane of the disk does not oscillate with a c-speed wave of galactic wavelength. A period of about 1e9 years, which is what the original draft says, is consistent with the warp for a kiloparsec amplitude, and is not the wave's own period.
+The two periods have to be told apart: λ/c is the wave's, 1e8 to 1e9 years is the matter's.
+
 ## 4. Claims in this family that no code in the repository reproduces
 
 - The Bullet Cluster paragraphs of `DM_GalacticCavity/paper_draft.md` §1 (five "attacks") are arguments, not computations; the quantitative parts (Clowe et al. 2006 and Bradač et al. 2006 numbers, WIMP exclusion limits, angular-momentum figures) are TODO.

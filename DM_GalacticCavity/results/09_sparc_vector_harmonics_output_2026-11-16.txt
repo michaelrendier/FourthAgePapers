@@ -1,0 +1,15 @@
+PART A  brackets
+  l=1  u x^2 at x = 30, 60, 120, 240: scalar [0.987 1.011 1.008 1.003]  vector [0.999 1.001 1.    1.   ];  centre u(1e-3)/max: scalar 1  vector 1
+  l=2  u x^2 at x = 30, 60, 120, 240: scalar [1.027 0.989 0.992 0.998]  vector [1.009 1.    1.    1.   ];  centre u(1e-3)/max: scalar 2.94e-07  vector 3.77e-07
+  l=3  u x^2 at x = 30, 60, 120, 240: scalar [0.975 1.016 1.009 1.002]  vector [0.996 1.004 1.001 1.   ];  centre u(1e-3)/max: scalar 2e-14  vector 2.47e-14
+
+PART B/C  fits, 175 galaxies, 5% floor, fixed M/L
+model                                  k median chi2/dof median BIC  BIC wins
+baryons + Burkert (reference)          2            0.48       12.4        75
+scalar l=1 (from 05)                   2            0.52       12.9        23
+vector multipole l=1                   2            0.42       12.5        35
+vector multipole l=2                   2            0.93       18.8        18
+vector multipole l=3                   2            1.39       25.7        22
+vector mix l=1+2+3, one k (4 par)      4            0.36       15.6         2
+  mix vs best single vector multipole: median dBIC +3.8, mix better in 18 of 175; mix vs Burkert: median dBIC +3.5, mix better in 35
+  fitted mixing weights: a2 median 0.00 (16-84% 0.00-6.37), a3 median 0.72 (16-84% 0.20-7.09); at a bound (0 or 10): 140 of 175

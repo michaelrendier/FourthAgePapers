@@ -1,0 +1,30 @@
+PART A  974732 stars; G median 13.9; parallax_over_error > 10; distance range (median, 95th pct) 1.15, 4.24 kpc
+  883873 stars with 6 < R < 12 kpc, |z| < 1.5 kpc; median R 8.03 kpc, median V_phi 224 km/s, median V_z 0.07 km/s, std V_z 21.8 km/s
+
+PART B  mean z and mean V_z in R x phi cells (cells with >= 300 stars; azimuth measured from the Sun-Galactic-centre line, Sun at phi = 180 deg)
+  R bin (kpc)   N      mean z (pc)   mean V_z (km/s)   [by azimuth 135..225 deg: V_z]
+   6.0- 7.0   104560      -37.4         -0.99          -0.8  -0.9  -0.5  -1.2  -1.6  -1.5
+   7.0- 8.0   320376       -1.4         -0.35          -1.2  -0.5  -0.1  -0.4  -1.2  -2.5
+   8.0- 9.0   345839       +9.2         +0.00          -1.3  -0.3  +0.2  -0.1  -0.8  -1.8
+   9.0-10.0    75080      +38.6         +0.42          +0.5  -0.1  +0.7  +0.5  -0.2  -1.2
+  10.0-11.0    25827      +34.4         +1.45          -0.5  +0.9  +1.6  +1.8  +1.3  +0.0
+  11.0-12.0    12191      +57.6         +1.95            -   +1.7  +2.0  +2.3  +1.7    - 
+
+PART C  warp pattern: dz_w/dt = V_z - Omega dz_w/dphi, with z_w = mean z per (R, phi) cell; Omega = V_phi/R measured in the same cell
+  R (kpc)  dz/dphi (pc/rad)  mean V_z   Omega*dz/dphi   residual dz_w/dt (km/s)   z range across azimuth (pc)
+   6.57           -126        -1.08         -4.11           +3.03                  208
+   7.60           -164        -1.00         -4.75           +3.75                  250
+   8.39           -149        -0.68         -3.93           +3.25                  229
+   9.38            -68        +0.01         -1.63           +1.64                  153
+  10.45            +10        +0.86         +0.20           +0.66                  224
+  11.42            -81        +1.91         -1.53           +3.44                  161
+  (the 3 cells per ring that exist near the Sun cover only +-45 degrees of azimuth: dz/dphi is a local slope, not a whole-ring warp fit. Systematics not propagated:
+   the solar vertical velocity (7.78 km/s), z_sun (20.8 pc), the Gaia parallax zero point, and the selection function; I take 2 km/s as the systematic floor)
+
+PART D  period bound: an oscillation of amplitude A and period P has peak vertical speed 2 pi A / P; P >= 2 pi A / v_max
+  A = 0.1 kpc (the z range seen across azimuth above)  v_max = 5.8 km/s  ->  P >= 1.07e+08 years
+  A = 1 kpc (an undulation of kiloparsec amplitude)    v_max = 5.8 km/s  ->  P >= 1.07e+09 years
+  matter following a wave of period lambda/c = 1e+05 yr (lambda = 100,000 ly) with A = 0.1 kpc would move vertically at 6.14e+03 km/s (0.02 of the speed of light)
+  matter following a wave of period lambda/c = 1e+05 yr (lambda = 100,000 ly) with A = 1.0 kpc would move vertically at 6.14e+04 km/s (0.20 of the speed of light)
+  so the measured vertical motion of the plane is >= 3 orders of magnitude slower than a c-speed wave of galactic wavelength; the observed plane does not
+  oscillate with the wave. A period of ~1e9 years (the original draft) is consistent with the warp for kpc amplitude, and is not lambda/c.

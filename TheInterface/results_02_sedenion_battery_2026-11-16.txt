@@ -1,0 +1,94 @@
+====================================================================================================
+S1  SUBALGEBRA CENSUS
+35 index-lines {a,b,a^b} (with e0: 4-element sets): all closed under the product: True;  {'associative': 35, 'not associative': 0}
+15 index-planes (with e0: 8-element sets):
+    8  ('O', 'alternative', 'norm-multiplicative', 'not associative')
+    7  ('O', 'not alternative', 'norm broken', 'not associative')
+   genuine octonion planes (alternative and norm-multiplicative): 8: [[1, 2, 3, 4, 5, 6, 7], [1, 2, 3, 8, 9, 10, 11], [1, 4, 5, 8, 9, 12, 13], [1, 6, 7, 8, 9, 14, 15], [2, 4, 6, 8, 10, 12, 14], [2, 5, 7, 8, 10, 13, 15], [3, 4, 7, 8, 11, 12, 15]]
+
+====================================================================================================
+S2  SYMMETRY GROUP of the product table (index maps in GL(4,2) that extend to signed relabellings = axis-permuting automorphisms)
+|GL(4,2)| = 20160 index maps tested; axis-permuting automorphisms of the sedenion table: |G| = 168
+orbits on the 15 imaginary axes: sizes [7, 1, 7] -> [[1, 2, 3, 4, 5, 6, 7], [8], [10, 11, 12, 13, 14, 15, 9]]
+orbits on the 35 lines: sizes [7, 7, 21]
+orbits on the 15 planes: sizes [1, 7, 7]
+   plane orbit of size 1, genuine octonion: [True]
+   plane orbit of size 7, genuine octonion: [True]
+   plane orbit of size 7, genuine octonion: [False]
+orbitals (orbits on unordered pairs of axes): 6, sizes [21, 7, 7, 42, 7, 21]
+G-INVARIANT groupings of the 15 axes (equivalence relations stable under G): 11
+   block sizes [15]                         (everything in one block)
+   block sizes [8, 7]                       ((1, 2, 3, 4, 5, 6, 7), (8, 9, 10, 11, 12, 13, 14, 15))
+   block sizes [8, 7]                       ((1, 2, 3, 4, 5, 6, 7, 8), (9, 10, 11, 12, 13, 14, 15))
+   block sizes [14, 1]                      ((1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15), (8,))
+   block sizes [7, 7, 1]                    ((1, 2, 3, 4, 5, 6, 7), (8,), (9, 10, 11, 12, 13, 14, 15))
+   block sizes [8, 1, 1, 1, 1, 1, 1, 1]     ((1,), (2,), (3,), (4,), (5,), (6,), (7,), (8, 9, 10, 11, 12, 13, 14, 15))
+   block sizes [8, 1, 1, 1, 1, 1, 1, 1]     ((1, 2, 3, 4, 5, 6, 7, 8), (9,), (10,), (11,), (12,), (13,), (14,), (15,))
+   block sizes [2, 2, 2, 2, 2, 2, 2, 1]     ((1, 9), (2, 10), (3, 11), (4, 12), (5, 13), (6, 14), (7, 15), (8,))
+   block sizes [7, 1, 1, 1, 1, 1, 1, 1, 1]  ((1,), (2,), (3,), (4,), (5,), (6,), (7,), (8,), (9, 10, 11, 12, 13, 14, 15))
+   block sizes [7, 1, 1, 1, 1, 1, 1, 1, 1]  ((1, 2, 3, 4, 5, 6, 7), (8,), (9,), (10,), (11,), (12,), (13,), (14,), (15,))
+   block sizes [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] ((1,), (2,), (3,), (4,), (5,), (6,), (7,), (8,), (9,), (10,), (11,), (12,), (13,), (14,), (15,))
+   a grouping of sizes 5+5+5 appears among them: False;  4+7+4: False;  2+11+2: False;  7+8: True;  1+15: True
+
+====================================================================================================
+S3  THE 336 PARTITIONS 5+5+5 AND THE PROJECT'S FIVE BRACKETS, against G
+ovoids 168, partitions into three ovoids 336
+G-orbits on the 336 partitions: sizes [168, 168];  stabiliser size of each orbit: [1, 1]
+closed-subalgebra content of {0} u block, for a representative of each orbit: [['FRAGMENT', 'FRAGMENT', 'FRAGMENT'], ['FRAGMENT', 'FRAGMENT', 'FRAGMENT']]
+project brackets (stabiliser in G; class of each block with e0 added):
+   {1:15}     blocks [15]                       classes ['closed(15)']                     orbit size 1, stabiliser 168
+   {2:14}     blocks [1, 14]                    classes ['C', 'FRAGMENT']                  orbit size 1, stabiliser 168
+   {8:8}      blocks [7, 8]                     classes ['O', 'FRAGMENT']                  orbit size 1, stabiliser 168
+   {4:4:4:4}  blocks [3, 4, 4, 4]               classes ['H', 'FRAGMENT', 'FRAGMENT', 'FRAGMENT'] orbit size 7, stabiliser 24
+   {4:8:4}    blocks [4, 7, 4]                  classes ['FRAGMENT', 'O', 'FRAGMENT']      orbit size 7, stabiliser 24
+
+====================================================================================================
+S4  ALL 4:8:4 SPLITS of the flag kind  U < W < V  (U = 2-dim subspace, W = 3-dim; blocks: U-coset, W with e0, U-coset)
+flags U < W: 105 (35 quaternion axes-sets x 3 octonion-sets each = 105)
+flags whose W is a genuine octonion subalgebra: 56
+the project's {4:8:4} middle block [1, 2, 3, 8, 9, 10, 11] is a plane (3-dim subspace) of the table: True;  genuine octonion: True;  its two outer blocks [4, 5, 6, 7] and [12, 13, 14, 15] are cosets of the quaternion axes-set {1,2,3}: True
+flags with that W: 7 (one per quaternion U inside it, i.e. the 7 lines of the Fano plane W, each with its pair of cosets)
+G-orbits on the 105 flags: sizes [7, 7, 7, 21, 21, 42]
+
+====================================================================================================
+S5  ZERO DIVISORS FROM THE PRODUCT
+assessor-type vectors e_a +- e_b (a<b among 1..15): 210; ordered zero-product pairs among them 336; zero divisors of that type 84 on 42 index pairs
+   (the record gives 84 zero divisors on 42 index pairs; 336 ordered zero-product pairs)
+connected components of index pairs under zero products: 7, sizes [6, 6, 6, 6, 6, 6, 6]
+  kite 0: 6 vertices, 12 edges, degrees [4, 4, 4, 4, 4, 4]; struts (non-adjacent pairs) [((1, 10), (2, 9)), ((4, 15), (7, 12)), ((5, 14), (6, 13))]; axes used [1, 2, 4, 5, 6, 7, 9, 10, 12, 13, 14, 15]; low axes [1, 2, 4, 5, 6, 7]
+  kite 1: 6 vertices, 12 edges, degrees [4, 4, 4, 4, 4, 4]; struts (non-adjacent pairs) [((1, 11), (3, 9)), ((4, 14), (6, 12)), ((5, 15), (7, 13))]; axes used [1, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15]; low axes [1, 3, 4, 5, 6, 7]
+  kite 2: 6 vertices, 12 edges, degrees [4, 4, 4, 4, 4, 4]; struts (non-adjacent pairs) [((1, 12), (4, 9)), ((2, 15), (7, 10)), ((3, 14), (6, 11))]; axes used [1, 2, 3, 4, 6, 7, 9, 10, 11, 12, 14, 15]; low axes [1, 2, 3, 4, 6, 7]
+  kite 3: 6 vertices, 12 edges, degrees [4, 4, 4, 4, 4, 4]; struts (non-adjacent pairs) [((1, 13), (5, 9)), ((2, 14), (6, 10)), ((3, 15), (7, 11))]; axes used [1, 2, 3, 5, 6, 7, 9, 10, 11, 13, 14, 15]; low axes [1, 2, 3, 5, 6, 7]
+  kite 4: 6 vertices, 12 edges, degrees [4, 4, 4, 4, 4, 4]; struts (non-adjacent pairs) [((1, 14), (6, 9)), ((2, 13), (5, 10)), ((3, 12), (4, 11))]; axes used [1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14]; low axes [1, 2, 3, 4, 5, 6]
+  kite 5: 6 vertices, 12 edges, degrees [4, 4, 4, 4, 4, 4]; struts (non-adjacent pairs) [((1, 15), (7, 9)), ((2, 12), (4, 10)), ((3, 13), (5, 11))]; axes used [1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 15]; low axes [1, 2, 3, 4, 5, 7]
+  kite 6: 6 vertices, 12 edges, degrees [4, 4, 4, 4, 4, 4]; struts (non-adjacent pairs) [((2, 11), (3, 10)), ((4, 13), (5, 12)), ((6, 15), (7, 14))]; axes used [2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 15]; low axes [2, 3, 4, 5, 6, 7]
+every component is an octahedron (6 vertices, 12 edges, all degree 4, exactly 3 non-adjacent pairs): True
+(first guess, FAILED: that each kite uses three low axes forming a line) low axes used by each kite: [(1, 2, 3, 4, 5, 6), (1, 2, 3, 4, 5, 7), (1, 2, 3, 4, 6, 7), (1, 2, 3, 5, 6, 7), (1, 2, 4, 5, 6, 7), (1, 3, 4, 5, 6, 7), (2, 3, 4, 5, 6, 7)]
+   those triples are lines of the table: False; distinct: 7; they are the 7 lines of the plane {1..7}: False
+what the kites actually are: each uses 6 of the 7 low axes and 6 of the 7 high axes (8 is never used); the omitted low axis of each kite: [3, 2, 5, 4, 7, 6, 1]; omitted high axis = low + 8 in every kite: True
+   the three struts of each kite, as low-axis pairs, complete with the omitted axis to the three lines of the Fano plane {1..7} through that axis: True
+   so 7 kites <-> 7 low axes <-> the 7 doubling pairs (k, k+8); with e8 unused: 7 x 2 + 1 = 15 (the G-invariant grouping 2+2+2+2+2+2+2+1 of S2)
+   ordered zero-product pairs at index level: 168; G preserves them (checked on 40 group elements): True; G-orbit sizes: [168]
+   index pairings {k, k xor d} (d = 1..15) that G maps to themselves: d in [8] (the CD doubling pairing d = 8 is the only one; the sigma_RB pairing k <-> k xor 4 is NOT preserved)
+alignment with the 42 zero-divisor index pairs: number of pairs whose two axes lie in DIFFERENT blocks:
+   the 336 ovoid triples: min 29, max 31, mean 30.0 of 42; counts by value: {29: 168, 31: 168}
+   {1:15}     0 of 42
+   {2:14}     0 of 42
+   {8:8}      42 of 42
+   {4:4:4:4}  42 of 42
+   {4:8:4}    36 of 42
+   random 5+5+5 splits (2000): mean 29.9, min 26, max 39
+
+====================================================================================================
+S6  CIRCLES INSIDE THE OBJECT
+exp(theta u) = cos + u sin is a circle in the plane (1,u) for EVERY unit imaginary direction u of the 15-dim space (random u, theta; powers 2, 3, 5): max error 2.1e-15
+   so the object contains a 14-sphere of circles through 1, power-associatively; the failures are in PRODUCTS of different circles:
+   norm of the product of two random circle points (a norm-multiplicative algebra would give exactly 1): min 0.794, mean 1.004, max 1.183 (400 draws)
+   the same with both circles along coordinate axes e_a, e_b: min 1.000000, max 1.000000 (the axes themselves never break the norm)
+zero divisors as circles: each zero-divisor vector u = (e_a + s e_b)/sqrt2 has u*u = -1 (so it generates a circle exp(theta u)); the quarter-turn points of two such circles multiply to exactly 0
+   for all 336 ordered zero-product pairs: the product of two points ON the unit sphere is the ZERO vector (a circle point times a circle point collapses to the origin: the circle product is not closed)
+   fraction of assessor-circle pairs whose quarter-turn product is zero: 0.0076 (336 of 44100); unit-imaginary check max |u*u + 1| = 2.2e-16
+associativity of coordinate-axis triples by the plane that contains them (independent triples only; each lies in exactly one of the 15 planes):
+   genuine octonion plane    1344 ordered independent triples,     0 associative (0.0%)
+   non-alternative plane     1176 ordered independent triples,   672 associative (57.1%)
+associator size over all 15^3 coordinate-axis triples: {0.0: 1527, 2.0: 1848} (0 means the three circles compose associatively)

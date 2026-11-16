@@ -1,0 +1,11 @@
+A  spreads (5 disjoint lines covering the 15 points): 56
+B  5-caps: 1008;  C  ovoids (every plane meets in 1 or 3 points): 168
+D  partitions of the 15 points into three ovoids: 336;  into three arbitrary 5-caps: 336
+   ovoid-triple partitions by the multiset pattern of (ovoid, line) intersection sizes: 1 pattern(s)
+E  over all (ovoid partition, spread) pairs, how the three ovoids meet the five lines of the spread (sorted per ovoid):
+   ((0, 0, 1, 2, 2), (0, 0, 1, 2, 2), (0, 1, 1, 1, 2)) : 10080 pairs
+   ((0, 0, 1, 2, 2), (0, 0, 1, 2, 2), (1, 1, 1, 1, 1)) : 5040 pairs
+   ((0, 1, 1, 1, 2), (0, 1, 1, 1, 2), (0, 1, 1, 1, 2)) : 3360 pairs
+   ((1, 1, 1, 1, 1), (1, 1, 1, 1, 1), (1, 1, 1, 1, 1)) : 336 pairs
+   pairs in which EVERY ovoid meets EVERY line of the spread in exactly one point (a 3 x 5 grid: 3 ovoids x 5 lines): 336 of 18816
+   those 336 pairs use 336 distinct ovoid partitions and 56 distinct spreads

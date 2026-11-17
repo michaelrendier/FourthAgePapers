@@ -1,4 +1,6 @@
-# The Interface
+# The Circle Atlas: H_hat_RB and The Complete Shape of Mathematics
+
+*(directory `TheInterface/`; the paper carries the Atlas name per the author, 2026-11-16)*
 
 **Cody Michael Allison** (Michael Rendier) · the.wandering.god@gmail.com ·
 [github.com/michaelrendier](https://github.com/michaelrendier) ·
@@ -6,7 +8,7 @@ ORCID: [0009-0007-7239-6760](https://orcid.org/0009-0007-7239-6760)
 
 **Fourth Age Paper.** One Paper. One Claim. One Engine. One Wiki.
 
-**Status: OUTLINE (2026-11-16).** Registered 2026-09-17 as a stub; on 2026-11-16 the author supplied the H_hat_RB / circle context below and this README became the paper's synopsis, catalogue and syllabus. No section is written yet; the one script (`01_fifteen_partitions.py`) is a lead, not a result.
+**Status: OUTLINE, with the engines built (2026-11-16).** The Atlas engine (`ValaQuenta/modules/circle_atlas`) and the Pi Derivation Toolset (`ValaQuenta/modules/pi_derivations`) exist and run (§K–L). Registered 2026-09-17 as a stub; on 2026-11-16 the author supplied the H_hat_RB / circle context below and this README became the paper's synopsis, catalogue and syllabus. No section is written yet; the one script (`01_fifteen_partitions.py`) is a lead, not a result.
 
 
 > **Assistant note.** This outline was written by a transformer language model (Claude Sonnet 5.5, `claude-sonnet-5-5`) on 2026-11-16 from a long message by the author, Cody Michael Allison (pen name Michael Rendier), an autodidact, not an academic; his method is not to tell the model the result he is looking for. Claims below that begin "the author's" are his; each is labelled **ESTABLISHED** (textbook), **THEORETICAL**, **INTERPRETATION**, **CONJECTURE** or **OPEN**, and `:CALCULATED` is a suffix for a result a script in this directory produced. Where the model recalled a literature item from memory it is marked *recalled, verify*. Notation scope follows the standing ruling: Ĥ_RB is the maths name, 0_RB is the VAPMIP/Monad name; no rename is made here.
@@ -95,7 +97,7 @@ For the project: ln and exp are the exchange between *add* and *scale* (exp turn
 ## D. Syllabus: what to build and what to test (nothing here has been run)
 
 1. **Trigonometry from the circle, in code (easy; `ESTABLISHED`).** sin, cos, tan, sec, csc, cot as segment lengths of the unit circle; e^{iθ}; the angle-addition formulae as rotation composition; the waveform A sin(ωt + φ) + C as the projection of uniform circular motion. Listing 1 (§F) is the seed.
-2. **The emergence criterion for π.** Define 'emergent' precisely as: *no step names a circle, diameter, circumference, radius or disk area, even implicitly through a trigonometric function or polar coordinates.* Inventory the derivations in ThePlace (`GenerationalLineage/engine/toolsets/circle.py` `pi_unit_circles`, `PiFromAbove`, the 'two squares' one the author mentioned) and the standard diameter-free candidates (Basel ζ(2) = π²/6, Wallis product, Gaussian integral ∫e^{−x²} = √π (polar coordinates inside the usual proof), Leibniz series, −i ln(−1)); mark each as constructed or emergent by that test. Expected finding, stated as a hypothesis: most standard 'derivations' use a circle somewhere.
+2. **π (revised 2026-11-16).** The author does not want an emergence test. The emergent π is the one that DEFINES the circle: twice the first positive zero of the cosine power series (`pi_derivations.cos_zero`). Every other route to π is collected in the Pi Derivation Toolset and labelled by what of the circle its inputs already hold; each new circle transform brings its own π route. (The earlier 'criterion' item is withdrawn.)
 3. **Circle catalogue, in code.** One entry per form in §G with: its defining equation, the `circle.py` operator or other module that already implements it, a numerical check that it closes on the circle, and the tier.
 4. **Perturbation coverage.** From the six operators plus the ℓₚ circle in `circle.py` (ORBIT, UNFOLD, CUT, FOLD, PROJECT, SHUFFLE; ℓₚ), plus the cardioid/limaçon, rolling curves and Fourier epicycles: define a small constructive grammar (point, line, circle; perturbations as composable operators), then for each equation in `PtolemyDesktop/Archimedes/` ask whether the grammar generates it. Report the coverage fraction and every failure (failed results stay).
 5. **The 1 + 15 grading** (§E).
@@ -214,3 +216,13 @@ Every number below comes from the project's own product (`GenerationalLineage/en
 2. **Reading of 'a circle has 16 dimensions'.** As embedding: 2 of 16 channels per circle, the choice of plane being the choice of one of 15 imaginary directions (a 14-sphere of circles through 1). As grading: 1 + 15, with 15 = 3 × 5 (§E). The author's text leans to the grading.
 3. **Extend or stand apart.** `GenerationalLineage/engine/toolsets/circle.py` already holds the catalogue of §G rows 1, 4, 6, 7, 8, 24; the ValaQuenta engine 'Forms Of A Circle' would extend and cite it. Its π placement (Add = C = πd, Scale = A = πr², Sign = d = π) is marked 'Cody to confirm' in the code.
 4. **Which of the 336 partitions** (§E) is the project's, by the sign and incidence test above.
+
+## K. The sign test, 2026-11-16 (`:CALCULATED`; `03_sign_test.py`, output `results_03_sign_test_2026-11-16.txt`)
+
+Question: which sedenion axis acts as SIGN (θ → −θ)? Conjugation by any axis negates every other imaginary direction, so that test does not discriminate (kept). The doubling identity e_k x = x\* e_k on the first octonion holds for every x exactly for k = 8 … 15 and fails (at x = e_k) for k = 1 … 7. So SIGN is carried by the whole second octonion, e₈ as its generator; neither e₇ (last of the first octonion) nor e₁ is supported.
+
+## L. The engines (built 2026-11-16)
+
+`ValaQuenta/modules/circle_atlas/` (notebook 22, wiki `ValaQuenta/wiki/circle_atlas.md`, Ainulindalë 137): 19 viewports run TO (enter fixed-point space) and FROM (exit, with the fibre of choices). 18 close on the circle to numerical zero; Berry–Keating H = xp does not (hyperbola, residual 6.4) and closes under the Wick rotation t → it. The Lagrangian's FROM is a relation, not an inverse: L, 3L and L + d/dt F share one stationary path. Sedenion: 15 exact circles, 84 zero-divisor circles, 336 annihilating ordered pairs. Gaps listed in the wiki and `gaps()`.
+`ValaQuenta/modules/pi_derivations/` (notebook 23, Ainulindalë 138): 26 routes, none reading `math.pi`. `ValaQuenta/modules/constants/maths.py` `derive_pi()` reads `_PI = math.pi` as input and its (2/π)·π = 2 is an identity for any π; the toolset files it as `identity`.
+Census over the repositories and the import probe (69 load, 0 fail) are in notebook 22.

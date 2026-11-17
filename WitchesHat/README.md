@@ -15,10 +15,10 @@ The author's statement: the Witch's Hat, the galactic particle, the resonation c
 | A. The hat as geometry | null cone, brim as the fixed set of the inversion r ↦ R²/r | `Ainulindale/wiki/29_witches_hat_paper.md`; engine `ArdaQuenta/modes/witches_hat.py` | lemma ESTABLISHED; halo from inversion **fails** its test (ρ ∝ r⁻⁶, not r⁻²), recorded |
 | B. The dynamic path and the cone | L_(I|O), L_FR = 0, the hat and its inverse | `Ainulindale/wiki/51_dynamic_geodesic.md`; `ValaQuenta/modules/l_io_photon_path`; `BulletCluster/L_IO_SPECIFICATION.md` | listing executed 2026-11-13; claims `CONJECTURE`/`INTERPRETATION` |
 | C. The galactic cavity (SPARC) | the resonance chamber; pre-registered P1–P4; the "leaf in the bowl" | `DM_GalacticCavity/` (`paper_draft.md`, notebooks 00–02, `dark_matter_cavity.py`, `03_sparc_test.py`) | **run in this pass: §3 below** |
-| D. Dark matter is a shape | gravity as shape, Bullet Cluster as two shapes crossing; GR/QM class jurisdiction | `BulletCluster/paper_draft.md` (abstract; sections 1–5 are stubs), `BulletCluster/README.md` | RM-ratio test **never run on observational data** (no Stokes Q/U on disk) |
+| D. Dark matter is a shape (needs ptychography and possibly birefringence, author 2026-11-17) | gravity as shape, Bullet Cluster as two shapes crossing; GR/QM class jurisdiction | `BulletCluster/paper_draft.md` (abstract; sections 1–5 are stubs), `BulletCluster/README.md` | RM-ratio test **never run on observational data** (no Stokes Q/U on disk) |
 | E. The medium at cosmic scale | CMB/BAO as the same resonance; plasma boundary | `CMB_FractalBoundary/`, `CMB_PlasmaBoundary/` | notebooks not executed (0 of 4); five "confirmed" predictions need rerun |
-| F. The brim as turbulence | Ro = 1 ↔ D* = 1, the laminar–turbulent boundary | `Crawford_NavierStokes/` | gathering, not a programme |
-| G. The medium's origin | cavitation, Bang, black-hole scar | `DeSitterCavitation/` (branch stub), `WhiteHoleBang/`, `PiFromAbove/` | stubs / drafts |
+| F. ~~The brim as turbulence~~ | **Not part of the Witch's Hat paper (author, 2026-11-17).** The Crawford / Navier–Stokes stub is not necessary here; `Crawford_NavierStokes/` stays as a notepad. | — | — |
+| G. The medium's origin | cavitation, Bang, black-hole scar; the gravastar's photon sphere (Circle Atlas viewport `photon_sphere`) | `DeSitterCavitation/` (branch stub), `WhiteHoleBang/`, `PiFromAbove/` | **comes after all observational data has been evaluated (author, 2026-11-17): we do not guess at it, we measure it.** Stubs only until then |
 | H. Constants used | d*, Ω_ZS, the four d* faces | `Ainulindale/wiki/133_canonical_maths.md` §2.2 | ESTABLISHED arithmetic |
 
 ## 3. Pre-registered predictions (framework constants d* and Ω_ZS) and what the data say (`:CALCULATED`, 2026-11-14; kept as the record of a failed pre-registration; the model test of §3b does not use them)
@@ -116,3 +116,10 @@ The two periods have to be told apart: λ/c is the wave's, 1e8 to 1e9 years is t
 4. Part E: execute the CMB notebooks, rerun the five "confirmed" predictions, record what holds.
 5. Every telescope dataset added later gets a row in a results table of this file, with the script that produced it.
 6. ScalarContextPropagation last (the author's order).
+
+
+## 6. Scope rulings of 2026-11-17 (author)
+- **Part F (Crawford / Navier–Stokes) is dropped** from this paper; it remains a notepad.
+- **Part G (the medium's origin) is last**: it waits until every observational data set has been evaluated.
+- **Part D (dark matter as a shape)** requires **ptychography** and possibly **birefringence**; a polarization control is the Crab Nebula (HST polarizers 1996, 1997, 2003; JWST NIRCam/MIRI mosaics; VLA and pulsar polarization to be requested) with the Planck SMICA maps for the CMB/BAO side.
+- **Scaffolds:** every JWST mosaic and IFU cube on disk except the Bullet Cluster (already done) has a raw image and a false-colour image under `WitchesHat/scaffolds/` (script `make_scaffold.py`; algorithm in its header), mirrored to `~/Desktop/SpaceClaude/BulletCluster/scaffolds/`.

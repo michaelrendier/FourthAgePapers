@@ -35,6 +35,8 @@
     two sides interact. Registered 2026-09-17. STUB — claim, engine,
     notebooks all still to be written. See TheInterface/README.md.
 
+[ ] WitchesHat drafts — cursory cs-paper draft of every Part A–H on branch witches-hat, built on the Circle Atlas (2026-11-16 ruling: the Circle Atlas is the CS paper for The Interface AND machinery for the Witch's Hat). Needs list in ContextPlease scratchpad 2026-11-16_circle_atlas/WITCHES_HAT_NEEDS.md.
+
 [x] TwinPrimeWheels — results paper (no prediction), written 2026-11-16: the primes cut into circles at the twin pairs. See TwinPrimeWheels/paper/
     and TwinPrimeWheels.pdf. Open: wheel-size distribution for m >= 2 from the
     singular series; the claude.ai twin-prime project record (PROMPT in ContextPlease

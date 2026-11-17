@@ -10,6 +10,13 @@ eventual home by copying — ValaQuenta keeps a canonical copy of every engine.*
 Each paper makes a single falsifiable claim. The engine derives and tests it.
 The notebooks record the derivation. The wiki page is written last.
 
+**Two kinds of paper live here** (author's ruling, 2026-11-16; the Fourth Age is the Age of Men, and no rule limits what belongs):
+
+1. **Hypotheses under test** (the rule above): One Paper, One Claim, One Prediction, One Engine, One set of notebooks, One Wiki page.
+2. **Workbench papers**: this repository is the author's workbench for anything that is not Ainulindalë or VAPMIP work but is headed for arXiv. Results-and-code papers such as `CollatzShift`, `AdditionMatrixOrbits` and `TwinPrimeWheels` make no prediction and are Fourth Age papers of this kind. The `cs-paper-code-conventions` skill governs how they show code; `ScalarContextPropagation` §2 is the model for Notation and Disambiguation.
+
+**Branches.** The Witch's Hat family (parent register `WitchesHat/README.md`, `DM_GalacticCavity`, `CMB_*`, `Crawford_NavierStokes`, `WhiteHoleBang`) lives on the branch `witches-hat`; telescope data for it is under `/media/rendier/Telescope Data/`. `DM_GalacticCavity/data/` in the `main` working tree holds the SPARC and Gaia files the branch uses (untracked, kept). `TheInterface` (The Circle Atlas paper) and `TwinPrimeWheels` are on `main`.
+
 ---
 
 ## Papers to Expect

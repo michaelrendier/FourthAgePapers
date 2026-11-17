@@ -4,7 +4,7 @@
 
 **Cody Michael Allison** (Michael Rendier), independent researcher · the.wandering.god@gmail.com · [ORCID 0009-0007-7239-6760](https://orcid.org/0009-0007-7239-6760) · github.com/michaelrendier\
 **Written by an AI assistant:** Claude Sonnet 5.5 (`claude-sonnet-5-5`), with the author's [`cs-paper-code-conventions` skill](https://github.com/michaelrendier/ContextPlease/blob/main/claude/skills/cs-paper-code-conventions/SKILL.md) running\
-**Date:** 2026-11-16 · **Status:** results paper, no prediction · **Code:** [FourthAgePapers/TwinPrimeWheels](https://github.com/michaelrendier/FourthAgePapers/tree/main/TwinPrimeWheels)
+**Date:** 2026-11-16 · **Status:** Fourth Age paper (workbench kind), results, no prediction · **Code:** [FourthAgePapers/TwinPrimeWheels](https://github.com/michaelrendier/FourthAgePapers/tree/main/TwinPrimeWheels)
 
 ---
 
@@ -16,7 +16,7 @@
 >
 > **The method.** The author does not tell the assistant what result to find. The task was: build the small program, run it, report. **Failures stay in the paper** (Section 6).
 >
-> **What kind of paper this is.** A results paper: it shows one short program, what it computes, and what came out. **It makes no prediction**, and by the series' own rule a paper with no prediction is not a Fourth Age paper; it is filed in the Fourth Age directory at the author's request and labelled as a results paper. It contains no proofs, and it does not claim the Twin Prime Conjecture.
+> **What kind of paper this is.** A Fourth Age paper of the workbench kind (the repository holds hypotheses under test, with a prediction written first, and workbench papers headed for arXiv; this is the second). It shows one short program, what it computes, and what came out. It makes no prediction, contains no proofs, and does not claim the Twin Prime Conjecture.
 
 ---
 
@@ -26,9 +26,11 @@ Every twin pair (p, p+2) has exactly one number between its members, its *centre
 
 ---
 
-## 0. Scope and labels
+## 0. Notation, disambiguation, scope
 
-Labels follow the author's standing scheme: **ESTABLISHED** (textbook or exact), **THEORETICAL**, **INTERPRETATION**, **CONJECTURE**, **OPEN**. A result computed by the program in this directory carries the suffix `:CALCULATED`. Hedging is allowed in this paper; it is labelled, not hidden.
+**Labels.** **ESTABLISHED** (textbook or exact), **OURS** (code or construction built for this project), **FIRST STATED HERE** (dated, not found stated this way elsewhere the author has checked), **THEORETICAL**, **INTERPRETATION**, **CONJECTURE**, **OPEN**. A result computed by the program in this directory carries the suffix `:CALCULATED`. Hedging is allowed here; it is labelled, not hidden.
+
+**Disambiguation** (as in `ScalarContextPropagation` §2.2). A citation with no tag is maths the code was built directly against; a citation marked `Post-Hoc:` is a correspondence noticed after the code worked. Everything cited below is `Post-Hoc:`, except the author's own `rhp/wrap.py`, which this program was built against. The wheel construction was built before any of the literature below was read for it. The twin prime conjecture's claim is a statement of the problem, not a source.
 
 | Statement | Label |
 |---|---|
@@ -36,7 +38,7 @@ Labels follow the author's standing scheme: **ESTABLISHED** (textbook or exact),
 | Observed counts of wheels, sizes, Brun tail, singular-series ratio, below | ESTABLISHED:CALCULATED |
 | Hardy–Littlewood count of twin pairs | CONJECTURE (1923; unproven) |
 | There are infinitely many twin primes | OPEN (the Twin Prime Conjecture) |
-| Reading each centre as a *zero point* and each wheel as a circle | INTERPRETATION (the author's) |
+| Cutting the primes into circles at the twin centres (centre = zero point, wheel = circle) | OURS; FIRST STATED HERE as a construction (not found stated this way elsewhere; see Question 3) |
 
 ## 1. What a wheel is
 

@@ -4,7 +4,7 @@
 
 **Cody Michael Allison** (Michael Rendier), independent researcher · the.wandering.god@gmail.com · [ORCID 0009-0007-7239-6760](https://orcid.org/0009-0007-7239-6760) · github.com/michaelrendier\
 **Written by an AI assistant:** Claude Sonnet 5.5 (`claude-sonnet-5-5`), with the author's [`cs-paper-code-conventions` skill](https://github.com/michaelrendier/ContextPlease/blob/main/claude/skills/cs-paper-code-conventions/SKILL.md) running\
-**Date:** 14 October 2026 · **Status:** stub for expert review · **Code:** [FourthAgePapers/AdditionMatrixOrbits](https://github.com/michaelrendier/FourthAgePapers/tree/main/AdditionMatrixOrbits)
+**Date:** 16 November 2026 · **Status:** stub for expert review · **Code:** [FourthAgePapers/AdditionMatrixOrbits](https://github.com/michaelrendier/FourthAgePapers/tree/main/AdditionMatrixOrbits)
 
 ---
 
@@ -26,7 +26,7 @@ Grade-school multiplication writes one row per digit of the multiplier; adding t
 
 ## 0. Scope, labels, and what this paper is not
 
-- **Not a Fourth Age paper.** It has no pre-registered prediction. It is a code paper with results.
+- **A Fourth Age paper of the workbench kind** (no prediction; see `FourthAgePapers/README.md`). It is a code paper with results.
 - **Labels.** `ESTABLISHED` (textbook or published), `OURS` (not found in the literature we read), `THEORETICAL`, `OPEN`. The suffix `:CALCULATED` means this paper's own code produces the result; it is not a derivation. Everything in Sections 1–4 is `ESTABLISHED:CALCULATED` (elementary number theory, checked by the code over the stated range) except the address of Section 4, which is `OURS:CALCULATED` (a restatement; reported with its neighbours).
 - **Built-against and Post-Hoc.** The Multiplication Matrix Explorer, whose matrix and factor search this paper analyses, is the author's own earlier tool (built-against, no tag). Heninger–Shacham (2009) was noticed afterwards and is marked `Post-Hoc:` in the references. We have not been able to download or read it.
 - **The generational-lineage engine is not used here.** The engine files in `engine/` are plain Python; no section depends on it.
@@ -219,7 +219,7 @@ python3 engine/e_addm_followup.py --crosscheck  # compares with the Explorer's t
 python3 paper/make_paper.py --check          # does this paper match a fresh build?
 ```
 
-Environment of this build: Python 3.12.3, a ThinkPad X1 Carbon (6th gen, Core i7-8550U); building the paper took about 18 s. SHA-256 prefixes of the engine file used:
+Environment of this build: Python 3.12.3, a ThinkPad X1 Carbon (6th gen, Core i7-8550U); building the paper took about 10 s. SHA-256 prefixes of the engine file used:
 
 | file | sha256 (first 12) |
 |---|---|

@@ -4,7 +4,7 @@
 
 **Cody Michael Allison** (Michael Rendier), independent researcher · the.wandering.god@gmail.com · [ORCID 0009-0007-7239-6760](https://orcid.org/0009-0007-7239-6760) · github.com/michaelrendier\
 **Written by an AI assistant:** Claude Sonnet 5.5 (`claude-sonnet-5-5`), with the author's [`cs-paper-code-conventions` skill](https://github.com/michaelrendier/ContextPlease/blob/main/claude/skills/cs-paper-code-conventions/SKILL.md) running\
-**Date:** 14 October 2026 · **Status:** draft for expert review · **Code:** [FourthAgePapers/CollatzShift](https://github.com/michaelrendier/FourthAgePapers/tree/main/CollatzShift)
+**Date:** 16 November 2026 · **Status:** draft for expert review · **Code:** [FourthAgePapers/CollatzShift](https://github.com/michaelrendier/FourthAgePapers/tree/main/CollatzShift)
 
 ---
 
@@ -28,7 +28,7 @@ We describe three small, self-checking Python programs (standard library only, a
 
 ## 0. Scope and labels
 
-**Not a Fourth Age paper.** This directory sits in the `FourthAgePapers` repository for historical reasons. The author's Fourth Age template ("One Paper, One Claim") asks for a pre-registered prediction. This paper is a results-and-code paper: it makes **no prediction**, nothing in it is pre-registered, and it is not an instance of that template.
+**A Fourth Age paper of the workbench kind.** `FourthAgePapers` holds two kinds of paper: hypotheses under test (One Claim, One Engine, One Set of Notebooks, One Wiki, a prediction written down first) and the author's workbench papers for anything headed for arXiv that is not Ainulindalë or VAPMIP work. This is the second kind: a results-and-code paper that makes no prediction.
 
 **Labels.** Each result carries a label.
 
@@ -455,7 +455,7 @@ python3 engine/e_collatz_gl_decomposition.py # about 7 s; needs GenerationalLine
 python3 paper/make_paper.py --check          # does this paper match a fresh build?
 ```
 
-Environment of this build: Python 3.12.3, a ThinkPad X1 Carbon (6th gen, Core i7-8550U); building the paper took about 34 s. SHA-256 prefixes of the engine files used:
+Environment of this build: Python 3.12.3, a ThinkPad X1 Carbon (6th gen, Core i7-8550U); building the paper took about 20 s. SHA-256 prefixes of the engine files used:
 
 | file | sha256 (first 12) |
 |---|---|

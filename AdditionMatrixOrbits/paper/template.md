@@ -26,7 +26,7 @@ Grade-school multiplication writes one row per digit of the multiplier; adding t
 
 ## 0. Scope, labels, and what this paper is not
 
-- **Not a Fourth Age paper.** It has no pre-registered prediction. It is a code paper with results.
+- **A Fourth Age paper of the workbench kind** (no prediction; see `FourthAgePapers/README.md`). It is a code paper with results.
 - **Labels.** `ESTABLISHED` (textbook or published), `OURS` (not found in the literature we read), `THEORETICAL`, `OPEN`. The suffix `:CALCULATED` means this paper's own code produces the result; it is not a derivation. Everything in Sections 1–4 is `ESTABLISHED:CALCULATED` (elementary number theory, checked by the code over the stated range) except the address of Section 4, which is `OURS:CALCULATED` (a restatement; reported with its neighbours).
 - **Built-against and Post-Hoc.** The Multiplication Matrix Explorer, whose matrix and factor search this paper analyses, is the author's own earlier tool (built-against, no tag). Heninger–Shacham (2009) was noticed afterwards and is marked `Post-Hoc:` in the references. We have not been able to download or read it.
 - **The generational-lineage engine is not used here.** The engine files in `engine/` are plain Python; no section depends on it.

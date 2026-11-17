@@ -1,6 +1,6 @@
 # The Addition Matrix as Rotors
 
-> **A code paper. Results and code, no prediction.** *The Addition Matrix as Rotors* (source `paper/The_Addition_Matrix_as_Rotors.md`; the PDF is `AdditionMatrixOrbits.pdf` at this level, the only PDF kept) is the paper. It is **not a Fourth Age paper**: it has no pre-registered prediction, so it follows the departure used by `CollatzShift`. It is a **stub for expert review**: the code runs and the numbers are generated, the prose is short.
+> **A code paper. Results and code, no prediction.** *The Addition Matrix as Rotors* (source `paper/The_Addition_Matrix_as_Rotors.md`; the PDF is `AdditionMatrixOrbits.pdf` at this level, the only PDF kept) is the paper. It is a Fourth Age paper of the workbench kind: it makes no prediction, like `CollatzShift`. It is a **stub for expert review**: the code runs and the numbers are generated, the prose is short.
 >
 > Written by an AI assistant (Claude Sonnet 5.5, `claude-sonnet-5-5`) with the author's `cs-paper-code-conventions` skill running; the author is a software engineer, not a mathematician. Labels: `ESTABLISHED`, `OURS`, `THEORETICAL`, `OPEN`; suffix `:CALCULATED` = this paper's own code produces the result (not a derivation).
 

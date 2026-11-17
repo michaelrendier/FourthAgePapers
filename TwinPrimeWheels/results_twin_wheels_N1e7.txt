@@ -1,0 +1,35 @@
+N: 10000000
+twin pairs: 58980
+first centres: [4, 6, 12, 18, 30, 42, 60, 72]
+centres ≡ 0 mod 6 (excluding (3,5)): 58979/58979
+wheels L ≡ 0 mod 6 (excluding the first): 58978/58978
+mean L: 169.5541727423785
+mean m = L/6: 28.259028790396417
+local Hardy–Littlewood spacing at N, (ln N)²/(2C₂): 196.76464252947855
+smallest wheel: 2
+largest wheel: 1722
+largest wheel at centre: 9923988
+wheels with L = 6 (centres one 6-step apart): 899
+wheels with no interior prime: 5274
+mean interior primes per wheel: 9.267993692670272
+max interior primes: 101
+max |observed − geometric| over m: 0.020890045107938324
+observed P(m=1), geometric P(m=1): (0.015242971955644478, 0.03538692031552908)
+centres > 6 mod 30: occupied residues / allowed: (3, 3)
+centres > 6 mod 30: min, max count over occupied: (19507, 19797)
+centres > 6 mod 210: occupied residues / allowed: (15, 15)
+centres > 6 mod 210: min, max count over occupied: (3881, 4072)
+wheel sizes by L mod 30 (0, 6, 12, 18, 24): [17790, 7358, 14552, 12798, 6480]
+same, if consecutive centres drew their residue mod 30 independently from {0, 12, 18}: [0.3333333333333333, 0.1111111111111111, 0.2222222222222222, 0.2222222222222222, 0.1111111111111111]
+observed shares: [0.3016, 0.1248, 0.2467, 0.217, 0.1099]
+share of wheels with m = 5 and m = 7 (L = 30, 42) vs m = 4 and m = 6: [0.05152768829054902, 0.04722099766014446, 0.017854115093763775, 0.015226016480721624]
+singular series S(0,2), S(0,2,6,8): (np.float64(1.3203237211802865), np.float64(4.151182551336925))
+predicted P(m=1)/geometric = S(0,2,6,8)/(6·S(0,2)²): 0.39688047143149907
+observed P(m=1)/geometric: 0.43075158334576247
+Brun partial sum: 1.7383570439172704
+B₂ − partial sum: 0.16380353918672963
+4C₂/ln N: 0.16383121930601496
+Hardy–Littlewood count: 58755.48161544596
+observed / HL: 1.0038212329876472
+N / HL count (HL mean spacing over [0, N]): 170.19688589142882
+N / observed pairs: 169.548999660902

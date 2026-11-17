@@ -223,14 +223,14 @@ Question: which sedenion axis acts as SIGN (θ → −θ)? Conjugation by any ax
 
 ## L. The engines (built 2026-11-16)
 
-`ValaQuenta/modules/circle_atlas/` (notebook 22, wiki `ValaQuenta/wiki/circle_atlas.md`, Ainulindalë 137): 24 viewports run TO (enter fixed-point space) and FROM (exit, with the fibre of choices). 18 close on the circle to numerical zero; Berry–Keating H = xp does not (hyperbola, residual 6.4) and closes under the Wick rotation t → it. The Lagrangian's FROM is a relation, not an inverse: L, 3L and L + d/dt F share one stationary path. Sedenion: 15 exact circles, 84 zero-divisor circles, 336 annihilating ordered pairs. Gaps listed in the wiki and `gaps()`.
+`ValaQuenta/modules/circle_atlas/` (notebook 22, wiki `ValaQuenta/wiki/circle_atlas.md`, Ainulindalë 137): 25 viewports run TO (enter fixed-point space) and FROM (exit, with the fibre of choices). 18 close on the circle to numerical zero; Berry–Keating H = xp does not (hyperbola, residual 6.4) and closes under the Wick rotation t → it. The Lagrangian's FROM is a relation, not an inverse: L, 3L and L + d/dt F share one stationary path. Sedenion: 15 exact circles, 84 zero-divisor circles, 336 annihilating ordered pairs. Gaps listed in the wiki and `gaps()`.
 `ValaQuenta/modules/pi_derivations/` (notebook 23, Ainulindalë 138): 28 routes, none reading `math.pi`. `ValaQuenta/modules/constants/maths.py` `derive_pi()` reads `_PI = math.pi` as input and its (2/π)·π = 2 is an identity for any π; the toolset files it as `identity`.
 Census over the repositories and the import probe (69 load, 0 fail) are in notebook 22.
 
 
 ## §M. Second pass (2026-11-16): what Cody's six questions measured
 
-Run in `ValaQuenta/modules/circle_atlas` (24 viewports) and `pi_derivations` (28 routes); every number is from a script, `ESTABLISHED:CALCULATED` unless marked.
+Run in `ValaQuenta/modules/circle_atlas` (25 viewports) and `pi_derivations` (28 routes); every number is from a script, `ESTABLISHED:CALCULATED` unless marked.
 
 1. **Sphere, hypersphere, n-ball.** A circle lives in every sphere (great circles of S^n, n = 1…31, 1e-14). V_n peaks at n = 5 (5.2638), the surface at n = 7; V₁₆ = 0.2353. S¹, S³, S⁷ are closed under the product (4e-16); **S¹⁵ is not** (norm defect 0.366).
 2. **The box-kite as a spectrum.** The operator L_d of each of the 84 zero-divisor diagonals is skew with one signature, 0 (×4), √2 (×8), 2 (×4); the flow carries two incommensurate lines (ratio √2): a torus although the number d/|d| is an exact circle. The spectrum says "zero divisor" and |d|²; it cannot say which kite (the author's account: the symmetry, the Blackjack subgroup). The nullspace (eigenvectors) names the four annihilating partners: 84/84. From an anchor (the string), the reading σ(L_aL_b) splits the 84 into 7 classes (2, 2, 4, 4 in the anchor's kite; 8, 32, 32 outside). Three constructs notated apart: De Marrais kite, Scalar Boxkite (7 ordered pairs, string from the pivot), Scaled Boxkite / Mind's Eye (G2-carried, tetrahedra grab the anchor; **not computed**).

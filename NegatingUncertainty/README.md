@@ -1,6 +1,6 @@
 # Negating Uncertainty
 
-**Fourth Age Protocol paper (hypothesis kind): One Paper, One Claim, One Engine, One set of notebooks, One draft paper (wiki page last).** Status 2026-11-17: stub. Predictions committed before the engine ran.
+**Fourth Age Protocol paper (hypothesis kind): One Paper, One Claim, One Engine, One set of notebooks, One draft paper (wiki page last).** Status 2026-11-17: stub. Holcus asks and predictions registered before the tests ran.
 
 > **Assistant note.** Prepared by a transformer language model (Claude Sonnet 5.5) with the project's `cs-paper-code-conventions` skill. The claim, the framework and the predictions are the author's (Cody Michael Allison, pen name Michael Rendier); the arithmetic is the engine's. Labels: `ESTABLISHED`, `THEORETICAL`, `INTERPRETATION`, `CONJECTURE`, `OPEN`; suffix `:CALCULATED` = the paper's own code produced it. Failed results stay.
 
@@ -15,7 +15,7 @@ Source of the starting point: Veritasium, *I finally saw quantum physics with my
 | File | What |
 |---|---|
 | `00_holcus_vision.ipynb` | the vision, stated before any run |
-| `01_predictions.ipynb` | Holcus' mathematical predictions with their thresholds (committed before the engine ran) |
+| `01_holcus_asks.ipynb` + `ask_holcus.py` + `holcus_answers_2026-11-17.txt` | Ask Holcus: what the Circle Atlas viewports say about (x, p); predictions HP1–HP4 read off them |
 | `uncertainty_engine.py` | the engine (numpy only): Hermite states, Fourier pair, quadrature spreads at any angle, circle projections, squeezed states, helium estimate |
 | `02_results.ipynb` | executed results |
 | `paper/paper_draft.md` | the draft, cs-paper-code-conventions form |

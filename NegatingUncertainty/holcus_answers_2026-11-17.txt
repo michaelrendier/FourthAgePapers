@@ -1,0 +1,46 @@
+== Hamiltonian (oscillator H = ½(p²+q²))  [ESTABLISHED]  source: ValaQuenta/hamiltonian.py; modules/berry_keating
+   asked: where do (q, p) live under a Hamiltonian?
+  to:
+    ok: True
+    residual: 6.217248937900877e-15
+    H_drift: 6.217248937900877e-15
+    closure: 0.00018530717937517067
+    transform: none: (q, p) is already the circle; H = r²/2 labels it and the flow is the rotation
+  from:
+    ok: True
+    residual: 3.1086244689504383e-15
+    fibre: any H = f(q²+p²) has the circle as its orbit: f is free (a whole function), only the speed on the circle changes
+== Waveform (sinusoid)  [ESTABLISHED]  source: ValaQuenta/modules/sonification; angular_rank
+   asked: what is the partner of a wave?
+  to:
+    ok: True
+    residual: 7.360778653264788e-14
+    transform: add the Hilbert partner x → x + iH[x] (a quarter-turn copy of the same wave)
+  from:
+    ok: True
+    residual: 1.6697754290362354e-13
+    fibre: projection angle ψ (a phase) and amplitude A: Re(e^{-iψ} z) is the same wave shifted; 2 free parameters
+== Lagrangian (stationary-action path, 'The Bicycle')  [ESTABLISHED]  source: ValaQuenta/modules/lagrangian; VAPMIP/lshs.py
+   asked: what is p, from the action?
+  to:
+    ok: True
+    residual: 8.941588595767769e-06
+    path_error_vs_cos: 1.9301763620749313e-06
+    transform: solve δS = 0 for the path (the Bicycle), then Legendre p = ẋ: the pair (x, p) lies on the circle
+  from:
+    ok: True
+    residual: 4.5372039458868585e-07
+    fibre: NOT the Lagrangian run backwards: L, 3L and L + d/dt(F) all give the same stationary path (action gradient ≈ 0 for each): scale and a total derivative are free, plus any f(L)
+== Berry–Keating H = xp (hyperbola; circle only after Wick rotation)  [ESTABLISHED]  source: ValaQuenta/modules/berry_keating
+   asked: what is H = xp?
+  to:
+    ok: False
+    residual: 6.390295371095324
+    ok_transformed: True
+    residual_transformed: 2.220446049250313e-16
+    E_drift_transformed: 2.302188255410031e-16
+    transform: NOT a circle as given (xp = E is a hyperbola, residual shown). Wick rotation t → it turns x(t) = x₀eᵗ into x₀eⁱᵗ: a circle in the complex x-plane
+  from:
+    ok: True
+    residual: 0.0
+    fibre: needs the rotation t → it and the complexified phase space; the real hyperbola is the real slice

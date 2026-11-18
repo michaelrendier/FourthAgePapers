@@ -568,3 +568,12 @@ Fra:1 Mem:356.59M (Peak 468.36M) | Time:00:03.22 | Mem:271.51M, Peak:271.60M | S
 Fra:1 Mem:356.59M (Peak 468.36M) | Time:00:03.22 | Mem:271.60M, Peak:271.60M | Scene, ViewLayer | Updating Baking
 Fra:1 Mem:356.59M (Peak 468.36M) | Time:00:03.22 | Mem:271.60M, Peak:271.60M | Scene, ViewLayer | Updating Device | Writing constant memory
 Fra:1 Mem:356.59M (Peak 468.36M) | Time:00:03.22 | Mem:271.60M, Peak:271.60M | Scene, ViewLayer | Sample 0/24
+Fra:1 Mem:391.77M (Peak 468.36M) | Time:00:04.70 | Remaining:00:34.18 | Mem:306.76M, Peak:306.76M | Scene, ViewLayer | Sample 1/24
+Fra:1 Mem:391.77M (Peak 468.36M) | Time:00:23.44 | Remaining:00:08.32 | Mem:306.76M, Peak:306.76M | Scene, ViewLayer | Sample 17/24
+Fra:1 Mem:407.40M (Peak 468.36M) | Time:00:30.92 | Mem:306.76M, Peak:306.76M | Scene, ViewLayer | Sample 24/24
+Fra:1 Mem:407.40M (Peak 468.36M) | Time:00:30.92 | Mem:306.76M, Peak:306.76M | Scene, ViewLayer | Finished
+Saved: 'renders_v3/hat_n4_top.png'
+Time: 00:31.14 (Saving: 00:00.19)
+
+
+Blender quit

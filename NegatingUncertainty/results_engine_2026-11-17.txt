@@ -1,0 +1,33 @@
+P1/P2 eigenstates: sigma_x sigma_p vs (n+1/2), and the circle of energy (n+1/2)
+  n=0  quantum 0.500000000  (n+1/2) 0.5  circle rms product 0.500000000  area/h 0.500000000
+  n=1  quantum 1.500000000  (n+1/2) 1.5  circle rms product 1.500000000  area/h 1.500000000
+  n=2  quantum 2.500000000  (n+1/2) 2.5  circle rms product 2.500000000  area/h 2.500000000
+  n=3  quantum 3.500000000  (n+1/2) 3.5  circle rms product 3.500000000  area/h 3.500000000
+  n=4  quantum 4.500000000  (n+1/2) 4.5  circle rms product 4.500000000  area/h 4.500000000
+  n=5  quantum 5.500000000  (n+1/2) 5.5  circle rms product 5.500000000  area/h 5.500000000
+  n=6  quantum 6.500000000  (n+1/2) 6.5  circle rms product 6.500000000  area/h 6.500000000
+  n=7  quantum 7.500000000  (n+1/2) 7.5  circle rms product 7.500000000  area/h 7.500000000
+  n=8  quantum 8.500000000  (n+1/2) 8.5  circle rms product 8.500000000  area/h 8.500000000
+P3 quadrature spread over theta for n = 0,1,4: max relative spread
+  n=0  1.57e-16
+  n=1  1.81e-16
+  n=4  0.00e+00
+P4 squeezed Gaussian sigma_x = 0.5: spread vs ellipse formula and conjugate product
+  theta=0.000  spread 0.500000  ellipse 0.500000  conjugate product 0.500000
+  theta=0.393  spread 0.599862  ellipse 0.599862  conjugate product 0.565962
+  theta=0.785  spread 0.790569  ellipse 0.790569  conjugate product 0.625000
+  theta=1.178  spread 0.943486  ellipse 0.943486  conjugate product 0.565962
+  theta=1.571  spread 1.000000  ellipse 1.000000  conjugate product 0.500000
+P5 kinetic energy of a Gaussian vs hbar^2/(8 m sigma^2)
+  sigma=1.00  KE 0.125000  formula 0.125000
+  sigma=0.50  KE 0.500000  formula 0.500000
+  sigma=0.25  KE 2.000000  formula 2.000000
+  sigma=0.10  KE 12.500000  formula 12.500000
+P7 Fourier transform of psi_n versus (-i)^n psi_n
+  n=0  max error 6.66e-16
+  n=1  max error 6.78e-16
+  n=2  max error 5.55e-16
+  n=3  max error 6.75e-16
+  n=4  max error 5.59e-16
+  n=5  max error 7.78e-16
+P6 liquid helium-4: {'hbar2_over_2m_K_A2': 6.06, 'r_A': 2.22, 'video_E_K': 1.23, 'gauss3d_sigma_r_over_2_K': 3.69}

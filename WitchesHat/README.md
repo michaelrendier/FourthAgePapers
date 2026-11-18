@@ -21,6 +21,8 @@ The author's statement: the Witch's Hat, the galactic particle, the resonation c
 | G. The medium's origin | cavitation, Bang, black-hole scar; the gravastar's photon sphere (Circle Atlas viewport `photon_sphere`) | `DeSitterCavitation/` (branch stub), `WhiteHoleBang/`, `PiFromAbove/` | **comes after all observational data has been evaluated (author, 2026-11-17): we do not guess at it, we measure it.** Stubs only until then |
 | H. Constants used | d*, Ω_ZS, the four d* faces | `Ainulindale/wiki/133_canonical_maths.md` §2.2 | ESTABLISHED arithmetic |
 
+> **Sibling drafts (2026-11-17):** one cursory cs-paper draft per part is in `papers/` (index `papers/README.md`). This file stays the register; the parent paper is rewritten after the siblings are reviewed.
+
 ## 3. Pre-registered predictions (framework constants d* and Ω_ZS) and what the data say (`:CALCULATED`, 2026-11-14; kept as the record of a failed pre-registration; the model test of §3b does not use them)
 
 The predictions were committed in `Ainulindale` as `ac67bfa` (2026-05-30 11:52 −0700, notebooks 00 and 01); the first analysis commit is `dd86e87` (2026-05-30 20:42). So the pre-registration is real and precedes the analysis. The notebook gives no operational definition of its quantities; `DM_GalacticCavity/03_sparc_test.py` fixes them and prints every number below (output in `DM_GalacticCavity/results/03_sparc_test_output_2026-11-14.txt`). SPARC data: the repository holds the main tables and all 175 curves, byte-identical to the official site (`DM_GalacticCavity/data/SPARC_DATA.md`); the complete set, 1.3 GB, is in `/media/rendier/Telescope Data/SPARC/`. Used here: 135 have a flat V_flat and an NFW halo mass.

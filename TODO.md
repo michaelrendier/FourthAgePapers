@@ -15,6 +15,9 @@
 
 ---
 
+[x] Witch's Hat family: cursory cs-paper drafts of every sibling (A, B, C, D, E, G, H, I, J) in `WitchesHat/papers/` (branch `witches-hat`, 2026-11-17). Next: review, then rewrite the parent paper (`WitchesHat/README.md`).
+[ ] Witch's Hat: from the author — B observable and sign/size; C notebook 02 repair-or-replace; D RM-ratio test spec, first Einstein cross, real Stokes Q/U; E go to rerun the five predictions; Planck SMICA destination; NRAO links.
+
 ## Active
 
 [ ] HyperindexingSystem — "The Hyperindexing System: Data With No Physical

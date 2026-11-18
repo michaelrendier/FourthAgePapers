@@ -49,7 +49,7 @@ def trace_path(psi, E=0.0, n=4, T=40.0, npts=4000):
     t = np.linspace(0, sol.t[-1], npts); p = sol.sol(t)
     x, y = p[0], p[1]; r = np.hypot(x, y)
     speed = np.hypot(p[2], p[3])
-    W = np.concatenate([[0], np.cumsum(0.5*(speed[1:] + speed[:-1])*np.diff(t))])      # int p.dq = int v^2 dt for unit mass
+    W = np.concatenate([[0], np.cumsum(0.5*(speed[1:]**2 + speed[:-1]**2)*np.diff(t))])  # int p.dq = int v^2 dt for unit mass (corrected 2026-11-18: this was int v dt, the arc length)
     return x, y, V_family(r, n), W
 
 # ------------------------------------------------------------------ 4. Schrodinger: radial m = 0 states on the hat

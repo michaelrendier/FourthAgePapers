@@ -17,7 +17,7 @@
 
 **Results (`:CALCULATED`, `hat_sim_output_2026-11-17.txt`).**
 - Closest approach at E = 0 against the closed form √(sin ψ)((n−2)/n)^¼: 0.0842 vs 0.0841 (ψ = 0.01), 0.5464 vs 0.5247 (ψ = 0.4; the form is a small-ψ asymptote).
-- Abbreviated action along the radial path brim → hilltop, W = ∫₀¹√(4x²−2x⁴)dx = 0.861929 (numerical and exact agree); a non-radial path reaches its closest approach with W between 0.68 and 0.95 (ψ = 0.4 to 0.01), more than the radial one for small ψ because it swings around the hilltop.
+- Abbreviated action along the radial path brim → hilltop, W = ∫₀¹√(4x²−2x⁴)dx = 0.861929 (numerical and exact agree); a non-radial path reaches its closest approach with W = 0.8619, 0.8618, 0.8609, 0.8560, 0.8314 for ψ = 0.01, 0.05, 0.1, 0.2, 0.4: the abbreviated action to the closest approach is almost independent of the launch angle (3.5 % lower at ψ = 0.4). **Correction (2026-11-18):** the first version of this README reported 0.68 to 0.95 here; that was the arc length ∫v dt, not the action ∫p·dq = ∫v² dt; the code and this number are fixed.
 - Focus against shape (median r_min/r₀ of the ψ = 0.02–0.4 bundle): 0.350 (n = 2.2), 0.392 (4), 0.445 (20). Shape sets the resolution; nothing singles out n = 4 (paper B).
 - Not claimed: that the paths form a cone. The paths are computed; the cone surface drawn in the renders is the author's reading (height = radial action W₀ above the brim plane), not a result.
 

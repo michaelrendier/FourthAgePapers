@@ -4,11 +4,11 @@ curvature at the hilltop V''(0) = -mu^2 = -7843.8 GeV^2; at the brim V''(v) = 2 
 from the vev: tree level with the Z-scale couplings: m_W = 80.23 (PDG 80.37), m_Z = 91.56 (PDG 91.19), m_photon = 0.0 GeV, weak angle 28.80 deg (the brim circle carries the Goldstone/gauge freedom)
 
 == Paths: closest approach at E = 0 (the hilltop) vs launch angle, n = 4 (SM shape)
-  psi=0.01  r_min=0.0842  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.0841  action to closest approach W=0.9497
-  psi=0.05  r_min=0.1888  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.1880  action to closest approach W=0.8881
-  psi=0.10  r_min=0.2681  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.2657  action to closest approach W=0.8424
-  psi=0.20  r_min=0.3820  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.3748  action to closest approach W=0.7780
-  psi=0.40  r_min=0.5464  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.5247  action to closest approach W=0.6839
+  psi=0.01  r_min=0.0842  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.0841  action to closest approach W=0.8619
+  psi=0.05  r_min=0.1888  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.1880  action to closest approach W=0.8618
+  psi=0.10  r_min=0.2681  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.2657  action to closest approach W=0.8609
+  psi=0.20  r_min=0.3820  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.3748  action to closest approach W=0.8560
+  psi=0.40  r_min=0.5464  analytic sqrt(sin psi)((n-2)/n)^(1/4)=0.5247  action to closest approach W=0.8314
   radial path brim -> hilltop: W = 0.861929  (exact int_0^1 sqrt(4x^2-2x^4)dx = 0.861929)
 
 == Focusing against shape (median r_min of the psi bundle 0.02..0.4 at E=0)

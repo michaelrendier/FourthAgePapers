@@ -40,7 +40,7 @@ Reading: the data say "cored and saturating" and no more; the standing-wave halo
 
 ## 4. Stub list
 
-1. Repair `02_sparc_analysis.ipynb` (invalid JSON at line 243), rerun notebooks 00–02.
+1. Done 2026-11-17: `02_sparc_analysis.ipynb` repaired (its metadata block had been written as an escaped string, invalid JSON at line 243) and notebooks 00–02 executed with 0 errors; notebook 00 needed two compatibility fixes (an unused `sph_harm` import removed from scipy; a colour-array line colour replaced by a scatter). Notebook 02 reproduces the verdicts: P1 mean r_t/r_max rejected (p = 0.0013, deviation 0.093), Tully–Fisher log-slope 0.646 against the predicted 1.0, V_flat/V_bar,max mean 1.34 against 0.567.
 2. The wiki line "P1 confirmed against SPARC 97-galaxy sample" is unsupported by the record; correct it **only on the author's go**.
 3. Spin-2 radial functions; wave dispersion in the medium; DC14 profile; BTF and RAR scatter as secondary tests.
 4. Write the white-paper form with cold listings (each of 03–10 as one Listing).

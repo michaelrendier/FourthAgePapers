@@ -23,7 +23,7 @@ The CMB/BAO structure is the same resonance seen at cosmic scale; the instrument
 
 ## 2. Machinery
 
-`CMB_FractalBoundary/` (Planck 2018 and WMAP 9-year TT spectra in `data/`; summaries in `results/`), `CMB_PlasmaBoundary/` (Planck 70 GHz SEVEM maps; ptychography and fractal-flame fits). The four notebooks have **no executed cell**. Planck SMICA R3.00 (2.4 GB; I, Q, U and the masks) is planned for the full-sky and polarization side; the manifest is written, **not downloaded**.
+`CMB_FractalBoundary/` (Planck 2018 and WMAP 9-year TT spectra in `data/`; summaries in `results/`), `CMB_PlasmaBoundary/` (Planck 70 GHz SEVEM maps; ptychography and fractal-flame fits). Rerun 2026-11-17: the three `CMB_FractalBoundary` notebooks now execute (0 errors); `CMB_PlasmaBoundary` notebooks 00, 01 and 03 execute, notebook 02 (the ptychography itself) **cannot**, because it reads `path/to/planck_sevem_070_1024.fits`, a placeholder, and no Planck 70 GHz map is on disk. Planck SMICA R3.00 (2.4 GB; I, Q, U and the masks) is planned for the full-sky and polarization side; the manifest is written, **not downloaded**.
 
 ## 3. Results as recorded (`:CALCULATED` by the scripts that wrote them; **not reproduced in this pass**)
 
@@ -35,9 +35,21 @@ The CMB/BAO structure is the same resonance seen at cosmic scale; the instrument
 
 Fractal-flame ptychography (Planck 70 GHz) gives D_f = 1.973 ± 0.013 (30° fields) against the prediction φ = 1.618: the prediction **fails** at this field size; WMAP 2.011 ± 0.003. BAO: the sound speed c/√3 = 0.5774 c; Ω_ZS = 0.5671 is 1.8 % below it (ratio 0.9823, `:CALCULATED` in `papers/code/H_constants.py`). The two are different numbers; the closeness is noted, not used.
 
+## 3b. The five predictions, rerun (`:CALCULATED`, `CMB_FractalBoundary/02_data_analysis.ipynb`, 2026-11-17)
+
+| # | Prediction | Measured | Notebook verdict and its threshold |
+|---|---|---|---|
+| P1 | D_f = φ − 1 = 0.6180 | 0.6091 (err 0.0089) | ✓ if err < 0.02 |
+| P2 | ℓ*_Planck / ℓ*_WMAP = 2.000 | 2.078 (err 0.078) | ✓ if err < 0.1 |
+| P3 | C_ℓ*(WMAP) < 0 | −1.605e-3 | ✓ |
+| P4 | opposition peak at ℓ = 2 | ℓ = 2 | ✓ |
+| P5 | ePIE converges in < 50 iterations | 31 | ✓ |
+
+All five reproduce as written. Reading: the thresholds (0.02 and 0.1) are the notebook's own and were not fixed by a stated error budget; P2's 3.9 % miss passes only under the 0.1 absolute tolerance. P1 here is a one-dimensional DFA exponent; the two-dimensional ptychography of `CMB_PlasmaBoundary` gives D_f from 1.36 to 2.01 depending on the field of view (Planck 1.973 at 30°, 1.476 at 3°): it equals φ only near 7° and **fails** the constant-D_f prediction (ΔD_f ≈ 0.7), while Planck and WMAP agree within 2σ at every scale and the structure is filamentary. The 1-D and 2-D statements are different quantities; no relation between them is derived here.
+
 ## 4. Stub list
 
-1. Execute the four CMB notebooks; rerun the five "confirmed" predictions (needs the author's go) and record what holds.
+1. Done above for the five predictions. Still needed: the Planck 70 GHz SEVEM map (not on disk) to rerun the ptychography; state an error budget before the thresholds are quoted again.
 2. Download Planck SMICA R3.00 (destination to be chosen; the faulting drive is not used for writes).
 3. Euclid DR1-Foundation (released 2026-11-12, about 1900 deg², no polarimeter): footprint check against the Crab and the chosen Einstein crosses.
 4. Reconcile the CMB trio (FractalBoundary, PlasmaBoundary, the Witch's Hat Part E): same object, three drafts; state the difference in each README.

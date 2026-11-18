@@ -7,7 +7,10 @@ ln10 = math.log(10)
 dstar = omega/ln10
 print("d* = Omega/ln10 = %.12f ; d* ln10 = %.12f" % (dstar, dstar*ln10))
 spec = 0.24600
-print("d*_spec (measured) = %.5f ; gap = %.12f ; 1/(1000 sqrt2) = %.12f" % (spec, dstar - spec, 1/(1000*math.sqrt(2))))
+print("d*_spec (measured) = %.5f" % spec)
+print("gap in d* units  d* - d*_spec            = %.12f" % (dstar - spec))
+print("gap in ln10 units Omega - d*_spec ln10   = %.12f ; /ln10 = %.12f" % (omega - spec*ln10, (omega - spec*ln10)/ln10))
+print("1/(1000 sqrt2) = %.12f (differs from the ln10-unit gap by %.1e: the 'closeness' is 0.03 percent, not an identity)" % (1/(1000*math.sqrt(2)), abs(omega - spec*ln10 - 1/(1000*math.sqrt(2)))))
 X = math.exp(omega)
 print("X* = e^Omega = %.6f = 1/Omega = %.6f ; log10 X* = %.9f = d*" % (X, 1/omega, math.log10(X)))
 print("c_s/c = 1/sqrt3 = %.6f ; Omega/(1/sqrt3) = %.4f" % (1/math.sqrt(3), omega*math.sqrt(3)))

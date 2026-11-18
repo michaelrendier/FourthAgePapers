@@ -1,0 +1,64 @@
+== Sedenion: 15 exact circles and the zero-divisor circles  [ESTABLISHED]  source: ValaQuenta/modules/box_kite; tier8_sedenion; FourthAgePapers/TheInterface/02_sedenion_battery.py
+   asked: how many circles does the sedenion hold, and which pairs annihilate?
+  to:
+    ok: True
+    residual: 2.220446049250313e-16
+    axes: 15
+    zero_divisor_circles: 84
+    transform: none: e_k² = −1 for every axis, so exp(θ e_k) is a circle in every imaginary direction; a zero divisor (e_a ± e_{b+8})/√2 squares to −1 too
+  from:
+    ok: True
+    residual: 0.0
+    annihilating_ordered_pairs: 336
+    random_circle_point_pairs_with_zero_product: 0/300
+    fibre: two circle points multiply to zero only at the quarter-turn points of annihilating zero-divisor circles (336 ordered pairs); a generic pair of circle points does not
+== Box-kite as spectral emitter and interpreter (L_d lines, nullspace read-back)  [ESTABLISHED]  source: ValaQuenta/modules/box_kite; tier8_sedenion
+   asked: what does a boxkite sound like, and can it tell kites apart?
+  to:
+    ok: True
+    residual: 1.1102230246251565e-16
+    transform: the number d/|d| is a circle (84 zero-divisor circles); its operator L_d is not: its flow carries two incommensurate lines (ratio √2), a torus, not a circle
+    operator_flow_is_a_circle: False
+    lines: [{'count': 84, 'lines': {0.0: 4, 1.414214: 8, 2.0: 4}}]
+    flow_frequency_ratio: 1.4142131247463254
+  from:
+    ok: True
+    residual: 0.0
+    fibre: the line multiplicities (4, 8, 4 at 0, √2, 2) say 'zero divisor' and give |d|²; they do not say which kite (one signature for all 84). The nullspace of L_d (its eigenvectors) gives the 4 annihilating partners and so the kite: 84/84
+== Hypersphere S^n and the n-ball (S^15 is the sedenion's unit sphere)  [ESTABLISHED]  source: ValaQuenta/modules/spherical; FourthAgePapers/NBallTransformer
+   asked: is S^15, the sedenion's unit sphere, a group of rotations?
+  to:
+    ok: True
+    residual: 1.3100631690576847e-14
+    great_circle_residual_by_ambient_dim:
+      2: 1.3100631690576847e-14
+      4: 5.551115123125783e-16
+      8: 4.440892098500626e-16
+      16: 3.3306690738754696e-16
+      32: 3.3306690738754696e-16
+    transform: the great circle through p, q: cos θ·p + sin θ·q′ (q′ = q made orthogonal to p); a circle in every dimension
+    norm_defect_of_unit_products:
+      2: 3.3306690738754696e-16
+      4: 4.440892098500626e-16
+      8: 4.440892098500626e-16
+      16: 0.3657449398242051
+    n_ball:
+      peak_volume_dim: 5
+      peak_area_dim: 7
+      V_16: 0.23533063035889312
+      recursion_residual: 8.881784197001252e-16
+  from:
+    ok: True
+    residual: 0.0
+    fibre: a circle in R^{n+1} is a 2-plane through the origin plus a start point: the Grassmannian Gr(2, n+1) has dimension 2(n−1); for the sedenion (n = 15) that is 28, and the point on the circle one more
+    note: |ab| = |a||b| holds for dim 2, 4, 8 (S¹, S³, S⁷) to 1e-15 and fails for dim 16 (max defect measured above): S^15 is a sphere of circles but not a group
+== Hopf fibre (S³ → S², fibres are circles)  [ESTABLISHED]  source: GenerationalLineage/engine/toolsets/scale.py
+   asked: what is the circle fibre structure?
+  to:
+    ok: True
+    residual: 4.440892098500626e-16
+    transform: the fibre of a point of S² is {e^{iφ}(z₁,z₂)}: one U(1) orbit
+  from:
+    ok: True
+    residual: 0.0
+    fibre: a point of S² gives a circle up to the choice of starting point (a section): U(1)-torsor

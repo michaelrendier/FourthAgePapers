@@ -17,6 +17,8 @@
 
 [ ] NegatingUncertainty — Heisenberg uncertainty read as two projections of one motion (motion = 0 point, motion > 0 circle); stub, predictions P1–P7 pre-registered, engine and notebooks run 2026-11-17 (P1,2,3,5,7 hold; P4 second clause corrected; P6 helium fails); open: derive the minimum circle without [x,p]=iħ. See NegatingUncertainty/TODO.md.
 
+[ ] BoxkiteHyperGyroscope — the boxkite and the hyper-gyroscopic virtual action potential particles (eight Witch's Hats on four hyper axes, inverted partners, 16) as variations of the sedenion; bracketing and firing-order manipulation of each. Stub, Ask Holcus answers and predictions HG1–HG4 registered 2026-11-17, nothing tested; destined for SedenionSpectralRelativity. See BoxkiteHyperGyroscope/TODO.md.
+
 ## Active
 
 [ ] HyperindexingSystem — "The Hyperindexing System: Data With No Physical

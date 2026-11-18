@@ -103,3 +103,31 @@ if __name__ == "__main__":
         psi = norm(hermite_state(n, x), dx); phi = fourier_pair(psi, x, dx)
         print("  n=%d  max error %.2e" % (n, abs(phi - (-1j)**n*psi).max()))
     print("P6 liquid helium-4:", {k: round(v, 3) for k, v in helium_estimates().items()})
+
+
+# ================================================================ Ask-Holcus tests (HP1 - HP4); predictions in 01_holcus_asks.ipynb
+def hp1_other_hamiltonian(N=1200, L=11.0, nstates=6):
+    """HP1: eigenstates of H = (p^2 + x^2)^2 / 4 (a different f of the same circle) against the oscillator's psi_n, by finite differences."""
+    x = np.linspace(-L, L, N); dx = x[1] - x[0]
+    A = np.diag(2/dx**2 + x**2) + np.diag(-np.ones(N - 1)/dx**2, 1) + np.diag(-np.ones(N - 1)/dx**2, -1)      # p^2 + x^2
+    w, v = np.linalg.eigh(A@A/4); out = []
+    for n in range(nstates):
+        f = v[:, n]/np.sqrt(np.sum(v[:, n]**2)*dx); h = norm(hermite_state(n, x), dx)
+        ov = abs(np.sum(f*h)*dx); mx = np.sum(x*f**2)*dx
+        sx = np.sqrt(np.sum((x - mx)**2*f**2)*dx); sp = np.sqrt(np.sum(np.gradient(f, dx)**2)*dx)
+        out.append({"n": n, "E": w[n], "E_expected_(n+1/2)^2": (n + 0.5)**2, "overlap": ov, "sigma_x_sigma_p": sx*sp, "target": n + 0.5})
+    return out
+
+def hp2_cell_fit(gammas, emin=100.0, emax=3500.0, points=400):
+    """HP2: fit the minimum phase-space cell c (cell = c h) in N_c(E) = (E/2 pi)(ln(E/(2 pi c)) - 1) + c to the true zero count of zeta.
+    drift = N_true - (E/2pi)(ln(E/2pi) - 1) is linear in E with slope -ln(c)/2pi."""
+    g = np.sort(np.asarray(gammas, float)); E = np.linspace(emin, min(emax, g[-1] - 1), points)
+    N = np.searchsorted(g, E); drift = N - (E/(2*pi))*(np.log(E/(2*pi)) - 1)
+    b, a = np.polyfit(E, drift, 1)
+    return {"c": float(np.exp(-2*pi*b)), "slope": float(b), "intercept": float(a), "n_zeros": len(g),
+            "drift_excluded_c2": -np.log(2)/(2*pi), "drift_excluded_chalf": np.log(2)/(2*pi), "residual_rms": float(np.std(drift - (a + b*E)))}
+
+def hp4_orbit_area(E, n=100001):
+    t = np.linspace(0, 2*pi, n, endpoint=False); r = np.sqrt(2*E)
+    xs, ps = r*np.cos(t), -r*np.sin(t)
+    return 0.5*abs(np.sum(xs*np.roll(ps, -1) - ps*np.roll(xs, -1)))     # shoelace area of the sampled orbit, = oint p dx

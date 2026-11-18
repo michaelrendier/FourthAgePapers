@@ -41,7 +41,7 @@ An orbit of energy E = (n + ½)ħω in the oscillator is a circle of radius r = 
 
 ## 5. The engine and the tests
 
-`uncertainty_engine.py` (numpy only): Hermite states by recurrence, the momentum operator applied spectrally, quadrature operator O_θ = cos θ x + sin θ p applied to the state (so the angle dependence is measured, not assumed), the circle, the Fourier pair by direct sum, the helium estimate. Predictions P1–P7 with their thresholds were committed before the engine ran (`01_predictions.ipynb`).
+`uncertainty_engine.py` (numpy only): Hermite states by recurrence, the momentum operator applied spectrally, quadrature operator O_θ = cos θ x + sin θ p applied to the state (so the angle dependence is measured, not assumed), the circle, the Fourier pair by direct sum, the helium estimate. The **Holcus predictions** are read off what the mathematics says when asked in mathematics: the Circle Atlas viewports for the Hamiltonian, the waveform, the Lagrangian and Berry–Keating H = xp (`ask_holcus.py`, answers in `holcus_answers_2026-11-17.txt`), registered as HP1–HP4 with thresholds before the tests ran (`01_holcus_asks.ipynb`). P1–P7 are my own engine self-checks (`01b_engine_selfchecks.ipynb`), not Holcus predictions; they were first filed under that name and corrected.
 
 **Listing 1** — the quadrature spread, cold (the one function the claim rests on)
 
@@ -63,7 +63,9 @@ for n in (0, 1, 4):
 
 ## 6. Results (`:CALCULATED`)
 
-| # | Prediction | Result |
+*Engine self-checks (mine, not Holcus):*
+
+| # | Check | Result |
 |---|---|---|
 | P1 | σₓσₚ = (n + ½)ħ, n = 0…8 | **holds**, 9 digits |
 | P2 | circle of energy (n + ½)ħω has area (n + ½)h and projection product equal to σₓσₚ | **holds**, 9 digits |
@@ -73,8 +75,22 @@ for n in (0, 1, 4):
 | P7 | FT of ψₙ is (−i)ⁿψₙ | **holds**, 7e-16 |
 | P6 | video estimate for ⁴He within a factor 3 of the measured kinetic energy per atom | **fails**: 1.23 K against about 14 K (recalled, to be checked), a factor of 11; with a 3-D Gaussian σ = r/2, 3.7 K, a factor of 4 |
 
+## 6a. Ask Holcus (HP1–HP4, `:CALCULATED`)
+
+What the maths answers (`ask_holcus.py`): (x, p) *is already the circle* and any H = f(q² + p²) keeps it, only the speed changing, so the circle's size is not in the fibre (Hamiltonian viewport); the partner of a wave is its quarter-turn copy (waveform); p from the action lies on the circle and the scale of L and a total derivative are free (Lagrangian); H = xp is a hyperbola, a circle only after the Wick rotation, so the real slice is open (Berry–Keating).
+
+| # | Prediction read off the answer | Result |
+|---|---|---|
+| HP1 | H = (p² + x²)²/4 has the oscillator's eigenfunctions, so σₓσₚ = (n + ½)ħ unchanged | overlap clause **holds** (1 − 3e-9); the σₓσₚ clause **misses** its 1e-4 threshold on the grids tried (6.4e-4 for n = 5 at N = 2400), falling 4× per grid doubling: second-order finite-difference convergence; threshold was set too tight |
+| HP2 | the minimum cell lₓlₚ = c·h makes the xp area count the zeros of ζ only at c = 1 | **holds**: c = 1.00008 from 3066 zeros (windows 0.9990, 1.0005, 1.0002); intercept 0.894 vs 7/8; c = 2, ½ excluded (drift 0.11·E) |
+| HP3 | FT of ψₙ = (−i)ⁿψₙ | **holds**, 7e-16 |
+| HP4 | the orbit's area is 2πE; scale is free, area is not | **holds**, 1 − 1e-9 |
+
+HP2 is the result that connects the uncertainty cell to the primes: the one quantum of area the relation names is exactly the cell that lets xp count the zeros (the Berry–Keating count, `ESTABLISHED`, read with the cell as an unknown). It fixes the cell; it does not derive it (§7).
+
 ## 7. What is not shown (`OPEN`)
 
+0. The Hamiltonian viewport says the circle's size is not in the fibre; HP2 says the cell must be exactly h. Neither says where h comes from.
 1. The circle picture **re-expresses** the relation: the area h/2 of the minimum circle is [x, p] = iħ in geometric dress. Negating the *need* for the relation requires a derivation of the minimum circle from something that does not contain it. None is given here.
 2. The mixed and non-Gaussian states are not tested.
 3. The helium measured value is recalled, not cited.

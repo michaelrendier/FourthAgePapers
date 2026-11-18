@@ -60,6 +60,10 @@ Results:
 
 Next: the same bundle in the Jacobi metric with the real L_(I|O) weighting, and an amplitude (not ray) version, to see whether any n is selected.
 
+## 2c. The simulator (2026-11-17)
+
+`WitchesHat/simulator/` maps the established maths into one program: the Standard-Model Higgs hat with measured m_h and v (λ = 0.12938, brim radius 246.22 GeV, V″(0) = −μ², V″(v) = m_h² checked), Schrödinger m = 0 ring states (ground state on the brim, r = 0.969 and 0.991 at depths 40 and 400), the Maxwell + hat Nielsen–Olesen vortex (flux 6.283080 against 2π, Bogomolny residual 9.4e-5), and the classical path bundle from the brim at E = 0 with its abbreviated action (radial brim → hilltop W = 0.861929, exact and numerical agree). The author's cone of dynamic action is drawn on top and labelled `THEORETICAL`. Renders (Blender, `renders_v3/`) and the README are in that directory; the method is the `spatial-simulation` skill.
+
 ## 3. Results (`:CALCULATED`)
 
 - The transform pair is exact to machine precision on a periodic box once the k = 0 mode is set to zero. That degenerate point is where the mean convergence is unmeasurable (the mass-sheet degeneracy), and treating it as a stated boundary, not a patch, is the module's "boundary role" (`ESTABLISHED` method, author's naming).

@@ -315,3 +315,7 @@ The infographic presents an effective dimensionality curve: Planck scale ≈ 2, 
 *Addendum IV — Ainulindalë Conjecture*  
 *Author: O Captain My Captain*  
 *Updated: 2026-05-07 (§VI–VII added from Gemini deep-research synthesis)*
+
+## Update 2026-11-19 (c)
+
+The infographic's "Planck scale ≈ 2" is a position on a scale axis whose origin is a unit-system choice: the four Planck constants (c, G, ħ, k_B) generate an index-2 sublattice of the SI exponent lattice (determinant −2), and Stoney units differ from Planck by exactly √α. Only dimensionless ratios between scales are physical; see `Ainulindale/wiki/142_units_flattening_and_emergence.md` §3.

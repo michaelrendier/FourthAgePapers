@@ -24,3 +24,7 @@ Source of the starting point: Veritasium, *I finally saw quantum physics with my
 ## Standing rules that apply
 
 Mainstream models only for every test (no framework constants); the Noether-framed papers stay as written; Ĥ_RB is the maths name, 0_RB is VAPMIP/Monad-only; failed results stay in the paper; one claim only.
+
+## Update 2026-11-19 (c)
+
+ħ emergence on the hat (the exact quantum thresholds follow the classical closed-loop action, ħ_n = W_total/(π(n + γ)), γ ≈ 0.622 measured) and what ħ = 1 flattens are recorded in `Ainulindale/wiki/141_hbar_from_the_hat.md` and `Ainulindale/wiki/142_units_flattening_and_emergence.md`; the paper's draft carries the notes (§ Update 2026-11-19 (c)). The relation is unchanged: it is re-expressed, not negated, until a derivation of the minimum circle exists.

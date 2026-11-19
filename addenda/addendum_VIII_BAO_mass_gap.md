@@ -203,3 +203,7 @@ BAO is "the first acoustic mode above the ground state" (§I). Sharpened: it is 
 *Collaborator: Claude Sonnet 4.6 (Anthropic)*  
 *Date: 2026-05-17*  
 *Status: ESTABLISHED — closes Addendum IV §III*
+
+## Update 2026-11-19 (c): a number to correct
+
+Objection 1 states Λ_QCD / Λ_UV = 200 MeV / M_Planck ~ 10⁻¹⁷. Computed: 0.2 GeV / 1.221×10¹⁹ GeV = **1.6×10⁻²⁰** (8.2×10⁻²⁰ for the reduced Planck mass 2.435×10¹⁸ GeV). A ratio of 10⁻¹⁷ corresponds to an upper scale of 2×10¹⁶ GeV, the grand-unification scale, not the Planck mass. The argument (the mass gap is a dimensionless ratio of the infrared scale to the ultraviolet cutoff) is unchanged; the quoted number should read about 10⁻²⁰ for the Planck mass. The Planck mass is also an origin chosen by a unit system, which makes the ratio a dimensionless distance on the scale axis (`Ainulindale/wiki/142_units_flattening_and_emergence.md` §3, §5).

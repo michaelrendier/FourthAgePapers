@@ -433,3 +433,7 @@ The equations are hers.
 ## Update 2026-11-19: cross-reference to the hat engine
 
 "The Witches Hat always has a hole at its tip" (the contracted-phase section) is a statement about this paper's bell (minimum half-angle 13.82°). In the Witch's Hat engine the potential's hilltop is smooth, and the apex of the action cone at E = 0 is rounded (momentum zero there); for E > 0 it is a point with slope √(2E), standing 0.2189 depth-units above the hilltop at E = 0 (`FourthAgePapers/WitchesHat/README.md` §8). These are different constructions; the two uses of "tip" are not reconciled here (`OPEN`).
+
+## Update 2026-11-19 (c): the GAP as the mismatch of two readings of one step
+
+d* and Ω_ZS are one step of the scale axis in two log bases (d* · ln 10 = Ω; `Ainulindale/wiki/142_units_flattening_and_emergence.md` §5). The GAP of §"Ω_ZS − d*·log 10" = 7.073575×10⁻⁴ is then the mismatch between two *readings* of that step (the measured spectral 0.24600 against the exact Ω/ln 10 = 0.246307): the same shape as a constant emerging as the quotient of two flattenings (the ESU/EMU ratio giving c). `INTERPRETATION`; the GAP itself is arithmetic and unchanged.

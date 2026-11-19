@@ -11,3 +11,9 @@
 - [ ] Mixed and non-Gaussian states; Hardy / Beurling uncertainty (a function and its transform cannot both decay fast).
 - [ ] Helium: use a measured zero-point kinetic energy (neutron scattering) and a better cage radius than the mean spacing; check the recalled constants.
 - [ ] Wiki page (last), PDF mirror to `SpaceClaude/FinalPapers/FourthAgePapers/`.
+
+# Update 2026-11-19 (c)
+- [ ] Re-register P2 with the general offset: area = 2πħ(n + γ); γ = ½ for the oscillator, 0.622 … 0.6235 measured for the hat's separatrix orbit (not derived).
+- [ ] Route to the "minimum circle": name the native-space loop whose action is the cell (the hat supplies closed-form actions; `ValaQuenta/modules/witches_hat/semiclassical.py`). Prediction-first: register before computing.
+- [ ] Time–energy pair: add t = ∂W/∂E (wiki 140) as the second projection of the same motion.
+- [ ] The Flattening Syndrome link in the earlier TODO line is now concrete: see `Ainulindale/wiki/142_units_flattening_and_emergence.md` §6 (what ħ = 1, c = 1, k_B = 1 each collapse).

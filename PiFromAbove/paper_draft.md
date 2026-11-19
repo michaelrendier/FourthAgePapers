@@ -309,3 +309,7 @@ Zero free parameters.
 ## Update 2026-11-19: two different swaps
 
 "The Penrose swap" in §1 is the exchange of the two halves of a twistor, (ω^α, π_α′) → (π_α′, ω^α). The **time–length swap** defined in `Ainulindale/wiki/140_length_and_time.md` (the sign change of the conversion field v² and the map ρ → it relating Penrose's arctan to the Smith-chart tanh) is a different operation. They are not claimed equivalent here; whether the twistor swap and ρ → it are related is `OPEN`.
+
+## Update 2026-11-19 (c): natural units are a flattening
+
+The CMB total power "π⁴/15 (in natural units)" sets k_B = ħ = c = 1. The number π⁴/15 is the dimensionless integral ∫x³/(eˣ − 1)dx (π emerging from the integral); restoring the units reintroduces the constants that were set to 1 (σ_SB = (π²/60)k⁴/(ħ³c²)). What a unit choice collapses (length–time, action, temperature–energy) and what stays visible after the collapse are set out in `Ainulindale/wiki/142_units_flattening_and_emergence.md` §6. No claim here that π and a unit constant are related.

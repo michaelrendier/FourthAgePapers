@@ -8,7 +8,7 @@ The paths come from the ValaQuenta engines; nothing is aimed or designed in this
     L_dynamic   the original (wiki 51): the hat moves, the particle exchanges energy dE = integral dV/dt dt with it
 
 Run with the ValaQuenta venv:  ~/Projects/ThePlace/ValaQuenta/.venv/bin/python render_lagrangian_svgs.py
-Writes lagrangian_svgs/*.svg and lagrangian_svgs/index.html next to this file.
+Writes ../papers/figures/lagrangians/v1.0/WitchesHat_Lagrangians_v1.0_*.svg and index.html (version 1.0; version 2.0 is render_lagrangians_v2.py).
 """
 import math
 import os
@@ -21,9 +21,11 @@ from ValaQuenta.modules.witches_hat import action as AC          # noqa: E402
 from ValaQuenta.modules.witches_hat import maths as W            # noqa: E402
 from ValaQuenta.modules.lagrangian_sm import maths as S          # noqa: E402
 
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "lagrangian_svgs")
+VERSION = "v1.0"
+OUT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "papers", "figures", "lagrangians", VERSION))      # figures live with the paper; v2.0 is render_lagrangians_v2.py
 BG, FG, MUTED = "#0b1220", "#e6edf3", "#8b98a9"
 GOLD, WHITE = "#f2cc60", "#ffffff"
+CHUNKED = False                                                   # v2 sets True: polyline chunks instead of one element per sample
 R_EXT = 1.6                                                       # radial extent of the drawn hat (brim radius = 1)
 
 
@@ -137,6 +139,16 @@ def render_panel(sc, view, ox, oy, pw, ph):
                 prims.append((50.0, '<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="%.1f" stroke-linecap="round"%s/>' % (X(u[i]), Y(v[i]), X(u[i + 1]), Y(v[i + 1]), col, w_, (' stroke-dasharray="%s"' % dash) if dash else "")))
     for ln in sc.lines:
         P = ln["p"]; u, v, d = project(P, az, el)
+        if CHUNKED:                                                            # v2: each path is a few short coloured polylines, not one element per sample (10x smaller files)
+            ch = max(3, len(P)//14)
+            for i in range(0, len(P) - 1, ch):
+                j = min(i + ch, len(P) - 1)
+                if np.isnan(P[i:j + 1]).any() or j <= i: continue
+                col = ln["c"][(i + j)//2] if isinstance(ln["c"], list) else ln["c"]; dash = ' stroke-dasharray="%s"' % ln["d"] if ln["d"] else ""
+                pts = " ".join("%.1f,%.1f" % (X(u[k]), Y(v[k])) for k in range(i, j + 1)); dd = float(np.mean(d[i:j + 1])) + 0.03
+                if ln["halo"]: prims.append((dd, '<polyline points="%s" fill="none" stroke="#0b1220" stroke-opacity="0.8" stroke-width="%.1f" stroke-linecap="round"/>' % (pts, ln["w"] + 2.2)))
+                prims.append((dd + 0.001, '<polyline points="%s" fill="none" stroke="%s" stroke-opacity="%.2f" stroke-width="%.1f" stroke-linecap="round"%s/>' % (pts, col, ln["o"], ln["w"], dash)))
+            continue
         step = max(1, len(P)//90)
         idx = list(range(0, len(P) - 1, step))
         for i in idx:
@@ -150,6 +162,8 @@ def render_panel(sc, view, ox, oy, pw, ph):
             prims.append((dd + 0.001, '<line x1="%.1f" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-opacity="%.2f" stroke-width="%.1f" stroke-linecap="round"%s/>' % (X(u[i]), Y(v[i]), X(u[j]), Y(v[j]), col, ln["o"], ln["w"], dash)))
     for pt in sc.points:
         u, v, d = project(pt["p"], az, el); prims.append((d[0] + 0.05, '<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s" stroke="#0b1220" stroke-width="1.2"/>' % (X(u[0]), Y(v[0]), pt["r"], pt["c"])))
+    for lb in getattr(sc, "labels", []):                                        # optional text labels (v2): world point + text
+        u, v, d = project(lb["p"], az, el); prims.append((d[0] + 0.5, '<text x="%.1f" y="%.1f" fill="%s" font-size="12" font-weight="600" paint-order="stroke" stroke="#0b1220" stroke-width="3">%s</text>' % (X(u[0]) + 8, Y(v[0]) - 6, lb.get("c", FG), lb["t"])))
     prims.sort(key=lambda t: t[0]); out += [p for _, p in prims]
     # gnomon
     gx, gy = ox + 34, oy + ph - 18
@@ -288,15 +302,15 @@ def context_svg():
     parts = sorted(parts, key=lambda t: t[1]); a.barh([p[0] for p in parts], [max(p[1], 1e-4) for p in parts], color=[p[2] for p in parts]); a.set_xscale("log"); a.set_xlabel("mass, GeV (log); in the SM mass = coupling to the hat × v")
     a.set_title("The spectrum: mass = coupling to the one hat × v (grey: ≈ 0)", fontsize=11)
     fig.suptitle("The Standard-Model context of the hat: particles, temperature, spectrum", color=FG, fontsize=17, fontweight="bold", y=0.995); fig.tight_layout(rect=(0, 0, 1, 0.97))
-    path = os.path.join(OUT, "sm_context.svg"); fig.savefig(path, facecolor=BG); plt.close(fig); return path
+    path = os.path.join(OUT, "WitchesHat_Lagrangians_v1.0_sm_context.svg"); fig.savefig(path, facecolor=BG); plt.close(fig); return path
 
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True); made = []
-    for name, fn in (("L_SM.svg", scene_sm), ("L_NN.svg", scene_nn), ("L_IO.svg", scene_lio), ("L_dynamic_original.svg", scene_dyn)):
+    for name, fn in (("WitchesHat_Lagrangians_v1.0_L_SM.svg", scene_sm), ("WitchesHat_Lagrangians_v1.0_L_NN.svg", scene_nn), ("WitchesHat_Lagrangians_v1.0_L_IO.svg", scene_lio), ("WitchesHat_Lagrangians_v1.0_L_dynamic_original.svg", scene_dyn)):
         made.append(write_svg(fn(), name)); print("wrote", made[-1], "%.0f KB" % (os.path.getsize(made[-1])/1024))
     made.append(context_svg()); print("wrote", made[-1])
     html = ['<!doctype html><meta charset="utf-8"><title>The Lagrangians on the Witch\'s Hat</title><body style="background:#0b1220;color:#e6edf3;font-family:Helvetica,Arial,sans-serif;margin:24px">',
-            "<h1>The Lagrangians on the Mexican hat</h1><p>Each SVG has four views: isometric, top, front, side. Brim in gold, hilltop in white.</p>"]
+            "<h1>The Lagrangians on the Mexican hat, v1.0 (drawn on the potential surface)</h1><p>Each SVG has four views: isometric, top, front, side. Brim in gold, hilltop in white.</p>"]
     for p in made: html.append('<h2>%s</h2><p><a style="color:#79c0ff" href="%s">%s</a></p><img src="%s" style="max-width:100%%">' % (os.path.basename(p)[:-4], os.path.basename(p), os.path.basename(p), os.path.basename(p)))
     open(os.path.join(OUT, "index.html"), "w").write("\n".join(html)); print("wrote", os.path.join(OUT, "index.html"))

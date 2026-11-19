@@ -44,3 +44,7 @@ all still to be written.
 - [ ] Notebooks: demonstrate ADD/SCALE/SIGN as the floor across at least
       two structurally different programming languages.
 - [ ] Wiki page (written last, per convention).
+
+## Update 2026-11-19 (outside this paper's claim; recorded for the Scale engine only)
+
+This paper deliberately carries no mathematics or physics framing. For the record of the engine behind it: the `ASS` word's orthogonal Smith charts, Γ_SCALE = tanh(½ ln s) ⟂ Γ_ADD = tanh(½ a) (`add_scale_sign.to_smith()`), are the tanh compactification of a log-length; Penrose's arctan of a time is the same map under ρ → it (identities to 3e-14), measured in `Ainulindale/wiki/140_length_and_time.md`. The Smith-chart circle pencils are orthogonal and parabolic (all through Γ = 1). The author calls this "gauge space" (the complete shape of scale); it is defined, with the Apollonian gasket and equation space, in the `spatial-simulation` skill, `references/spaces.md` §7–§8. The word "gauge" is not in `scale/maths.py`; the reading is the author's.

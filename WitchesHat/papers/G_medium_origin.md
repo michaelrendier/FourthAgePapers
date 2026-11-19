@@ -41,3 +41,7 @@ gravastar: shell a ≈ 2.002 M, photon sphere at 1.4985 × shell, de Sitter hori
 ## 4. References
 
 Mazur & Mottola (2004); Misner, Thorne & Wheeler (1973).
+
+## Update 2026-11-19
+
+The horizon reading (the horizon as the time distortion; we are on the interior side and exit through the white hole) is recorded as the author's `INTERPRETATION` in §11 of the parent `../README.md`, with what the engine measures (a simple zero of the conversion field is at infinite transit time and finite length) and what it does not test. This part still comes after all observational data sets have been evaluated.

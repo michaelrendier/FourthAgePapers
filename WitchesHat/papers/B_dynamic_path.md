@@ -80,3 +80,7 @@ Next: the same bundle in the Jacobi metric with the real L_(I|O) weighting, and 
 ## 5. References
 
 Kaiser & Squires (1993); Schneider, Ehlers & Falco (1992); Clowe et al. (2006).
+
+## Update 2026-11-19
+
+The original L_dynamic (Ainulindale wiki 51, 2026-06-12) is `L_standard + ∫ J_red · d(J_blue)/dt dλ` (a time-dependent background); L_(I|O) = ∫ J_red · J_blue ds (renamed 2026-06-17) is a different object whose integrand is the constant e^(−E). The hat in time, the moving hat and the energy exchange (dE = u·(v − v₀)), and the L_(I|O) functional evaluated on the whole bundle are in §§7–9 of the parent `../README.md`; the claim above that L_(I|O) is "L computed with the real metric" is a reading of the lensing case only.

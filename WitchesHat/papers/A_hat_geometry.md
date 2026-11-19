@@ -54,3 +54,7 @@ source r^0  -> image slope -6.00
 ## 5. References
 
 Hawking (1974); Hawking, Perry & Strominger (2016); Penrose (1965). Journal details to be checked against `Ainulindale/wiki/98_provenance_and_citations.md`.
+
+## Update 2026-11-19
+
+The hat's shape and its paths are now computed by `ValaQuenta/modules/witches_hat` (action cone, tip and sheets, §8 of the parent `../README.md`; figures `figures/lagrangians/v1.0` and `v2.0`). Parts of this draft predate that: the focus is a funnel (closest approach ∝ offset^0.504), not a point caustic; the tip of the action cone stands 0.2189 depth-units above the hilltop at E = 0. Failed results above are kept.

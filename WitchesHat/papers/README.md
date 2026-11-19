@@ -14,3 +14,5 @@ Each is a cs-paper-code-conventions draft: assistant note, Notation and Disambig
 | I Circle Atlas | `I_circle_atlas.md` | ValaQuenta `circle_atlas` | machinery paper for The Interface |
 | J Crab control, scaffolds | `J_crab_control_and_scaffolds.md` | `scaffolds/make_scaffold.py` | data in hand; Stokes maps not yet built |
 | F | dropped (author, 2026-11-17) | | Crawford / Navier–Stokes stays a notepad |
+
+**2026-11-19:** new material (the Standard-Model engine and Lagrangians, the action cone, the hat in time, length and time, the horizon reading, the spaces skill) is consolidated in the parent `../README.md` §§7–14, not as separate drafts. Versioned figures: `figures/lagrangians/` (v1.0, v2.0).

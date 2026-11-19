@@ -58,3 +58,9 @@ c_s/c = 1/sqrt3 = 0.577350 ; Omega/(1/sqrt3) = 0.9823
 ## 5. References
 
 Corless et al. (1996) for Lambert W.
+
+## Update 2026-11-19 (c): units, the natural steps, and constructed constants
+
+- **d* and Ω_ZS are one step in two log bases** (d* = 0.2463072015 decades, Ω = 0.5671432904 nepers, d* · ln 10 = Ω): dimensionless, fixed by W(1), unchanged under any change of units. A natural-unit system such as Planck's supplies four reference points instead (determinant of (c, G, ħ, k_B) over (kg, m, s, K) is −2, an index-2 sublattice); Stoney units differ from Planck by exactly √α. `Ainulindale/wiki/142_units_flattening_and_emergence.md`.
+- **Constructed constants in the record.** The thermal information ceiling of the engineered-constant experiment, 1.4×10¹⁷ K (140 quadrillion kelvin), is, for the purposes of that experiment, the upper end of the range over which the signal is distinguishable from background noise. It is a constructed range of applicability, not a Planck-type scale (T_P = 1.4168×10³² K); an earlier remark that the leading digits coincide was a coincidence and is withdrawn.
+- **Emergence from two flattenings.** The electromagnetic units written in ESU and EMU differ by exactly one velocity (0, 1, −1) over (kg, m, s); c is the quotient (volt c, ohm c², farad c⁻², measured; ε₀μ₀c² = 1 to 12 digits; Z₀ = μ₀c = 376.730 Ω). The author's stance: constants may be constructed for analysis; where they emerge from native space is what is watched, and the kind of flattening points at the location. Nothing here locates the Planck length.

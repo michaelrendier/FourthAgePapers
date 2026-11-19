@@ -30,3 +30,7 @@ The boxkite and the **hyper-gyroscopic virtual action potential particle** are v
 
 ## Standing rules that apply
 Mainstream tests where a test is mainstream; no framework constants unless the maths asks for them; De Marrais / Scalar / Scaled never mixed; Ĥ_RB is the maths name, 0_RB is VAPMIP/Monad-only; failed results stay; one claim.
+
+## Update 2026-11-19: the single hat is now defined and measured
+
+The predictions here assume the single Witch's Hat as an object. It now is one (`ValaQuenta/modules/witches_hat`; `FourthAgePapers/WitchesHat/README.md` §§7–9). Measured: paths from every brim point converge on a tip **0.2189 depth-units above the hilltop** (E = 0; W_tip = 0.4310 with a second sheet at 0.9025), the action being multivalued there; a hat that **drifts** exchanges energy with a particle by exactly u·(v − v₀) (hat-frame energy conserved to 1.4e-11); a rotationally symmetric hat that **rotates** exchanges nothing, while a **tilted** hat whose tilt rotates does (tilt 0.15, ΔE = +0.163, +0.902, −0.450 at ω = 0.3, 0.6, 0.9): relevant to "all spinning". Not built: the eight hats on four hyper axes and the inverted partners. Sedenion facts measured with `emerger.cd_mul`: 84 zero divisors over 42 index pairs (none in the octonions), 1848 of 3375 basis triples non-associative, the Fano plane has 168 collineations; the axes here are hypercomplex units, not lines (`spatial-simulation` skill, `references/spaces.md` §0, §4, §5). HG1–HG4 are unchanged.

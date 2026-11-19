@@ -289,3 +289,11 @@
 [ ] D_f = φ−1 from Three Faces: axiomatic form of the opposition constraint derivation.
 
 [ ] Adjoint drug criterion: B̂_drug = R̂_cancer† — formal construction from ZD signature.
+
+# Update 2026-11-19
+[ ] WitchesHat parent paper v0.2 — read sections 7–14 of `WitchesHat/README.md` with the author; write the introduction (problem and the way around it) only after that discussion.
+[ ] The tip distance (0.2189 depth-units at E = 0): dependence on E, tilt g, hat shape, unit convention; which is physical.
+[ ] Time–length swap: Eisenhart–Duval lift; static ↔ time-dependent swap-partner conjecture (the original L_dynamic as the swap image of the static hat); Smith z → 1/z against v → 1/v.
+[ ] Horizon reading (the horizon as the time distortion; we are inside at the end of the hole's life): which metric; the Penrose boundary; link to Part G.
+[ ] Papers updated 2026-11-19 with the measured L_NN/L_(I|O) corrections and the horizon/Smith–Penrose results: PhiSpiral (2), TheInterface, FastInverse, BoxkiteHyperGyroscope, Telperion, PiFromAbove; on their branches: DeSitterCavitation, EventHorizonCrossingSimulation, AddScaleSign.
+[ ] ScalarContextPropagation: NOT updated; to be discussed with the author first (it mentions the Smith chart and L_(I|O)).

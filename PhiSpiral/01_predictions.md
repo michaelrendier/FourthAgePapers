@@ -76,3 +76,7 @@ But proxy n* = 5.2096. Gap to 5.302 is 0.093. Not obviously exact.
 **Test:** Map each operator to a Noether current. Verify that the action integral ∫J_red·J_blue ds = L_(I|O) recovers the closure condition.
 
 **Status:** OPEN — deep, requires D-M paper level analysis
+
+## Update 2026-11-19: the test of the closure operator needs a path-dependent integrand
+
+The test above ("verify that the action integral ∫ J_red·J_blue ds = L_(I|O) recovers the closure condition") reduces, for the definition as written, to e^(−E) × arc length: the product J_red·J_blue is e^(−E) for every σ (measured; wiki 64 §2). A closure condition cannot come out of that integrand. Re-register the test with a path-dependent integrand (the original L_dynamic's time-dependent term, `L_standard + ∫ J_red · d(J_blue)/dt`, or a measured path) before running it. The registered text above is kept as written. Also: `L_dynamic` in older notes is the original object, not L_(I|O).

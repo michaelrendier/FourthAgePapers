@@ -213,3 +213,9 @@ The spring is not circular. The full rotation undershoots by (π−φ) ≈ 87°,
 ## Appendix — what in ContextPlease was used, and what ContextPlease is
 
 **ContextPlease** (`https://github.com/michaelrendier/ContextPlease`) is the *Manual Transmission Context Continuity* library: the versioned record that lets a new human or AI agent pick up a project without rediscovering it. Nothing in it is loaded automatically; whoever works chooses what to read. Used for this correction pass: the Fourth Age Protocol (`FOURTH_AGE_PROTOCOL.md`), the paper-writing conventions (`claude/skills/cs-paper-code-conventions/`) and the canonical notation (`claude/.clauderc_canonical_maths`).
+
+## Update 2026-11-19
+
+**Notation.** The action integral ∫ J_red·J_blue ds is `L_(I|O)` (renamed from `L_dynamic` on 2026-06-17); the original `L_dynamic` (Ainulindale wiki 51, 2026-06-12) is a different object, `L_standard + ∫ J_red · d(J_blue)/dt dλ`. Where this draft writes L_dynamic for the action integral (§ "three operators", and the precession insight ω_prec = (J_red + J_blue)/L_dynamic), read `L_(I|O)`.
+
+**Measured** (`ValaQuenta/modules/lagrangian_sm/compare.py`, `lio_integrand`; wiki 64 §2): with J_red = e^(−(1−σ)E) and J_blue = e^(−σE) the product is e^(−E) for every σ, so ∫ J_red·J_blue ds = e^(−E) × arc length. The integrand is flat in σ and cannot by itself carry a closure condition; what peaks at σ = ½ is min(J_red, J_blue). The correspondence of the three operators (O_E, O_M, O_C) with (J_red, J_blue, L_(I|O)) therefore stays `CONJECTURE`. See `FourthAgePapers/WitchesHat/README.md` §7 and §9.

@@ -17,6 +17,8 @@ The notebooks record the derivation. The wiki page is written last.
 
 **Branches.** The Witch's Hat family (parent register `WitchesHat/README.md`, `DM_GalacticCavity`, `CMB_*`, `Crawford_NavierStokes`, `WhiteHoleBang`) lives on the branch `witches-hat`; telescope data for it is under `/media/rendier/Telescope Data/`. `DM_GalacticCavity/data/` in the `main` working tree holds the SPARC and Gaia files the branch uses (untracked, kept). `TheInterface` (The Circle Atlas paper) and `TwinPrimeWheels` are on `main`.
 
+> **Update 2026-11-19.** The Witch's Hat parent paper (`WitchesHat/README.md`, branch `witches-hat`) is now draft v0.2: sections 7–14 consolidate the Standard-Model engine and Lagrangians, the action cone and its tip, the hat in time, length and time, the horizon reading and the spaces skill; versioned figures in `WitchesHat/papers/figures/lagrangians/` (v1.0, v2.0).
+
 ---
 
 ## Papers to Expect

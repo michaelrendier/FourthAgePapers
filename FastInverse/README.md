@@ -167,3 +167,7 @@ regime." One clean counterexample closes the paper's claim as stated.
 - [ ] Licensing section (see `ScalarContextPropagation/README.md §15`
       for the pattern).
 - [ ] Wiki page (written last, per convention).
+
+## Update 2026-11-19
+
+The Smith chart's Γ(s) = (s − 1)/(s + 1) equals tanh(½ ln s) (measured, 2e-16): a compactification of the log-length ln s. Penrose's arctan of a time and this tanh of a length are one map under ρ → it (to 3e-14), so the chart is a Penrose compactification with length and time exchanged (`Ainulindale/wiki/140_length_and_time.md`). The Mexican-hat potential is now an engine (`ValaQuenta/modules/witches_hat`, the Standard-Model quartic with its brim, hilltop and action cone: `FourthAgePapers/WitchesHat/README.md` §§7–8). Whether the **Apollonian gasket plays the role of that potential** is not tested by the engine and stays `OPEN`; the circle pencils of the Smith chart are orthogonal and parabolic (all through Γ = 1), measured.

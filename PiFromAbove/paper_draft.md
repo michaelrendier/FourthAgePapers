@@ -305,3 +305,7 @@ Zero free parameters.
 ## Appendix — what in ContextPlease was used, and what ContextPlease is
 
 **ContextPlease** (`https://github.com/michaelrendier/ContextPlease`) is the *Manual Transmission Context Continuity* library: the versioned record that lets a new human or AI agent pick up a project without rediscovering it. Nothing in it is loaded automatically; whoever works chooses what to read. Used for this correction pass: the Fourth Age Protocol (`FOURTH_AGE_PROTOCOL.md`), the paper-writing conventions (`claude/skills/cs-paper-code-conventions/`) and the canonical notation (`claude/.clauderc_canonical_maths`).
+
+## Update 2026-11-19: two different swaps
+
+"The Penrose swap" in §1 is the exchange of the two halves of a twistor, (ω^α, π_α′) → (π_α′, ω^α). The **time–length swap** defined in `Ainulindale/wiki/140_length_and_time.md` (the sign change of the conversion field v² and the map ρ → it relating Penrose's arctan to the Smith-chart tanh) is a different operation. They are not claimed equivalent here; whether the twistor swap and ρ → it are related is `OPEN`.

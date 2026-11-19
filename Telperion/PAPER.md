@@ -429,3 +429,7 @@ The equations are hers.
 ## Appendix — what in ContextPlease was used, and what ContextPlease is
 
 **ContextPlease** (`https://github.com/michaelrendier/ContextPlease`) is the *Manual Transmission Context Continuity* library: the versioned record that lets a new human or AI agent pick up a project without rediscovering it. Nothing in it is loaded automatically; whoever works chooses what to read. Used for this correction pass: the Fourth Age Protocol (`FOURTH_AGE_PROTOCOL.md`), the paper-writing conventions (`claude/skills/cs-paper-code-conventions/`) and the canonical notation (`claude/.clauderc_canonical_maths`).
+
+## Update 2026-11-19: cross-reference to the hat engine
+
+"The Witches Hat always has a hole at its tip" (the contracted-phase section) is a statement about this paper's bell (minimum half-angle 13.82°). In the Witch's Hat engine the potential's hilltop is smooth, and the apex of the action cone at E = 0 is rounded (momentum zero there); for E > 0 it is a point with slope √(2E), standing 0.2189 depth-units above the hilltop at E = 0 (`FourthAgePapers/WitchesHat/README.md` §8). These are different constructions; the two uses of "tip" are not reconciled here (`OPEN`).

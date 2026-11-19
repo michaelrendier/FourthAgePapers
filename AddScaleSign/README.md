@@ -48,3 +48,7 @@ all still to be written.
 ## Update 2026-11-19 (outside this paper's claim; recorded for the Scale engine only)
 
 This paper deliberately carries no mathematics or physics framing. For the record of the engine behind it: the `ASS` word's orthogonal Smith charts, Γ_SCALE = tanh(½ ln s) ⟂ Γ_ADD = tanh(½ a) (`add_scale_sign.to_smith()`), are the tanh compactification of a log-length; Penrose's arctan of a time is the same map under ρ → it (identities to 3e-14), measured in `Ainulindale/wiki/140_length_and_time.md`. The Smith-chart circle pencils are orthogonal and parabolic (all through Γ = 1). The author calls this "gauge space" (the complete shape of scale); it is defined, with the Apollonian gasket and equation space, in the `spatial-simulation` skill, `references/spaces.md` §7–§8. The word "gauge" is not in `scale/maths.py`; the reading is the author's.
+
+## Update 2026-11-19 (c) (outside this paper's claim; recorded for the Scale engine only)
+
+The Scale engine's Γ_SCALE = tanh(½ ln s) has a reference: s is measured against a chosen anchor (the Smith chart's z₀). That anchor is a constructed unit; where such a reference emerges from the native space is the open question, and the kind of flattening a unit choice performs is catalogued in `Ainulindale/wiki/142_units_flattening_and_emergence.md`. The orthogonal pencils and the ESU/EMU case (c as the quotient of two eliminations of one axis) are there too.

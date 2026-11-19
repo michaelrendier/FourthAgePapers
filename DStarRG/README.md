@@ -263,3 +263,7 @@ manifold, and read the limit.
   between the *measured* fifth d* and this engine's *converged* fourth.
 - **Cavitation Cascade** — the Big Bang as a phase transition at σ=½; this
   engine is the RG flow into that transition.
+
+## Update 2026-11-19 (c): the Translator face as two bases of one step
+
+The Translator face (d*_RG · ln 10 → Ω_ZS) is the statement that d* and Ω are one step of the scale axis u = ln x in two log bases (decades and nepers): 0.2463072015 decades = 0.5671432904 nepers. A natural-unit system (Planck, Stoney) supplies reference points instead, not steps; the lattice arithmetic (Planck: determinant −2; Stoney/Planck = √α) and the electromagnetic quotient (c from ESU against EMU) are in `Ainulindale/wiki/142_units_flattening_and_emergence.md`. The measured spectral 0.24600 against the exact 0.246307 leaves GAP = 7.073575×10⁻⁴: the mismatch of two readings of one step. `INTERPRETATION`; the faces and the open RG value are unchanged.

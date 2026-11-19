@@ -169,3 +169,12 @@ Kept separate from the established physics above on purpose.
       the pattern) — established GR is not proprietary; the `0_RB`/
       `L_(I|O)` construction method is.
 - [ ] Wiki page (written last, per convention).
+
+## Update 2026-11-19: requirements added from measurement (still a stub; nothing here is built)
+
+1. **The clock to fly the camera by is the transit ruler.** With a conversion field v(r) (the coordinate speed of light, f = 1 − 2M/r for Schwarzschild; √(2(E − V)) in the Witch's Hat), the transit length ρ = ∫dr/v is the tortoise coordinate; in (ρ, t) every radial null path is a 45° line.
+2. **The horizon is a simple zero of v:** infinite transit time, finite length. Measured: Schwarzschild M = 1, dv/dr = 0.5000 (ρ ≈ 2M ln(r − 2M)); de Sitter static patch ℓ = 1, dv/dr = 2.0000; the Standard-Model hat's E = 0 hilltop, 1.0000. A turning point is a square-root zero at finite transit time. The simulation must show both, and must say which one a scene contains. (`ValaQuenta/modules/witches_hat/length_time.py`, `zero_of_the_conversion_field`; `Ainulindale/wiki/140_length_and_time.md`.)
+3. **Two rulers.** The path of least action and the path of least time between the same two points differ unless v is constant (35 % time excess in the hat, measured); a crossing simulation must declare which one it draws.
+4. **The compactified picture:** Penrose's arctan of a time and the Smith chart's tanh of a log-length are one map under ρ → it (to 3e-14); the boundary points (i⁺ for the E = 0 hilltop) are where infinite transit time sits.
+5. **The author's reading (2026-11-19, `INTERPRETATION`):** the horizon is the time distortion and an exterior space; we are on the interior side at the end of the hole's life and exit through the white hole (`FourthAgePapers/WitchesHat/README.md` §11). A crossing simulation is where this could be made concrete; it is not assumed here.
+6. L_(I|O) as a "crossing operator": its integrand is the constant e^(−E) (wiki 64 §2), so it values a path and does not generate one; the original `L_dynamic` (wiki 51) is the time-dependent object. Decide which the claim above means before building.

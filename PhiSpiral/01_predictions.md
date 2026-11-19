@@ -80,3 +80,7 @@ But proxy n* = 5.2096. Gap to 5.302 is 0.093. Not obviously exact.
 ## Update 2026-11-19: the test of the closure operator needs a path-dependent integrand
 
 The test above ("verify that the action integral ∫ J_red·J_blue ds = L_(I|O) recovers the closure condition") reduces, for the definition as written, to e^(−E) × arc length: the product J_red·J_blue is e^(−E) for every σ (measured; wiki 64 §2). A closure condition cannot come out of that integrand. Re-register the test with a path-dependent integrand (the original L_dynamic's time-dependent term, `L_standard + ∫ J_red · d(J_blue)/dt`, or a measured path) before running it. The registered text above is kept as written. Also: `L_dynamic` in older notes is the original object, not L_(I|O).
+
+## Update 2026-11-19 (b): a candidate test (not registered)
+
+If the closure e^{πi}·e^{iφ}·e^{i(π−φ)} = 1 is the phase of a closed loop in the path-integral sense, the testable statement is a ladder ħ_n = S_loop/(2π(n + γ)) with S_loop a closed-form action (the hat's are in `Ainulindale/wiki/141_hbar_from_the_hat.md` §2; the measured offset γ = 0.622 … 0.6235 is in §3). This is only registered if the author names the loop; prediction-first rules apply, so no calculation should be run against it before that.

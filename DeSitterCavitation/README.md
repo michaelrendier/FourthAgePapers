@@ -172,3 +172,9 @@ LIGO/Virgo now and decisive for LISA on supermassive mergers.
 ---
 
 *No free parameters in P1. No renormalization. Failed predictions (P4) stay in data.*
+
+## Update 2026-11-19: the horizon as a simple zero, and the author's horizon reading
+
+- **Measured** (`ValaQuenta/modules/witches_hat/length_time.py`, `zero_of_the_conversion_field`): a horizon is a *simple zero* of the conversion field v (the coordinate speed of light), where the transit time diverges as (1/κ) ln(distance) and the length stays finite; a turning point is a square-root zero (finite). The de Sitter static patch, ds² = −f dt² + dr²/f with f = 1 − r²/ℓ², has a simple zero at r = ℓ with dv/dr = 2/ℓ (measured 2.0000 for ℓ = 1; surface gravity 1/ℓ, Gibbons–Hawking temperature 1/(2πℓ) = 0.159155 for ℓ = 1). The Schwarzschild horizon has dv/dr = 1/(2M) (0.5000 for M = 1), and the Standard-Model hat's E = 0 hilltop has 1.0000 (`Ainulindale/wiki/140_length_and_time.md`).
+- **The author's reading (2026-11-19, `INTERPRETATION`):** the event horizon *is* the time distortion and an exterior space; far in the future, at the end of the black hole's life, we are on the interior side and exit through the white hole. This sits beside, and is not yet reconciled with, this paper's claim that the interior is a finite de Sitter core (`OPEN`): the two could be the same statement about different sides of the same boundary, or not. Standard background (from memory, to verify): the maximally extended Schwarzschild geometry has a white-hole region; the Oppenheimer–Snyder interior is a closed FRW universe whose time reverse is an expanding one. See `FourthAgePapers/WitchesHat/README.md` §11.
+- De Sitter space is defined with its views and acceptance tests in the `spatial-simulation` skill, `references/spaces.md` §2 (the embedding interval is invariant under boosts, measured to 12 digits).

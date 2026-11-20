@@ -1,0 +1,9 @@
+Q1: PASS  sum of ring areas / pi = n! - 1 (exact); outer ring / n! = 244/245 = 0.995918; ring widths grow: w_245/w_244 = 15.6547 (sqrt 245 = 15.6525)
+Q2: PASS  outer ring fraction = 60024/60025 exactly
+Q3: PASS  max rel err of ratio 2.74e-16; sum V(2m) = 23.140692632779 vs e^pi = 23.140692632779; ratio>1 for m=[1, 2, 3]; max dimension = 5 (V=5.2638); V(6)=5.1677
+Q4: FAIL  Monte Carlo rel err d1:0.0000, d2:0.0006, d3:0.0022, d4:0.0032, d5:0.0030, d6:0.0029, d7:0.0062, d8:0.0186; shell identity rel err 2.7e-16
+Q5: PASS  ln n! - Stirling = 3.401358653718e-04; 1/(12n) - 1/(360n^3) = 3.401358655360e-04
+Q6: PASS  Archimedes Factorial.factorial == math.factorial for 1..20; used in Q3 ratio test
+Q7: PASS  V at d=2,4,8,16,32: 3.142, 4.935, 4.059, 0.2353, 4.303e-06
+Q8: PASS  pi/k > 0 for all k: no SIGN enters the ring factors (trivial)
+Q4 follow-up (run 2, labelled, not a repair): d=8 with 5,000,000 points, seed 1: 4.0710 vs 4.0587, relative error 0.30%, expected sd 0.35%. The registered 1% tolerance was tighter than the Monte Carlo noise at d=8 (hit rate 1.6%); the formula is not in doubt.

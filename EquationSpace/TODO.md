@@ -26,3 +26,7 @@
 ## Update 2026-11-20 (test 7: 11/12)
 - Done: pair census (5 signatures), circle entry/loop/exit table for 6,268 fractals, 8–15 monitor with F = 8.
 - Failed: P3 (AG order-sensitivity 42 %), C2 mod-4 (54.6 %). Open: why AG is mostly order-symmetric; a fourth generator that is not a labelled slot; canonical-pair detection (x,p),(ln x,θ) from the sources rather than the words; circle for the python equations.
+
+## Update 2026-11-20 (test 8: 13/14/15)
+- Done: the 65 Python equations in a table (class S/B/I/X/N, kind of circle, relation vs evaluation, operators with ASS roots); 17 predictions, 3 failed (Q4 second clause, Q6, Q13 at R=3); static detector recall 13.5 %.
+- Open: canonical-pair detection and circle kinds for the 6,268 fractal formulas from SOURCE behaviour (the same method); a K assigned from behaviour; Γ reflection formula as the circle of the factorial family; fix or label the source defects (author's call); derive the decomposition of equations into layer-1 operators beyond the AST counts.

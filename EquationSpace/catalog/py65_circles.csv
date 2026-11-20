@@ -1,0 +1,66 @@
+id,class,kind,relation,pillar,ass_word,ops,static,evidence
+Maths/Calculus.py::non_sympy_derivative,X,quarter-turn operator,E,G,FFAGGGGFGGFFFSFAFFFAGGFFGGGGFFGGGGFGFF,"Compare×8,Mult×1,Sub×2,append×3,index×1,int×6,join×1,print×2,replace×1","APPEND×3,CYCLE×0","D on span{sin,cos} has matrix [[0.0, -1.0], [1.0, 0.0]] (basis sin,cos); D² = −1 (err 3.3e-08), D⁴ = 1 (err 6.6e-08); the function only handles polynomial strings"
+Maths/Combinatorics.py::Shuffle,X,cyclic group Zn inside Sn,E,A,AFFAF,"len×1,list×1,permutations×1,print×1",CYCLE×0,prints 24 permutations; they contain the 4 cyclic rotations (the circle Z4 ⊂ S4): True; the function does not single them out
+Maths/Combinatorics.py::bills2100,N,-,E,A,AAAFAGGF,"Add×1,Compare×1,combinations×1,len×1,range×1,set×1,sum×1",CYCLE×0,subset sums of a multiset
+Maths/Combinatorics.py::all2100,N,-,E,A,AAAFAGF,"Add×1,Compare×1,combinations_with_replacement×1,len×1,range×1,set×1,sum×1",CYCLE×0,integer points on a hyperplane
+Maths/Combinatorics.py::first_order,B,round circle,E,S,FSAF,"Add×1,Mult×1,accumulate×1,repeat×1",CYCLE×0,"p = e^(2πi/7), q = 0: |sₙ| = 1 (dev 1.1e-15) and period 7 (|s7−s0| = 5.2e-16); p real: line; |p|≠1: spiral"
+Maths/Combinatorics.py::second_order,B,recurrence conic: circle / line / hyperbola,E,S,FSSAAFF,"Add×2,Mult×2,accumulate×1,map×1,repeat×1",CYCLE×0,"p=2cos(2π/7),q=−1: period 7 (dev 8.9e-16); regime by sign of p²+4q: 298 of 298; Fibonacci Cassini F(n+1)F(n−1)−F(n)² = (−1)ⁿ: True"
+Maths/Factorial.py::factorial,N,-,E,A,AAFGGA,"Add×1,list×1,range×1",CYCLE×0,"integer products; the circle enters only through Γ's reflection formula, not through this code"
+Maths/Factorial.py::doubleFactorial,N,-,E,A,GAFA,"list×1,range×1",CYCLE×0,"integer products; the circle enters only through Γ's reflection formula, not through this code"
+Maths/Factorial.py::subFactorial,N,-,E,A,GAAFAFSSFGAFS,"Add×1,Div×1,Mult×2,append×1,factorial×2,list×1,range×1","APPEND×1,CYCLE×0","integer products; the circle enters only through Γ's reflection formula, not through this code"
+Maths/Factorial.py::sloaneSF,N,-,E,A,FAAFA,"Add×1,factorial×1,list×1,range×1",CYCLE×0,"integer products; the circle enters only through Γ's reflection formula, not through this code"
+Maths/Factorial.py::pickoverSF,N,-,E,S,FSFAS,"Mult×1,Pow×1,factorial×1,list×1",CYCLE×0,"integer products; the circle enters only through Γ's reflection formula, not through this code"
+Maths/Factorial.py::expFact,N,-,E,A,GAFAS,"Pow×1,list×1,range×1",CYCLE×0,"integer products; the circle enters only through Γ's reflection formula, not through this code"
+Maths/Factorial.py::hyperFact,N,-,E,S,SGAFAS,"Pow×2,list×1,range×1",CYCLE×0,"integer products; the circle enters only through Γ's reflection formula, not through this code"
+Maths/Factorial.py::stirlingApprox,S,round circle (π from the Gaussian integral),E,S,SSSSSS,"Div×1,Mult×3,Pow×1,sqrt×1","CYCLE×0,PI×1",√(2πn)(n/e)ⁿ: π is the area constant of the circle; ratio to n! at n=10: 0.9917
+Maths/LorenzStirling.py::stirling_poly_10,B,winding,E,S,SSSSASSASSASSASSASSASSASAS,"Add×3,Div×1,Mult×9,Pow×8,Sub×5",CYCLE×0,"registered R=3: image winds 8.000 (NOT 9: one zero lies at |z|=5.12, outside the circle); R=10: 9.000 (= degree 9)"
+Maths/LorenzStirling.py::stirling_inversion_step,B,circle inversion,E,S,SSAGGSASAF,"Add×3,Compare×1,Div×2,Pow×2,complex×1","CPLX×6,CYCLE×0,INVERSION×2,SUMSQ×1","|f(z)|=1/|z| and f∘f=id, max err 1.8e-15 (unit circle fixed)"
+Maths/LorenzStirling.py::iterate,S,-,E,G,AAFFGGGSSSAFGGGFGSFAAF,"Add×2,BasinResult×3,Compare×2,Mod×1,Mult×2,Pow×1,abs×5,float×1,int×1","CYCLE×0,RADIUS×5",
+Maths/LorenzStirling.py::step,B,winding,E,S,ASASASSASASASA,"Add×3,Mult×7,Sub×4",CYCLE×0,"20,000 steps sweep 137.3 turns about the two lobe centres"
+Maths/LorenzStirling.py::trajectory,I,linked,E,A,AAFF,"append×1,range×1,step×1","APPEND×1,CYCLE×0",
+Maths/LorenzStirling.py::seed_from_basin,B,cone,E,S,SSS,Mult×3,"CPLX×2,CYCLE×0",output satisfies z = 2·√(x²+y²) for 500 points: the plane is lifted onto a cone
+Maths/LorenzStirling.py::classify,I,linked,E,G,FGFFFGGF,"ClassifyResult×2,float×1,iterate×1,seed_from_basin×1,trajectory×1",CYCLE×0,
+Maths/LorenzStirling.py::lorenz_trajectory,I,linked,E,-,F,trajectory×1,CYCLE×0,
+Maths/LorenzStirling.py::basin_map,I,linked,E,A,FFFFAFAFFG,"complex×1,enumerate×2,iterate×1,linspace×2,zeros×1",CYCLE×0,
+Maths/Matrix.py::divide,N,-,E,S,GGSGSS,Div×3,CYCLE×0,a dilation by 1/divisor
+Maths/Matrix.py::col_shift,B,cyclic group Zn,E,A,FGGAAAFFFF,"Compare×1,IndexError×1,append×1,array×1,pop×1,range×1,tolist×1","APPEND×1,CYCLE×1,POP0×1","n shifts = identity, no smaller count is (n = 5)"
+Maths/Matrix.py::row_shift,B,cyclic group Zn,E,G,FGGAAFFFF,"Compare×1,IndexError×1,append×1,array×1,pop×1,range×1,tolist×1","APPEND×1,CYCLE×1,POP0×1","n shifts = identity, no smaller count is (n = 4)"
+Maths/Matrix.py::ero_replace,B,shear-composed rotation,E,G,GGGGSF,"Compare×2,IndexError×1,Mult×1",CYCLE×0,"three ero_replace shears = rotation, max err 1.2e-15 over 20 angles"
+Maths/Matrix.py::ero_interchange,B,reflection,E,G,SFFGGGGFF,"Compare×2,Div×1,IndexError×1,array×1,print×2",CYCLE×0,swap twice = identity (order 2; run on a stand-in object with .array)
+Maths/Matrix.py::ero_scaling,N,-,E,G,GGSF,"Compare×1,IndexError×1,Mult×1",CYCLE×0,"a dilation (the radial partner of rotation), no circle in the function"
+Maths/StatisticsAndProbability.py::splitlist,N,-,E,A,AAAA,"Add×1,len×1,range×1",CYCLE×0,order or count statistic; no radial structure in the function
+Maths/StatisticsAndProbability.py::mean,B,p-norm ball centre (L2),E,A,AFAFS,"Div×1,float×2,len×1,sum×1",CYCLE×0,function output is the argmin of the ball radius in the L2 norm: 500 of 500
+Maths/StatisticsAndProbability.py::median,B,p-norm ball centre (L1 diamond),E,A,FAAGGASFAFASFFASASF,"Add×1,Compare×1,Div×4,Mod×1,Sub×1,float×2,int×3,len×4,sorted×1",CYCLE×0,function output is the argmin of the ball radius in the L1 norm: 500 of 500
+Maths/StatisticsAndProbability.py::mode,N,-,E,G,AFGGGG,"Compare×2,max×1",CYCLE×0,order or count statistic; no radial structure in the function
+Maths/StatisticsAndProbability.py::quartiles,I,linked,E,A,FAAGGASFAFASFAFASFFASFAF,"Add×2,Compare×1,Div×4,Mod×1,Sub×1,int×4,len×5,median×5",CYCLE×0,
+Maths/StatisticsAndProbability.py::range,B,p-norm ball diameter (L∞),E,G,FGA,"Sub×1,sorted×1",CYCLE×0,range = 2 × radius of the minimal L∞ ball: 200 of 200
+Maths/StatisticsAndProbability.py::midrange,B,p-norm ball centre (L∞ square),E,S,FGAS,"Add×1,Div×1,sorted×1",CYCLE×0,function output is the argmin of the ball radius in the L∞ norm: 500 of 500
+Maths/StatisticsAndProbability.py::zscore,B,sphere,E,S,FFAFS,"Div×1,Sub×1,float×3",CYCLE×0,"z-scores lie on the sphere Σz² = n (population sd), max err 3.6e-15"
+Maths/StatisticsAndProbability.py::zscores,B,sphere,E,S,FFAFSFFAFS,"Div×2,Sub×2,float×6",CYCLE×0,"z-scores lie on the sphere Σz² = n (population sd), max err 3.6e-15"
+Maths/StatisticsAndProbability.py::dev,B,sphere (hyperplane Σ = 0),E,A,AFFFAF,"Sub×1,append×1,float×2,mean×1","APPEND×1,CYCLE×0",the centred vector lies in the hyperplane through the centre: Σ = 5.6e-17
+Maths/StatisticsAndProbability.py::devmean,I,linked,E,A,FAFFAS,"Div×1,dev×2,float×1,len×1,sum×1",CYCLE×0,
+Maths/StatisticsAndProbability.py::devsqr,B,sphere,E,A,AFFFAFFFASF,"Mult×1,Sub×2,append×1,float×4,mean×2","APPEND×1,CYCLE×0,SQDEV×1","z-scores lie on the sphere Σz² = n (population sd), max err 3.6e-15"
+Maths/StatisticsAndProbability.py::samplevar,B,sphere,E,A,FAFFAS,"Div×1,devsqr×2,float×1,len×1,sum×1",CYCLE×0,"z-scores lie on the sphere Σz² = n (population sd), max err 3.6e-15"
+Maths/StatisticsAndProbability.py::samplestandev,B,sphere,E,S,FS,"samplevar×1,sqrt×1",CYCLE×0,"z-scores lie on the sphere Σz² = n (population sd), max err 3.6e-15"
+Maths/StatisticsAndProbability.py::estsamplevar,B,sphere,E,A,FAFFAAS,"Div×1,Sub×1,devsqr×2,float×1,len×1,sum×1",CYCLE×0,"z-scores lie on the sphere Σz² = n−1 (estimated sd), max err 7.1e-15"
+Maths/StatisticsAndProbability.py::estsamplestandev,B,sphere,E,S,FS,"estsamplevar×1,sqrt×1",CYCLE×0,"z-scores lie on the sphere Σz² = n−1 (estimated sd), max err 7.1e-15"
+Maths/StatisticsAndProbability.py::sample,I,linked,E,A,ASAFAAAFAFAAFFFFAAFFFAAFFAFFFFSFFFFSF,"Add×5,Mod×2,Mult×1,dev×1,devmean×1,devsqr×2,estsamplevar×2,len×1,mean×1",CYCLE×0,
+Maths/StatisticsAndProbability.py::boxplot_data,I,linked,E,G,FFGFF,"pop×2,quartiles×1,sorted×1","CYCLE×0,POP0×1",
+Maths/Thermodynamics.py::boyleslaw,B,hyperbola,R,S,FFAFFFAFGGSSGGSSGGSS,"Add×2,Compare×3,Div×2,Mult×4,locals×2,print×2,str×2,values×1",CYCLE×0,"pV=k is the unit hyperbola u²−v²=2k (rotated 45°); p=√k·e^φ, V=√k·e^−φ is a boost (hyperbolic angle φ=½ln(p/V))"
+Maths/Thermodynamics.py::charleslaw,X,sphere (velocity space),R,G,GGAGAGGGSSGGSSGGSS,"Add×2,Compare×7,Div×1,Mult×5",CYCLE×0,T ∝ ⟨v²⟩: sampled 3-D Maxwell velocities give T = m⟨v²⟩/3k = 299.9 K for 300 K (ratio 0.9998); the function itself has no sphere. 
+Maths/Thermodynamics.py::gaylussacslaw,X,sphere (velocity space),R,G,GGAGAGGGSSGGSSGGSS,"Add×2,Compare×7,Div×2,Mult×4",CYCLE×0,T ∝ ⟨v²⟩: sampled 3-D Maxwell velocities give T = m⟨v²⟩/3k = 299.9 K for 300 K (ratio 0.9998); the function itself has no sphere. 
+Maths/Thermodynamics.py::combinedgaslaw,X,sphere (velocity space),R,G,GGAGAGAGGGSSSGGSSSGGSSSGGSSS,"Add×3,Compare×9,Div×4,Mult×8",CYCLE×0,T ∝ ⟨v²⟩: sampled 3-D Maxwell velocities give T = m⟨v²⟩/3k = 299.9 K for 300 K (ratio 0.9998); the function itself has no sphere. 
+Maths/Thermodynamics.py::idealgaslaw,X,sphere (velocity space),R,S,GGAGAGAGAGGGSSSSGGSSSSGGSSSSGGSSSSGGSSSS,"Add×4,Compare×11,Div×5,Mult×15",CYCLE×0,"T ∝ ⟨v²⟩: sampled 3-D Maxwell velocities give T = m⟨v²⟩/3k = 299.9 K for 300 K (ratio 0.9998); the function itself has no sphere. idealgaslaw(V=1.0, n=1.0, T=300.0) raises TypeError: unsupported operand type(s) for *: 'float' and 'decimal.Decimal'"
+Maths/Trigonometry.py::degRad,S,angle measure,E,S,SS,"Div×1,Mult×1","CYCLE×0,PI×1",full turn = 360° = 2π; code: (180/π)·deg (that is rad→deg) and no return
+Maths/Trigonometry.py::radDeg,S,angle measure,E,S,SS,"Div×1,Mult×1","CYCLE×0,PI×1",code: (π/180)·rad (that is deg→rad) and no return
+Maths/Sequences/DeBruijnSequences.py::dfs,I,linked,E,A,AAAGGFFF,"Add×1,Compare×1,add×1,append×1,dfs×1,range×1","APPEND×1,CYCLE×0",
+Maths/Sequences/DeBruijnSequences.py::deBruijn,B,cyclic group Zn (Eulerian circuit),E,A,FFASFSAA,"Mult×1,Sub×1,clear×2,dfs×1,pow×1,range×1",CYCLE×0,read as a cycle of length 27 every 3-window occurs once: 27 of 27 distinct
+Maths/Sequences/DeBruijnSequences.py::main,I,linked,E,-,FF,"deBruijn×1,print×1",CYCLE×0,
+Maths/Sequences/MersennePrimes.py::mersenne,N,-,E,A,AASAFF,"Add×1,Mult×1,append×1,print×1,range×1","APPEND×1,CYCLE×0",f(x)=2x+1 is pure SCALE about the fixed point −1 (u = x+1 doubles); no circle
+Maths/Sequences/FibonacciSequence.py::fibonacci_number,B,hyperbola,E,A,AAAA,"Add×1,Sub×1,range×1",CYCLE×0,"same sequence; n=1,2 return 0,0 not 1,1 (defect)"
+Maths/Sequences/FibonacciSequence.py::fibonacci_series,B,hyperbola,E,A,AAAAF,"Add×1,Sub×1,append×1,range×1","APPEND×1,CYCLE×0",Cassini invariant: consecutive pairs lie on x²−xy−y² = ±1 (hyperbola): True
+Maths/Sequences/FibonacciSequence.py::explicit_formula_fibonacci_number,B,"hyperbola (Binet: φ and −1/φ, φ·ψ = −1)",E,S,SASSASASSSSF,"Add×1,Div×1,Mult×1,Pow×3,Sub×2,int×1,sqrt×3",CYCLE×0,Binet agrees with the recurrence up to n = 71 (first mismatch from float rounding/truncation)
+Maths/Sequences/LucasNumbers.py::lucas_number,B,hyperbola,E,A,AAAA,"Add×1,Sub×1,range×1",CYCLE×0,|L(n+1)L(n−1) − L(n)²| = 5 for all tested n (Cassini analogue)
+Maths/Sequences/LucasNumbers.py::lucas_series,B,hyperbola,E,A,AAAAF,"Add×1,Sub×1,append×1,range×1","APPEND×1,CYCLE×0","returns the Fibonacci numbers [1, 1, 2, 3, 5, 8] (starts 1,1), not Lucas (defect); same Cassini hyperbola"
+Maths/Sequences/LucasNumbers.py::lucas_lehmer_number,B,hyperbola (hyperbolic angle doubling),E,A,AAASA,"Pow×1,Sub×2,range×1",CYCLE×0,the last term of the same sequence; s→s²−2 is T₂ on the hyperbola
+Maths/Sequences/LucasNumbers.py::lucas_lehmer_sequence,B,"hyperbola (hyperbolic angle doubling, mod 2ᵖ−1 a finite circle)",E,A,AAASAF,"Pow×1,Sub×2,append×1,range×1","APPEND×1,CYCLE×0","sₖ = 2cosh(2ᵏ·arccosh 2): rel err 4.3e-15 (k≤5); s_{p−2} mod 2ᵖ−1 classifies p=3,5,7,11,13,17,19: True"

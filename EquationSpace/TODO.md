@@ -14,3 +14,4 @@
 - [x] Test 4 run (facets): F2 and F3 confirmed, F1 partly failed (Noether and Fermat compute project quantities), F4 no φ; exploratory: Schwarzschild orbits are ℘ with g2 = 1/12 - M²/L².
 - [ ] Control for the ℘ result: the same construction with a different cubic; and the role question (℘ as potential in B̂, as solution in the orbit).
 - [ ] Fix the h_rb_hat coupling sums at σ <= 1 (truncated divergent series) or label them; replace the Laurent ℘ by the full function (author's call).
+- [ ] SCOPE 2026-11-19: map ONLY emergent (derivable) equations as a tree rooted at add:scale:sign; constructed (found-in) ones are not drawn; Σ_RB is out of this mapping (VAPMIP). Discuss the tree design with the author before building.

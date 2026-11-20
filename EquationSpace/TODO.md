@@ -22,3 +22,7 @@
 ## Update 2026-11-20 (test 6: 09/10)
 - Done: walk address (faithful, injective), prefix tree (0.79 ratio, W3 failed), reachable indices = octonion half 0..7, conjugate / non-conjugate pairs of the three generators (X1–X6 pass, X7 weak).
 - Open: a fourth generator (index 8) to reach the sedenion half, to be named by the author; the per-equation derivation by family; X4 with a mixed-parity state; catalog-wide census of which equations contain a canonical pair vs the non-canonical (θ,p) pair; circle entry/exit per equation.
+
+## Update 2026-11-20 (test 7: 11/12)
+- Done: pair census (5 signatures), circle entry/loop/exit table for 6,268 fractals, 8–15 monitor with F = 8.
+- Failed: P3 (AG order-sensitivity 42 %), C2 mod-4 (54.6 %). Open: why AG is mostly order-symmetric; a fourth generator that is not a labelled slot; canonical-pair detection (x,p),(ln x,θ) from the sources rather than the words; circle for the python equations.

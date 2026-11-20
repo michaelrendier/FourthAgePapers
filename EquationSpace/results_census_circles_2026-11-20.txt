@@ -1,0 +1,18 @@
+distinct words (1..400): 3461
+pair AS present in 3394 (98.1%); order-sensitive on its subword: 3216 (94.8%)
+pair AG present in 2859 (82.6%); order-sensitive on its subword: 1202 (42.0%)
+pair SG present in 2854 (82.5%); order-sensitive on its subword: 0 (0.0%)
+all three letters: 2831 (81.8%)
+single-letter words (no pair at all): 16
+pair-type signatures: {(): 16, ('AS', 'AG', 'SG'): 2831, ('AG',): 28, ('AS',): 563, ('SG',): 23}
+distinct loop words (1..400): 3904 ; pillar-only projections: 3415
+C1 closed loop words: 288 of 3415 (8.4%)
+C2 returns to index 0: 36317, even length 36317 (100.0%) ; returns to (+1,e0): 17376, length %4==0: 9485 (54.6%)
+C3 first letters: {'A': '14.8%', 'G': '43.2%', 'S': '42.0%'} ; last letters: {'A': '43.4%', 'G': '17.7%', 'S': '38.9%'}
+C4 circle number distribution (order of the loop element): {4: 2823, 2: 304, 1: 288} ; number 4: 82.7%
+C5 bailout contains SIGN: 5922 of 5922 formulas with a bailout (100.0%)
+words with F: 2317
+H1 end in upper half (F=8): 1303 (56.2%)
+H2 membership identical for F=8 and F=15: True ; full address same: 1014 of 2317
+H3 upper half entered within first 5 letters: 1761 (76.0%)
+mean fraction of the walk in the upper half: 0.530

@@ -1,0 +1,7 @@
+table built, all 256 products are +-e_(a xor b): True
+EQ1 {'triples': 2730, 'closed': 210, 'assoc': 882, 'closed_and_assoc': 210, 'closed_not_assoc': 0, 'open_and_assoc': 672, 'H_class': 210, 'H_agrees': 2058}
+EQ2 n=3 words=20000 distinct values histogram {1: 9213, 2: 10787} worst=2 | EQ3 Catalan=2 mean distinct sign-patterns=1.555 (sign patterns seen: 4)
+EQ2 n=4 words=20000 distinct values histogram {1: 3041, 2: 16959} worst=2 | EQ3 Catalan=5 mean distinct sign-patterns=1.841 (sign patterns seen: 32)
+EQ2 n=5 words=20000 distinct values histogram {1: 844, 2: 19156} worst=2 | EQ3 Catalan=14 mean distinct sign-patterns=1.964 (sign patterns seen: 600)
+EQ2 n=6 words=20000 distinct values histogram {1: 256, 2: 19744} worst=2 | EQ3 Catalan=42 mean distinct sign-patterns=1.992 (sign patterns seen: 1785)
+EQ2 n=7 words=5000 distinct values histogram {1: 22, 2: 4978} worst=2 | EQ3 Catalan=132 mean distinct sign-patterns=1.996 (sign patterns seen: 1986)

@@ -1,6 +1,6 @@
 # Equation Space
 
-**Fourth Age Protocol paper (hypothesis kind): One Paper, One Claim, One Engine, One set of notebooks, One draft paper (wiki last).** Status 2026-11-19: **stub**. The author's definition is recorded, the existing machinery is listed, a few counts are measured; no claim is registered, no prediction is written, nothing is tested. The introduction is not drafted (discuss first).
+**Fourth Age Protocol paper (hypothesis kind): One Paper, One Claim, One Engine, One set of notebooks, One draft paper (wiki last).** Status 2026-11-19: **stub with a first engine**. The author's definition is recorded, Ask Holcus was run, three predictions were registered before testing (EQ2 confirmed, EQ1 failed as an "iff" and was chased to its source, EQ3 measured). No claim is registered yet. The introduction is not drafted (discuss first).
 
 > **Assistant note.** Prepared by a transformer language model (Claude Sonnet 5.5, `claude-sonnet-5-5`) with the project's `cs-paper-code-conventions` skill. The definition is the author's (Cody Michael Allison, pen name Michael Rendier). Labels: `ESTABLISHED`, `THEORETICAL`, `INTERPRETATION`, `CONJECTURE`, `OPEN`; `:CALCULATED` = the paper's own code produced it. Predictions are asked of the maths (Ask Holcus), not written by the assistant. Failed results stay.
 
@@ -17,9 +17,9 @@ Equation space is the permutation space of all the equations that can be made fr
 | `ValaQuenta/modules/emerger`, `bracketing_firing_order` | the explored finite piece: bracketings and firing orders over the 15 imaginary units; the 10 {1,3,7}-shapes of 15 |
 | `~/.claude/skills/spatial-simulation/references/spaces.md` §8 | the skill's record + stub (points, axes, motions; views not yet defined) |
 
-## What is measured now (`ESTABLISHED:CALCULATED`, 2026-11-19; script in the ContextPlease scratchpad of that date)
+## What is measured now (`ESTABLISHED:CALCULATED`, 2026-11-19; `equation_space.py`, results in `02_results.md`)
 
-A "point" in the finite piece is a word (an ordered list of units) in a full bracketing. Counts: bracketings of n factors = Catalan(n − 1) = 1, 2, 5, 14, 42, 132, 429 for n = 2…8; words with a firing order = n! · Catalan(n − 1): 120 at n = 4, 665,280 at n = 7, 2.03×10²⁰ at n = 16. Random words of 4 or 5 units in the octonions and the sedenions give, over all their bracketings, **1.8–1.95 distinct nonzero values on average (1 would be associative)**, and no zero product in 300 random draws of either algebra: equation space is already branching at the octonions, and zero divisors are not found by sampling words at random. The deformation-battery and the 132-bracketing law (§13 of the Scalar paper) are the structured version of this count.
+A point of the finite piece is a word of basis units in a full bracketing; its value is **(sign, index)**: the index is the XOR of the word's indices whatever the bracketing, so bracketing and order move only the sign. Counts: bracketings of n factors = Catalan(n − 1) = 1, 2, 5, 14, 42, 132, 429 for n = 2…8; words with a firing order n!·Catalan(n − 1): 120 at n = 4, 665,280 at n = 7. (`bracketing_firing_order` counts *groupings* as set partitions, Bell numbers: 15 at n = 4; a different object.) Measured: every basis-unit word has 1 or 2 distinct values over all bracketings (EQ2, confirmed); the sign patterns seen are a vanishing fraction of the possible ones (1,986 at n = 7 of 2¹³²); associativity of a triple is **not** decided by closure alone (EQ1 failed as an "iff": 672 non-closed triples are associative, all with one or two upper-half units, the single upper unit never in the middle). So a point needs (index, Cayley–Dickson half) per slot. Zero divisors are outside this sign-space (they need sums such as e₁ + e₁₀).
 
 ## The first questions (not claims)
 
@@ -37,6 +37,10 @@ Exists: the toolset and sedenion companion above; `emerger`; `bracketing_firing_
 | File | What |
 |---|---|
 | `README.md` | this stub |
+| `ask_holcus.py`, `holcus_answers_2026-11-19.txt` | Ask Holcus: what the emerger and bracketing engines answer |
+| `01_holcus_asks.md` | the answers and the predictions EQ1–EQ3, registered before any test |
+| `equation_space.py`, `results_engine_2026-11-19.txt` | the sign-space engine and its raw output |
+| `02_results.md` | results, the failure of EQ1 and its source, corrections |
 | `TODO.md` | what is next |
 
 ## Standing rules that apply

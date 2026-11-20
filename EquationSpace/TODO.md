@@ -11,3 +11,6 @@
 - [x] Test 3 run: 15 Archimedes equations: 5 EXACT, 8 LIMIT, 2 NOT FOUND; classification identical for Ĥ_RB and controls (non-discriminating).
 - [ ] Test 4 (forward, derivation not membership): does φ (Binet/Fibonacci) emerge from Ĥ_RB at some σ without being inserted? Predictions asked of Holcus first.
 - [ ] Define 'derived' with the author: forward from the dials, no fitted coefficients; control operator must fail where Ĥ_RB succeeds.
+- [x] Test 4 run (facets): F2 and F3 confirmed, F1 partly failed (Noether and Fermat compute project quantities), F4 no φ; exploratory: Schwarzschild orbits are ℘ with g2 = 1/12 - M²/L².
+- [ ] Control for the ℘ result: the same construction with a different cubic; and the role question (℘ as potential in B̂, as solution in the orbit).
+- [ ] Fix the h_rb_hat coupling sums at σ <= 1 (truncated divergent series) or label them; replace the Laurent ℘ by the full function (author's call).

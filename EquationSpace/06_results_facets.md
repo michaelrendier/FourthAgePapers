@@ -1,0 +1,24 @@
+# EquationSpace test 4: results (2026-11-19). Predictions: `05_registered_facets.md`; code `facet_tests.py`, `weierstrass_gr.py`; output `results_facets_2026-11-19.txt`, `results_weierstrass_gr_2026-11-19.txt`
+
+The question: can GR, QM, F = ma, Navier–Stokes, … be *derived* from Σ_RB, or does the code only name them? `ValaQuenta/modules/h_rb_hat` already holds a facet table (σ = 2 GR, σ = 1 Yang–Mills / Navier–Stokes, σ = ½ QM and the zeta zeros, σ < ½ Fermat). Labels `ESTABLISHED:CALCULATED` for arithmetic; the readings are marked.
+
+| | prediction | result | verdict |
+|---|---|---|---|
+| F1 | each `facet_*` computes only coupling sums and constants; no quantity of the named theory | GR, Yang–Mills, Navier–Stokes, QM, Riemann: only σ and a coupling sum (plus strings). **Noether computes J_red, J_blue, J₃ and a three-phase balance; Fermat computes a discriminant** (the project's own quantities, not the named theory's) | **partly failed as stated**: 5 of 7 facets are labels; 2 compute project quantities |
+| F2 | the flow of x∂_x (the generator of R̂ = xp) for flow-time ln p scales by p and equals the boost with Doppler factor p | p = 2, 3, 5, 7: |scale − p| < 3×10⁻¹³; lightcone residual < 10⁻¹⁵; the Doppler factor of the boost is p to 3×10⁻¹⁵ | **confirmed** |
+| F3 | B̂ = ½p² + V gives m ẍ = −V′ with the module's ℘; the force family is −℘′ and 1/r gravity is not in it | ẍ = −V′ to 2×10⁻⁶ (finite-difference limited); V·x² → 1 at the pole (double pole), V·x grows as 1/x | **confirmed** |
+| F4 | no coupling sum, ζ(σ) or Euler product at σ = ½, 1, 2 within 0.1 % of φ, 1/φ, φ², 1/φ² | 32 comparisons, **0 hits** (nearest: Euler product over 20 primes at σ = 2 is 1.6408 against φ = 1.6180, 1.4 %) | confirmed (no emergence of φ at the facet couplings) |
+| F5 | no numerical check of the Navier–Stokes or GR facet against its equation | confirmed by F1 | confirmed |
+
+## What F2 and F3 are, and are not
+**F2** shows what R̂ generates: a dilation of the scale axis u = ln x by ln p, which in light-cone coordinates is exactly the Lorentz boost of Doppler factor p (the bridge of the `relativity` engine, wiki 143 §5). It does not show that Σ_p p^{-σ}(…) is special relativity. **F3** shows that the Blue operator ½p² + ℘ has Newton's second law as its Heisenberg equation, with force −℘′: so F = ma is *derived* from B̂ as a form, restricted to the elliptic-function force family (Calogero–Moser-type: inverse-square *potentials*; Newtonian gravity's 1/r potential has a simple pole and is not in the family). `ESTABLISHED` mathematics applied to the operator's own term.
+
+## Anomalies chased
+1. **The "coupling sum" is a truncated divergent series for σ ≤ 1.** Σ_p p^{-σ} over the first 20 primes gives 1.7429 at σ = 1 (Yang–Mills and Navier–Stokes facets identical) and 4.9896 at σ = ½ (QM and zeta facets identical): the prime sum diverges there, so these numbers are artefacts of the 20-prime cut. The QM and Riemann facets return the same number because they are the same σ. Source: the first-20-primes list `PRIMES`.
+2. **The module's ℘ is a four-term Laurent series, not the elliptic function.** Against the true ℘ built by integrating ℘″ = 6℘² − g₂/2, the relative error at g₂ = 1 is 9×10⁻¹⁰ at x = 0.2, 6×10⁻⁸ at 0.4, 6×10⁻⁷ at 0.6, 3×10⁻⁶ at 0.8: safe for the F3 test, not beyond the first lattice cell.
+
+## Exploratory (post-hoc, not registered): GR orbits are Weierstrass functions with the Blue term's own invariants
+The Schwarzschild orbit equation u″ + u = M/L² + 3Mu² (u = 1/r, G = c = 1) **is** the Weierstrass equation ℘″ = 6℘² − g₂/2 under u = (2/M)℘ + 1/(6M), exactly when **g₂ = 1/12 − M²/L²** (symbolic, residual zero). Its first integral gives **g₃ = 1/216 − M²/(12L²) − C M²/4**, and along a numerically integrated orbit (p = 100M, e = 0.3) the identity (℘′)² = 4℘³ − g₂℘ − g₃ holds to 3×10⁻¹⁷. For light, g₂ = 1/12. This is a known class of result (Schwarzschild orbits are elliptic; attribution to verify under the Literature Download Protocol), found here with the Blue term's own ℘(x; g₂, g₃). **The role differs:** in B̂ the ℘ is the *potential*; in the orbit it is the *solution*. What it does show is that the function class the Blue term names is the class in which GR's central-field orbits live, with g₂ carrying the angular momentum.
+
+## Reading for the question "can they be derived"
+Derived from the operator's own terms: the dilation/boost action of R̂ (F2), Newton's second law with an elliptic-function force from B̂ (F3). Named but not derived: GR, Yang–Mills, Navier–Stokes, QM, Riemann (F1). Not found: φ at the facet couplings (F4). The route that remains open is the one the exploratory result suggests: carry the facet through the ℘ with (g₂, g₃) as the dials, then ask which orbit-class of each theory appears, with the control (the same construction with a different cubic) failing where the Blue term succeeds.

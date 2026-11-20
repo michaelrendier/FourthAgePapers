@@ -1,0 +1,27 @@
+== F1 audit: what does each facet function compute?
+facet_fermat               numbers {'discriminant': 1.0}                                strings 8
+facet_general_relativity   numbers {'sigma': 2.0, 'coupling_sum': 0.4497032182086859}   strings 10
+facet_navier_stokes        numbers {'sigma': 1.0, 'imaginary': 0.0, 'coupling_sum': 1.7428669168860038} strings 12
+facet_noether_current      numbers {'J_red': 1.0, 'J_blue': -1.5508333333333333, 'J_3': -0.27541666666666664, 'three_phase_balance': -0.8262499999999999} strings 8
+facet_quantum_mechanics    numbers {'sigma': 0.5, 'coupling_sum': 4.989633250806095}    strings 10
+facet_riemann_zeta         numbers {'sigma': 0.5, 'coupling_sum': 4.989633250806095}    strings 7
+facet_yang_mills           numbers {'sigma': 1.0, 'coupling_sum': 1.7428669168860038}   strings 12
+
+== F2 R = xp as a dilation generator, flow time ln p
+p=2 flow scale 2.000000000000  |scale-p| 2.9e-14 | boost Doppler factor 2.000000000000  lightcone residual 1.1e-16  |k-p| 0.0e+00
+p=3 flow scale 3.000000000000  |scale-p| 7.1e-14 | boost Doppler factor 3.000000000000  lightcone residual 4.4e-16  |k-p| 4.4e-16
+p=5 flow scale 5.000000000000  |scale-p| 1.7e-13 | boost Doppler factor 5.000000000000  lightcone residual 3.1e-16  |k-p| 1.8e-15
+p=7 flow scale 7.000000000000  |scale-p| 2.8e-13 | boost Doppler factor 7.000000000000  lightcone residual 8.9e-16  |k-p| 2.7e-15
+
+== F3 B = p^2/2 + V(x) with the module's Weierstrass term: Hamilton's equations
+t=0.35  x''=1.951880  -V'(x)=1.951877  rel 1.6e-06
+t=0.50  x''=0.964947  -V'(x)=0.964945  rel 1.8e-06
+t=0.65  x''=0.444763  -V'(x)=0.444763  rel 8.9e-07
+V(x) ~ x^-2 near the pole (double pole): 1.0000000005 1.00000000000005   [a 1/r potential would give V*x -> const, V*x^2 -> 0]
+V*x at 0.01, 0.001: 100.00000005 1000.0000000000499
+
+== F4 phi against the facet couplings
+sigma 0.5 {'P(sigma) first 20 primes': 4.989633, 'zeta(sigma)': -1.460355, 'Euler product 20': 583.711943}
+sigma 1.0 {'P(sigma) first 20 primes': 1.742867, 'zeta(sigma)': None, 'Euler product 20': 7.824868}
+sigma 2.0 {'P(sigma) first 20 primes': 0.449703, 'zeta(sigma)': 1.644934, 'Euler product 20': 1.640754}
+comparisons 32, hits within 0.1%: 0

@@ -296,6 +296,6 @@
 [ ] Time–length swap: Eisenhart–Duval lift; static ↔ time-dependent swap-partner conjecture (the original L_dynamic as the swap image of the static hat); Smith z → 1/z against v → 1/v.
 [ ] Horizon reading (the horizon as the time distortion; we are inside at the end of the hole's life): which metric; the Penrose boundary; link to Part G.
 [ ] Papers updated 2026-11-19 with the measured L_NN/L_(I|O) corrections and the horizon/Smith–Penrose results: PhiSpiral (2), TheInterface, FastInverse, BoxkiteHyperGyroscope, Telperion, PiFromAbove; on their branches: DeSitterCavitation, EventHorizonCrossingSimulation, AddScaleSign.
-[ ] ScalarContextPropagation: NOT updated; to be discussed with the author first (it mentions the Smith chart and L_(I|O)).
+[ ] ScalarContextPropagation: MOVED to VAPMIP/ScalarContextPropagation on 2026-11-20 (proprietary licensing); NOT updated; to be discussed with the author first (it mentions the Smith chart and L_(I|O)).
 - [ ] EquationSpace — stub 2026-11-19: the author's definition (permutation space of all equations from 0_RB), records found, counts measured; claim and definition of a point to be discussed
 - [ ] Papers updated 2026-11-19 (c) with units/flattening/ħ-emergence notes: NegatingUncertainty, FastInverse, TheInterface, PiFromAbove, Telperion, addenda IV and VIII (Λ_QCD/M_Planck is 1.6×10⁻²⁰, not 10⁻¹⁷), WitchesHat H_constants + parent §15, AddScaleSign, DStarRG (branches); ScalarContextPropagation deferred for discussion

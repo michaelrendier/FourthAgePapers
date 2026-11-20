@@ -1,0 +1,67 @@
+== addresses of the registered assignment (kg,m,s,A,K,mol,cd) -> e1..e7
+quantity                   exponents               tilt#  axis# domain   ZD    equat
+mass (inertia)             (1, 0, 0, 0, 0, 0, 0)       0      0 C        False False
+length                     (0, 1, 0, 0, 0, 0, 0)       0      0 C        False False
+time                       (0, 0, 1, 0, 0, 0, 0)       0      0 C        False False
+velocity                   (0, 1, -1, 0, 0, 0, 0)      0      0 FRAGMENT False False
+acceleration               (0, 1, -2, 0, 0, 0, 0)      0      0 FRAGMENT False False
+momentum                   (1, 1, -1, 0, 0, 0, 0)      0      0 H        False False
+force N = m a              (1, 1, -2, 0, 0, 0, 0)      0      0 H        False False
+energy J                   (1, 2, -2, 0, 0, 0, 0)      0      0 H        False False
+power W                    (1, 2, -3, 0, 0, 0, 0)      0      0 H        False False
+action J s                 (1, 2, -1, 0, 0, 0, 0)      0      0 H        False False
+pressure Pa                (1, -1, -2, 0, 0, 0, 0)      0      0 H        False False
+frequency Hz               (0, 0, -1, 0, 0, 0, 0)      0      0 C        False False
+G (Newton)                 (-1, 3, -2, 0, 0, 0, 0)      0      0 H        False False
+entropy J/K                (1, 2, -2, 0, -1, 0, 0)      4      0 FRAGMENT False False
+temperature K              (0, 0, 0, 0, 1, 0, 0)       0      0 C        False False
+molar entropy J/(K mol)    (1, 2, -2, 0, -1, -1, 0)      8      0 FRAGMENT False False
+amount mol                 (0, 0, 0, 0, 0, 1, 0)       0      0 C        False False
+luminous cd                (0, 0, 0, 0, 0, 0, 1)       0      0 C        False False
+current A                  (0, 0, 0, 1, 0, 0, 0)       0      0 C        False False
+charge C                   (0, 0, 1, 1, 0, 0, 0)       0      0 FRAGMENT False False
+voltage V                  (1, 2, -3, -1, 0, 0, 0)      0      0 FRAGMENT False False
+resistance Ohm             (1, 2, -3, -2, 0, 0, 0)      0      0 FRAGMENT False False
+capacitance F              (-1, -2, 4, 2, 0, 0, 0)      0      0 FRAGMENT False False
+epsilon_0                  (-1, -3, 4, 2, 0, 0, 0)      0      0 FRAGMENT False False
+mu_0                       (1, 1, -2, -2, 0, 0, 0)      0      0 FRAGMENT False False
+dimensionless              (0, 0, 0, 0, 0, 0, 0)       0      0 R        False False
+
+A1 mechanical quantities with tilt=axis=0: True (13 of them)
+   mixed quantities (kg/m/s together with A,K,mol,cd): {'entropy J/K': (4, 0), 'molar entropy J/(K mol)': (8, 0), 'charge C': (0, 0), 'voltage V': (0, 0), 'resistance Ohm': (0, 0), 'capacitance F': (0, 0), 'epsilon_0': (0, 0), 'mu_0': (0, 0)}
+
+A2 assignments of the 7 base units to e1..e7: 5040 ; mechanical quantities all tilt-null in 2880 of them (57.1%)
+   quantities with non-zero tilt: registered assignment 2 ; over all assignments min 1, mean 9.06, max 16 ; fraction of assignments with count <= registered: 22.9%
+
+A3 F = m a address: ['0', '1', '1', '-2', '0', '0', '0', '0'] ...
+   zero divisor: False | on ZD equator: False | domain_of {1,2,3}: H | gain_class: unit (gain 1, NOW)
+   sigma_rb: sigma_is_half True  T1_holds True  Sigma_tilt 0  Sigma_axis 0
+   emerge: input_norm 2.449490 ; firing_order {'Sigma_tilt': 0.0, 'precession_step_of_12': 6, 'entry_bracket_index': 1, 'canonical': "['{1:15}', '{2:14}', '{8:8}', '{4:4:4:4}', '{4:8:4}']", 'sigma_rb_phased': "['{2:14}', '{8:8}', '{4:4:4:4}', '{4:8:4}', '{1:15}']", 'order': "['{2:14}', '{8:8}', '{4:4:4:4}', '{4:8:4}', '{1:15}']", 'phased_is_legal': False}
+   steps: [('{2:14}', 'THEORETICAL'), ('{8:8}', 'DERIVED'), ('{4:4:4:4}', 'DERIVED'), ('{4:8:4}', 'THEORETICAL'), ('{1:15}', 'DERIVED')]
+
+   one iterator step (exponent +-1) from the F = m a address, and what emerge/sigma_rb says:
+     kg  +1 -> (2, 1, -2, 0, 0, 0, 0) tilt# 0 axis# 0 domain H ZD False
+     kg  -1 -> (0, 1, -2, 0, 0, 0, 0) tilt# 0 axis# 0 domain FRAGMENT ZD False
+     m   +1 -> (1, 2, -2, 0, 0, 0, 0) tilt# 0 axis# 0 domain H ZD False
+     m   -1 -> (1, 0, -2, 0, 0, 0, 0) tilt# 0 axis# 0 domain FRAGMENT ZD False
+     s   +1 -> (1, 1, -1, 0, 0, 0, 0) tilt# 0 axis# 0 domain H ZD False
+     s   -1 -> (1, 1, -3, 0, 0, 0, 0) tilt# 0 axis# 0 domain H ZD False
+     A   +1 -> (1, 1, -2, 1, 0, 0, 0) tilt# 0 axis# 0 domain FRAGMENT ZD False
+     A   -1 -> (1, 1, -2, -1, 0, 0, 0) tilt# 0 axis# 0 domain FRAGMENT ZD False
+     K   +1 -> (1, 1, -2, 0, 1, 0, 0) tilt# 4 axis# 0 domain FRAGMENT ZD False
+     K   -1 -> (1, 1, -2, 0, -1, 0, 0) tilt# 4 axis# 0 domain FRAGMENT ZD False
+     mol +1 -> (1, 1, -2, 0, 0, 1, 0) tilt# 4 axis# 0 domain FRAGMENT ZD False
+     mol -1 -> (1, 1, -2, 0, 0, -1, 0) tilt# 4 axis# 0 domain FRAGMENT ZD False
+     cd  +1 -> (1, 1, -2, 0, 0, 0, 1) tilt# 4 axis# 0 domain FRAGMENT ZD False
+     cd  -1 -> (1, 1, -2, 0, 0, 0, -1) tilt# 4 axis# 0 domain FRAGMENT ZD False
+
+Part G emergent objects and their addresses (dimension of the quantity each defines):
+  inertia m (G6)                   (1, 0, 0, 0, 0, 0, 0)  tilt# 0 axis# 0 domain C
+  force F = k m a (G6)             (1, 1, -2, 0, 0, 0, 0) tilt# 0 axis# 0 domain H
+  entropy S = k ln W (G5)          (1, 2, -2, 0, -1, 0, 0) tilt# 4 axis# 0 domain FRAGMENT
+  D = d/dx (ADD generator)         (0, -1, 0, 0, 0, 0, 0) tilt# 0 axis# 0 domain C
+  theta = x D (SCALE generator)    (0, 0, 0, 0, 0, 0, 0)  tilt# 0 axis# 0 domain R
+  wp (potential; 1/length^2)       (0, -2, 0, 0, 0, 0, 0) tilt# 0 axis# 0 domain C
+  g2 (1/length^4)                  (0, -4, 0, 0, 0, 0, 0) tilt# 0 axis# 0 domain C
+  g3 (1/length^6)                  (0, -6, 0, 0, 0, 0, 0) tilt# 0 axis# 0 domain C
+  boost / Doppler factor           (0, 0, 0, 0, 0, 0, 0)  tilt# 0 axis# 0 domain R

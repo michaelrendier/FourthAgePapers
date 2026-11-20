@@ -43,6 +43,7 @@ Exists: the toolset and sedenion companion above; `emerger`; `bracketing_firing_
 | `02_results.md` | results, the failure of EQ1 and its source, corrections |
 | `03_registered_criterion.md`, `archimedes_sample.py`, `04_results_archimedes.md`, `results_archimedes_sample_2026-11-19*.txt` | test 3: 15 Archimedes equations (8 Maths modules, 7 fractal formulas) classed EXACT / LIMIT / NOT FOUND against Ĥ_RB and two controls; run 1 classifier bug kept |
 | `05_registered_facets.md`, `facet_tests.py`, `weierstrass_gr.py`, `06_results_facets.md`, `results_facets_*.txt`, `results_weierstrass_gr_*.txt` | test 4: do the facets of Σ_RB derive their theories or name them (R̂ = boost generator, B̂ → F = ma, φ scan, GR orbits as Weierstrass functions) |
+| `07_registered_grammar_catalog_address.md`, `grammar.py`, `catalog.py`, `address.py`, `address_discrimination.py`, `word_address.py`, `08_results_grammar_catalog_address.md`, `catalog/`, `results_grammar_*`, `results_catalog_*`, `results_address*`, `results_word_address_*` | test 5: the grammar (7 emergent derivations from ADD, SCALE, SIGN), the catalog of 6,268 + 65 Archimedes equations as ASS-words against the firing-order space, and the sedenion address of quantities (unit encoding collapses; word as walk) |
 | `TODO.md` | what is next |
 
 ## Standing rules that apply

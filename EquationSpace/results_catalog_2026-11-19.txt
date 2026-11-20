@@ -1,0 +1,16 @@
+py named equations: 65 ; ufm formulas with a loop: 6268
+C1 distinct (loop|bailout) skeletons: 4500 ; distinct loop words: 4381 ; duplication x1.4
+   most common skeletons: [('FFFSA|GGG', 160), ('|', 142), ('FFFSAAGGSGASSGSGSA|GGG', 86), ('FFFSAAS|GGG', 57), ('SA|GG', 44)]
+C2 formulas with a bailout section: 5922 ; with >=1 SIGN (anywhere) and >=1 ADD in the loop: 5795 (97.9%)
+   with a SIGN primitive in the bailout itself: 5922 (100.0%) ; with an ADD in the loop: 5795 (97.9%)
+C3 words by length n: occupied / 3^n possible / orderings-with-bracketings 3^n*Catalan(n-1)
+   n=1 occupied     3  of      3  (100.000%)  ;  firing-order points 3
+   n=2 occupied     6  of      9  (66.667%)  ;  firing-order points 9
+   n=3 occupied    20  of     27  (74.074%)  ;  firing-order points 54
+   n=4 occupied    49  of     81  (60.494%)  ;  firing-order points 405
+   n=5 occupied    72  of    243  (29.630%)  ;  firing-order points 3402
+   n=6 occupied    95  of    729  (13.032%)  ;  firing-order points 30618
+   n=7 occupied   128  of   2187  (5.853%)  ;  firing-order points 288684
+   n=8 occupied   153  of   6561  (2.332%)  ;  firing-order points 2814669
+   length histogram (n: count): {0: 193, 1: 22, 2: 296, 3: 161, 4: 296, 5: 267, 6: 258, 7: 259, 8: 233, 9: 226, 10: 200, 11: 207, 12: 166, 13: 183, 14: 138, 15: 241, 16: 69, 17: 75, 18: 86, 19: 69} ... max 44157
+   root totals over all words: ADD 482559 SCALE 563448 SIGN 544143 (unknown-function slots 97636, random 3076)

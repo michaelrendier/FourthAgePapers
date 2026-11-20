@@ -1,0 +1,6 @@
+== distinct 16-out results among the 25 named quantities: 4
+   19 ['mass (inertia)', 'length', 'time', 'velocity', 'acceleration', 'momentum', 'force N = m a', 'energy J', 'power W', 'action J s', 'pressure Pa', 'frequency Hz', 'G (Newton)', 'charge C', 'voltage V', 'resistance Ohm', 'capacitance F', 'epsilon_0', 'mu_0']
+   4 ['temperature K', 'amount mol', 'luminous cd', 'current A']
+   1 ['entropy J/K']
+   1 ['molar entropy J/(K mol)']
+== 2000 random exponent vectors in [-3,3]^7: 1255 distinct 16-out results (largest class 24)

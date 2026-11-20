@@ -1,6 +1,6 @@
 # EquationSpace test 4: results (2026-11-19). Predictions: `05_registered_facets.md`; code `facet_tests.py`, `weierstrass_gr.py`; output `results_facets_2026-11-19.txt`, `results_weierstrass_gr_2026-11-19.txt`
 
-> **Scope note (author, 2026-11-19).** Σ_RB is not part of the emergent-equation mapping: it is the VAPMIP capacity. This page is kept as the record of what was run; the mapping proceeds without it. Vocabulary from here on: **emergent** = derivable (an edge from a parent by a checked derivation), **constructed** = found in (expressible, no derivation). Only emergent equations are mapped.
+> **Scope note (author, 2026-11-19; corrected the same day).** Vocabulary: **emergent** = derivable (reached by a checked derivation), **constructed** = found in (expressible, no derivation). The first scope note on this page said Σ_RB is out of the mapping; that was a misreading. Ainulindale wiki 14 §1: "Σ_RB was a renotation artefact (the sum was formerly Ĥ_RB)": the module `h_rb_hat` is Ĥ_RB, and **the Ĥ_RB exploration mapping (find every Archimedes equation in Ĥ_RB, and how to reach it) is the task.** This page is the record of the first tests of it.
 
 The question: can GR, QM, F = ma, Navier–Stokes, … be *derived* from Σ_RB, or does the code only name them? `ValaQuenta/modules/h_rb_hat` already holds a facet table (σ = 2 GR, σ = 1 Yang–Mills / Navier–Stokes, σ = ½ QM and the zeta zeros, σ < ½ Fermat). Labels `ESTABLISHED:CALCULATED` for arithmetic; the readings are marked.
 

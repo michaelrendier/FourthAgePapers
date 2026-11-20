@@ -17,3 +17,8 @@
 - [ ] SCOPE 2026-11-19 (corrected): the task is the Ĥ_RB exploration mapping: find every Archimedes equation in Ĥ_RB as an EMERGENT equation (derivable) and record how to reach it; constructed (found-in) ones are not claimed. Σ_RB is the old notation for the same operator (wiki 14 §1). Discuss the dial grammar and the ledger before building.
 - [x] Test 5 run: G1-G7 pass; C1 failed (4,500 skeletons); unit address collapses (19 of 25 quantities identical); word-endpoint address carries only count parity.
 - [ ] Next: the WALK address (partial products) and the prefix tree of the catalog; circle entry and exit per equation; derive more of the catalog (G-style) beyond placement; richer input for the 16-in 16-out operator.
+
+
+## Update 2026-11-20 (test 6: 09/10)
+- Done: walk address (faithful, injective), prefix tree (0.79 ratio, W3 failed), reachable indices = octonion half 0..7, conjugate / non-conjugate pairs of the three generators (X1–X6 pass, X7 weak).
+- Open: a fourth generator (index 8) to reach the sedenion half, to be named by the author; the per-equation derivation by family; X4 with a mixed-parity state; catalog-wide census of which equations contain a canonical pair vs the non-canonical (θ,p) pair; circle entry/exit per equation.

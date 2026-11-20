@@ -1,0 +1,17 @@
+pool: py named functions 65 ; ufm formulas with a loop 6739
+py   Maths/Sequences/LucasNumbers.py::lucas_number                  EXACT     
+py   Maths/Matrix.py::ero_interchange                               LIMIT     
+py   Maths/Sequences/LucasNumbers.py::lucas_series                  EXACT     
+py   Maths/Sequences/FibonacciSequence.py::explicit_formula_fibonac EXACT     
+py   Maths/Sequences/DeBruijnSequences.py::dfs                      LIMIT     
+py   Maths/Combinatorics.py::Shuffle                                EXACT     
+py   Maths/LorenzStirling.py::iterate                               LIMIT     
+py   Maths/StatisticsAndProbability.py::zscore                      EXACT     
+ufm  pwc-convert.ufm::MsetModJulia-bare                             LIMIT     
+ufm  obsolete.ufm::REB004D                                          LIMIT     
+ufm  jrf.ufm::USA2a                                                 NOT FOUND 
+ufm  bje.ufm::Bullet                                                NOT FOUND 
+ufm  em.ufm::MenorahFractal                                         LIMIT     
+ufm  om2.ufm::HugaMarash                                            LIMIT     
+ufm  ben.ufm::FviewDisco                                            LIMIT     
+tiers: {'EXACT': 5, 'LIMIT': 8, 'NOT FOUND': 2} | differences between H_RB and the two controls: 0

@@ -41,6 +41,7 @@ Exists: the toolset and sedenion companion above; `emerger`; `bracketing_firing_
 | `01_holcus_asks.md` | the answers and the predictions EQ1–EQ3, registered before any test |
 | `equation_space.py`, `results_engine_2026-11-19.txt` | the sign-space engine and its raw output |
 | `02_results.md` | results, the failure of EQ1 and its source, corrections |
+| `03_registered_criterion.md`, `archimedes_sample.py`, `04_results_archimedes.md`, `results_archimedes_sample_2026-11-19*.txt` | test 3: 15 Archimedes equations (8 Maths modules, 7 fractal formulas) classed EXACT / LIMIT / NOT FOUND against Ĥ_RB and two controls; run 1 classifier bug kept |
 | `TODO.md` | what is next |
 
 ## Standing rules that apply

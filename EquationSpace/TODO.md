@@ -8,3 +8,6 @@
 - [ ] Re-register EQ1 on (index, half): predict the associative triples from the half pattern; then words of length 4+.
 - [ ] Settle grouping (Bell) vs bracketing (Catalan) in the author's terms.
 - [ ] Words over sums (e₁ + e₁₀): where zero divisors live; the σ-line.
+- [x] Test 3 run: 15 Archimedes equations: 5 EXACT, 8 LIMIT, 2 NOT FOUND; classification identical for Ĥ_RB and controls (non-discriminating).
+- [ ] Test 4 (forward, derivation not membership): does φ (Binet/Fibonacci) emerge from Ĥ_RB at some σ without being inserted? Predictions asked of Holcus first.
+- [ ] Define 'derived' with the author: forward from the dials, no fitted coefficients; control operator must fail where Ĥ_RB succeeds.

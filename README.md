@@ -23,7 +23,9 @@ The notebooks record the derivation. The wiki page is written last.
 
 The project's interactive galleries are self-contained HTML pages. Each is served from a small local web server that listens on `127.0.0.1` only; start it with the launcher in the right-hand column (it also opens the page). They are served over http, not opened as files, so that Firefox shows the author's favicon in the tab (Firefox stores no icon for `file://` pages). The links open in a new tab once the server is running; GitHub removes the new-tab attribute when it renders this file, in which case middle-click.
 
-**One entry point for all galleries:** <a href="http://127.0.0.1:8760/galleries/index.html" target="_blank" rel="noopener">http://127.0.0.1:8760/galleries/index.html</a> (start it with `~/Projects/ThePlace/galleries/serve_all.sh`): every gallery, a combined search over all images, the atlas list and a README of how the galleries are made.
+**On the web:** <a href="https://michaelrendier.github.io/" target="_blank" rel="noopener">michaelrendier.github.io</a> is the central page: every repository, a gallery page for each, and one catalog of every generated image.
+
+**One entry point for all galleries (local):** <a href="http://127.0.0.1:8760/galleries/index.html" target="_blank" rel="noopener">http://127.0.0.1:8760/galleries/index.html</a> (start it with `~/Projects/ThePlace/galleries/serve_all.sh`): every gallery, a combined search over all images, the atlas list and a README of how the galleries are made.
 
 | Gallery | What it shows | Repository | Open (new tab) | Start the server |
 |---|---|---|---|---|

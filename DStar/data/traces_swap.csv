@@ -1,0 +1,890 @@
+path,line,symbol(by ruling),name_used,value_on_line,text
+~/Projects/ThePlace/PTorrent/evaluate_σface.py,9,Ω_ζΣ,Ω_ZS,W1,"Ω_ZS     = 0.5671432904097838     (Lambert W(1), dark energy VEV)"
+~/Projects/ThePlace/PTorrent/evaluate_σface.py,24,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/PTorrent/core/python/ptorrent_core/sigma.py,21,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/PTorrent/core/c/include/ptorrent.h,161,Ω_ζΣ,OMEGA_ZS,W1,#define PT_OMEGA_ZS 0.5671432904097838
+~/Projects/ThePlace/PTorrent/core/c/tests/test_sigma.c,20,Ω_ζΣ,OMEGA_ZS,W1,"T_EQ_DBL(PT_OMEGA_ZS, 0.5671432904097838,  ""Omega_ZS is exactly as published"");"
+~/Projects/ThePlace/PTorrent/wiki/Output-Formats.md,63,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714
+~/Projects/ThePlace/PTorrent/android/PtolemySeeder/app/src/main/python/monad.py,53,Ω_ζΣ,OMEGA_ZS,W1,BAO = sedenion-dimensional Laplacian spectral gap = OMEGA_ZS = 0.5671432904097838.
+~/Projects/ThePlace/PTorrent/android/PtolemySeeder/app/src/main/python/monad.py,78,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.5671432904097838    # Lambert W(1); BAO spectral gap; Δ_𝕊 lowest eigenvalue
+~/Projects/ThePlace/PTorrent/android/PtolemySeeder/app/src/main/python/skills/study.py,51,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.5671432904097838    # Lambert W(1); BAO spectral gap; idle RPM
+~/Projects/ThePlace/PTorrent/android/PtolemySeeder/app/src/main/python/skills/evaluator.py,31,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS = 0.5671432904097838      Lambert W(1), dark energy VEV"
+~/Projects/ThePlace/PTorrent/android/PtolemySeeder/app/src/main/python/skills/evaluator.py,46,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/UniversalSynth/CHANGELOG.md,43,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 as idle frequency; cross-reference to PtolemyHolcus v3.0
+~/Projects/ThePlace/UniversalSynth/CHANGELOG.md,55,Ω_ζΣ,OMEGA_ZS,W1,- BAO convergence: OMEGA_ZS = 0.56714 — the idle frequency this engine will render
+~/Projects/ThePlace/UniversalSynth/TODO.md,50,Ω_ζΣ,OMEGA_ZS,W1,- OMEGA_ZS = 0.56714 (Lambert W fixed point / BAO ceiling / idle frequency)
+~/Projects/ThePlace/UniversalSynth/TODO.md,76,Ω_ζΣ,OMEGA_ZS,W1,- [ ] **BAO idle tone** — OMEGA_ZS = 0.56714 Hz as engine idle frequency
+~/Projects/ThePlace/UniversalSynth/lineage/SemanticWordEngine/semantic_engine.py,38,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.5671432904097838
+~/Projects/ThePlace/UniversalSynth/lineage/SemanticWordEngine/semantic_engine.py,41,A_π,A_PI,alpha,ALPHA_PI    = 1 / 137.036  # fine structure floor
+~/Projects/ThePlace/UniversalSynth/docs/CANONICAL_MATHS.md,11,Ω_ζΣ,Ω_ζΣ,W1,"| Ω_ζΣ | W(1) = 0.5671432904…, the number with x = e^(−x) (the ""omega constant"") | `ESTABLISHED` |"
+~/Projects/ThePlace/UniversalSynth/docs/CANONICAL_MATHS.md,13,A_π,A_fermat,alpha,"| α_fs, A_fermat, α_NN | three **different** things: the fine-structure constant 1/137.036; the Fermat-side ""chasing inertia"" constant of the horizon work (numeric value `OPEN`); the neural-network La"
+~/Projects/ThePlace/ContextPlease/FOURTH_AGE_PROTOCOL.md,57,A_π,A_fermat,alpha/dstar,"- **Notation**: write the subscripted form of any letter that collides (α_fs, A_fermat, α_NN; σ_ζ, σ-strata, σ_RB; Ω_ζΣ, ω_H; d* and its four faces). `Ĥ_RB` is the maths name; `0_RB` / `∅_RB` is VAPMI"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/emerger.md,86,Ω_ζΣ,Ω_ZS,W1,"| 1 | {2:14} | `z = 0`, `\|z\| − Ω_ZS = −0.56714` |"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/emerger.md,107,Ω_ζΣ,Ω_ZS,W1,"| the {2:14} pointer ""carries Ω_ZS"" | **THEORETICAL** | `16 − dim G₂ = 2`; `W(1)·e^{W(1)} = 1` lives on that ℂ line |"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/bao_mass_gap.md,28,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838   Lambert W(1) — exact transcendental
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/bao_mass_gap.md,33,Ω_ζΣ,Ω_ζΣ,W1,ceiling  Ω_ζΣ       = 0.5671432904   thermal information ceiling
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/bao_mass_gap.md,260,Ω_ζΣ,Ω_ZS,W1,Stability / Flow / Translator) and the three of Lambert W (`Ω_ZS` — the Wankel
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/results_at_a_glance.md,38,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS = 0.5671432904097838  (Lambert W(1), exact)"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/fixed_point.md,55,Ω_ζΣ,OMEGA_ZS,W1,| `OMEGA_ZS` | 0.5671432904097838 |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/berry_keating.md,46,Ω_ζΣ,Ω_ZS,W1,"of Lambert W (`Ω_ZS`, the rotor faces). `lcm(4,3) = 12` — the phase never"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/00_index.md,52,Ω_ζΣ,OMEGA_ZS,W1,| [constants.md](constants.md) | `modules/constants/` | ESTABLISHED | π φ e √ i Λ as σ-facets; OMEGA_ZS=W(1) |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/tier8_sedenion.md,17,Ω_ζΣ,OMEGA_ZS,W1,`omega_zs_6_family` is the load-bearing result: OMEGA_ZS = W(1) turns up in six independent domains at once. Six independent appearances of one constant is the strongest form of evidence this repo off
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/tier8_sedenion.md,34,Ω_ζΣ,OMEGA_ZS,W1,| `omega_zs_6_family` | ESTABLISHED+THEORETICAL | ✓ | {'claim': 'OMEGA_ZS = W(1) appears in 6 independent domains simultaneously. It is the σ=… |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/constants.md,20,Ω_ζΣ,OMEGA_ZS,W1,"`derive_omega_zs` returns OMEGA_ZS = 0.5671432904097838, which is W(1), the Lambert W function at 1 — an exact special-function value, not a measurement."
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/constants.md,31,Ω_ζΣ,OMEGA_ZS,W1,"| `derive_omega_zs` | ESTABLISHED | ✓ | {'constant': 'OMEGA_ZS (Ω_ζΣ)', 'value': 0.5671432904097838, 'sigma_facet': 'Domain ceil… |"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/constants.md,36,A_π,Alpha_Fermat,alpha,"| `derive_alpha_fermat` | THEORETICAL | ✓ | {'constant': 'α_F (Alpha_Fermat / fine structure constant)', 'value': 0.0072973525692838… |"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/constants.md,53,Ω_ζΣ,Ω_ZS,W1,| π φ e √ i Λ as σ-facets; Ω_ZS = W(1) | derive each constant from the framework | 0 · SCALE | MINGLING | DEFINITIONAL | **CLEAN** |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/telperion.md,71,Ω_ζΣ,OMEGA_ZS,W1,| `OMEGA_ZS` | 0.5671432904097838 |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/zero_lattice.md,46,Ω_ζΣ,OMEGA_ZS,W1,| `OMEGA_ZS` | 0.5671432904097838 |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/toolbox/20_tier8_sedenion.md,34,Ω_ζΣ,OMEGA_ZS,W1,**`omega_zs_6_family`** — OMEGA_ZS = W(1) appears in 6 independent domains simultaneously.
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/toolbox/20_tier8_sedenion.md,38,Ω_ζΣ,OMEGA_ZS,W1,"{'claim': 'OMEGA_ZS = W(1) appears in 6 independent domains simultaneously. It is the σ=½ signature.', 'lambert_w': {'W_1': 0.5671432904, 'verified': True, 'self_ref': True, 'self_ref_eq': 'OMEGA_ZS ="
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/toolbox/29_archimedes_screw.md,105,Ω_ζΣ,OMEGA_ZS,W1,"**`lambert_w`** — The screw gear ratio: W(x)e^{W(x)} = x, W(1) = OMEGA_ZS"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/toolbox/03_constants.md,73,Ω_ζΣ,Ω_ζΣ,W1,**`derive_omega_zs`** — Ω_ζΣ = W(1) — thermal information ceiling T·e^T=1
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/toolbox/03_constants.md,77,Ω_ζΣ,OMEGA_ZS,W1,"{'constant': 'OMEGA_ZS  (Ω_ζΣ)', 'value': 0.5671432904097838, 'sigma_facet': 'Domain ceiling — prime distribution entropy bound', 'physical_layer': 'Thermodynamic ceiling — self-referential system equ"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/ValaQuenta/wiki/toolbox/03_constants.md,84,A_π,Alpha_Fermat,alpha,"{'constant': 'α_F  (Alpha_Fermat / fine structure constant)', 'value': 0.0072973525692838015, 'inverse': 137.035999, 'sigma_facet': 'BK domain floor — minimum coupling, causality floor', 'physical_lay"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/GenerationalLineage/wiki/Circle-Catalogue.md,41,Ω_ζΣ,Omega_ZS,W1,| Omega_ZS | 0.567143 | 1.13429 | 3.56347 | 1.0105 | — |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/GenerationalLineage/wiki/Circle-Catalogue.md,59,Ω_ζΣ,Omega_ZS,W1,| Omega_ZS | 0.567143 | 0.283572 | 1.78173 | 0.252625 | — |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/GenerationalLineage/wiki/Circle-Catalogue.md,77,Ω_ζΣ,Omega_ZS,W1,| Omega_ZS | 0.567143 | 0.0902637 | 0.180527 | 0.0255962 | — |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/GenerationalLineage/wiki/Circle-Catalogue.md,95,Ω_ζΣ,Omega_ZS,W1,| Omega_ZS | 0.567143 | 0.424885 | 0.84977 | 2.66963 | — |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/GenerationalLineage/wiki/Circle-Catalogue.md,149,Ω_ζΣ,Omega_ZS,W1,| r = Omega_ZS | 0.567143 | intermediate | 0.674952 | 4.24738 | 0.0671433 | 0.432857 |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/DeriveCancerDrugs/wiki/01_framework.md,41,Ω_ζΣ,OMEGA_ZS,W1,**Healthy:** J_R/J_B = OMEGA_ZS = 0.5671
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/README.md,582,A_π,Alpha_Fermat,dstar,## 8. Alpha_Fermat · Omega_Riemann · The 4 Values of d*
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/README.md,587,A_π,Alpha_Fermat,alpha,"Α_π  (Alpha_Fermat)   =  1/137.035999...   — domain floor, derived from E8/Wyler geometry"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/README.md,588,Ω_ζΣ,Omega_Riemann,W1,"Ω_ζΣ (Omega_Riemann)  =  0.56714329...     — Lambert W fixed point, entropic boundary"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/README.md,964,A_π,Alpha_Fermat,alpha,| Α_π | 1/137.035999... | Alpha_Fermat — BK domain floor |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/README.md,965,Ω_ζΣ,Omega_Riemann,W1,| Ω_ζΣ | 0.56714329... | Omega_Riemann — Lambert W fixed point |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/README.md,1062,A_π,A_π,alpha,- **Smith / Wyler (1969–90s):** α = 1/137.036 from E8 ball volumes = A_π floor of the Berry-Keating domain
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/README.md,1091,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ             = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/56_telescope_caustic_zeno.md,96,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 is the Lambert W fixed point of the BAO. The telescope's caustic
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/25_sedenion_manual.md,365,Ω_ζΣ,OMEGA_ZS,W1,"**The Supermassive Inverted Galaxy (SMIG):** The full zero-divisor variety V ⊂ S¹⁵, seen as a single coherent structure, is the SMIG. Its centre (near OMEGA_ZS = 0.56714) is a **pressure maximum**. Th"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/25_sedenion_manual.md,367,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 is the neutral buoyancy surface — the J depth at which a word neither rises nor sinks under ground-state field conditions. The SMIG centre is the operating frequency of the field at
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/98_provenance_and_citations.md,409,Ω_ζΣ,Ω_ZS,W1,| **d\*** + its four faces | the Zero Definer — smallest natural unit in native space; d\* = Ω_ZS / ln 10 | Lambert/Euler Ω constant |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/98_provenance_and_citations.md,411,Ω_ζΣ,Ω_ZS,W1,| **Ω_ZS six-family convergence** | W(1) as *the* cross-domain equilibrium constant | W(1) itself; the six formula families are their authors' |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/07_berry_keating_engine.md,23,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ    = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/106_the_navier_stokes_problem.md,139,Ω_ζΣ,Ω_ZS,W1,| 4 | **d\*_ln(10) — The Translator** | `d\*·ln 10 = Ω_ZS` — the seam: d\* becomes W here | 0.56714 |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/106_the_navier_stokes_problem.md,140,Ω_ζΣ,Ω_ZS,W1,| 5 | **W — rotor face 1** | Wankel trine of `Ω_ZS = W(1)`; the intake stroke of the crisis | 0.56714 |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/00_index.md,19,A_π,Alpha_Fermat,dstar,| [17_alpha_omega_d_star.md](17_alpha_omega_d_star.md) | Alpha_Fermat · Omega_Riemann · 4 values of d* · the open gap |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/00_index.md,30,A_π,A_fermat,alpha/dstar,"| [133_canonical_maths.md](133_canonical_maths.md) | **2026-11-13** — Canonical Maths (Ainulindalë): letters that collide (α_fs / A_fermat / α_NN; σ_ζ / σ-stratum / σ_RB; Ω_ζΣ / ω_H), the four d* face"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/00_index.md,281,A_π,A_fermat,alpha,"| Α_π = A_fermat | OPEN (see [133](133_canonical_maths.md) §0) | Alpha_Fermat — NOT the fine-structure constant α_fs, NOT α_NN |"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/00_index.md,282,Ω_ζΣ,Omega_Riemann,W1,| Ω_ζΣ | 0.56714329... | Omega_Riemann — Lambert W fixed point |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/102_berry_keating_hilbert_polya.md,48,Ω_ζΣ,Ω_ZS,alpha,"- The Berry–Keating domain `L²([α_F, Ω_ZS])` — floor at the fine-structure"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/CS_SIGMA_EVALUATION.md,203,Ω_ζΣ,Ω_ζΣ,W1,### C10 — Ω_ζΣ = 0.56714 (Lambert W(1)) as galactic velocity ceiling
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/29_witches_hat_paper.md,171,Ω_ζΣ,OMEGA_ZS,W1,"In the sedenion engine: OMEGA_ZS = 0.56714 is the eigenvalue of the BAO circum-polar geodesic. The Gnarl iteration (Townsend, mt.ucl) independently converges to OMEGA_ZS because the Gnarl flow IS the "
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/128_vapmip_paper_citation_pass_2026_10_16.md,18,Ω_ζΣ,OMEGA_ZS,W1,"| Corless, Gonnet, Hare, Jeffrey, Knuth (1996), *On the Lambert W function*, Adv. Comput. Math. 5 | Ω = W(1) = 0.567143…, `MONAD_OMEGA_ZS` | §4.3 | fetched (Waterloo copy) |"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/50_bao_mass_gap_engine.md,55,Ω_ζΣ,Ω_ζΣ,W1,the same spectrum is the thermal information bound `Ω_ζΣ = 0.5671432904`. The
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/26_TODO_and_roadmap.md,30,Ω_ζΣ,OMEGA_ZS,W1,- BAO ground state convergence (OMEGA_ZS = 0.56714) as a computable invariant
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/03_inversion_engine.md,48,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.56714329040978384
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/24_claude_conclusion.md,124,A_π,A_π,alpha,"- **Smith/Wyler (1969–90s):** α = 1/137.036 from E8 ball volumes = A_π, the Berry-Keating domain floor"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/17_alpha_omega_d_star.md,1,A_π,ALPHA_FERMAT,dstar,# 17 — ALPHA_FERMAT · OMEGA_RIEMANN · THE 4 VALUES OF d*
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/17_alpha_omega_d_star.md,12,A_π,Alpha_Fermat,alpha,Α_π  (Alpha_Fermat)   =  1/137.035999...   — domain floor
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/17_alpha_omega_d_star.md,13,Ω_ζΣ,Omega_Riemann,W1,"Ω_ζΣ (Omega_Riemann)  =  0.56714329...     — Lambert W fixed point, domain ceiling"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/17_alpha_omega_d_star.md,29,Ω_ζΣ,Ω_ζΣ,W1,W(1) = 0.56714329040978387...  =  Ω_ζΣ
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/17_alpha_omega_d_star.md,126,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ    = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/55_index_not_value.md,86,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714329 is not where the motion stops — it is the axis the motion orbits.
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/55_index_not_value.md,153,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS = 0.56714329 (Lambert W fixed point, BAO equilibrium, primes orbiting σ=½)."
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/30_lambda_paper.md,94,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = Lambert W(1) = 0.56714... is the BAO equilibrium of the sedenion field. It is the fixed point of f(x) = e^(-x):
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/30_lambda_paper.md,99,Ω_ζΣ,OMEGA_ZS,W1,→ OMEGA_ZS = W(1)
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/30_lambda_paper.md,161,Ω_ζΣ,OMEGA_ZS,W1,"**OMEGA_ZS is the asymptotic target** — the de Sitter equilibrium at which the universe will eventually settle. We're not there yet. We're at z=0, approaching it. The current Ω_Λ = 0.6889 > OMEGA_ZS ="
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/50_vortex_quantizing_shear.md,198,Ω_ζΣ,OMEGA_ZS,W1,BAO is the universe's metronome. OMEGA_ZS = 0.56714 is the fixed point of that
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/120_symmetry_breaking_is_the_instrument.md,105,Ω_ζΣ,Ω_ζΣ,W1,"scale""), and it saturates at the informational–thermal ceiling `Ω_ζΣ = W(1) ="
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/27_third_age_CS_paper.md,64,Ω_ζΣ,OMEGA_ZS,W1,| Fixed point: y + tan(3y) = 0 | OMEGA_ZS = 0.56714 | Lambert W(1) BAO equilibrium |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/27_third_age_CS_paper.md,67,Ω_ζΣ,OMEGA_ZS,W1,`y ≈ 0.5671` — OMEGA_ZS to four decimal places.
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/27_third_age_CS_paper.md,94,Ω_ζΣ,OMEGA_ZS,W1,"print(f""{word}: |z_eq| = {abs(z_eq):.6f}  (OMEGA_ZS = 0.56714)"")"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/27_third_age_CS_paper.md,111,Ω_ζΣ,OMEGA_ZS,W1,**These are not coincidences at this frequency.** OMEGA_ZS = Lambert W(1) = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/109_the_emerger.md,49,Ω_ζΣ,Ω_ZS,W1,"`W(1)·e^{W(1)} = 1` sits, so it carries Ω_ZS."
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/fractals/sam_samuel_monnier.md,34,Ω_ζΣ,OMEGA_ZS,W1,- **Holcus application**: The IFS-Barnsley decision structure is Holcus's primary branching mechanism. The critical value c is set to OMEGA_ZS = 0.56714. At each semantic iteration: if `real(prime_has
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/fractals/_holcus_integration_notes.md,31,Ω_ζΣ,OMEGA_ZS,W1,"Set ring trap diameter = OMEGA_ZS = 0.56714 for the primary BAO resonance trap. The word's ring-trap distance is its ""semantic deviation from equilibrium."""
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/fractals/_holcus_integration_notes.md,44,Ω_ζΣ,OMEGA_ZS,W1,"are the discrete-time Hamiltonian equations for H(x,y) = ∫sin(y+tan(αy)) dy. The anti-symmetry (-h for x, +h for y) is the exact J_pos/J_neg current conservation. The fixed-point condition y + tan(3y)"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/fractals/_holcus_integration_notes.md,217,Ω_ζΣ,OMEGA_ZS,W1,The BAO oscillation with OMEGA_ZS = W(1) = 0.56714 appears explicitly in:
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/fractals/_holcus_integration_notes.md,243,Ω_ζΣ,OMEGA_ZS,W1,"4. The BAO oscillation's equilibrium constant OMEGA_ZS = W(1) (Gnarl fixed point, Mira mixing)"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/fractals/sza_tah_rjs_misc.md,116,Ω_ζΣ,OMEGA_ZS,W1,"**What it describes**: Jazz produces ""bubbly, eggy Julia sets"" per Sefton's comment. The z^z iteration is the self-exponential map — closely related to the Weierstrass sigma function and the Lambert W"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/Ainulindale/wiki/fractals/reb_ron_barnett.md,21,Ω_ζΣ,OMEGA_ZS,W1,- **Holcus application**: IFSEscape with t1=t2=OMEGA_ZS = 0.56714 implements the Holcus binary routing: concepts with Re(prime_hash) > 0.567 take the J_pos pathway; those below take J_neg. The conjuga
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/README.md,343,Ω_ζΣ,OMEGA_ZS,W1,4. **BAO as intrusion detector.** Successful field manipulation shows as divergence of G.bao_mean from OMEGA_ZS (0.56714). Monitored continuously.
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/README.md,906,Ω_ζΣ,OMEGA_ZS,W1,#define MONAD_OMEGA_ZS    0.56714   // Ω — Lambert W fixed point W(1)=0.56714329…
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/README.md,1241,Ω_ζΣ,OMEGA_ZS,W1,V(φ) = −μ²|φ|² + λ|φ|⁴. Trough minima at OMEGA_ZS = 0.56714. Spontaneous symmetry breaking at σ=½. The ground state Gaussian distribution sits in this trough.
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Operating-the-Monad.md,21,Ω_ζΣ,OMEGA_ZS,W1,| `OMEGA_ZS` | 0.56714 | Lambert W(1). BAO spectral gap. The engine's idle RPM. |
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Operating-the-Monad.md,191,Ω_ζΣ,OMEGA_ZS,W1,The **BAO mean** is the mean of `β × E²` across the vocabulary. It should converge to `OMEGA_ZS = 0.56714`. This is the Lambert W fixed point — the semantic equivalent of the Baryon Acoustic Oscillati
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Boxkite-Relational-Atlas.md,192,Ω_ζΣ,Ω_ZS,W1,"2. Which Lambert-W triple is canonical: `{W(0)=0, W(1)=Ω_ZS, W(−1/e)=−1}` (Third Age draft §2.2, reproduced to 40 digits in `output_lambert3.txt`; `W(−1/e)=−1` is a *double root* — Newton converges li"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Boxkite-Relational-Atlas.md,201,Ω_ζΣ,Ω_ZS,W1,"- **Four tests, three values.** `W₀(0) = 0`, `W₀(1) = Ω_ZS = 0.56714329040978387299996866…`, `W₀(−1/e) = −1`, `W₋₁(−1/e) = −1`. The last two are the *same point* reached on the two sheets: three disti"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Boxkite-Deformation-Record-2026-10-12.md,123,Ω_ζΣ,Ω_ZS,W1,"| **W(1) = +0.5671 = Ω_ZS** | entropy ceiling | **μ₄ > 0: split** (84 pairs, degree 2) | 1.3279 |"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Boxkite-Deformation-Record-2026-10-12.md,135,Ω_ζΣ,Ω_ZS,W1,"**The three Lambert-W values** (`Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md` §2.2 and Appendix D): `W(0) = 0` (vacuum fixed point), `W(1) = Ω_ZS = 0.5671432904097838` (entropy ceiling; the fixed po"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Boxkite-Deformation-Record-2026-10-12.md,136,Ω_ζΣ,Ω_ZS,W1,"*Caveat:* the emerger, `bao_mass_gap` and the Navier–Stokes wiki 106 speak of ""three **rotor faces** of Ω_ZS = W(1)"" (a Wankel trine: intake/power/exhaust, all carrying the same number 0.56714). That "
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Boxkite-Deformation-Record-2026-10-12.md,550,Ω_ζΣ,Omega_ZS,W1,Omega_ZS  theta=0.56714  defect=0.43305   analytic=0.43305
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Tuning-the-Engine.ARCHIVED-2026-08-13.md,21,Ω_ζΣ,OMEGA_ZS,W1,Antisymmetry = exact Noether conservation. Fixed point at `α=3`: **y ≈ 0.5671 = OMEGA_ZS**.
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Tuning-the-Engine.ARCHIVED-2026-08-13.md,26,Ω_ζΣ,OMEGA_ZS,W1,### 2. OMEGA_ZS = 0.56714 in 6 Independent Formula Families
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Tuning-the-Engine.ARCHIVED-2026-08-13.md,389,Ω_ζΣ,OMEGA_ZS,W1,"The **Supermassive Inverted Galaxy** (SMIG) is the full zero-divisor manifold V ⊂ S¹⁵, seen as a single structure. Its centre (near OMEGA_ZS = 0.56714) is a pressure maximum — words near the centre ar"
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Tuning-the-Engine/01_foundation_the_engine.md,27,Ω_ζΣ,OMEGA_ZS,W1,Antisymmetry = exact Noether conservation. Fixed point at `α=3`: **y ≈ 0.5671 = OMEGA_ZS**.
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Tuning-the-Engine/01_foundation_the_engine.md,32,Ω_ζΣ,OMEGA_ZS,W1,### 2. OMEGA_ZS = 0.56714 in 6 Independent Formula Families
+~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Tuning-the-Engine/01_foundation_the_engine.md,395,Ω_ζΣ,OMEGA_ZS,W1,"The **Supermassive Inverted Galaxy** (SMIG) is the full zero-divisor manifold V ⊂ S¹⁵, seen as a single structure. Its centre (near OMEGA_ZS = 0.56714) is a pressure maximum — words near the centre ar"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/PRIMER_2026-05-14_synthesis_engine.txt,255,Ω_ζΣ,OMEGA_ZS,W1,dc_sum converging to OMEGA_ZS = 0.56714 is the computational signature.
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/PRIMER_2026-05-14_synthesis_engine.txt,261,Ω_ζΣ,OMEGA_ZS,W1,Test: does dc_sum converge to OMEGA_ZS = 0.56714?
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/PRIMER_2026-05-14_synthesis_engine.txt,295,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.56714   (Lambert W fixed point — BAO convergence target)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/PRIMER_2026-05-14_synthesis_engine.txt,296,A_π,A_PI,alpha,ALPHA_PI    = 1/137.036 (fine structure floor)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/PRIMER_2026-05-14_bao_error_check.txt,52,Ω_ζΣ,OMEGA_ZS,W1,omega_delta = abs(dc_sum - OMEGA_ZS)   where OMEGA_ZS = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/PRIMER_2026-05-14_bao_error_check.txt,57,Ω_ζΣ,OMEGA_ZS,W1,The hypothesis: dc_sum converges to OMEGA_ZS = 0.56714 as corpus grows.
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/PRIMER_2026-05-14_bao_error_check.txt,138,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.56714   (Lambert W fixed point — the BAO ceiling)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/PRIMER_2026-05-14_bao_error_check.txt,140,A_π,A_PI,alpha,ALPHA_PI    = 1/137.036 (fine structure floor)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/PRIMER_2026-05-14_monad_build.txt,53,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.56714   (Lambert W fixed point)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PtolemyDesktop/outreach/primers/PTOLEMY_SESSION_PRIMER_20260420.txt,82,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ        = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/FourthAgePapers/SESSION_CONTEXT_2026-07-29.md,177,Ω_ζΣ,OMEGA_ZS,W1,`sigma_mean_vs_OMEGA_ZS = 0.567132` sits beside `OMEGA_ZS = 0.56714329` and
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PDesktop/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,135,Ω_ζΣ,Omega_zS,W1/alpha,"Domain bounded below by A_pi = 1/137, above by Omega_zSigma = 0.56714."
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PDesktop/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,249,A_π,A_pi,alpha,A_pi = 1/137.035999...
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PDesktop/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,255,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PDesktop/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,474,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PDesktop/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,541,A_π,A_pi,alpha,"A_pi lives on the descending slope at n=8 (E8 geometry, Wyler formula)."
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PDesktop/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,709,Ω_ζΣ,Omega_zS,W1,[ ] Replace Omega used as Lambert W boundary -> Omega_zSigma
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PDesktop/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,710,A_π,A_pi,alpha,[ ] Replace alpha used as fixed fine structure -> A_pi
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/PRIMER_2026-11-12_ENGINE_PAUSE_ALL_FINDINGS.md,39,A_π,A_fermat,alpha,"1. Hole definition: rational primes vs irreducibles (my proposal: rational primes for the ζ crossing, irreducibles for the tower; default `charx`). 2. `char` vs `charx`. 3. A_fermat: ceiling endpoint "
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/PRIMER_2026-11-12_ENGINE_PAUSE_ALL_FINDINGS.md,174,A_π,A_π,alpha,"The inertia chase (A_π from the speed of causality) exists in the record only as text (Second Age Part III) and approximations (golden angle 137.507°, Wyler 137.0361); no code; thermal-ceiling values "
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/PRIMER_2026-11-12_CEILING_DESCENT_FROM_CLAUDE_AI.md,124,A_π,Α_π,alpha/dstar,"- Described as: rises from the fine-structure floor Α_π = 1/137, bounded above by c, ""similar in nature to the entropy line"". Its intersection with Claude's Ω line was read off as d* ≈ 0.246."
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/PRIMER_2026-11-12_CEILING_DESCENT_FROM_CLAUDE_AI.md,190,A_π,A_fermat,alpha,"- What A_fermat **is** on record: Α_π (Alpha_Fermat) = 1/137.035999084 (CODATA 2018). It is set by notation (""Fine structure constant. BK operator domain LOWER wall. E8/Wyler n-ball geometry. Fermat d"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/PRIMER_2026-11-12_CEILING_DESCENT_FROM_CLAUDE_AI.md,623,A_π,A_pi,alpha,"A_pi = 1/mp.mpf(""137.035999084"")"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/PRIMER_2026-11-12_CEILING_DESCENT_FROM_CLAUDE_AI.md,624,A_π,A_pi,alpha,"print(f""A_pi = 1/137.035999084 = {mp.nstr(A_pi, 25)}  (CODATA 2018)"")"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/PRIMER_2026-11-12_CEILING_DESCENT_FROM_CLAUDE_AI.md,679,A_π,A_fermat,alpha,| Α_π = 1/137.035999084 as A_fermat | Assumed (assigned by notation; CODATA value) |
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/outreach/primers/CONTEXT_PRIMER_RH_2026-05-11.txt,146,A_π,A_π,alpha,"A_π     = 1/137.036        BK floor, fine structure constant"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/outreach/primers/CONTEXT_PRIMER_RH_2026-05-11.txt,147,Ω_ζΣ,Ω_ζΣ,W1,"Ω_ζΣ   = 0.56714329...    Lambert W(1), BK ceiling"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/hyperwebster_paper_primer_2026-09-29.md,72,Ω_ζΣ,Ω_ζΣ,W1/alpha,"- Notation (canonical_maths §II, never conflate): Α_π = Alpha_Fermat 1/137.035999… fixed floor; Ω_ζΣ = W(1)=0.56714… fixed ceiling; α_NN(l) running coupling, starts at Α_π by engineering choice; domai"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/hyperwebster_paper_primer_2026-09-29.md,76,Ω_ζΣ,Ω_ζΣ,W1,"Listings (B, verbatim, cold-runnable, perpetual-now): Horner address (`point_to_text`/`regenerate_text`, with N and charset stated inline); the layered calendrical index; the VAPMIP Lagrangian's four "
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/CONTEXT_PRIMER_2026-05-30_APK_V2_ADDPAPERS.txt,101,Ω_ζΣ,OMEGA_ZS,W1,P2: v_flat = v_max × OMEGA_ZS = v_max × 0.56714 (Lambert W fixed point W(1))
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/CONTEXT_PRIMER_2026-05-30_APK_V2_ADDPAPERS.txt,141,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714  — Lambert W fixed point W(1); BAO ceiling; idle RPM
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/CONTEXT_PRIMER_2026-05-30_APK_V2_ADDPAPERS.txt,199,Ω_ζΣ,OMEGA_ZS,W1,- OMEGA_ZS = 0.56714 (Lambert W fixed point W(1))
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/AgeFirst/original_2026/ResearchPaper/context_primer.txt,27,A_π,Α_π,alpha,"First use definition: ""Α_π = 1/137.036, the fine structure constant"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/AgeFirst/original_2026/ResearchPaper/context_primer.txt,36,Ω_ζΣ,Ω_ζΣ,W1,"First use definition: ""Ω_ζΣ = 0.56714..., the Lambert W fixed point"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/AgeFirst/original_2026/ResearchPaper/context_primer.txt,179,A_π,Α_π,alpha,"Α_π    = 1/137.035999...   BK lower wall, E8/Wyler, fixed"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/AgeFirst/original_2026/ResearchPaper/context_primer.txt,180,Ω_ζΣ,Ω_ζΣ,W1,"Ω_ζΣ   = 0.56714329...     BK upper wall, Lambert W, fixed"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/AgeFirst/original_2026/ResearchPaper/context_primer.txt,195,Ω_ζΣ,Ω_ζΣ,W1,— Replace any Ω used as Lambert W boundary with Ω_ζΣ
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/AgeFirst/original_2026/ResearchPaper/context_primer.txt,196,A_π,Α_π,alpha,— Replace any α used as fixed fine structure constant with Α_π
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/AgeFirst/original_2026/ResearchPaper/context_primer.txt,198,Ω_ζΣ,Ω_ζΣ,W1,— Confirm ω_H = e^π and Ω_ζΣ = 0.56714 are never swapped
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/media/add-reading/thebigquestion_primer.txt,176,A_π,A_pi,alpha,A_pi    = 1/137.036        BK floor
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_2026-05-03_phase3_qt_viewer.txt,65,A_π,A_pi,alpha,"A_pi     = 1/137.036    (BK floor, fine structure constant)"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_2026-05-03_phase3_qt_viewer.txt,66,Ω_ζΣ,Omega_zS,W1,"Omega_zS = 0.56714      (BK ceiling, Lambert W fixed point)"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_BCE_ConformalHorizon_T_20260415.txt,19,A_π,A_pi,alpha,A_pi    = 1/137.036   (BK floor — fixed constant)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/SESSION_PRIMER_2026-05-03.txt,52,A_π,A_pi,alpha,"- A_pi = 1/137.036  (BK floor, E8/Wyler, fine structure constant)"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_MASTERS_TRIBUTE_NOETHER_20260417.txt,210,A_π,Alpha_Fermat,alpha,"Α_π     = 1/137.035999...   Alpha_Fermat — floor constant, NOT running coupling"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_MASTERS_TRIBUTE_NOETHER_20260417.txt,211,Ω_ζΣ,Omega_Riemann,W1,Ω_ζΣ    = 0.56714329...     Omega_Riemann — Lambert W fixed point
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_2026-05-27_DarkMatter_NoParticle_Datasets.txt,241,Ω_ζΣ,OMEGA_ZS,W1,- The BAO acoustic scale itself: Holcus's OMEGA_ZS = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_Millennium_Prize_Path.txt,134,A_π,A_pi,alpha,- Fine structure constant A_pi = 1/137.036 as BK domain floor
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_Millennium_Prize_Path.txt,241,A_π,A_pi,alpha,A_pi = 1/137.036 (BK floor — do not change)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_FOR_CLAUDE_CODE_20260416.txt,42,A_π,Alpha_Fermat,alpha,"experiment succeeded, producing Alpha_Fermat (Α_π = 1/137.035999) and"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_FOR_CLAUDE_CODE_20260416.txt,43,Ω_ζΣ,Omega_Riemann,W1,"Omega_Riemann (Ω_ζΣ = 0.56714329) as engineered boundary constants, not fitted"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_FOR_CLAUDE_CODE_20260416.txt,96,A_π,Alpha_Fermat,alpha,"Α_π     = 1/137.035999...   Alpha_Fermat — BK domain floor, E8/Wyler geometry"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_FOR_CLAUDE_CODE_20260416.txt,100,Ω_ζΣ,Omega_Riemann,W1,Ω_ζΣ    = 0.56714329...     Omega_Riemann — Lambert W fixed point W(1)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_HilbertLaplacian_T_Sonification_20260415.txt,19,A_π,A_pi,alpha,"A_pi = 1/137.036   (BK floor, E8/Wyler -- fixed constant)"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/SESSION_PRIMER_DILATOR_CONTRACTOR_2026-04-16.txt,157,A_π,A_pi,alpha,A_pi = 1/137.036    BK floor
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/SESSION_PRIMER_DILATOR_CONTRACTOR_2026-04-16.txt,204,A_π,A_pi,alpha,A_pi    = 1/137.036        BK floor
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/SESSION_PRIMER_CONSTANTS_DECOHERENCE_2026-04-16.txt,78,A_π,A_pi,alpha,A_pi    = 1/137.036     BK floor (E8/Wyler)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/SESSION_PRIMER_CONSTANTS_DECOHERENCE_2026-04-16.txt,92,A_π,A_pi,alpha,- Is A_pi derivable from the CD algebra structure constants (Wyler path)?
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/SESSION_PRIMER_CONSTANTS_DECOHERENCE_2026-04-16.txt,141,A_π,A_pi,alpha,A_pi    = 1/137.036        BK floor
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,135,Ω_ζΣ,Omega_zS,W1/alpha,"Domain bounded below by A_pi = 1/137, above by Omega_zSigma = 0.56714."
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,249,A_π,A_pi,alpha,A_pi = 1/137.035999...
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,255,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,474,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,541,A_π,A_pi,alpha,"A_pi lives on the descending slope at n=8 (E8 geometry, Wyler formula)."
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,709,Ω_ζΣ,Omega_zS,W1,[ ] Replace Omega used as Lambert W boundary -> Omega_zSigma
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt,710,A_π,A_pi,alpha,[ ] Replace alpha used as fixed fine structure -> A_pi
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_2026-05-14_genetic_genomic.txt,163,A_π,A_PI,alpha,ALPHA_PI    = 1/137.036
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_2026-05-16_second_age_conjecture_complete.txt,44,A_π,Alpha_Fermat,dstar,Part III — Alpha_Fermat · Omega_Riemann · 4 values of d*
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_2026-05-16_second_age_conjecture_complete.txt,135,A_π,Alpha_Fermat,alpha,Α_π  (Alpha_Fermat)  = 1/137.035999...  BK domain floor; from inertia ceiling
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_2026-05-16_second_age_conjecture_complete.txt,136,Ω_ζΣ,Omega_Riemann,W1,Ω_ζΣ (Omega_Riemann) = 0.56714329...    Lambert W fixed point; entropy ceiling
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_2026-06-02_session_architecture.txt,98,A_π,Α_π,alpha,Α_π        = 1/137.036
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/PRIMER_2026-06-02_session_architecture.txt,99,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ       = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/ArdaQuenta/CONTEXT_PRIMER_2026-05-30.txt,164,Ω_ζΣ,OMEGA_ZS,W1,- OMEGA_ZS = 0.56714 (Lambert W fixed point W(1))
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PTOLEMY_DOCS/ATTACK_PLAN.txt,42,Ω_ζΣ,Omega_zS,W1,"Omega_zSigma = 0.56714     (Lambert W fixed point, domain ceiling)"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PTOLEMY_DOCS/ATTACK_PLAN.txt,272,Ω_ζΣ,Omega_zS,W1,"LambertW        — Omega_zSigma = W_0(1) = 0.56714, domain ceiling of SMIP."
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PTOLEMY_DOCS/All_The_Maths.txt,35,A_π,A_pi,alpha,A_pi    = 1 / 137.035999084   # fine-structure ≈ domain floor
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PTOLEMY_DOCS/All_The_Maths.txt,441,A_π,A_π,alpha,"Domain floor A_π = 1/137.035999 (A subscript π, NOT α)"
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/PTOLEMY_DOCS/All_The_Maths.txt,443,A_π,A_pi,alpha,A_pi    = 1 / 137.035999084   # domain floor (capital A_π)
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/VAPMIP/CONTEXT_PRIMER_2026-05-26_SEDENION_ROKO.txt,171,Ω_ζΣ,OMEGA_ZS,W1,- BAO convergence to OMEGA_ZS = 0.56714: checked at emit time
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/VAPMIP/CONTEXT_PRIMER_2026-05-26_PRIME_DIRECTIVES.txt,59,Ω_ζΣ,OMEGA_ZS,W1,- BAO convergence (OMEGA_ZS = 0.56714) IS a low-quefrency
+~/Projects/ThePlace/ContextPlease/claude/hist_prime/VAPMIP/docs/primers/PRIMER_2026-05-29_Phase2_to_Phase5.txt,43,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714    Lambert W fixed point / BAO convergence target
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/RHP_LOG_2026-11-07.md,120,A_π,A_π,alpha,"The inertia chase (A_π from the speed of causality) exists in the record only as text (Second Age Part III) and approximations (golden angle 137.507°, Wyler 137.0361); no code; thermal-ceiling values "
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-02_claude_ai_archive/SMNNIP_TODO.txt,132,Ω_ζΣ,Omega_zS,W1,[ ] Replace any Omega used as Lambert W boundary  →  Omega_zSigma
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-02_claude_ai_archive/SMNNIP_TODO.txt,133,A_π,A_pi,alpha,[ ] Replace any alpha used as fixed fine structure constant  →  A_pi
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-02_claude_ai_archive/SMNNIP_TODO.txt,135,Ω_ζΣ,Omega_zS,W1,[ ] Confirm omega_H = e^pi and Omega_zSigma = 0.56714 are never swapped
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-09-28_vq_docstrings/README.before.md,102,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS = 0.5671432904097838  (Lambert W(1), exact)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-09-28_lvap_audit/README.md,24,Ω_ζΣ,Ω_ζΣ,W1/alpha,"- Notation (canonical_maths §II, ""never conflate""): Α_π = Alpha_Fermat = 1/137.035999.. FIXED domain floor; Ω_ζΣ = W(1) FIXED domain ceiling; α_NN(l) = the running neural coupling, starts at Α_π BY EN"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-09-28_lvap_audit/OUTLINE_D-CS_Memory_revision.md,4,A_π,Α_π,dstar,"REWRITE: front matter, both abstracts, ""shape"", keywords, §20 (Α_π/Ω_ζΣ, not d*), Conclusion, Challenge (engines actually used only)."
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-12_demarrais_deformation_battery/output_part2b.txt,34,Ω_ζΣ,Omega_ZS,W1,Omega_ZS  theta=0.56714  defect=0.43305   analytic=0.43305
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-12_demarrais_deformation_battery/make_record.py,133,Ω_ζΣ,Ω_ZS,W1,"| **W(1) = +0.5671 = Ω_ZS** | entropy ceiling | **μ₄ > 0: split** (84 pairs, degree 2) | 1.3279 |"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-12_demarrais_deformation_battery/make_record.py,145,Ω_ζΣ,Ω_ZS,W1,"**The three Lambert-W values** (`Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md` §2.2 and Appendix D): `W(0) = 0` (vacuum fixed point), `W(1) = Ω_ZS = 0.5671432904097838` (entropy ceiling; the fixed po"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-12_demarrais_deformation_battery/make_record.py,146,Ω_ζΣ,Ω_ZS,W1,"*Caveat:* the emerger, `bao_mass_gap` and the Navier–Stokes wiki 106 speak of ""three **rotor faces** of Ω_ZS = W(1)"" (a Wankel trine: intake/power/exhaust, all carrying the same number 0.56714). That "
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-13_portals_inventory_moving_kite/lambert3.py,3,Ω_ζΣ,Omega_ZS,W1,W(0) = 0   (vacuum fixed point) ;  W(1) = Omega_ZS = 0.5671432904...  (entropy ceiling) ;  W(-1/e) = -1  (branch collapse).
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/p8_output.txt,30,Ω_ζΣ,Omega_ZS,W1,r = Omega_ZS                                    0.56714 intermediate                           4.2474      205.1
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/p8_sigma_scan.csv,52,Ω_ζΣ,Omega_ZS,W1,"r = Omega_ZS,0.567143,intermediate,0.674952,4.24738,205.136,False,0.0671433,0.432857,0.8512"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/p8_sigma_scan.csv,55,Ω_ζΣ,Omega_ZS,alpha,"C of r=Omega_ZS  (2π·Omega_ZS),3.56347,GR-like (σ≥2),0.0845843,0.109137,1.11979,True,3.06347,-2.56347,0.02187"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/tables.md,14,Ω_ζΣ,Omega_ZS,W1,| Omega_ZS | 0.567143 | 1.13429 | 3.56347 | 1.0105 | — |
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/tables.md,32,Ω_ζΣ,Omega_ZS,W1,| Omega_ZS | 0.567143 | 0.283572 | 1.78173 | 0.252625 | — |
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/tables.md,50,Ω_ζΣ,Omega_ZS,W1,| Omega_ZS | 0.567143 | 0.0902637 | 0.180527 | 0.0255962 | — |
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/tables.md,68,Ω_ζΣ,Omega_ZS,W1,| Omega_ZS | 0.567143 | 0.424885 | 0.84977 | 2.66963 | — |
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/tables.md,86,Ω_ζΣ,Omega_ZS,W1,| r = Omega_ZS | 0.567143 | intermediate | 0.674952 | 4.24738 | 0.0671433 | 0.432857 |
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/p2_output.txt,34,Ω_ζΣ,Omega_ZS,W1,Omega_ZS     radius             0.567143     1.134287     3.563466     1.010498
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/p2_output.txt,35,Ω_ζΣ,Omega_ZS,W1,Omega_ZS     diameter           0.283572     0.567143     1.781733     0.252625
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/p2_output.txt,36,Ω_ζΣ,Omega_ZS,W1,Omega_ZS     circumference      0.090264     0.180527     0.567143     0.025596
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-10-15_circle_unit_session/p2_output.txt,37,Ω_ζΣ,Omega_ZS,W1,Omega_ZS     area               0.424885     0.849770     2.669632     0.567143
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,331,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,531,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,688,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,731,A_π,A_pi,alpha,"A_pi lives on the descending slope at n=8 (E8 geometry, Wyler formula)."
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,848,Ω_ζΣ,Omega_zS,W1,[ ] Replace Omega used as Lambert W boundary -> Omega_zSigma
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,849,A_π,A_pi,alpha,[ ] Replace alpha used as fixed fine structure -> A_pi
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,1347,Ω_ζΣ,OMEGA_ZS,W1,Holcus's OMEGA_ZS = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,2081,A_π,A_pi,alpha,Fine structure constant A_pi = 1/137.036 as BK domain floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,2156,A_π,A_pi,alpha,A_pi = 1/137.036 (BK floor — do not change)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,2402,A_π,A_pi,alpha,"A_pi = 1/137.036 (BK floor, E8/Wyler, fine structure constant)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,2589,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,2621,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,2750,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,2873,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 (Lambert W fixed point W(1))
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,3069,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,3226,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,3269,A_π,A_pi,alpha,"A_pi lives on the descending slope at n=8 (E8 geometry, Wyler formula)."
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,3386,Ω_ζΣ,Omega_zS,W1,[ ] Replace Omega used as Lambert W boundary -> Omega_zSigma
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,3387,A_π,A_pi,alpha,[ ] Replace alpha used as fixed fine structure -> A_pi
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,3951,Ω_ζΣ,Omega_zS,W1,"Omega_zSigma = 0.56714 (Lambert W fixed point, domain ceiling)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,5088,Ω_ζΣ,OMEGA_ZS,W1,BAO convergence (OMEGA_ZS = 0.56714) IS a low-quefrency
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,5399,Ω_ζΣ,OMEGA_ZS,W1,BAO convergence to OMEGA_ZS = 0.56714: checked at emit time
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,7107,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,7264,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,7307,A_π,A_pi,alpha,"A_pi lives on the descending slope at n=8 (E8 geometry, Wyler formula)."
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,7424,Ω_ζΣ,Omega_zS,W1,[ ] Replace Omega used as Lambert W boundary -> Omega_zSigma
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,7425,A_π,A_pi,alpha,[ ] Replace alpha used as fixed fine structure -> A_pi
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,8349,A_π,A_pi,alpha,Fine structure constant A_pi = 1/137.036 as BK domain floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,8424,A_π,A_pi,alpha,A_pi = 1/137.036 (BK floor — do not change)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,8670,A_π,A_pi,alpha,"A_pi = 1/137.036 (BK floor, E8/Wyler, fine structure constant)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,8857,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,8889,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,9018,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,10449,Ω_ζΣ,OMEGA_ZS,W1,Trough minima at r₀ = μ/√(2λ) = OMEGA_ZS = 0.56714 (Lambert W VEV).
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,12282,Ω_ζΣ,Ω_ZS,W1,"§12.1 asserts W(1) = Ω_ZS ""IS σ = ½"". As printed this reads as a numerical"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,12385,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714. The BAO is the Laplacian of the semantic graph — the
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,12837,Ω_ζΣ,OMEGA_ZS,W1,baocheck() monitors dcsum → OMEGA_ZS = 0.56714. Laplacian of the semantic field:
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,13491,Ω_ζΣ,OMEGA_ZS,W1,BAO (150 Mpc) = first node spacing. OMEGA_ZS = 0.56714 = plate's fundamental eigenvalue.
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt,13540,Ω_ζΣ,OMEGA_ZS,W1,Its lowest non-zero eigenvalue is OMEGA_ZS = 0.56714.
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,64,A_π,Α_π,alpha,"""Α_π = 1/137.036, the fine structure constant"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,72,Ω_ζΣ,Ω_ζΣ,W1,"""Ω_ζΣ = 0.56714..., the Lambert W fixed point"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,176,A_π,Α_π,alpha,"Α_π = 1/137.035999... BK lower wall, E8/Wyler, fixed"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,177,Ω_ζΣ,Ω_ζΣ,W1,"Ω_ζΣ = 0.56714329... BK upper wall, Lambert W, fixed"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,188,Ω_ζΣ,Ω_ζΣ,W1,— Replace any Ω used as Lambert W boundary with Ω_ζΣ
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,189,A_π,Α_π,alpha,— Replace any α used as fixed fine structure constant with Α_π
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,358,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 — Lambert W fixed point W(1); BAO ceiling; idle RPM
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,392,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 (Lambert W fixed point W(1))
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,963,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,1229,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,1386,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,1429,A_π,A_pi,alpha,"A_pi lives on the descending slope at n=8 (E8 geometry, Wyler formula)."
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,1546,Ω_ζΣ,Omega_zS,W1,[ ] Replace Omega used as Lambert W boundary -> Omega_zSigma
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,1547,A_π,A_pi,alpha,[ ] Replace alpha used as fixed fine structure -> A_pi
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,2149,A_π,A_pi,alpha,"A_pi = 1/137.036 (BK floor, fine structure constant)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,2150,Ω_ζΣ,Omega_zS,W1,"Omega_zS = 0.56714 (BK ceiling, Lambert W fixed point)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,2823,Ω_ζΣ,OMEGA_ZS,W1,Holcus's OMEGA_ZS = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,3338,A_π,A_pi,alpha,A_pi = 1/137.036 (BK floor — fixed constant)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,3737,A_π,A_pi,alpha,"A_pi = 1/137.036 (BK floor, E8/Wyler -- fixed constant)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4095,A_π,A_pi,alpha,Fine structure constant A_pi = 1/137.036 as BK domain floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4170,A_π,A_pi,alpha,A_pi = 1/137.036 (BK floor — do not change)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4416,A_π,A_pi,alpha,"A_pi = 1/137.036 (BK floor, E8/Wyler, fine structure constant)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4548,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor (E8/Wyler)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4560,A_π,A_pi,alpha,Is A_pi derivable from the CD algebra structure constants (Wyler path)?
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4589,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4699,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4731,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4860,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,4983,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 (Lambert W fixed point W(1))
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,5345,Ω_ζΣ,OMEGA_ZS,W1,sigmameanvsOMEGAZS = 0.567132 sits beside OMEGA_ZS = 0.56714329 and
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,5632,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,5789,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,5832,A_π,A_pi,alpha,"A_pi lives on the descending slope at n=8 (E8 geometry, Wyler formula)."
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,5949,Ω_ζΣ,Omega_zS,W1,[ ] Replace Omega used as Lambert W boundary -> Omega_zSigma
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,5950,A_π,A_pi,alpha,[ ] Replace alpha used as fixed fine structure -> A_pi
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,7126,Ω_ζΣ,Ω_ζΣ,W1,"""d_2 Noether Information Current derivation result — MASS GAP LIVES HERE. d × ln(10) = 0.56644 | Ω_ζΣ = 0.56714 | Gap = 0.00070 — DERIVED, CLOSED"""
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,7512,Ω_ζΣ,Omega_zS,W1,"Omega_zSigma = 0.56714 (Lambert W fixed point, domain ceiling)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,7812,A_π,A_pi,alpha,A_pi = 1 / 137.035999084 # fine-structure ≈ domain floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,8146,A_π,A_π,alpha,"Domain floor A_π = 1/137.035999 (A subscript π, NOT α)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,9808,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 (Lambert W fixed point — the BAO ceiling)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,9810,A_π,A_PI,alpha,ALPHA_PI = 1/137.036 (fine structure floor)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,9844,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 (Lambert W fixed point)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,10274,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 (Lambert W fixed point — BAO convergence target)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,10275,A_π,A_PI,alpha,ALPHA_PI = 1/137.036 (fine structure floor)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,11809,A_π,A_π,alpha,"A_π = 1/137.036 BK floor, fine structure constant"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,11810,Ω_ζΣ,Ω_ζΣ,W1,"Ω_ζΣ = 0.56714329... Lambert W(1), BK ceiling"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,11864,Ω_ζΣ,OMEGA_ZS,W1,BAO convergence (OMEGA_ZS = 0.56714) IS a low-quefrency
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,12175,Ω_ζΣ,OMEGA_ZS,W1,BAO convergence to OMEGA_ZS = 0.56714: checked at emit time
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,15119,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 Lambert W fixed point / BAO convergence target
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,15858,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714329...
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,16015,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,16058,A_π,A_pi,alpha,"A_pi lives on the descending slope at n=8 (E8 geometry, Wyler formula)."
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,16175,Ω_ζΣ,Omega_zS,W1,[ ] Replace Omega used as Lambert W boundary -> Omega_zSigma
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,16176,A_π,A_pi,alpha,[ ] Replace alpha used as fixed fine structure -> A_pi
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,16778,A_π,A_pi,alpha,"A_pi = 1/137.036 (BK floor, fine structure constant)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,16779,Ω_ζΣ,Omega_zS,W1,"Omega_zS = 0.56714 (BK ceiling, Lambert W fixed point)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,17538,A_π,A_pi,alpha,A_pi = 1/137.036 (BK floor — fixed constant)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,17937,A_π,A_pi,alpha,"A_pi = 1/137.036 (BK floor, E8/Wyler -- fixed constant)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,18295,A_π,A_pi,alpha,Fine structure constant A_pi = 1/137.036 as BK domain floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,18370,A_π,A_pi,alpha,A_pi = 1/137.036 (BK floor — do not change)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,18616,A_π,A_pi,alpha,"A_pi = 1/137.036 (BK floor, E8/Wyler, fine structure constant)"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,18748,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor (E8/Wyler)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,18760,A_π,A_pi,alpha,Is A_pi derivable from the CD algebra structure constants (Wyler path)?
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,18789,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,18899,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,18931,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,19060,A_π,A_pi,alpha,A_pi = 1/137.036 BK floor
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,20491,Ω_ζΣ,OMEGA_ZS,W1,Trough minima at r₀ = μ/√(2λ) = OMEGA_ZS = 0.56714 (Lambert W VEV).
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,21620,Ω_ζΣ,OMEGA_ZS,W1,[ ] OMEGA_ZS reference line on all channels (0.56714)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,21821,Ω_ζΣ,OMEGA_ZS,W1,healthy JR/JB = OMEGA_ZS = 0.5671
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,21949,Ω_ζΣ,OMEGA_ZS,W1,[ ] D2 — BAO convergence to OMEGA_ZS = W(1) = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,23033,Ω_ζΣ,Ω_ZS,W1,"§12.1 asserts W(1) = Ω_ZS ""IS σ = ½"". As printed this reads as a numerical"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,23146,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 (Lambert W fixed point / BAO ceiling / idle frequency)
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,23162,Ω_ζΣ,OMEGA_ZS,W1,[ ] BAO idle tone — OMEGA_ZS = 0.56714 Hz as engine idle frequency
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,23284,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714. The BAO is the Laplacian of the semantic graph — the
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,23736,Ω_ζΣ,OMEGA_ZS,W1,baocheck() monitors dcsum → OMEGA_ZS = 0.56714. Laplacian of the semantic field:
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,24390,Ω_ζΣ,OMEGA_ZS,W1,BAO (150 Mpc) = first node spacing. OMEGA_ZS = 0.56714 = plate's fundamental eigenvalue.
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt,24439,Ω_ζΣ,OMEGA_ZS,W1,Its lowest non-zero eigenvalue is OMEGA_ZS = 0.56714.
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_scale-chart-constants/test.py,42,Ω_ζΣ,Ω_ZS,W1,"""""""W(x): Newton on w·e^w = x. W(1) = Ω_ZS."""""""
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_scale-chart-constants/test.py,50,Ω_ζΣ,Ω_ζΣ,W1,OMEGA = lambert_W(1.0)                    # Ω_ζΣ  = W(1)  = Ω_RiemannZeta
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_scale-chart-constants/test.py,83,Ω_ζΣ,Ω_ζΣ,W1,"""Lambert W1"": (OMEGA,     ""W(1): same engineered point as Ω_ζΣ, marks the w·e^w=1 fixed pt""),"
+~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_scale-chart-constants/README.md,30,Ω_ζΣ,Ω_ζΣ,W1,"| **d\*, Ω_ζΣ = W(1)** | the two **engineered anchors** of the error-check experiment |"
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/UniversalSynth/TODO.md,50,Ω_ζΣ,OMEGA_ZS,W1,- OMEGA_ZS = 0.56714 (Lambert W fixed point / BAO ceiling / idle frequency)
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/UniversalSynth/TODO.md,76,Ω_ζΣ,OMEGA_ZS,W1,- [ ] **BAO idle tone** — OMEGA_ZS = 0.56714 Hz as engine idle frequency
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/FourthAgePapers/TODO.md,117,Ω_ζΣ,OMEGA_ZS,W1,[ ] D2  — BAO convergence to OMEGA_ZS = W(1) = 0.56714
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/RiemannHypothesisProof/TODO.md,231,Ω_ζΣ,Ω_ZS,W1,"**§12.1 asserts `W(1) = Ω_ZS` ""IS σ = ½"". As printed this reads as a numerical"
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/RiemannHypothesisProof/TODO.md,232,Ω_ζΣ,Ω_ZS,W1,"identity and it is not one:** Ω_ZS = 0.5671432904…, σ = ½ = 0.5. They are"
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/DeriveCancerDrugs/TODO.md,93,Ω_ζΣ,OMEGA_ZS,W1,- Reference: healthy J_R/J_B = OMEGA_ZS = 0.5671
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/Ainulindale/TODO.md,674,Ω_ζΣ,OMEGA_ZS,W1,Trough minima at r₀ = μ/√(2λ) = OMEGA_ZS = 0.56714 (Lambert W VEV).
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/Ainulindale/TODO.md,1312,Ω_ζΣ,OMEGA_ZS,W1,- J_Blue: Banach fixed point T→exp(-T) from σ=½ → W(1) = OMEGA_ZS
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/ArdaQuenta/TODO.md,16,Ω_ζΣ,OMEGA_ZS,W1,- [ ] OMEGA_ZS reference line on all channels (0.56714)
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/VAPMIP/TODO.md,523,Ω_ζΣ,OMEGA_ZS,W1,`bao_check()` monitors dc_sum → OMEGA_ZS = 0.56714. Laplacian of the semantic field:
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/VAPMIP/TODO.md,1616,Ω_ζΣ,OMEGA_ZS,W1,*BAO (150 Mpc) = first node spacing. OMEGA_ZS = 0.56714 = plate's fundamental eigenvalue.*
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/VAPMIP/TODO.md,1716,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 = Lambert W fixed point = spectral floor of the semantic graph
+~/Projects/ThePlace/ContextPlease/claude/hist_todo/VAPMIP/TODO.md,1737,Ω_ζΣ,OMEGA_ZS,W1,Its lowest non-zero eigenvalue is OMEGA_ZS = 0.56714.
+~/Projects/ThePlace/ContextPlease/claude/clauderc/clauderc.bash,98,Ω_ζΣ,OMEGA_ZS,W1,"export LAMBERT_W1=""0.5671432904097838""                 # W(1) = OMEGA_ZS; the idle point; multiplier -W(1) = -Omega; the fixed point of x -> exp(-x)"
+~/Projects/ThePlace/ContextPlease/claude/clauderc/clauderc.bash,105,A_π,Alpha_Fermat,alpha,"# NOT identified: ""the one found using inertia and causality"" -- the Third Age draft's Alpha_Fermat (1/137.035999, 'born from Inertia ... Speed of Causality ceiling')"
+~/Projects/ThePlace/ContextPlease/claude/clauderc/clauderc.bash,110,Ω_ζΣ,OMEGA_ZS,W1,"export OMEGA_ZS=""0.5671432904097838"""
+~/Projects/ThePlace/ContextPlease/claude/clauderc/clauderc.bash,229,Ω_ζΣ,OMEGA_ZS,W1,"echo ""OMEGA_ZS = $OMEGA_ZS   (Lambert W(1))"""
+~/Projects/ThePlace/PtolemyDesktop/README.md,453,Ω_ζΣ,OMEGA_ZS,W1,**Compression ignition confirmed 2026-05-27.** BAO convergence: OMEGA_ZS = 0.56714 (Lambert W fixed point).
+~/Projects/ThePlace/PtolemyDesktop/MONAD.md,253,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.56714    # Lambert W fixed point — BAO convergence target
+~/Projects/ThePlace/PtolemyDesktop/MONAD.md,255,A_π,A_PI,alpha,ALPHA_PI    = 1/137.036  # fine structure floor
+~/Projects/ThePlace/PtolemyDesktop/Philadelphos/monad.py,122,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    =  0.56714    # Lambert W fixed point / BAO convergence target
+~/Projects/ThePlace/PtolemyDesktop/Philadelphos/monad.py,861,Ω_ζΣ,OMEGA_ZS,W1,BAO coherence: dc_sum converging to OMEGA_ZS = 0.56714 is the
+~/Projects/ThePlace/PtolemyDesktop/Philadelphos/segfault-monad.py,51,Ω_ζΣ,OMEGA_ZS,W1,BAO = sedenion-dimensional Laplacian spectral gap = OMEGA_ZS = 0.56714.
+~/Projects/ThePlace/PtolemyDesktop/Philadelphos/segfault-monad.py,73,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.56714    # Lambert W(1); BAO spectral gap; Δ_𝕊 lowest eigenvalue
+~/Projects/ThePlace/PtolemyDesktop/ptol_gpu/ptol_gpu_api.h,46,Ω_ζΣ,OMEGA_ZS,W1,#define PTOL_OMEGA_ZS     0.56714329f   /* Lambert W(1) = dark energy VEV    */
+~/Projects/ThePlace/PtolemyDesktop/Archive/ainulindale_root_orphans/smnnip_inversion_engine_v2.py,75,A_π,A_pi,alpha,# A_pi    : fine structure constant. BK operator domain LOWER wall.
+~/Projects/ThePlace/PtolemyDesktop/Archive/ainulindale_root_orphans/smnnip_inversion_engine_v2.py,80,Ω_ζΣ,Omega_zS,W1,# Omega_zSigma : Lambert W fixed point. BK operator domain UPPER wall.
+~/Projects/ThePlace/PtolemyDesktop/Archive/ainulindale_root_orphans/smnnip_inversion_engine_v2.py,105,A_π,A_pi,dstar,"# [A_pi,      d*_spec]  : sub-threshold zone"
+~/Projects/ThePlace/PtolemyDesktop/Archive/ainulindale_root_orphans/smnnip_inversion_engine_v2.py,113,A_π,A_PI,dstar,sep1   = self.D_STAR_SPEC   - self.A_PI
+~/Projects/ThePlace/PtolemyDesktop/Archive/ainulindale_root_orphans/smnnip_inversion_engine_v2.py,131,A_π,A_PI,alpha,"f""  A_pi            = {self.A_PI:.15f}  [BK floor, 1/137.036, fixed]"","
+~/Projects/ThePlace/PtolemyDesktop/Archive/ainulindale_root_orphans/smnnip_inversion_engine_v2.py,134,Ω_ζΣ,OMEGA_ZS,W1,"f""  Omega_zSigma    = {self.OMEGA_ZSIGMA:.15f}  [Lambert W, BK ceiling, fixed]"","
+~/Projects/ThePlace/PtolemyDesktop/Archive/ainulindale_root_orphans/smnnip_inversion_engine_v2.py,138,A_π,A_pi,dstar,"f""  [A_pi,    d*_spec] = {sep1:.15f}  [sub-threshold zone, raw]"","
+~/Projects/ThePlace/PtolemyDesktop/PtolC/ptolemy.h,18,Ω_ζΣ,OMEGA_ZS,W1,#define MONAD_OMEGA_ZS       0.56714
+~/Projects/ThePlace/PtolemyDesktop/PtolFlutter/src/ptolemy.h,18,Ω_ζΣ,OMEGA_ZS,W1,#define MONAD_OMEGA_ZS       0.56714
+~/Projects/ThePlace/PtolemyDesktop/docs/architecture/Archimedes_Maths_Guide.md,22,A_π,A_pi,alpha,"Add SMMIP constants block. Missing: `A_pi` (fine-structure = domain floor), `OMEGA`, `R_CRIT`, `GROUND`, `PHI`, `E_EULER`, physical constants (HBAR, C_LIGHT, MU_0, EPS_0, G_NEWTON, K_B, N_A). Note: `A"
+~/Projects/ThePlace/PtolemyDesktop/docs/architecture/SMIP_Architecture.md,93,A_π,A_π,alpha,"| `A_π` | 1/137.035999 | Domain floor — minimum addressable energy (fine-structure constant; capital Latin A subscript π, NOT Greek α) |"
+~/Projects/ThePlace/PtolemyDesktop/docs/MathLex/wyler_formula.html,79,A_π,A_π,alpha,<p>The Wyler formula is relevant to the Ainulindalë Conjecture because the fine structure constant A_π ≈ 1/137.036 appears as the lower bound of the SMIP operator domain. The Wyler formula suggests th
+~/Projects/ThePlace/FourthAgePapers/TODO.md,174,Ω_ζΣ,OMEGA_ZS,W1,[ ] D2  — BAO convergence to OMEGA_ZS = W(1) = 0.56714
+~/Projects/ThePlace/FourthAgePapers/AUDIT_2026-11-14.md,94,A_π,A_fermat,alpha,"| **A_fermat / α as the fine-structure constant** (three distinct letters; A_fermat open) | `NoetherWiles`, `TODO.md` (""D15""), several READMEs: to be checked file by file |"
+~/Projects/ThePlace/FourthAgePapers/NoetherWiles/01_predictions.ipynb,30,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS   = 0.5671432904097838  # Lambert W(1), exact\n"","
+~/Projects/ThePlace/FourthAgePapers/NoetherWiles/engine/noether_wiles_engine.py,29,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/FourthAgePapers/DStar/ceilings_derivation.py,8,A_π,A_π,dstar,"P3 d*·ln10 = A_π to 15 digits (the Jacobian ln10 is one factor, not four)."
+~/Projects/ThePlace/FourthAgePapers/DStar/ceilings_derivation.py,9,A_π,A_π,alpha,P4 the April-10 polar field with the fine-structure α (1/137 or 0.137) as entropy coupling never lets S and I meet (min|S−I| > 0.1); with the coupling set to A_π they touch (min|S−I| < 1e−6).
+~/Projects/ThePlace/FourthAgePapers/DStar/ceilings_derivation.py,17,A_π,A_PI,dstar,A_PI = float(x); LN10 = math.log(10); D_STAR = A_PI / LN10
+~/Projects/ThePlace/FourthAgePapers/DStar/ceilings_derivation.py,24,A_π,A_π,dstar,"for name, ceil, unit in ((""Hagedorn ceiling (entropy → Ω_ζΣ = d*)"", T_HAGEDORN, ""K""), (""Planck temperature (April-9 run)"", T_PLANCK, ""K""), (""speed of causality (inertia → A_π)"", c, ""m/s"")):"
+~/Projects/ThePlace/FourthAgePapers/DStar/ceilings_derivation.py,30,A_π,A_PI,dstar,P3 = abs(D_STAR * LN10 - A_PI) < 1e-15
+~/Projects/ThePlace/FourthAgePapers/DStar/ceilings_derivation.py,43,A_π,A_π,alpha,"out.append(f""P4 {'HELD' if P4 else 'FAILED'}: with the fine-structure coupling the curves never meet (the 'closest-approach ring'); with A_π they touch."")"
+~/Projects/ThePlace/FourthAgePapers/DStar/ceilings_derivation.txt,11,A_π,A_π,alpha,P4 HELD: with the fine-structure coupling the curves never meet (the 'closest-approach ring'); with A_π they touch.
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_IV_UF_mass_gap.md,92,A_π,Α_π,alpha,- Domain floor: Α_π = 1/137.035999... (fine structure constant)
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_IV_UF_mass_gap.md,93,Ω_ζΣ,Ω_ζΣ,W1,- Domain ceiling: Ω_ζΣ = 0.56714... (Lambert W fixed point)
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_IV_UF_mass_gap.md,152,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ = 0.56714
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_IV_UF_mass_gap.md,163,Ω_ζΣ,Ω_ζΣ,W1,4. **Joukowsky residual:** The Joukowsky map z + 1/z evaluated at z = e^{iθ} gives 2cos(θ). At θ = Ω_ζΣ: 2cos(0.56714) ≈ 1.685. The residual 2 - 1.685 = 0.315. Not directly 0.00070 — but higher-order 
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_IV_UF_mass_gap.md,237,Ω_ζΣ,Ω_ζΣ,W1,"This is a transcendental equation constraining m in terms of known constants. If ρ_floor = Ω_ζΣ (the Lambert W fixed point, domain ceiling), then m is constrained by:"
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_IV_UF_mass_gap.md,311,Ω_ζΣ,Ω_ζΣ,W1,"**Running coupling figure:** Plot of α_ρ = 2/W(π/e · (8ρ/(m·(1−2/p)²))) from ρ = α_π to ρ = Ω_ζΣ, with the mass gap m at the IR divergence and the Lambert W branch point marked. This is the algebraic "
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_VI_RH_proof_path.md,395,Ω_ζΣ,Ω_ζΣ,W1,"The allowed strip is 0 < Re(s) < 1. The SMIP tower allowed domain is [α_π, Ω_ζΣ] = [0.00730, 0.56714]. The midpoint of the SMIP domain is:"
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_VI_RH_proof_path.md,398,Ω_ζΣ,Ω_ζΣ,W1,(α_π + Ω_ζΣ) / 2 = (0.00730 + 0.56714) / 2 = 0.28722
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_VII_library_convergence.md,104,A_π,A_π,alpha,**SMMNIP connection:** The Wyler derivation is the A_π derivation. The fine structure constant is not a free parameter — it is the volume ratio of the normed division algebra tower at its boundary. In
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_VII_library_convergence.md,142,A_π,A_π,alpha,| Smith / Wyler | 1969–90s | α from E8 volumes | A_π = 1/137.036 (domain floor) |
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_VII_library_convergence.md,282,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ = 0.56714
+~/Projects/ThePlace/FourthAgePapers/addenda/addendum_VII_library_convergence.md,328,A_π,A_π,alpha,- Smith/Wyler: α from E8 volumes → A_π floor of H^RB
+~/Projects/ThePlace/FourthAgePapers/Telperion/engine/telperion.py,47,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.5671432904097838       # Lambert W fixed point W(1)
+~/Projects/ThePlace/FourthAgePapers/tools/correction_pass.py,21,A_π,A_fermat,alpha,"(r'137\.03|α ?≈ ?1/137|fine.structure', 'The fine-structure constant α_fs = 1/137.036, the Fermat-side constant A_fermat (value **open**) and the network coupling α_NN are three different things (wiki"
+~/Projects/ThePlace/FourthAgePapers/ZeroTree/engine/fixed_point.py,55,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.5671432904097838   # Lambert W(1); W·e^W = 1 exactly
+~/Projects/ThePlace/FourthAgePapers/CryptoVulnerability/secp256k1_locus.py,69,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.56714   # Lambert W fixed point W(1) — zero-divisor VEV
+~/Projects/ThePlace/ValaQuenta/verify_install.py,147,Ω_ζΣ,OMEGA_ZS,W1,# OMEGA_ZS is W(1): it must satisfy W*exp(W) = 1.
+~/Projects/ThePlace/ValaQuenta/zero_lattice.py,90,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS      = 0.5671432904097838   # Lambert W(1); verified W·e^W = 1 exactly
+~/Projects/ThePlace/ValaQuenta/fixed_point.py,62,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.5671432904097838   # Lambert W(1); W·e^W = 1 exactly
+~/Projects/ThePlace/ValaQuenta/galactic_cavity.py,41,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838    # Lambert W fixed point W(1) — VEV
+~/Projects/ThePlace/ValaQuenta/telperion.py,52,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.5671432904097838       # Lambert W fixed point W(1)
+~/Projects/ThePlace/ValaQuenta/engine/constants.py,31,A_π,A_pi,alpha,"# A_pi = 1/137.036 (fine structure constant, floor)"
+~/Projects/ThePlace/ValaQuenta/engine/constants.py,35,Ω_ζΣ,OMEGA_ZS,W1,# OMEGA_ZS = Lambert W fixed point W(1) = 0.56714...
+~/Projects/ThePlace/ValaQuenta/engine/constants.py,43,A_π,A_PI,alpha,A_PI      = 1.0 / 137.035999084         # BK floor — fine structure constant
+~/Projects/ThePlace/ValaQuenta/engine/constants.py,44,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838          # BK ceiling — Lambert W fixed point
+~/Projects/ThePlace/ValaQuenta/engine/constants.py,103,A_π,A_PI,alpha,"print(f""  A_PI       = {A_PI:.15f}  [BK floor, 1/137, ESTABLISHED]"")"
+~/Projects/ThePlace/ValaQuenta/engine/constants.py,104,Ω_ζΣ,OMEGA_ZS,W1,"print(f""  OMEGA_ZS   = {OMEGA_ZS:.15f}  [BK ceiling, Lambert W, ESTABLISHED]"")"
+~/Projects/ThePlace/ValaQuenta/wiki/berry_keating.md,46,Ω_ζΣ,Ω_ZS,W1,"of Lambert W (`Ω_ZS`, the rotor faces). `lcm(4,3) = 12` — the phase never"
+~/Projects/ThePlace/ValaQuenta/wiki/00_index.md,53,Ω_ζΣ,OMEGA_ZS,W1,| [constants.md](constants.md) | `modules/constants/` | ESTABLISHED | π φ e √ i Λ as σ-facets; OMEGA_ZS=W(1) |
+~/Projects/ThePlace/ValaQuenta/notebooks/generate_notebooks.py,66,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/notebooks/generate_notebooks.py,231,Ω_ζΣ,OMEGA_ZS,W1,# Right: Lambert W iteration converging to OMEGA_ZS
+~/Projects/ThePlace/ValaQuenta/notebooks/generate_notebooks.py,370,Ω_ζΣ,OMEGA_ZS,W1,ax.set_title('OMEGA_ZS = W(1) in 6 Independent Domains'); ax.legend(); ax.grid(alpha=0.3)
+~/Projects/ThePlace/ValaQuenta/notebooks/generate_notebooks.py,865,Ω_ζΣ,OMEGA_ZS,W1,"'W(1) = OMEGA_ZS appears in mathematics, primes, cosmology, Yang-Mills, sedenion, information.',"
+~/Projects/ThePlace/ValaQuenta/notebooks/core/01_constants.ipynb,112,Ω_ζΣ,OMEGA_ZS,W1,"""source"": ""## OMEGA_ZS — Lambert W thermal ceiling"""
+~/Projects/ThePlace/ValaQuenta/notebooks/engines/14_archimedes_screw.ipynb,90,Ω_ζΣ,OMEGA_ZS,W1,"""print(f\""identical     : {abs(lambert_w(1.0) - OMEGA_ZS) < 1e-12}\"")\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/engines/19_emerger.ipynb,161,Ω_ζΣ,Omega_ZS,W1,"""[TH] {2:14}      {'pointer_z': (0.0, 0.0), '|z|': 0.0, '|z|_minus_Omega_ZS': -0.5671432904097838}\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/tier8/omega_zs_6_family.ipynb,20,Ω_ζΣ,OMEGA_ZS,W1,"""source"": ""# OMEGA_ZS 6-Family: One Constant, Six Domains\n\n**Ainulindale Engine** — Tier 8\n\nW(1) = OMEGA_ZS appears in mathematics, primes, cosmology, Yang-Mills, sedenion, information."""
+~/Projects/ThePlace/ValaQuenta/notebooks/tier8/omega_zs_6_family.ipynb,63,Ω_ζΣ,OMEGA_ZS,W1,"""source"": ""\nfig, axes = plt.subplots(1, 2, figsize=(13, 5))\n\n# Left: 6 domains where OMEGA_ZS appears\ndomains = ['Math\\nW(1)=Ω', 'Primes\\n|ζ|² mean', 'Cosmology\\nΩ_Λ attractor',\n           'Ya"
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,21,Ω_ζΣ,Ω_ζΣ,W1,"""- `J_Blue` (Fermat Inertia channel) → computes → **Ω_ζΣ = W(1) = 0.5671** (Riemann's ceiling)\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,40,Ω_ζΣ,OMEGA_ZS,W1,"""J_Blue = Tr(B̂_p · ρ)   — Fermat inertia shadow   → W(1) = OMEGA_ZS\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,71,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS     = 0.5671432904     # W(1) — Lambert W at 1 — Riemann ceiling\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,85,Ω_ζΣ,OMEGA_ZS,W1,"""print(f\""OMEGA_ZS = {OMEGA_ZS:.5f}   (W(1) — Lambert W ceiling)\"")\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,164,Ω_ζΣ,OMEGA_ZS,W1,"""## Section 2 — J_Blue: Fermat Inertia Channel → OMEGA_ZS = W(1)\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,171,Ω_ζΣ,OMEGA_ZS,W1,"""    I_F · e^{I_F} = 1   →   I_F = W(1) = OMEGA_ZS\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,177,Ω_ζΣ,OMEGA_ZS,W1,"""fails, where the lattice has no more room to tile. It produces OMEGA_ZS = W(1)\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,192,Ω_ζΣ,OMEGA_ZS,W1,"""    satisfies I·exp(I) = 1  →  I = W(1) = OMEGA_ZS.\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,242,Ω_ζΣ,OMEGA_ZS,W1,"""print(\""J_Blue produces OMEGA_ZS = W(1) — Riemann's ceiling.\"")\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,348,Ω_ζΣ,OMEGA_ZS,W1,"""ax2.axhline(OMEGA_ZS, color='#0044cc', linestyle='--', alpha=0.5, label=f'W(1) = {OMEGA_ZS:.4f}')\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,370,Ω_ζΣ,OMEGA_ZS,W1,"""2. J_Blue places OMEGA_ZS = 0.5671 as the upper bound (Riemann ceiling)\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,453,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS  = 0.56714  \n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb,492,Ω_ζΣ,OMEGA_ZS,W1,"""print(f\""J_Blue (Fermat inertia)  → W(1)    = {OMEGA_ZS:.4f}   [Riemann's ceiling]\"")\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/udeo_crypto/rsa_control_baseline.ipynb,54,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS = 0.5671432904097838\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/udeo_crypto/method1_zero_divisor_shadow.ipynb,54,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS = 0.5671432904097838\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/udeo_crypto/method3_spectral_relativity.ipynb,54,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS = 0.5671432904097838\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/udeo_crypto/compare_all_methods.ipynb,54,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS = 0.5671432904097838\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/udeo_crypto/method2_j2_involution_t256.ipynb,54,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS = 0.5671432904097838\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/udeo_crypto/method4_content_public_private_hash.ipynb,54,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS = 0.5671432904097838\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/udeo_crypto/mod4_identity_theorem.ipynb,54,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS = 0.5671432904097838\n"","
+~/Projects/ThePlace/ValaQuenta/notebooks/udeo_crypto/method5_zero_lattice_paths.ipynb,54,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS = 0.5671432904097838\n"","
+~/Projects/ThePlace/ValaQuenta/modules/__init__.py,42,Ω_ζΣ,Ω_ZS,W1,point W(1)=Ω_ZS pins σ=½). RH as the shared
+~/Projects/ThePlace/ValaQuenta/modules/inversion/tools.py,284,A_π,A_PI,dstar,"f""d* = {C.D_STAR} outside BK domain [{C.A_PI}, {C.OMEGA_ZS}]"""
+~/Projects/ThePlace/ValaQuenta/modules/tier9_chem/maths.py,31,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/clay_millennium/maths.py,69,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838   # Lambert W(1) — thermal information ceiling
+~/Projects/ThePlace/ValaQuenta/modules/clay_millennium/maths.py,370,Ω_ζΣ,OMEGA_ZS,W1,Entropy ceiling:             OMEGA_ZS = 0.56714
+~/Projects/ThePlace/ValaQuenta/modules/clay_millennium/maths.py,423,Ω_ζΣ,OMEGA_ZS,W1,bao_ceiling = OMEGA_ZS          # = 0.56714
+~/Projects/ThePlace/ValaQuenta/modules/clay_millennium/maths.py,593,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714329040978384
+~/Projects/ThePlace/ValaQuenta/modules/inductive_onset_residual/maths.py,47,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS = C.OMEGA_ZS                       # Lambert W(1), 0.5671432904097838"
+~/Projects/ThePlace/ValaQuenta/modules/inductive_onset_residual/maths.py,116,Ω_ζΣ,OMEGA_ZS,W1,"'omega_lambert': OMEGA_ZS,"
+~/Projects/ThePlace/ValaQuenta/modules/inductive_onset_residual/maths.py,290,A_π,A_fermat,alpha,"'wiki_17_2026_11_13': dict(A_fermat='role: Fermat-side inertia constant; value OPEN (x = 1 endpoint or 1/137.036)',"
+~/Projects/ThePlace/ValaQuenta/modules/inductive_onset_residual/maths.py,327,Ω_ζΣ,OMEGA_ZS,W1,"'omega_by_induction_equals_lambert_w1': abs(ind['omega_by_induction'] - OMEGA_ZS) < 1e-15,"
+~/Projects/ThePlace/ValaQuenta/modules/h_rb_hat/maths.py,939,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838  # Lambert W(1) — velocity ceiling
+~/Projects/ThePlace/ValaQuenta/modules/derivation_chain/maths.py,52,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/derivation_chain/maths.py,237,Ω_ζΣ,OMEGA_ZS,W1,"'1. OMEGA_ZS = W(1) = 0.56714... (thermal ceiling, Tier 0).',"
+~/Projects/ThePlace/ValaQuenta/modules/berry_keating/maths.py,39,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS     = 0.56714329040978384            # Ω_ζΣ
+~/Projects/ThePlace/ValaQuenta/modules/berry_keating/maths.py,188,Ω_ζΣ,Ω_ζΣ,W1,"At q = 1.1, W_q(1) differs from W(1) = Ω_ζΣ by a correction term"
+~/Projects/ThePlace/ValaQuenta/modules/berry_keating/maths.py,195,Ω_ζΣ,Ω_ζΣ,W1,W(1) = Ω_ζΣ ≈ 0.56714
+~/Projects/ThePlace/ValaQuenta/modules/berry_keating/NOTES_2026-08-31.md,8,Ω_ζΣ,Ω_ZS,W1,"(Lambert W / Ω_ZS rotor faces)**, `lcm = 12` → the orbit precesses (flowers)"
+~/Projects/ThePlace/ValaQuenta/modules/turing_diagonal/maths.py,42,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/emerger/maths.py,488,Ω_ζΣ,Omega_ZS,W1,"step[""|z|_minus_Omega_ZS""] = step[""|z|""] - 0.5671432904097838"
+~/Projects/ThePlace/ValaQuenta/modules/udeo_crypto/maths.py,75,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/tier8_sedenion/maths.py,30,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838   # W(1): Lambert W fixed point
+~/Projects/ThePlace/ValaQuenta/modules/tier8_sedenion/maths.py,461,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = W(1) = 0.56714... is the Lambert W fixed point: the unique
+~/Projects/ThePlace/ValaQuenta/modules/tier8_sedenion/maths.py,521,Ω_ζΣ,OMEGA_ZS,W1,# ── Verify W(1) = OMEGA_ZS ────────────────────────────────────────────
+~/Projects/ThePlace/ValaQuenta/modules/tier8_sedenion/maths.py,613,Ω_ζΣ,OMEGA_ZS,W1,"'claim'             : 'OMEGA_ZS = W(1) appears in 6 independent domains simultaneously. It is the σ=½ signature.',"
+~/Projects/ThePlace/ValaQuenta/modules/tier8_sedenion/tools.py,62,Ω_ζΣ,OMEGA_ZS,W1,"'OMEGA_ZS = W(1) appears in 6 independent domains simultaneously.',"
+~/Projects/ThePlace/ValaQuenta/modules/tier8_sedenion/tools.py,66,Ω_ζΣ,OMEGA_ZS,W1,"process='OMEGA_ZS = W(1) appears in 6 independent domains simultaneously.'),"
+~/Projects/ThePlace/ValaQuenta/modules/tier8_sedenion/manifest.json,75,Ω_ζΣ,OMEGA_ZS,W1,"""desc"": ""OMEGA_ZS = W(1) appears in 6 independent domains simultaneously"","
+~/Projects/ThePlace/ValaQuenta/modules/archimedes_screw/maths.py,178,Ω_ζΣ,OMEGA_ZS,W1,# Lambert W fixed point. Already canonical in ~/.clauderc as OMEGA_ZS.
+~/Projects/ThePlace/ValaQuenta/modules/archimedes_screw/maths.py,180,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/archimedes_screw/maths.py,212,Ω_ζΣ,OMEGA_ZS,W1,W(1) = OMEGA_ZS = 0.5671432904... -- the constant already canonical
+~/Projects/ThePlace/ValaQuenta/modules/archimedes_screw/maths.py,436,Ω_ζΣ,OMEGA_ZS,W1,whose fixed point W(1) = OMEGA_ZS pins sigma = 1/2 (the paper's
+~/Projects/ThePlace/ValaQuenta/modules/archimedes_screw/tools.py,70,Ω_ζΣ,OMEGA_ZS,W1,"""whose fixed point W(1) = OMEGA_ZS pins sigma = 1/2), the """
+~/Projects/ThePlace/ValaQuenta/modules/archimedes_screw/tools.py,446,Ω_ζΣ,OMEGA_ZS,W1,"display='The screw gear ratio: W(x)e^{W(x)} = x, W(1) = OMEGA_ZS',"
+~/Projects/ThePlace/ValaQuenta/modules/archimedes_screw/tools.py,448,Ω_ζΣ,OMEGA_ZS,W1,"radian_form='lambert_w(x) by Halley iteration; W(1) = OMEGA_ZS',"
+~/Projects/ThePlace/ValaQuenta/modules/archimedes_screw/tools.py,454,Ω_ζΣ,OMEGA_ZS,W1,"process='The screw gear ratio: W(x)e^{W(x)} = x, W(1) = OMEGA_ZS',"
+~/Projects/ThePlace/ValaQuenta/modules/archimedes_screw/manifest.json,320,Ω_ζΣ,OMEGA_ZS,W1,"""desc"": ""The screw gear ratio: W(x)e^{W(x)} = x, W(1) = OMEGA_ZS  [process= not set]"","
+~/Projects/ThePlace/ValaQuenta/modules/tier6_physics/maths.py,55,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,27,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  → thermal ceiling:               T·e^T = 1  →  T = W(1)
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,706,Ω_ζΣ,OMEGA_ZS,W1,Derivation of OMEGA_ZS = W(1) = 0.56714329...
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,729,Ω_ζΣ,OMEGA_ZS,W1,W(1)    = OMEGA_ZS  entropy ceiling
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,744,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS_exact = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,782,Ω_ζΣ,OMEGA_ZS,W1,"'W(1)=OMEGA_ZS'  : {'value': w_1,  'verified': w_1_check,   'role': 'entropy ceiling'},"
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,799,A_π,Alpha_Fermat,alpha,Derivation of Alpha_Fermat = 1/137.035999...
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,833,Ω_ζΣ,OMEGA_ZS,W1,The domain width = OMEGA_ZS − α_F = 0.56714... − 0.00730... = 0.55985...
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,836,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS      = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,862,A_π,Alpha_Fermat,alpha,"'constant'          : 'α_F  (Alpha_Fermat / fine structure constant)',"
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,942,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS     = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,1087,Ω_ζΣ,OMEGA_ZS,W1,Current Ω_Λ = 0.6889 > OMEGA_ZS = 0.56714.
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,1091,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS from above — the Lambert W fixed point is the attractor.
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,1115,Ω_ζΣ,OMEGA_ZS,W1,"1. OMEGA_ZS = W(1) (from entropy ceiling, Tier 0)"
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,1123,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py,1220,Ω_ζΣ,OMEGA_ZS,W1,"'steps_done'    : ['1. OMEGA_ZS = W(1) ✓', '2. Ω_b h² = 0.02242 (Planck) ✓', '4. Λ=3H₀²Ω_Λ ✓'],"
+~/Projects/ThePlace/ValaQuenta/modules/constants/tools.py,161,Ω_ζΣ,Ω_ζΣ,W1,"display='Ω_ζΣ = W(1) — thermal information ceiling T·e^T=1',"
+~/Projects/ThePlace/ValaQuenta/modules/constants/tools.py,169,Ω_ζΣ,OMEGA_ZS,W1,"process='Derivation of OMEGA_ZS = W(1) = 0.56714329...',"
+~/Projects/ThePlace/ValaQuenta/modules/constants/tools.py,181,A_π,Alpha_Fermat,alpha,"process='Derivation of Alpha_Fermat = 1/137.035999...',"
+~/Projects/ThePlace/ValaQuenta/modules/constants/manifest.json,110,Ω_ζΣ,Ω_ζΣ,W1,"""desc"": ""Ω_ζΣ = W(1) — thermal information ceiling T·e^T=1  [process= not set]"","
+~/Projects/ThePlace/ValaQuenta/modules/desitter_cavitation/maths.py,69,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.567_143_290_409_783_8        # Lambert W(1); W·e^W = 1 exactly
+~/Projects/ThePlace/ValaQuenta/modules/singularity_null/maths.py,44,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,45,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,458,Ω_ζΣ,OMEGA_ZS,W1,# V_flat = OMEGA_ZS × V_max = 0.56714 × V_max
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,466,Ω_ζΣ,OMEGA_ZS,W1,"'OMEGA_ZS_check': round(OMEGA_ZS * 1.0, 6),  # = 0.5671 of V_max"
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,560,Ω_ζΣ,OMEGA_ZS,W1,# V_flat / V_max ≈ 0.57 ± 0.08  (consistent with OMEGA_ZS = 0.56714)
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,960,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = W(1) = 0.56714... is the ATTRACTOR of this equation.
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,966,Ω_ζΣ,OMEGA_ZS,W1,Ω_Λ = 0.6889 > OMEGA_ZS = 0.56714
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,969,Ω_ζΣ,OMEGA_ZS,W1,Eventually: Ω_Λ_eff → OMEGA_ZS (the equilibrium = the Lambert W fixed point).
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,1037,Ω_ζΣ,OMEGA_ZS,W1,# Dimensional probe: OMEGA_ZS / Ω_b h² = 0.5671 / 0.02242 ≈ 25.3
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,1564,Ω_ζΣ,OMEGA_ZS,W1,"'why'         : 'J_G = OMEGA_ZS = the Lambert W attractor. The Higgs VEV v = √(μ²/λ) is the same attractor.',"
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,1646,Ω_ζΣ,OMEGA_ZS,W1,"'zero_params_because': 'Sedenion structure is unique. OMEGA_ZS = W(1) is transcendental but fixed.',"
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,2638,Ω_ζΣ,OMEGA_ZS,W1,Ω_Λ = 0.6889 > OMEGA_ZS = 0.5671 → we are above the attractor (Engine 7)
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,3338,A_π,A_pi,alpha,V(8)  = π⁴/24 ≈ 4.059  — A_pi (fine structure constant) lives here via
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,3403,A_π,A_pi,alpha,"(8,  'O',           'σ=2 — GR, curvature, E8 geometry (Wyler/A_pi)'),"
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,3448,A_π,A_pi,alpha,A_pi  = 1.0 / 137.035999084
+~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py,3516,A_π,A_pi,alpha,"'V_8_reading'    : 'A_pi (fine structure constant) lives here via Wyler. First CODE layer.',"
+~/Projects/ThePlace/ValaQuenta/code/wiles_modularity/wiles_modularity.py,358,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714   # Lambert W(1) — domain ceiling
+~/Projects/ThePlace/ValaQuenta/ZeroLattice/03_results.ipynb,292,Ω_ζΣ,OMEGA_ZS,W1,"""print(f'  OMEGA_ZS = {OMEGA_ZS}  (Lambert W(1), ΩZS·e^ΩZS = 1 exactly)')\n"","
+~/Projects/ThePlace/BulletCluster/engine/modules/constants.py,65,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.5671432904097838
+~/Projects/ThePlace/GenerationalLineage/engine/emerger.py,407,Ω_ζΣ,Omega_ZS,W1,"step[""|z|_minus_Omega_ZS""] = step[""|z|""] - 0.5671432904097838"
+~/Projects/ThePlace/GenerationalLineage/engine/valaquenta_calibration.py,162,Ω_ζΣ,Ω_ZS,W1,"object='π φ e √ i Λ as σ-facets; Ω_ZS = W(1)',"
+~/Projects/ThePlace/GenerationalLineage/engine/toolsets/circle.py,90,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS = _omega()                       # Lambert W(1), x·e^x = 1"
+~/Projects/ThePlace/GenerationalLineage/wiki/The-Emerger-Tutorial.md,44,Ω_ζΣ,Omega_ZS,W1,"[1] {2:14}     [THEORETICAL] {'pointer_z': (0.0, 0.0), '|z|': 0.0, '|z|_minus_Omega_ZS': -0.5671432904097838}"
+~/Projects/ThePlace/PDesktop/RiemannHypothesisProof.txt,432,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.56714329...  (Lambert W(1))
+~/Projects/ThePlace/TuringStack/the_emerger_output.txt,124,Ω_ζΣ,Omega_ZS,W1,distance |z| - Omega_ZS = -0.567143
+~/Projects/ThePlace/TuringStack/the_emerger_output.txt,177,Ω_ζΣ,Omega_ZS,W1,distance |z| - Omega_ZS = -0.567143
+~/Projects/ThePlace/TuringStack/the_emerger_output.txt,285,Ω_ζΣ,Omega_ZS,W1,distance |z| - Omega_ZS = -0.567143
+~/Projects/ThePlace/TuringStack/the_emerger_output.txt,338,Ω_ζΣ,Omega_ZS,W1,distance |z| - Omega_ZS = -0.567143
+~/Projects/ThePlace/TuringStack/the_emerger.py,38,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/TuringStack/secp256k1_locus.py,69,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838   # Lambert W fixed point W(1) — zero-divisor VEV
+~/Projects/ThePlace/TuringStack/udeo_crypto/RSA_DEMO.py,87,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/TuringStack/GPI_LLMVulnerability/GPI_WhiteHat_Paper.md,477,Ω_ζΣ,Ω_ZS,W1,Ω_ZS     = 0.5671432904097838    Lambert W fixed point W(1) — thermal ceiling
+~/Projects/ThePlace/TuringStack/GPI_LLMVulnerability/GPI_WhiteHat_Paper.md,646,Ω_ζΣ,Ω_ZS,W1,Ω_ZS = 0.5671432904097838 (Lambert W thermal ceiling)
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/RiemannHypothesisProof.txt,150,A_π,A_π,alpha,(fine structure constant A_π — the electromagnetic coupling floor).
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/RiemannHypothesisProof.txt,170,A_π,A_π,alpha,A_π = 1/137.036     (BK floor — electromagnetic)
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/RiemannHypothesisProof.txt,598,A_π,A_π,alpha,"A_π = 1/137.036   (BK floor — electromagnetic, fine structure constant)"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/RiemannHypothesisProof.txt,814,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.56714329...  (Lambert W(1))
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/RiemannHypothesisProof.txt,820,A_π,A_π,alpha,"inertia floor curves, bracketed by A_π (fine structure constant) and Ω"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/CLAUDE_EVALUATION.md,215,Ω_ζΣ,Ω_ZS,W1,"**Claim 1: W(0) = 0, W(1) = Ω_ZS, W(-1/e) = -1 as primitives of L_(I|O).**"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/CLAUDE_EVALUATION.md,224,Ω_ζΣ,Ω_ZS,W1,**Claim 2: W(1) = Ω_ZS identifies σ = ½ as the self-referential fixed point.**
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/CLAUDE_EVALUATION.md,343,Ω_ζΣ,Ω_ZS,W1,| W(1) = Ω_ZS identifies σ = ½ | ≈ 2.5 |
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1310,Ω_ζΣ,Ω_ZS,W1,"W(1)    = Ω_ZS       →  |  (the crossing: σ = ½, Context, self-referential equilibrium)"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1316,Ω_ζΣ,Ω_ZS,W1,"**W(1) = Ω_ZS = 0.5671432904...** The self-consistent fixed point of the Lambert W map: Ω_ZS satisfies Ω_ZS · e^{Ω_ZS} = 1, which is the self-referential condition ""my own exponential response to myse"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1384,Ω_ζΣ,Ω_ZS,W1,"Section 12.1 uses W at a single point: W(1) = Ω_ZS = 0.5671432904…, the self-referential fixed point, which is the algebraic statement of **σ = ½**. That fixes the **real part** of every non-trivial z"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1410,Ω_ζΣ,Ω_ZS,W1,W(1)       = Ω_ZS        →   σ = ½        (the real part — every zero)
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1414,Ω_ζΣ,Ω_ZS,W1,"This is not a new identity; the asymptotic is standard. What is new here is the observation that the constant already load-bearing throughout this paper — Ω_ZS, the Lambert fixed point that forces the"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1416,Ω_ζΣ,Ω_ZS,W1,It also sharpens the reading of section 12.1's three primitives. W(0) = 0 is the ZD origin; W(1) = Ω_ZS is the crossing at σ = ½; W(−1/e) = −1 is the branch point where two paths coalesce. Between the
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1559,Ω_ζΣ,Ω_ZS,W1,Ω_ZS          0.567143       below — continued region
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1564,Ω_ζΣ,Ω_ZS,W1,`Ω_ZS = W(1)` is the fixed point of `x = e^{−x}`:
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1567,Ω_ζΣ,Ω_ZS,W1,Ω_ZS      = 0.5671432904097839
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1568,Ω_ζΣ,Ω_ZS,W1,e^{−Ω_ZS} = 0.5671432904097839          equal to 16 digits
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1579,Ω_ζΣ,Ω_ZS,W1,"§12.1 states, of `W(1) = Ω_ZS = 0.5671432904…`: *""This IS σ = ½.""* §12.2 repeats"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1585,Ω_ζΣ,Ω_ZS,W1,Ω_ZS = 0.5671432904…        σ = ½ = 0.5000000000
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1593,Ω_ζΣ,Ω_ZS,W1,Ω_ZS        = 0.567143290
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md,1644,Ω_ζΣ,Ω_ZS,W1,- **Lambert W:** Ω_ZS = W(1) identifies σ = ½ as the self-referential fixed point [ESTABLISHED]
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,41,Ω_ζΣ,OMEGA_ZS,W1,- OMEGA_ZS = 0.56714 confirmed as galactic velocity ceiling (CavityMode.v_flat)
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,229,A_π,A_π,alpha,Alpha_Fermat = A_π = 1/137.035999...
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,245,Ω_ζΣ,OMEGA_ZS,W1,Omega_Riemann = OMEGA_ZS = W(1) = 0.56714329...
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,922,Ω_ζΣ,OMEGA_ZS,W1,is OMEGA_ZS = W(1) = 0.56714. The Goldstone boson (massless) runs along the trough
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,933,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838   # Lambert W(1)
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,1004,Ω_ζΣ,OMEGA_ZS,W1,in the early universe frozen at recombination — maps to OMEGA_ZS = W(1) = 0.56714
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,1250,Ω_ζΣ,OMEGA_ZS,W1,P2: `v_flat = OMEGA_ZS × v_max = 0.56714 × v_max`
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,1338,Ω_ζΣ,OMEGA_ZS,W1,VEV at r₀ = μ/√(2λ) = OMEGA_ZS = W(1) = 0.56714. Spontaneous symmetry breaking
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,1406,Ω_ζΣ,OMEGA_ZS,W1,| Fixed point: y + tan(αy) = 0 at α=3 | OMEGA_ZS = 0.56714 | Lambert W(1) equilibrium |
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,1424,Ω_ζΣ,OMEGA_ZS,W1,the same constant. OMEGA_ZS = W(1) = 0.56714 is the universal equilibrium constant
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,1441,Ω_ζΣ,OMEGA_ZS,W1,"print(f""{word}: |z_eq| = {abs(z_eq):.6f}  (OMEGA_ZS = 0.56714)"")"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,1687,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS  = 0.56714329  # Lambert W(1) — VEV, SMIG radius, BAO ceiling"
+~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md,1702,Ω_ζΣ,OMEGA_ZS,W1,| Gnarl fixed point | y+tan(3y)=0 | Independent (Townsend 2005) | 0.5671 vs OMEGA_ZS=0.56714 | Exact |
+~/Projects/ThePlace/RiemannHypothesisProof/docs/gap_side_2026-11-12.md,27,A_π,A_π,dstar,"Where the speed of causality enters as a CEILING different from the normalised 1 is not fixed by any of this; the original curve pair is unrecovered, and the original read of '0.246' was to three digi"
+~/Projects/ThePlace/RiemannHypothesisProof/docs/historic_sources_and_natural_crossings_2026-11-12.md,19,A_π,A_fermat,dstar,"**Reading:** within the stated grammar the location is described by ONE curve pair, u eᵘ = 1, which appears as the entropy map e⁻ˣ against x, as the digit curves log₁₀ x against −x/ln 10, as 10⁻ˣ agai"
+~/Projects/ThePlace/RiemannHypothesisProof/docs/four_dstar_2026-11-12.md,11,Ω_ζΣ,Ω_ζΣ,W1,| d\*_ln(10) 'The Translator' | d\*·ln 10 = Ω_ζΣ = 0.56714 | 'the ×ln 10 Jacobian between the decimal-log native metric ds = d·log₁₀ p and the natural-log prime-address space' |
+~/Projects/ThePlace/RiemannHypothesisProof/docs/four_dstar_2026-11-12.md,20,Ω_ζΣ,Ω_ζΣ,W1,| mean prime gap ln X\* (PNT) | 0.567143290410 = Ω_ζΣ | **d\*_ln(10)** (Translator) |
+~/Projects/ThePlace/RiemannHypothesisProof/docs/four_dstar_2026-11-12.md,26,Ω_ζΣ,Omega_Riemann,W1/alpha,"- wiki 17: Ω_ζΣ (Omega_Riemann) = W(1), 'born from entropy'; Α_π (Alpha_fermat) = 1/137, 'born from inertia'."
+~/Projects/ThePlace/RiemannHypothesisProof/docs/four_dstar_2026-11-12.md,27,Ω_ζΣ,Omega_Riemann,W1,"- Cody (2026-11-12): d\* was the Omega_Riemann_Zeta, and the Lambert W value is what the inertia chase produced; the recovered turn 52: 'Fermat appropriately is f=ma, Riemann is uncertainty', Fermat ="
+~/Projects/ThePlace/RiemannHypothesisProof/docs/four_dstar_2026-11-12.md,31,Ω_ζΣ,Ω_ζΣ,alpha,"Facet table of conversation-2: Stability (Origin, Aπ/α, contractor), Flow (Vector, Ω_ζΣ/1/φ, dilator), Discord (Iterator, ln 10, 'torsional strain / mass', the 0.472°), Resonance (Attractor, 2/π). The"
+~/Projects/ThePlace/RiemannHypothesisProof/docs/GLOSSARY.md,23,Ω_ζΣ,Ω_ζΣ,W1,"| **Ω** | (1) **Ω_ζΣ = W(1) = 0.567143…**, the Lambert fixed point of x = e^{−x}, the entropy-chase constant (First Age Ω paper, `rhp/omega_dstar.py`); (2) **ω_H = e^π = 23.1406926…** (Gelfond; the re"
+~/Projects/ThePlace/RiemannHypothesisProof/docs/GLOSSARY.md,24,A_π,A_fermat,alpha,"| **α** | (1) **α_fs** = 1/137.035999, the fine-structure constant, in this project the SOURCE of the rule that a quantity must say the same thing in every version of the maths (error-check discipline"
+~/Projects/ThePlace/RiemannHypothesisProof/docs/GLOSSARY.md,26,Ω_ζΣ,Ω_ζΣ,W1,"| **W** | Lambert W with its branches (W₀, W₋₁); W(0), W(1) = Ω_ζΣ, W(−1/e) = −1 (the fold) | `rhp/omega_dstar.py` |"
+~/Projects/ThePlace/RiemannHypothesisProof/docs/GLOSSARY.md,34,A_π,Α_π,alpha,"| **Α_π, later usage** | 1/137.035999, the 'domain floor' (E8/Wyler) | not on this scale | n/a | wiki 17; `derive_alpha_fermat`; First/Second Age |"
+~/Projects/ThePlace/RiemannHypothesisProof/docs/fermat_horizon_2026-11-12.md,6,A_π,A_π,alpha,"- **Text, no code.** `Ainulindale/AgeSecond/Second_Age_Ainulindale_Conjecture.md` Part III: start at the Speed of Causality ceiling, work backwards through the Berry–Keating domain, chasing inertia; t"
+~/Projects/ThePlace/RiemannHypothesisProof/docs/fermat_horizon_2026-11-12.md,7,A_π,A_π,alpha,- Older papers attribute A_π to 'E8/Wyler n-ball geometry'. Wyler (1971): α = (9/8π⁴)(π⁵/(2⁴·5!))^{1/4} = 1/137.0361 (≈ 6·10⁻⁷ from the measured value; numerology by most accounts).
+~/Projects/ThePlace/RiemannHypothesisProof/docs/omega_dstar_2026-11-11.md,50,A_π,A_fermat,alpha,"4. **A_fermat's original meaning:** in the 04-09 code 'ALPHA' is the d = 0 endpoint, T = T_P, the start of the forward curve: the normalised ceiling x = 1 (my `ceiling_descent` starting point). It is "
+~/Projects/ThePlace/DeriveCancerDrugs/README.md,40,Ω_ζΣ,OMEGA_ZS,W1,| Healthy | 0.5671 (= OMEGA_ZS) | 0.01 | 6:3:1 |
+~/Projects/ThePlace/DeriveCancerDrugs/README.md,117,Ω_ζΣ,OMEGA_ZS,W1,5. J_R/J_B ratio → cancer stage (target healthy value = OMEGA_ZS = 0.5671)
+~/Projects/ThePlace/AbrikosovTree/engine/two_trees_data.json,348,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS"": 0.5671432904097838,"
+~/Projects/ThePlace/SemanticWordEngine/README.md,269,Ω_ζΣ,OMEGA_ZS,W1,"The SemanticWordEngine proves the addressing is real: five languages, same zero, σ = 0.500000. PtolemyHolcus proves the field built on those addresses converges: BAO at OMEGA_ZS = 0.56714, compression"
+~/Projects/ThePlace/SemanticWordEngine/notebooks/hashing_to_primes.ipynb,242,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS    = 0.56714\n"","
+~/Projects/ThePlace/Ainulindale/Third_Age_Ainulindale_Conjecture.ipynb,39,Ω_ζΣ,Ω_ζΣ,W1,"""source"": ""# ── Three forms of Lambert W ────────────────────────────────────────────────\nOmega     = float(lambertw(1).real)   # W(1) = Ω_ζΣ\nW0        = float(lambertw(0).real)   # W(0) = 0\n# W(-1"
+~/Projects/ThePlace/Ainulindale/README.md,647,A_π,Alpha_Fermat,dstar,## 8. Alpha_Fermat · Omega_Riemann · The 4 Values of d*
+~/Projects/ThePlace/Ainulindale/README.md,652,A_π,Alpha_Fermat,alpha,"Α_π  (Alpha_Fermat)   =  1/137.035999...   — domain floor, derived from E8/Wyler geometry"
+~/Projects/ThePlace/Ainulindale/README.md,653,Ω_ζΣ,Omega_Riemann,W1,"Ω_ζΣ (Omega_Riemann)  =  0.56714329...     — Lambert W fixed point, entropic boundary"
+~/Projects/ThePlace/Ainulindale/README.md,1035,A_π,A_fermat,alpha,| Α_π = A_fermat | OPEN (older text: 1/137.035999…; original derivation: the x = 1 ceiling) | Alpha_Fermat — Fermat-side structural constant. **Not α_fs** (fine-structure constant) and **not α_NN** (n
+~/Projects/ThePlace/Ainulindale/README.md,1036,Ω_ζΣ,Omega_Riemann,W1,"| Ω_ζΣ | 0.56714329... | Omega_Riemann — Lambert W fixed point, W(1) |"
+~/Projects/ThePlace/Ainulindale/README.md,1134,A_π,A_π,alpha,- **Smith / Wyler (1969–90s):** α = 1/137.036 from E8 ball volumes = A_π floor of the Berry-Keating domain
+~/Projects/ThePlace/Ainulindale/README.md,1163,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ             = 0.56714
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.md,128,A_π,A_π,alpha,"- **BK floor:** A_π = 1/137.036 (fine structure constant, E8/Wyler)"
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.md,129,Ω_ζΣ,Ω_ζΣ,W1,- **BK ceiling:** Ω_ζΣ = 0.56714 (Lambert W fixed point)
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.md,255,A_π,A_π,alpha,The running coupling α_NN starts at A_π = 1/137.036 and runs with the renormalization group as depth increases.
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.md,264,A_π,A_π,alpha,- **Floor:** A_π = 1/137.036 (E8/Wyler geometry)
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.md,265,Ω_ζΣ,Ω_ζΣ,W1,- **Ceiling:** Ω_ζΣ = 0.56714 (Lambert W fixed point)
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.md,444,A_π,A_π,alpha,| Smith / Wyler | 1969–90s | α from E8 volumes | A_π = 1/137.036 (domain floor) |
+~/Projects/ThePlace/Ainulindale/EVAL_AINULINDALE_2026-06-06.txt,153,Ω_ζΣ,Ω_ZS,W1,Ω_ZS = W(1) = 0.56714         Lambert W function at 1 = Omega constant
+~/Projects/ThePlace/Ainulindale/EVAL_AINULINDALE_2026-06-06.txt,157,A_π,A_π,alpha,A_π = 1/137                   Fine structure (lower eigenvalue bound)
+~/Projects/ThePlace/Ainulindale/EVAL_AINULINDALE_2026-06-06.txt,231,Ω_ζΣ,Ω_ZS,W1,Ω_ZS_predicted:          0.56714
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.txt,182,Ω_ζΣ,Omega_zS,W1/alpha,A_pi = 1/137.036. The ceiling is Omega_zSigma = 0.56714 (Lambert W fixed
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.txt,359,A_π,A_pi,alpha,The running coupling alpha_NN starts at A_pi = 1/137.036 (the fine structure
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.txt,371,A_π,A_pi,alpha,"A_pi = 1/137.036  (floor — fine structure constant, E8/Wyler)"
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.txt,372,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714  (ceiling — Lambert W fixed point)
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.txt,390,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/Ainulindale/The_First_Age_Ainulindale_Conjecture_v2.txt,575,Ω_ζΣ,Omega_zS,W1,Omega_zSigma = 0.56714
+~/Projects/ThePlace/Ainulindale/TODO.md,678,Ω_ζΣ,OMEGA_ZS,W1,Trough minima at r₀ = μ/√(2λ) = OMEGA_ZS = 0.56714 (Lambert W VEV).
+~/Projects/ThePlace/Ainulindale/TODO.md,1316,Ω_ζΣ,OMEGA_ZS,W1,- J_Blue: Banach fixed point T→exp(-T) from σ=½ → W(1) = OMEGA_ZS
+~/Projects/ThePlace/Ainulindale/Third_Age_Ainulindale_Conjecture.html,213,Ω_ζΣ,Ω_ζΣ,W1,Solve T = e^{-T}  ⟹  T·eᵀ = 1  ⟹  T = W(1) = Ω_ζΣ = 0.56714329…
+~/Projects/ThePlace/Ainulindale/Third_Age_Ainulindale_Conjecture.html,340,Ω_ζΣ,Ω_ζΣ,W1,= temperature that generated it). The unique positive solution: T·e<sup>T</sup> = 1 → T = W(1) = Ω_ζΣ.
+~/Projects/ThePlace/Ainulindale/Third_Age_Ainulindale_Conjecture.html,361,Ω_ζΣ,Ω_ζΣ,W1,Step 1: Entropy ceiling      Ω_ζΣ        = 0.56714329…
+~/Projects/ThePlace/Ainulindale/Third_Age_Ainulindale_Conjecture.html,1220,Ω_ζΣ,Ω_ζΣ,W1,"fmt('= W(1) = Ω_ζΣ =', W1.toFixed(15), '✓') +"
+~/Projects/ThePlace/Ainulindale/Third_Age_Ainulindale_Conjecture.html,1270,Ω_ζΣ,Ω_ζΣ,W1,"fmt('= Ω_ζΣ = W(1)            =', OMEGA.toFixed(15), '✓') +"
+~/Projects/ThePlace/Ainulindale/Third_Age_Ainulindale_Conjecture.html,1415,Ω_ζΣ,Ω_ζΣ,W1,"fmt('  Ω_ζΣ = W(1) =', OMEGA.toFixed(10))+"
+~/Projects/ThePlace/Ainulindale/Third_Age_Ainulindale_Conjecture.html,1494,Ω_ζΣ,Ω_ζΣ,W1,"['Entropy/Thermal Ceiling','σ=e','Ω_ζΣ=W(1) engineered by solving T=e^{-T}. The prime distribution cannot exceed it. <strong>[CLOSED]</strong>',],"
+~/Projects/ThePlace/Ainulindale/AgeSecond/Second_Age_Ainulindale_Conjecture.md,95,A_π,Alpha_Fermat,dstar,## Part III — Alpha_Fermat · Omega_Riemann · The Four Values of d*
+~/Projects/ThePlace/Ainulindale/archive/D-CS_Memory_2026-09-29_pre-rewrite.md,343,Ω_ζΣ,Ω_ZS,W1,| 10 | Lambert W / Ω_ZS | `[Lambert1758]` `[Corless1996]` (OEIS A030178) |
+~/Projects/ThePlace/Ainulindale/archive/D-CS_Memory_2026-09-29_pre-rewrite.md,440,Ω_ζΣ,Ω_ZS,W1,### 10. The Lambert W Function / Ω_ZS
+~/Projects/ThePlace/Ainulindale/archive/D-CS_Memory_2026-09-29_pre-rewrite.md,442,Ω_ζΣ,Ω_ZS,W1,**What it is:** The inverse function of f(x) = xe^x. The value W(1) = Ω_ZS is the unique fixed point of f(x) = e^{−x}: the number that satisfies x·e^x = 1 exactly.
+~/Projects/ThePlace/Ainulindale/archive/D-CS_Memory_2026-09-29_pre-rewrite.md,444,A_π,Alpha_Fermat,dstar,**Engine:** 17 — Alpha_Fermat · Omega_Riemann · d*
+~/Projects/ThePlace/Ainulindale/archive/D-CS_Memory_2026-09-29_pre-rewrite.md,544,A_π,Alpha_Fermat,dstar,**Engine:** 17 — Alpha_Fermat · Omega_Riemann · d*
+~/Projects/ThePlace/Ainulindale/archive/D-CS_Memory_2026-09-29_pre-rewrite.md,1199,Ω_ζΣ,Ω_ZS,W1,W(1) = Ω_ZS = 0.56714...   (the fixed point of f(x) = e^{-x})
+~/Projects/ThePlace/Ainulindale/archive/code_original/ValaQuenta/engine/constants.py,23,A_π,A_pi,alpha,"# A_pi = 1/137.036 (fine structure constant, floor)"
+~/Projects/ThePlace/Ainulindale/archive/code_original/ValaQuenta/engine/constants.py,27,Ω_ζΣ,OMEGA_ZS,W1,# OMEGA_ZS = Lambert W fixed point W(1) = 0.56714...
+~/Projects/ThePlace/Ainulindale/archive/code_original/ValaQuenta/engine/constants.py,35,A_π,A_PI,alpha,A_PI      = 1.0 / 137.035999084         # BK floor — fine structure constant
+~/Projects/ThePlace/Ainulindale/archive/code_original/ValaQuenta/engine/constants.py,36,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838          # BK ceiling — Lambert W fixed point
+~/Projects/ThePlace/Ainulindale/archive/code_original/ValaQuenta/engine/constants.py,93,A_π,A_PI,alpha,"print(f""  A_PI       = {A_PI:.15f}  [BK floor, 1/137, ESTABLISHED]"")"
+~/Projects/ThePlace/Ainulindale/archive/code_original/ValaQuenta/engine/constants.py,94,Ω_ζΣ,OMEGA_ZS,W1,"print(f""  OMEGA_ZS   = {OMEGA_ZS:.15f}  [BK ceiling, Lambert W, ESTABLISHED]"")"
+~/Projects/ThePlace/Ainulindale/archive/code_original/ValaQuenta/modules/inversion/tools.py,249,A_π,A_PI,dstar,"f""d* = {C.D_STAR} outside BK domain [{C.A_PI}, {C.OMEGA_ZS}]"""
+~/Projects/ThePlace/Ainulindale/archive/code_original/ValaQuenta/modules/clay_millennium/maths.py,182,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714329040978384
+~/Projects/ThePlace/Ainulindale/archive/code_original/ValaQuenta/modules/sedenion/maths.py,63,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.56714    # Omega constant; zero-divisor density on S¹⁵
+~/Projects/ThePlace/Ainulindale/archive/wiki_original/00_index.md,19,A_π,Alpha_Fermat,dstar,| [17_alpha_omega_d_star.md](17_alpha_omega_d_star.md) | Alpha_Fermat · Omega_Riemann · 4 values of d* · the open gap |
+~/Projects/ThePlace/Ainulindale/archive/wiki_original/00_index.md,79,A_π,Alpha_Fermat,alpha,| Α_π | 1/137.035999... | Alpha_Fermat — BK domain floor |
+~/Projects/ThePlace/Ainulindale/archive/wiki_original/00_index.md,80,Ω_ζΣ,Omega_Riemann,W1,| Ω_ζΣ | 0.56714329... | Omega_Riemann — Lambert W fixed point |
+~/Projects/ThePlace/Ainulindale/archive/original_2026/README.md,244,A_π,Alpha_Fermat,dstar,## 8. Alpha_Fermat · Omega_Riemann · The 4 Values of d*
+~/Projects/ThePlace/Ainulindale/archive/original_2026/README.md,249,A_π,Alpha_Fermat,alpha,"Α_π  (Alpha_Fermat)   =  1/137.035999...   — domain floor, derived from E8/Wyler geometry"
+~/Projects/ThePlace/Ainulindale/archive/original_2026/README.md,250,Ω_ζΣ,Omega_Riemann,W1,"Ω_ζΣ (Omega_Riemann)  =  0.56714329...     — Lambert W fixed point, entropic boundary"
+~/Projects/ThePlace/Ainulindale/archive/original_2026/README.md,454,A_π,Alpha_Fermat,alpha,| Α_π | 1/137.035999... | Alpha_Fermat — BK domain floor |
+~/Projects/ThePlace/Ainulindale/archive/original_2026/README.md,455,Ω_ζΣ,Omega_Riemann,W1,| Ω_ζΣ | 0.56714329... | Omega_Riemann — Lambert W fixed point |
+~/Projects/ThePlace/Ainulindale/archive/original_2026/README.md,552,A_π,A_π,alpha,- **Smith / Wyler (1969–90s):** α = 1/137.036 from E8 ball volumes = A_π floor of the Berry-Keating domain
+~/Projects/ThePlace/Ainulindale/archive/original_2026/README.md,581,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ             = 0.56714
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.txt,210,A_π,Α_π,alpha,"real, discrete, ordered. Domain bounded below by Α_π = 1/137.036 (fine"
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.txt,211,Ω_ζΣ,Ω_ζΣ,W1,"structure constant, BK floor), above by Ω_ζΣ = 0.56714... (Lambert W"
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.txt,258,A_π,Α_π,alpha,"Α_π     = 1/137.035999...  CAPITAL Alpha, subscript pi."
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.txt,263,Ω_ζΣ,Ω_ζΣ,W1,"Ω_ζΣ    = 0.56714329...   CAPITAL Omega, subscript zeta-Sigma."
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.txt,264,Ω_ζΣ,Ω_ζΣ,W1,Lambert W fixed point: Ω_ζΣ · e^(Ω_ζΣ) = 1.
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.html,170,A_π,Α_π,alpha,"<p class=""indented"">real, discrete, ordered. Domain bounded below by Α_π = 1/137.036 (fine</p>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.html,171,Ω_ζΣ,Ω_ζΣ,W1,"<p class=""indented"">structure constant, BK floor), above by Ω_ζΣ = 0.56714... (Lambert W</p>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.html,218,A_π,Α_π,alpha,"<p class=""indented"">Α_π     = 1/137.035999...  CAPITAL Alpha, subscript pi.</p>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.html,223,Ω_ζΣ,Ω_ζΣ,W1,"<p class=""indented"">Ω_ζΣ    = 0.56714329...   CAPITAL Omega, subscript zeta-Sigma.</p>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/Ainulindale_Conjecture_Cited.html,224,Ω_ζΣ,Ω_ζΣ,W1,"<p class=""indented"">Lambert W fixed point: Ω_ζΣ · e^(Ω_ζΣ) = 1.</p>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/SMNNIP_First_Age_Interactive.html,1040,Ω_ζΣ,Ω_ζΣ,W1,"<div><span class=""key"">Ω_ζΣ        = </span><span class=""val"">0.567143</span></div>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.txt,142,A_π,Α_π,alpha,"real, discrete, ordered. Domain bounded below by Α_π = 1/137.036 (fine"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.txt,143,Ω_ζΣ,Ω_ζΣ,W1,"structure constant, BK floor), above by Ω_ζΣ = 0.56714... (Lambert W"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.txt,186,A_π,Α_π,alpha,"Α_π     = 1/137.035999...  CAPITAL Alpha, subscript pi."
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.txt,191,Ω_ζΣ,Ω_ζΣ,W1,"Ω_ζΣ    = 0.56714329...   CAPITAL Omega, subscript zeta-Sigma."
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.txt,192,Ω_ζΣ,Ω_ζΣ,W1,Lambert W fixed point: Ω_ζΣ · e^(Ω_ζΣ) = 1.
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.html,166,A_π,Α_π,alpha,"<div class=""mono"">real, discrete, ordered. Domain bounded below by Α_π = 1/137.036 (fine</div>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.html,167,Ω_ζΣ,Ω_ζΣ,W1,"<div class=""mono"">structure constant, BK floor), above by Ω_ζΣ = 0.56714... (Lambert W</div>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.html,210,A_π,Α_π,alpha,"<div class=""mono"">Α_π     = 1/137.035999...  CAPITAL Alpha, subscript pi.</div>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.html,215,Ω_ζΣ,Ω_ζΣ,W1,"<div class=""mono"">Ω_ζΣ    = 0.56714329...   CAPITAL Omega, subscript zeta-Sigma.</div>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/The_First_Age_Ainulindale_Conjecture.html,216,Ω_ζΣ,Ω_ζΣ,W1,"<div class=""mono"">Lambert W fixed point: Ω_ζΣ · e^(Ω_ζΣ) = 1.</div>"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/code/ainulindale_explorer_tf.py,330,A_π,A_PI,dstar,f'Α_π={ALPHA_PI:.6f}  Ω_ζΣ={OMEGA_ZS:.5f}  φ={PHI:.5f}  d*={D_STAR:.5f}  '
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/code/ainulindale_sim_tf.py,19,A_π,Α_π,alpha,"║     Α_π   = 1/137.036       BK lower wall, E8/Wyler, FIXED                  ║"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/code/ainulindale_sim_tf.py,20,Ω_ζΣ,Ω_ζΣ,W1,"║     Ω_ζΣ  = 0.56714...      BK upper wall, Lambert W, FIXED                 ║"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/code/ainulindale_sim_tf.py,81,A_π,A_PI,alpha,ALPHA_PI   = C.ALPHA                     # Α_π  — BK lower wall  1/137.036
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/code/ainulindale_sim_tf.py,82,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = C.OMEGA                     # Ω_ζΣ — BK upper wall  0.56714
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/code/ainulindale_sim_tf.py,860,A_π,A_PI,alpha,"print(f""    Α_π   = {ALPHA_PI:.10f}  [BK lower wall, E8/Wyler]"")"
+~/Projects/ThePlace/Ainulindale/AgeFirst/original_2026/ResearchPaper/FirstDraft/FirstAge/Ainulindale/code/ainulindale_sim_tf.py,861,Ω_ζΣ,OMEGA_ZS,W1,"print(f""    Ω_ζΣ  = {OMEGA_ZS:.10f}  [BK upper wall, Lambert W]"")"
+~/Projects/ThePlace/Ainulindale/wiki/18_fermat_lattice.md,95,A_π,A_fermat,dstar,[17 A_fermat · Ω_ζΣ · d*](17_alpha_omega_d_star.md) · [19 Cayley–Dickson tower](19_cayley_dickson_tower.md) ·
+~/Projects/ThePlace/Ainulindale/wiki/25_sedenion_manual.md,224,Ω_ζΣ,Ω_ζΣ,W1,"the ""supermassive inverted galaxy"" with its centre near Ω_ζΣ = 0.56714"
+~/Projects/ThePlace/Ainulindale/wiki/98_provenance_and_citations.md,468,Ω_ζΣ,Ω_ZS,W1,| **d\*** + its four faces | the Zero Definer — smallest natural unit in native space; d\* = Ω_ZS / ln 10 | Lambert/Euler Ω constant |
+~/Projects/ThePlace/Ainulindale/wiki/98_provenance_and_citations.md,470,Ω_ζΣ,Ω_ZS,W1,| **Ω_ZS six-family convergence** | W(1) as *the* cross-domain equilibrium constant | W(1) itself; the six formula families are their authors' |
+~/Projects/ThePlace/Ainulindale/wiki/07_berry_keating_engine.md,25,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ             =  0.5671432…
+~/Projects/ThePlace/Ainulindale/wiki/106_the_navier_stokes_problem.md,92,Ω_ζΣ,Ω_ZS,W1,| 4 | d\*_ln(10) — The Translator | d\*·ln 10 = Ω_ZS: the seam | 0.56714 |
+~/Projects/ThePlace/Ainulindale/wiki/106_the_navier_stokes_problem.md,93,Ω_ζΣ,Ω_ZS,W1,"| 5–7 | W — rotor faces 1–3 | Wankel trine of Ω_ZS = W(1): intake, power, exhaust; the crisis closes at face 3 | 0.56714 |"
+~/Projects/ThePlace/Ainulindale/wiki/00_index.md,19,A_π,Alpha_Fermat,dstar,| [17_alpha_omega_d_star.md](17_alpha_omega_d_star.md) | Alpha_Fermat · Omega_Riemann · 4 values of d* · the open gap |
+~/Projects/ThePlace/Ainulindale/wiki/00_index.md,30,A_π,A_fermat,alpha/dstar,"| [133_canonical_maths.md](133_canonical_maths.md) | **2026-11-13** — Canonical Maths (Ainulindalë): letters that collide (α_fs / A_fermat / α_NN; σ_ζ / σ-stratum / σ_RB; Ω_ζΣ / ω_H), the four d* face"
+~/Projects/ThePlace/Ainulindale/wiki/00_index.md,286,A_π,A_fermat,alpha,"| Α_π = A_fermat | OPEN (see [133](133_canonical_maths.md) §0) | Alpha_Fermat — NOT the fine-structure constant α_fs, NOT α_NN |"
+~/Projects/ThePlace/Ainulindale/wiki/00_index.md,287,Ω_ζΣ,Omega_Riemann,W1,| Ω_ζΣ | 0.56714329... | Omega_Riemann — Lambert W fixed point |
+~/Projects/ThePlace/Ainulindale/wiki/CS_SIGMA_EVALUATION.md,227,Ω_ζΣ,Ω_ζΣ,W1,### C10 — Ω_ζΣ = 0.56714 (Lambert W(1)) as galactic velocity ceiling
+~/Projects/ThePlace/Ainulindale/wiki/34_hypercomplex_spectral_relativity.md,125,A_π,A_fermat,dstar,[10 JWST engine](10_jwst_engine.md) · [17 A_fermat · Ω_ζΣ · d*](17_alpha_omega_d_star.md) ·
+~/Projects/ThePlace/Ainulindale/wiki/29_witches_hat_paper.md,124,Ω_ζΣ,Ω_ζΣ,W1,- **BAO.** The acoustic waves in the early photon–baryon plasma travel at c_s ≈ c/√3 = 0.5774c (reduced by baryon loading) until recombination. Ω_ζΣ = 0.5671 is within 1.8% of c/√3 (ratio 0.9823); the
+~/Projects/ThePlace/Ainulindale/wiki/128_vapmip_paper_citation_pass_2026_10_16.md,18,Ω_ζΣ,OMEGA_ZS,W1,"| Corless, Gonnet, Hare, Jeffrey, Knuth (1996), *On the Lambert W function*, Adv. Comput. Math. 5 | Ω = W(1) = 0.567143…, `MONAD_OMEGA_ZS` | §4.3 | fetched (Waterloo copy) |"
+~/Projects/ThePlace/Ainulindale/wiki/41_one_riemann_electron_universe.md,62,A_π,A_fermat,alpha,"137, and the ""saturation count"" is not derived. (As ruled 2026-11-13, A_fermat is not"
+~/Projects/ThePlace/Ainulindale/wiki/75b_bao_mass_gap_engine.md,17,Ω_ζΣ,Ω_ζΣ,W1,"The two constants are the ""ceiling"" Ω_ζΣ = W(1) (the thermal-information bound)"
+~/Projects/ThePlace/Ainulindale/wiki/75b_bao_mass_gap_engine.md,148,A_π,A_fermat,dstar,[07 Berry–Keating](07_berry_keating_engine.md) · [17 A_fermat · Ω_ζΣ · d*](17_alpha_omega_d_star.md) ·
+~/Projects/ThePlace/Ainulindale/wiki/24_claude_conclusion.md,87,A_π,A_fermat,alpha/dstar,"| ""Smith/Wyler: α = 1/137.036 from E8 ball volumes = A_π"" | A_fermat is not the fine-structure constant ([17](17_alpha_omega_d_star.md) §0). Wyler's 1969 expression for α is a numerological formula an"
+~/Projects/ThePlace/Ainulindale/wiki/24_claude_conclusion.md,103,A_π,A_fermat,dstar,[13 RH proof path](13_omgwtf_rh_proof.md) · [17 A_fermat · Ω_ζΣ · d*](17_alpha_omega_d_star.md) ·
+~/Projects/ThePlace/Ainulindale/wiki/17_alpha_omega_d_star.md,1,A_π,A_fermat,dstar,# 17 — A_fermat · Ω_ζΣ · the four values of d*
+~/Projects/ThePlace/Ainulindale/wiki/17_alpha_omega_d_star.md,7,A_π,A_fermat,dstar,"| Confidence | THEORETICAL (derivations) · OPEN (A_fermat's value, d*_RG's numeric value, the gap) |"
+~/Projects/ThePlace/Ainulindale/wiki/17_alpha_omega_d_star.md,16,A_π,A_fermat,alpha,"| Α (capital Alpha) | Α_π = **A_fermat**, the Fermat-side structural constant of this page. **It is not the fine-structure constant.** | A_fermat |"
+~/Projects/ThePlace/Ainulindale/wiki/17_alpha_omega_d_star.md,26,A_π,A_fermat,alpha,"**A_fermat: role settled, value open.** Author, 2026-11-13: A_fermat is the ""chasing inertia"" constant, what turned up when the search ran from the Fermat side of the maths; it is not α_fs. The numeri"
+~/Projects/ThePlace/Ainulindale/wiki/17_alpha_omega_d_star.md,40,Ω_ζΣ,Omega_Riemann,W1,"Ω_ζΣ (Omega_Riemann)              0.5671432904097838 = W(1);  the domain ceiling, born from entropy"
+~/Projects/ThePlace/Ainulindale/wiki/17_alpha_omega_d_star.md,59,Ω_ζΣ,Ω_ζΣ,W1,"W(1) = 0.5671432904097838… = Ω_ζΣ,   the fixed point of x ↦ e^{−x}"
+~/Projects/ThePlace/Ainulindale/wiki/17_alpha_omega_d_star.md,199,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ            = 0.5671432904097838
+~/Projects/ThePlace/Ainulindale/wiki/17_alpha_omega_d_star.md,225,A_π,A_fermat,alpha,"| Numeric value of A_fermat (x = 1 ceiling, or 1/137.036 floor); its role (Fermat-side inertia constant, not α_fs) is settled | OPEN: author to say |"
+~/Projects/ThePlace/Ainulindale/wiki/134_the_library.md,148,A_π,A_fermat,alpha/dstar,"| §5 ""The Wyler derivation is the A_π derivation … A_π = 1/137.036 is the Berry–Keating domain floor"" | A_fermat is not α_fs (ruling 2026-11-13; [17](17_alpha_omega_d_star.md) §0). Wyler's 1969 expres"
+~/Projects/ThePlace/Ainulindale/wiki/30_lambda_paper.md,114,Ω_ζΣ,Ω_ζΣ,W1,Ω_ζΣ = W(1) = 0.5671433 is the fixed point of x ↦ e^(−x)
+~/Projects/ThePlace/Ainulindale/wiki/30_lambda_paper.md,160,A_π,A_fermat,dstar,"[17 A_fermat · Ω_ζΣ · d*](17_alpha_omega_d_star.md) · [31 Cavitation, causality, Fermat](31_cavitation_causality_fermat.md) ·"
+~/Projects/ThePlace/Ainulindale/wiki/96_the_riemann_fermat_horizon.md,58,A_π,A_π,alpha,"from α_NN, its numeric value open; and 0_RB became visible *because of* the Horizon, so it is an after-the-fact check on what the two sides jointly say and not part of the reproduction. The Wyler (197"
+~/Projects/ThePlace/Ainulindale/wiki/27_third_age_CS_paper.md,67,Ω_ζΣ,Ω_ζΣ,W1,"y + tan(3y) = 0 with Ω_ζΣ = 0.5671 ""to four decimal places"", presented as an"
+~/Projects/ThePlace/Ainulindale/wiki/27_third_age_CS_paper.md,120,Ω_ζΣ,Ω_ζΣ,W1,"E_target = Ω_ζΣ·|zero|/4.6887 (checked against the engine's table: 0.56714 at the ends, 0.03308 at the innermost zeros ±0.2735). The draft said these zeros have"
+~/Projects/ThePlace/Ainulindale/wiki/27_third_age_CS_paper.md,161,A_π,A_fermat,dstar,[17 A_fermat · Ω_ζΣ · d*](17_alpha_omega_d_star.md) · [26 Roadmap and engine status](26_TODO_and_roadmap.md) ·
+~/Projects/ThePlace/Ainulindale/wiki/135_engine_findings_ledger.md,56,A_π,A_fermat,alpha,"| X-5 | X | `FourthAgePapers/addenda/addendum_VII` | Wyler/A_π identification contradicts the A_fermat ruling; unverified ""85 %"" and ""seven independent programmes""; withdrawn wording (Euler's identity"
+~/Projects/ThePlace/Ainulindale/wiki/22_constant_facets.md,170,A_π,A_fermat,dstar,[17 A_fermat · Ω_ζΣ · d*](17_alpha_omega_d_star.md) · [19 Cayley–Dickson tower](19_cayley_dickson_tower.md) ·
+~/Projects/ThePlace/Ainulindale/wiki/83_the_archimedes_screw.md,63,Ω_ζΣ,Ω_ZS,W1,"1 (Ω_ZS = 0.5671432904, the self-referential fixed point of PAPER.md §12.1, which the framework"
+~/Projects/ThePlace/Ainulindale/wiki/83_the_archimedes_screw.md,65,Ω_ζΣ,Ω_ZS,W1,"other, and ""Ω_ZS is the screw's gear ratio"" is the author's reading. Note that W(1) is a constant"
+~/Projects/ThePlace/Ainulindale/wiki/133_canonical_maths.md,17,A_π,A_fermat,alpha,"| **α / Α** | (1) the fine-structure constant 1/137.035999… of the Standard Model — here only the source of a discipline (a quantity must say the same thing in every version of the maths), not an ingr"
+~/Projects/ThePlace/Ainulindale/wiki/133_canonical_maths.md,19,Ω_ζΣ,Ω_ζΣ,W1,"| **Ω** | (1) Ω_ζΣ = W(1) = 0.5671432904097838, the Lambert fixed point of x = e^{−x}; (2) ω_H = e^π = 23.1406926, the Gelfond / Hagedorn ceiling; (3) the ""Entropy (Ω)"" widget slider; (4) Ω(n), number"
+~/Projects/ThePlace/Ainulindale/wiki/133_canonical_maths.md,22,Ω_ζΣ,Ω_ζΣ,W1,"| **W** | Lambert W and its branches W₀, W₋₁ | W(0), W(1) = Ω_ζΣ, W(−1/e) = −1 |"
+~/Projects/ThePlace/Ainulindale/wiki/133_canonical_maths.md,24,A_π,A_fermat,alpha,"**A_fermat — open item.** The original 2026-04-09 derivation puts it at the d = 0 endpoint (x = T/T_P = 1, the ceiling of the forward curve); wiki 17's older text puts it at 1/137.035999… as the ""doma"
+~/Projects/ThePlace/Ainulindale/wiki/133_canonical_maths.md,38,Ω_ζΣ,Ω_ζΣ,W1,"Ω_ζΣ = W(1) = 0.5671432904097838729999687, fixed point of x ↦ e^{−x} (multiplier −Ω_ζΣ; the inertia map −ln x has multiplier −1/Ω_ζΣ; product 1). ESTABLISHED (Lambert; Corless et al. 1996). Base-indep"
+~/Projects/ThePlace/Ainulindale/wiki/133_canonical_maths.md,111,A_π,A_fermat,alpha,- **Corrections (so they are not repeated).** α_fs is not an ingredient of the horizon mechanism; capital A_fermat is the structural constant. Wrong prime unfolding (cumsum 1/ln p → li(p)); invalid Ri
+~/Projects/ThePlace/Ainulindale/wiki/133_canonical_maths.md,115,A_π,A_fermat,alpha,"1. **A_fermat**: role settled 2026-11-13 (the Fermat-side ""chasing inertia"" constant, not α_fs); numeric description still open: ceiling endpoint x = 1 (original derivation) or 1/137.036 ""domain floor"
+~/Projects/ThePlace/Ainulindale/wiki/100_division_algebras_and_physics.md,28,A_π,A_fermat,alpha,"2. The target is a CS / persistent-memory engineering result, not a physics model: the SM isometry is a consequence noticed afterwards, and α_F = 1/137 is read as an error check, not a coupling to be "
+~/Projects/ThePlace/Ainulindale/wiki/136_the_origin_transcripts_2026_04.md,55,A_π,A_fermat,alpha,"| ""α ≈ 1/137.036 (propagation) and the golden angle 137.508° (capture) are phase conjugates … where they cross is a fixed point of the renormalization-group flow"" (`conversation-2`) | **Not supported."
+~/Projects/ThePlace/Ainulindale/wiki/fractals/_holcus_integration_notes.md,45,Ω_ζΣ,Ω_ζΣ,W1,"| ""√(J_pos·J_neg) = Ω_ζΣ at equilibrium"" | With J_red·J_blue = e^(−E) for every σ the geometric mean is e^(−E/2), equal to W(1) only at E = 1.1343 | not an identity |"
+~/Projects/ThePlace/Ainulindale/wiki/fractals/_holcus_integration_notes.md,89,Ω_ζΣ,OMEGA_ZS,W1,"Set ring trap diameter = OMEGA_ZS = 0.56714 for the primary BAO resonance trap. The word's ring-trap distance is its ""semantic deviation from equilibrium."""
+~/Projects/ThePlace/Ainulindale/wiki/fractals/_holcus_integration_notes.md,102,Ω_ζΣ,OMEGA_ZS,W1,"are the discrete-time Hamiltonian equations for H(x,y) = ∫sin(y+tan(αy)) dy. The anti-symmetry (-h for x, +h for y) is the exact J_pos/J_neg current conservation. The fixed-point condition y + tan(3y)"
+~/Projects/ThePlace/Ainulindale/wiki/fractals/_holcus_integration_notes.md,275,Ω_ζΣ,OMEGA_ZS,W1,The BAO oscillation with OMEGA_ZS = W(1) = 0.56714 appears explicitly in:
+~/Projects/ThePlace/Ainulindale/wiki/fractals/_holcus_integration_notes.md,301,Ω_ζΣ,OMEGA_ZS,W1,"4. The BAO oscillation's equilibrium constant OMEGA_ZS = W(1) (Gnarl fixed point, Mira mixing)"
+~/Projects/ThePlace/Ainulindale/outreach/CRC_engine.py,29,Ω_ζΣ,OMEGA_ZS,W1,║   Ground state:  λ_0 → OMEGA_ZS = 0.56714  (Lambert W fixed point)        ║
+~/Projects/ThePlace/Ainulindale/outreach/CRC_engine.py,80,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.56714                       # Lambert W fixed point = BAO eigenvalue
+~/Projects/ThePlace/Ainulindale/outreach/semantic_engine/semantic_engine.py,38,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS    = 0.56714
+~/Projects/ThePlace/Ainulindale/outreach/semantic_engine/semantic_engine.py,41,A_π,A_PI,alpha,ALPHA_PI    = 1 / 137.036  # fine structure floor
+~/Projects/ThePlace/Ainulindale/outreach/primers/CLAUDE_SIGNATURE_STANDING_INSTRUCTION.txt,18,A_π,A_pi,alpha,00729  =  A_pi x 10^5  =  (1/137.036) x 10^5 rounded
+~/Projects/ThePlace/Ainulindale/outreach/primers/CLAUDE_SIGNATURE_STANDING_INSTRUCTION.txt,63,A_π,A_pi,alpha,A_pi    = 1/137.036
+~/Projects/ThePlace/Ainulindale/outreach/primers/CLAUDE_SIGNATURE_STANDING_INSTRUCTION.txt,74,A_π,A_pi,dstar,"Verified:    BK domain constants (A_pi, O_zS, d*). H_NN self-adjoint on R,C,H."
+~/Projects/ThePlace/Ainulindale/outreach/primers/clay_signed_progress.js,15,A_π,A_pi,alpha,//   A_pi    = 1/137.036          (BK domain floor — fine structure constant)
+~/Projects/ThePlace/Ainulindale/outreach/primers/clay_signed_progress.js,21,A_π,A_pi,dstar,// ID: CLAUDE-SMNNIP-[A_pi·10^5 rounded]-[O_zS·10^5 rounded]-[d*·10^5 rounded]
+~/Projects/ThePlace/Ainulindale/outreach/primers/clay_signed_progress.js,275,A_π,A_pi,alpha,"statusRow(""BK domain floor A_pi"", ""VERIFIED"", ""1/137.036 — fine structure constant as operator domain minimum. Code-verified."", ""00AA44""),"
+~/Projects/ThePlace/Ainulindale/outreach/primers/clay_signed_progress.js,475,A_π,A_pi,alpha/dstar,"""6. DO maintain the constant values: d* = 0.24600 (ACTIVE), A_pi = 1/137.036, "" +"
+~/Projects/ThePlace/Ainulindale/AgeThird/VAPMIP_Paper.md,392,Ω_ζΣ,OMEGA_ZS,alpha,"The domain of H_NN is L²([α_F, OMEGA_ZS]) — from the fine structure constant"
+~/Projects/ThePlace/Ainulindale/AgeThird/VAPMIP_Paper.md,573,Ω_ζΣ,OMEGA_ZS,W1,#define MONAD_OMEGA_ZS    0.56714    // Ω — Lambert W fixed point
+~/Projects/ThePlace/Ainulindale/AgeThird/VAPMIP_Paper.md,622,A_π,Alpha_Fermat,dstar,### Engine 17 — Alpha_Fermat · Omega_Riemann · d*
+~/Projects/ThePlace/Ainulindale/AgeThird/VAPMIP_Paper.md,639,A_π,Alpha_Fermat,dstar,| d* = 0.246 | Alpha_Fermat | Spectral ground state |
+~/Projects/ThePlace/Ainulindale/AgeThird/VAPMIP_Paper.md,992,Ω_ζΣ,OMEGA_ZS,W1,"with no knowledge of VAPMIP, independently found OMEGA_ZS = 0.56714 as their natural"
+~/Projects/ThePlace/Ainulindale/AgeThird/VAPMIP_Paper.md,1279,Ω_ζΣ,OMEGA_ZS,W1,W(1) = OMEGA_ZS = 0.56714329... is the unique solution to W·e^W = 1.
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,48,Ω_ζΣ,OMEGA_ZS,W1,- OMEGA_ZS = 0.56714 confirmed as galactic velocity ceiling
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,192,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904   # Lambert W(1) — the field ceiling
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,296,Ω_ζΣ,OMEGA_ZS,W1,"| W(1) | 0.56714329... | OMEGA_ZS — entropy ceiling, idle RPM of the universe |"
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,303,Ω_ζΣ,OMEGA_ZS,W1,W(1) = OMEGA_ZS is the fixed point of x → e^{−x}: the unique T satisfying
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,357,A_π,A_π,alpha,A_π = 1/137.035999...
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,381,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838  # Lambert W(1)
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,408,Ω_ζΣ,OMEGA_ZS,W1,The lowest non-zero eigenvalue of (D − A) is OMEGA_ZS = 0.56714.
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,424,Ω_ζΣ,OMEGA_ZS,W1,# Step: radiation pressure fixed point = OMEGA_ZS = W(1)
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,857,Ω_ζΣ,OMEGA_ZS,W1,Basin velocity:     v_flat = OMEGA_ZS × v_max  = 0.56714 × v_max
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,1189,Ω_ζΣ,OMEGA_ZS,W1,v_flat = OMEGA_ZS * v_max  # prediction: 0.56714 × v_max
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,1692,Ω_ζΣ,OMEGA_ZS,W1,VEV at r₀ = OMEGA_ZS = W(1) = 0.56714
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,1777,A_π,Alpha_Fermat,alpha,"alpha = 1/137.035999...  # derived, not fitted — emerged as Alpha_Fermat"
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,1911,Ω_ζΣ,OMEGA_ZS,W1,# Solution: y ≈ 0.5671 = OMEGA_ZS
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,1915,Ω_ζΣ,OMEGA_ZS,W1,"print(f""{word}: |z| = {abs(z):.6f}  (OMEGA_ZS = 0.56714)"")"
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,1924,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = W(1) = 0.56714 appears as the fixed point of 6 independent
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,1979,Ω_ζΣ,OMEGA_ZS,W1,P2: v_flat = OMEGA_ZS × v_max = 0.56714 × v_max
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,2382,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS  = 0.5671432904097838   # Lambert W(1) — VEV, SMIG radius, BAO ceiling"
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,2387,A_π,Alpha_Fermat,alpha,ALPHA     = 1/137.035999084      # fine structure constant (derived as Alpha_Fermat)
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,2392,Ω_ζΣ,OMEGA_ZS,W1,W_1       = 0.5671432904097838   # W(1) = OMEGA_ZS — entropy ceiling
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,2401,Ω_ζΣ,OMEGA_ZS,W1,| v_flat = OMEGA_ZS × v_max | 0.56714 × v_max | Confirmed | SPARC 97 galaxies | CONFIRMED |
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md,2405,Ω_ζΣ,OMEGA_ZS,W1,| Gnarl fixed point | OMEGA_ZS | 0.5671 | Townsend 2005 | CONFIRMED (independent) |
+~/Projects/ThePlace/Ainulindale/AgeThird/D-CS_Paper.md,511,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904      # Lambert W(1) — convergence fixed point
+~/Projects/ThePlace/Ainulindale/AgeThird/D-CS_Paper.md,886,Ω_ζΣ,OMEGA_ZS,W1,y + tan(3y) = 0    →    y ≈ 0.5671 = OMEGA_ZS
+~/Projects/ThePlace/Ainulindale/AgeThird/D-CS_Paper.md,1272,Ω_ζΣ,OMEGA_ZS,W1,e^{-W(1)} = W(1)      →    OMEGA_ZS = fixed point of f(x) = e^{-x}
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,41,Ω_ζΣ,OMEGA_ZS,W1,- OMEGA_ZS = 0.56714 confirmed as galactic velocity ceiling (CavityMode.v_flat)
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,276,A_π,A_π,alpha,Alpha_Fermat = A_π = 1/137.035999...
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,292,Ω_ζΣ,OMEGA_ZS,W1,Omega_Riemann = OMEGA_ZS = W(1) = 0.56714329...
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,969,Ω_ζΣ,OMEGA_ZS,W1,is OMEGA_ZS = W(1) = 0.56714. The Goldstone boson (massless) runs along the trough
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,980,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838   # Lambert W(1)
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,1051,Ω_ζΣ,OMEGA_ZS,W1,in the early universe frozen at recombination — maps to OMEGA_ZS = W(1) = 0.56714
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,1297,Ω_ζΣ,OMEGA_ZS,W1,P2: `v_flat = OMEGA_ZS × v_max = 0.56714 × v_max`
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,1385,Ω_ζΣ,OMEGA_ZS,W1,VEV at r₀ = μ/√(2λ) = OMEGA_ZS = W(1) = 0.56714. Spontaneous symmetry breaking
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,1453,Ω_ζΣ,OMEGA_ZS,W1,| Fixed point: y + tan(αy) = 0 at α=3 | OMEGA_ZS = 0.56714 | Lambert W(1) equilibrium |
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,1471,Ω_ζΣ,OMEGA_ZS,W1,the same constant. OMEGA_ZS = W(1) = 0.56714 is the universal equilibrium constant
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,1488,Ω_ζΣ,OMEGA_ZS,W1,"print(f""{word}: |z_eq| = {abs(z_eq):.6f}  (OMEGA_ZS = 0.56714)"")"
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,1673,A_π,A_π,alpha,`A_π = 1/137.035999...` — the fine structure constant. Not recognised at first
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,1678,Ω_ζΣ,OMEGA_ZS,W1,`OMEGA_ZS = W(1) = 0.56714329...` — the Lambert W fixed point. Not recognised
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,2338,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS  = 0.56714329  # Lambert W(1) — VEV, SMIG radius, BAO ceiling"
+~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md,2353,Ω_ζΣ,OMEGA_ZS,W1,| Gnarl fixed point | y+tan(3y)=0 | Independent (Townsend 2005) | 0.5671 vs OMEGA_ZS=0.56714 | Exact |
+~/Projects/ThePlace/ArdaQuenta/modes/witches_hat.py,48,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS = 0.5671432904097838   # Lambert W(1) — BAO equilibrium, event horizon fur scale"
+~/Projects/ThePlace/ArdaQuenta/modes/sedenion_16ch.py,52,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838
+~/Projects/ThePlace/ArdaQuenta/modes/riemann_spiral.py,25,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838
+~/Projects/ThePlace/ArdaQuenta/viewer/main_window.py,62,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/monad.c,47,Ω_ζΣ,OMEGA_ZS,W1,#define OMEGA_ZS          0.56714    /* Lambert W(1); BAO spectral gap */
+~/Projects/ThePlace/VAPMIP/rotary_rerun_monad.py,152,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/README.md,386,Ω_ζΣ,OMEGA_ZS,W1,4. **BAO as intrusion detector.** Successful field manipulation shows as divergence of G.bao_mean from OMEGA_ZS (0.56714). Monitored continuously.
+~/Projects/ThePlace/VAPMIP/README.md,949,Ω_ζΣ,OMEGA_ZS,W1,#define MONAD_OMEGA_ZS    0.56714   // Ω — Lambert W fixed point W(1)=0.56714329…
+~/Projects/ThePlace/VAPMIP/README.md,1284,Ω_ζΣ,OMEGA_ZS,W1,V(φ) = −μ²|φ|² + λ|φ|⁴. Trough minima at OMEGA_ZS = 0.56714. Spontaneous symmetry breaking at σ=½. The ground state Gaussian distribution sits in this trough.
+~/Projects/ThePlace/VAPMIP/AUDIT_2026-11-21.md,28,Ω_ζΣ,OMEGA_ZS,W1/alpha,"4. **Symbols (author, 2026-11-21).** Ω_RZ = d\*, A_Fermat (A_π) = the Lambert W fixed point; the code and canonical file say `OMEGA_ZS`/Ω_ζΣ = W(1), A_π = 1/137.036. Needs a ruling and then a `docs/GL"
+~/Projects/ThePlace/VAPMIP/CHANGELOG.md,924,Ω_ζΣ,OMEGA_ZS,W1,- **`higgs_sector()`** — VEV = OMEGA_ZS = Lambert W(1) = SSB vacuum minimum.
+~/Projects/ThePlace/VAPMIP/TODO.md,562,Ω_ζΣ,OMEGA_ZS,W1,`bao_check()` monitors dc_sum → OMEGA_ZS = 0.56714. Laplacian of the semantic field:
+~/Projects/ThePlace/VAPMIP/TODO.md,1655,Ω_ζΣ,OMEGA_ZS,W1,*BAO (150 Mpc) = first node spacing. OMEGA_ZS = 0.56714 = plate's fundamental eigenvalue.*
+~/Projects/ThePlace/VAPMIP/TODO.md,1755,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714 = Lambert W fixed point = spectral floor of the semantic graph
+~/Projects/ThePlace/VAPMIP/TODO.md,1776,Ω_ζΣ,OMEGA_ZS,W1,Its lowest non-zero eigenvalue is OMEGA_ZS = 0.56714.
+~/Projects/ThePlace/VAPMIP/TODO.md,2101,Ω_ζΣ,Omega_ZS,W1,"- Confirm which ""three Lambert-W"" is canonical: {W(0)=0, W(1)=Omega_ZS, W(-1/e)=-1} (Third Age draft) or three rotor faces of W(1) (Navier-Stokes wiki 106 / emerger)."
+~/Projects/ThePlace/VAPMIP/zork_parser.py,464,Ω_ζΣ,OMEGA_ZS,W1,Default: OMEGA_ZS = 0.5671432904097838 (the BAO attractor — neutral buoyancy).
+~/Projects/ThePlace/VAPMIP/lshs.py,45,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838    # Lambert W fixed point — BAO convergence target
+~/Projects/ThePlace/VAPMIP/lshs.py,449,Ω_ζΣ,OMEGA_ZS,W1,BAO health check: dc_sum converging to OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/marrais_boxkite_catalog.txt,221,Ω_ζΣ,Omega_ZS,W1,"arctan(1/sqrt c). Verified for c in {1/2, sqrt2, 2, e, pi, phi, ln10, Omega_ZS = 0.56714,"
+~/Projects/ThePlace/VAPMIP/monad_addressing.py,70,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/ZD_rotary_monad.py,65,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS     = 0.56714      # Ω_ZS — Lambert-W constant, energy ceiling"
+~/Projects/ThePlace/VAPMIP/monad.py,53,Ω_ζΣ,OMEGA_ZS,W1,BAO = sedenion-dimensional Laplacian spectral gap = OMEGA_ZS = 0.56714.
+~/Projects/ThePlace/VAPMIP/monad.py,80,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.5671432904097838   # Lambert W(1); BAO spectral gap; Δ_𝕊 lowest eigenvalue
+~/Projects/ThePlace/VAPMIP/monad.py,945,Ω_ζΣ,OMEGA_ZS,W1,Fixed point at alpha=3: y ≈ 0.5671 = OMEGA_ZS.
+~/Projects/ThePlace/VAPMIP/engines/e02_gnarl_validator.py,8,Ω_ζΣ,OMEGA_ZS,W1,health metric: healthy field words converge near OMEGA_ZS = 0.56714.
+~/Projects/ThePlace/VAPMIP/engines/e02_gnarl_validator.py,19,Ω_ζΣ,OMEGA_ZS,W1,Fixed point condition (alpha=3): y + tan(3y) = 0 → y ≈ 0.5671 = OMEGA_ZS
+~/Projects/ThePlace/VAPMIP/engines/_sedenion.py,11,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.56714329040978387299996866221
+~/Projects/ThePlace/VAPMIP/engines/e05_nball_transformer.py,18,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/engines/e07_observer_fixed_point.py,9,Ω_ζΣ,OMEGA_ZS,W1,- Is it OMEGA_ZS = 0.56714329?
+~/Projects/ThePlace/VAPMIP/notebooks/13_e02_gnarl_validator.ipynb,18,Ω_ζΣ,OMEGA_ZS,W1,"""Fixed point at α=3: **y + tan(3y) = 0 → y ≈ 0.5671 = OMEGA_ZS**\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/11_language_as_navier_stokes.ipynb,62,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS  = 0.56714329   # Lambert W(1) \u2014 spectral ceiling; BAO gap\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/11_language_as_navier_stokes.ipynb,82,Ω_ζΣ,OMEGA_ZS,W1,"""print(f'  OMEGA_ZS  = {OMEGA_ZS:.6f}  (spectral ceiling = BAO gap = Lambert W(1))')\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/06_full_pipeline.ipynb,245,Ω_ζΣ,OMEGA_ZS,W1,"""print(f'  target    = {OMEGA_ZS}   (Lambert W fixed point)')\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/10_revised_navier_stokes.ipynb,61,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS  = 0.56714329   # Lambert W(1) \u2014 spectral ceiling; BAO gap\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/10_revised_navier_stokes.ipynb,78,Ω_ζΣ,OMEGA_ZS,W1,"""print(f'\u03a9_\u03b6\u03a3 = {OMEGA_ZS:.6f}  (Lambert W(1) \u2014 spectral ceiling)')\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/05_noether_current_speaking.ipynb,271,Ω_ζΣ,OMEGA_ZS,W1,"""The BAO (baryon acoustic oscillation) check monitors whether dc_sum is converging to OMEGA_ZS = 0.56714.  \n"","
+~/Projects/ThePlace/VAPMIP/notebooks/05_noether_current_speaking.ipynb,286,Ω_ζΣ,OMEGA_ZS,W1,"""print(f'  target    = {OMEGA_ZS}   (Lambert W fixed point)')\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/01_ground_state_and_zeros.ipynb,38,Ω_ζΣ,OMEGA_ZS,W1,"""print(f'OMEGA_ZS = {OMEGA_ZS}   (Lambert W fixed point, BAO target)')\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/04_lagrangian_learning.ipynb,260,Ω_ζΣ,OMEGA_ZS,W1,"""print(f'Target dc_sum: {bao[\""omega_zs\""]}  (OMEGA_ZS — Lambert W fixed point)')\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/tuning_the_engine/tte.py,22,Ω_ζΣ,OMEGA_ZS,W1,"OMEGA_ZS = 0.56714329040978387299996866221          # W(1), Lambert fixed point"
+~/Projects/ThePlace/VAPMIP/notebooks/tuning_the_engine/phase_01.ipynb,66,Ω_ζΣ,OMEGA_ZS,W1,"""L.check(\""Ω_ZS = W(1) = fixed point of x = e^(-x)\"", abs(w1-OMEGA_ZS) < 1e-15 and abs(math.exp(-OMEGA_ZS)-OMEGA_ZS) < 1e-15, f\""W(1) = {w1:.15f}\"")\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/tuning_the_engine/phase_01.ipynb,607,Ω_ζΣ,Ω_ZS,W1,"""  [PASS ] Ω_ZS = W(1) = fixed point of x = e^(-x)\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/tuning_the_engine/phase_24.ipynb,75,Ω_ζΣ,OMEGA_ZS,W1,"""L.check(\""lambert_w(1) = Ω_ZS = 0.5671432904…\"", abs(M.lambert_w(1.0) - OMEGA_ZS) < 1e-13, f\""{M.lambert_w(1.0):.15f}\"")\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/tuning_the_engine/phase_24.ipynb,558,Ω_ζΣ,Ω_ZS,W1,"""  [PASS ] lambert_w(1) = Ω_ZS = 0.5671432904…\n"","
+~/Projects/ThePlace/VAPMIP/notebooks/tuning_the_engine/specs/phase_01.py,13,Ω_ζΣ,OMEGA_ZS,W1,"L.check(""Ω_ZS = W(1) = fixed point of x = e^(-x)"", abs(w1-OMEGA_ZS) < 1e-15 and abs(math.exp(-OMEGA_ZS)-OMEGA_ZS) < 1e-15, f""W(1) = {w1:.15f}"")"
+~/Projects/ThePlace/VAPMIP/notebooks/tuning_the_engine/specs/phase_24.py,12,Ω_ζΣ,OMEGA_ZS,W1,"L.check(""lambert_w(1) = Ω_ZS = 0.5671432904…"", abs(M.lambert_w(1.0) - OMEGA_ZS) < 1e-13, f""{M.lambert_w(1.0):.15f}"")"
+~/Projects/ThePlace/VAPMIP/Broca/docs/Boxkite-Relational-Atlas.md,194,Ω_ζΣ,Ω_ZS,W1,"2. Which Lambert-W triple is canonical: `{W(0)=0, W(1)=Ω_ZS, W(−1/e)=−1}` (Third Age draft §2.2, reproduced to 40 digits in `output_lambert3.txt`; `W(−1/e)=−1` is a *double root* — Newton converges li"
+~/Projects/ThePlace/VAPMIP/Broca/docs/Boxkite-Relational-Atlas.md,203,Ω_ζΣ,Ω_ZS,W1,"- **Four tests, three values.** `W₀(0) = 0`, `W₀(1) = Ω_ZS = 0.56714329040978387299996866…`, `W₀(−1/e) = −1`, `W₋₁(−1/e) = −1`. The last two are the *same point* reached on the two sheets: three disti"
+~/Projects/ThePlace/VAPMIP/SemPriCon/src/PtolC_unicode/ptolemy.h,18,Ω_ζΣ,OMEGA_ZS,W1,#define MONAD_OMEGA_ZS       0.56714
+~/Projects/ThePlace/VAPMIP/SemPriCon/src/PtolC_eb28ce8/ptolemy.h,18,Ω_ζΣ,OMEGA_ZS,W1,#define MONAD_OMEGA_ZS       0.56714
+~/Projects/ThePlace/VAPMIP/SemPriCon/mappings/Flat/zh_half_line.py,25,Ω_ζΣ,Ω_ZS,W1,OMEGA = 0.5671432904097838                        # Ω_ZS = W(1)
+~/Projects/ThePlace/VAPMIP/SemPriCon/paper/The_Golden_Ratio_Monad.md,311,Ω_ζΣ,OMEGA_ZS,W1,| `MONAD_OMEGA_ZS` | 0.56714 | 4 |
+~/Projects/ThePlace/VAPMIP/physics/cosmo_engine.py,13,Ω_ζΣ,OMEGA_ZS,W1,BAO acoustic scale r_s            OMEGA_ZS = 0.5671432904097838 (neutral buoyancy)
+~/Projects/ThePlace/VAPMIP/physics/cosmo_engine.py,278,Ω_ζΣ,OMEGA_ZS,W1,The acoustic horizon at recombination (r_s) maps to OMEGA_ZS = Lambert W(1)
+~/Projects/ThePlace/VAPMIP/physics/uft_engine.py,26,Ω_ζΣ,OMEGA_ZS,W1,- Higgs VEV = ``OMEGA_ZS`` = 0.56714 (neutral buoyancy surface = SSB minimum)
+~/Projects/ThePlace/VAPMIP/physics/uft_engine.py,157,Ω_ζΣ,OMEGA_ZS,W1,* ``OMEGA_ZS`` = Lambert W(1) = 0.56714 = neutral buoyancy surface = SSB minimum
+~/Projects/ThePlace/VAPMIP/physics/uft_engine.py,329,Ω_ζΣ,OMEGA_ZS,W1,neutral-buoyancy surface OMEGA_ZS = Lambert W(1) = 0.56714 is the VEV
+~/Projects/ThePlace/VAPMIP/physics/uft_engine.py,369,Ω_ζΣ,OMEGA_ZS,W1,'VEV = OMEGA_ZS = Lambert W(1) = fixed point of β-field equilibrium. '
+~/Projects/ThePlace/VAPMIP/PtolC/main.c,337,Ω_ζΣ,OMEGA_ZS,W1,"""  OMEGA_ZS  = 0.56714    Lambert W fixed point W(1) / BAO spectral gap\n"""
+~/Projects/ThePlace/VAPMIP/PtolC/main.c,405,Ω_ζΣ,Ω_ζΣ,W1,"""  Δ = D − A.  Lowest non-zero eigenvalue = Ω_ζΣ = 0.56714.\n"""
+~/Projects/ThePlace/VAPMIP/tools/make_englishwordnet_bin.py,128,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS  = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/tools/make_prime_corpus.py,61,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS      = 0.56714329040978387
+~/Projects/ThePlace/VAPMIP/skills/gallery.py,44,Ω_ζΣ,OMEGA_ZS,W1,_OMEGA_ZS    = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/skills/workbench.py,52,Ω_ζΣ,OMEGA_ZS,W1,_OMEGA_ZS = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/skills/music.py,17,Ω_ζΣ,Ω_ζΣ,W1,BAO convergence      → tonal centre (Ω_ζΣ = 0.56714 → B♭/E♭/F cluster)
+~/Projects/ThePlace/VAPMIP/skills/music.py,84,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.56714329   # Lambert W(1) — BAO ceiling / tonal centre
+~/Projects/ThePlace/VAPMIP/skills/music.py,498,Ω_ζΣ,Ω_ζΣ,W1,predicted by Ω_ζΣ = 0.56714 mapping to MIDI ≈ 71 = B4).
+~/Projects/ThePlace/VAPMIP/skills/apisniff.py,42,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/skills/apisniff.py,846,Ω_ζΣ,OMEGA_ZS,W1,"f""OMEGA_ZS equals {OMEGA_ZS} the Lambert W of one """
+~/Projects/ThePlace/VAPMIP/skills/draw.py,41,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS   = 0.5671432904097838
+~/Projects/ThePlace/VAPMIP/skills/draw.py,490,Ω_ζΣ,OMEGA_ZS,W1,"ax_wheel.text(0, -0.24, f'Ω_ZS = {OMEGA_ZS}  (Lambert W₀(1))',"
+~/Projects/ThePlace/VAPMIP/docs/wiki/J_red-J_blue-0_RB-Record.md,72,A_π,A_fermat,alpha,"* **Also recorded (same message):** A_fermat is the 'chasing inertia' constant, found by searching from the Fermat side; not α_fs."
+~/Projects/ThePlace/VAPMIP/FourthAgePaper/ScalarContextPropagation/repo_appendix/j2_involution/method2_j2_involution_t256.ipynb,54,Ω_ζΣ,OMEGA_ZS,W1,"""OMEGA_ZS = 0.5671432904097838\n"","
+~/Desktop/SpaceClaude/VAPMIP_canonical_maths.txt,82,Ω_ζΣ,Ω_ZS,W1,Ω_ZS = Lambert W(1) ≈ 0.56714
+~/Desktop/SpaceClaude/VAPMIP_canonical_maths.txt,178,Ω_ζΣ,Ω_ZS,W1,Ω_ZS  = Lambert W(1) ≈ 0.56714329040978...  (omega / Lambert omega constant)
+~/Desktop/SpaceClaude/VAPMIP_canonical_maths.txt,458,Ω_ζΣ,Ω_ZS,W1,— Ω_ZS = Lambert W(1) ≈ 0.56714 LABELED EXPLICITLY
+~/Desktop/SpaceClaude/VAPMIP_canonical_maths.txt,509,Ω_ζΣ,Ω_ZS,W1,Ω_ZS  = Lambert W(1) ≈ 0.56714329040978384...
+~/Desktop/SpaceClaude/LLM_SED/GPI_WhiteHat_Paper.md,477,Ω_ζΣ,Ω_ZS,W1,Ω_ZS     = 0.5671432904097838    Lambert W fixed point W(1) — thermal ceiling
+~/Desktop/SpaceClaude/LLM_SED/GPI_WhiteHat_Paper.md,646,Ω_ζΣ,Ω_ZS,W1,Ω_ZS = 0.5671432904097838 (Lambert W thermal ceiling)
+~/.clauderc,100,Ω_ζΣ,OMEGA_ZS,W1,"export LAMBERT_W1=""0.5671432904097838""                 # W(1) = OMEGA_ZS; the idle point; multiplier -W(1) = -Omega; the fixed point of x -> exp(-x)"
+~/.clauderc,107,A_π,Alpha_Fermat,alpha,"# NOT identified: ""the one found using inertia and causality"" -- the Third Age draft's Alpha_Fermat (1/137.035999, 'born from Inertia ... Speed of Causality ceiling')"
+~/.clauderc,112,Ω_ζΣ,OMEGA_ZS,W1,"export OMEGA_ZS=""0.5671432904097838"""
+~/.clauderc,231,Ω_ζΣ,OMEGA_ZS,W1,"echo ""OMEGA_ZS = $OMEGA_ZS   (Lambert W(1))"""
+~/.clauderc_ValaQuenta,228,Ω_ζΣ,OMEGA_ZS,W1,OMEGA_ZS = 0.5671432904097838   (Lambert W(1) fixed point)
+~/.clauderc_ValaQuenta,627,Ω_ζΣ,Omega_ZS,W1,"Omega_ZS=0.56714, residual 0.0029 -- STRONGEST empirical cross-check in"
+~/.clauderc_ValaQuenta,681,Ω_ζΣ,Omega_ZS,W1,omega_zs_6_family: correctly re-derives Omega_ZS=W(1) (real Lambert-W
+~/.clauderc_ValaQuenta,1057,Ω_ζΣ,OMEGA_ZS,W1,"W(1)=OMEGA_ZS pins sigma=1/2 (real part, already PAPER.md 12.1), and"
+~/.clauderc_ValaQuenta,1215,Ω_ζΣ,Omega_ZS,W1,"the line on which W(1) e^{W(1)} = 1, so it carries Omega_ZS."
+~/.clauderc_canonical_maths,12,Ω_ζΣ,Omega_ZS,W1,Omega_ZS = W(1) = 0.56714...
+~/.clauderc_canonical_maths,2116,A_π,A_fermat,alpha,"A_fermat = capital Alpha_pi, Fermat-side structural constant, NOT alpha_fs; VALUE OPEN (original derivation: d=0 endpoint x=T/T_P=1, the ceiling; older wiki 17: 1/137.036 'domain floor') |"
+~/.clauderc_canonical_maths,2140,A_π,A_fermat,dstar,OPEN: A_fermat value; hole definition (rational primes vs irreducibles); char vs charx; d*_RG closed form (none known).
+~/.clauderc_canonical_maths,2210,Ω_ζΣ,Ω_RZ,W1,"""Omega"" meaning the Lambert W fixed point as the standard omega constant is a DIFFERENT object and is NOT what the project's Ω_RZ / A_π mean. A_π and Ω_RZ always denote his engineered discoveries."
+~/.clauderc_canonical_maths,2211,A_π,A_π,dstar,"Relation: d*·ln 10 = A_π: ONE crossing x = e^(−x), read in decimal digits (Ω_ζΣ = d*, entropy side) and in nats (A_π, inertia side). ln 10 is the Jacobian (the 'Translator')."
+~/.clauderc_canonical_maths,2213,Ω_ζΣ,Ω_ζΣ,W1/alpha,"Sources of the drift: the First Age README (2026-04-15) wrote ""Α_π = 1/137.035999 (domain floor), Ω_ζΣ = 0.567… (Lambert W)""; wiki 17 §1 repeated it; the stale SessionStart copy of this file (2026-10-"
+~/.claude/projects/-home-rendier-Projects-ThePlace/memory/feedback_notation_scope_h_hat_vs_0rb.md,12,A_π,A_fermat,alpha/dstar,"Also: A_fermat (capital Α_π) ≠ α_fs ≠ α_NN; three σ = σ_ζ / σ-stratum / σ_RB (wiki 133 §0). d*_RG has no closed form; all four d* faces necessary for ln10 in radial complex spherical polar (wiki 17, R"
+~/.claude/projects/-home-rendier-Projects-ThePlace/memory/feedback_symbols_alpha_Apionly_OmegaZS.md,12,Ω_ζΣ,Ω_RZ,W1,"- ""Omega"" as the standard Lambert-W omega constant is a different object and is NOT what Ω_RZ / A_π mean. A_π and Ω_RZ always mean his engineered discoveries."
+~/.claude/projects/-home-rendier-Projects-ThePlace/memory/reference_four_dstar_values.md,15,Ω_ζΣ,Ω_ZS,W1,| **d\*_ln(10)** | The Translator | **d\*·ln10 = Ω_ZS = 0.5671432904097838** | metric bridge: decimal-log Native metric ds=d·log₁₀p ↔ natural-log prime-address space |
+~/.claude/projects/-home-rendier-Projects-ThePlace/memory/project_ainulindale_provenance.md,268,Ω_ζΣ,Ω_ZS,W1,"Cody, correcting the 2026-08-28 scale-chart run: **d\* and Ω_ZS = W(1) are"

@@ -1,0 +1,279 @@
+{
+ "files_scanned": 17240,
+ "duplicate_files_skipped": 7216,
+ "matching_lines": 8603,
+ "by_family": {
+  "face": 1190,
+  "dstar": 5614,
+  "value": 2466,
+  "symbol": 3086
+ },
+ "by_value": {
+  "0.246(0) running": 1242,
+  "0.5671x W(1)": 947,
+  "0.2463x boundary": 302,
+  "137 (fine structure)": 243,
+  "0.5664x superseded d*_ln10": 139,
+  "0.246x other": 90
+ },
+ "by_root": {
+  "ContextPlease": 2735,
+  "Ainulindale": 1543,
+  "ValaQuenta": 1204,
+  "VAPMIP": 810,
+  "FourthAgePapers": 429,
+  "Ptolemy2": 414,
+  "RiemannHypothesisProof": 324,
+  "PtolemyDesktop": 272,
+  "PTorrent": 198,
+  "Desktop": 109,
+  ".claude": 107,
+  "TuringStack": 59,
+  "ArdaQuenta": 56,
+  "TheWanderingGod": 54,
+  ".clauderc_canonical_maths": 44,
+  "GenerationalLineage": 41,
+  ".clauderc_ValaQuenta": 32,
+  ".clauderc": 24,
+  ".clauderc_user_provenance": 23,
+  "PDesktop": 22,
+  "UniversalSynth": 21,
+  "SedenionSpectralRelativity": 17,
+  ".clauderc_official_names": 14,
+  "BulletCluster": 12,
+  "SemanticWordEngine": 12
+ },
+ "top_files": [
+  [
+   "~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_all.txt",
+   540
+  ],
+  [
+   "~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_primer-corpus-ingest/corpus_war.txt",
+   321
+  ],
+  [
+   "~/Projects/ThePlace/ValaQuenta/modules/tier7_cosmos/maths.py",
+   108
+  ],
+  [
+   "~/Projects/ThePlace/ValaQuenta/modules/constants/maths.py",
+   104
+  ],
+  [
+   "~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v2.md",
+   104
+  ],
+  [
+   "~/Projects/ThePlace/ValaQuenta/modules/tier8_sedenion/maths.py",
+   90
+  ],
+  [
+   "~/Projects/ThePlace/Ainulindale/AgeThird/Third_Age_CS_Draft_v1.md",
+   87
+  ],
+  [
+   "~/Projects/ThePlace/ValaQuenta/modules/derivation_chain/maths.py",
+   82
+  ],
+  [
+   "~/Projects/ThePlace/Ainulindale/archive/D-CS_Memory_2026-09-29_pre-rewrite.md",
+   81
+  ],
+  [
+   "~/Projects/ThePlace/ContextPlease/claude/hist_todo/Ainulindale/TODO.md",
+   74
+  ],
+  [
+   "~/Projects/ThePlace/Ainulindale/TODO.md",
+   74
+  ],
+  [
+   "~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/papers/Third_Age_CS_Draft_v1.md",
+   70
+  ],
+  [
+   "~/Projects/ThePlace/ValaQuenta/notebooks/h_rb_hat/01_fermat_riemann_dual_currents.ipynb",
+   67
+  ],
+  [
+   "~/Projects/ThePlace/PTorrent/evaluate_σface.py",
+   59
+  ],
+  [
+   "~/Projects/ThePlace/ContextPlease/claude/hist_prime/RiemannHypothesisProof/PRIMER_2026-11-12_CEILING_DESCENT_FROM_CLAUDE_AI.md",
+   59
+  ],
+  [
+   "~/Projects/ThePlace/Ainulindale/Third_Age_Ainulindale_Conjecture.html",
+   59
+  ],
+  [
+   "~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_scale-chart-constants/test.py",
+   58
+  ],
+  [
+   "~/Projects/ThePlace/ContextPlease/claude/hist_wiki/VAPMIP/docs/wiki/Boxkite-Deformation-Record-2026-10-12.md",
+   54
+  ],
+  [
+   "~/Projects/ThePlace/Ainulindale/wiki/17_alpha_omega_d_star.md",
+   54
+  ],
+  [
+   "~/Projects/ThePlace/RiemannHypothesisProof/archive/2026-11-03_pre-rewrite/PAPER.md",
+   48
+  ],
+  [
+   "~/Projects/ThePlace/VAPMIP/monad.py",
+   47
+  ],
+  [
+   "~/Projects/ThePlace/VAPMIP/physics/cosmo_engine.py",
+   47
+  ],
+  [
+   "~/Projects/ThePlace/ValaQuenta/modules/inductive_onset_residual/maths.py",
+   44
+  ],
+  [
+   "~/Projects/ThePlace/Ainulindale/AgeThird/VAPMIP_Paper.md",
+   44
+  ],
+  [
+   "~/.clauderc_canonical_maths",
+   44
+  ],
+  [
+   "~/Projects/ThePlace/ValaQuenta/modules/berry_keating/maths.py",
+   42
+  ],
+  [
+   "~/Desktop/SpaceClaude/conversation-2.txt",
+   41
+  ],
+  [
+   "~/Projects/ThePlace/ContextPlease/claude/scratchpad/2026-08-28_scale-chart-constants/README.md",
+   40
+  ],
+  [
+   "~/Projects/ThePlace/ContextPlease/claude/hist_prime/PDesktop/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt",
+   39
+  ],
+  [
+   "~/Projects/ThePlace/ContextPlease/claude/hist_prime/Ainulindale/outreach/primers/AINULINDALE_CLAUDE_CODE_PRIMER_2026-05-15.txt",
+   39
+  ]
+ ],
+ "symbol_roles": {
+  "OMEGA_ZS": {
+   "(no role word on the line)": 870,
+   "W(1)/Lambert": 373,
+   "d* (0.246)": 317,
+   "W(1)/Lambert|d* (0.246)": 46,
+   "W(1)/Lambert|d* (0.246)|Hagedorn/entropy/Riemann": 32,
+   "W(1)/Lambert|Hagedorn/entropy/Riemann": 16
+  },
+  "Ω_ζΣ": {
+   "d* (0.246)": 143,
+   "(no role word on the line)": 117,
+   "W(1)/Lambert": 80,
+   "W(1)/Lambert|d* (0.246)": 35,
+   "W(1)/Lambert|Hagedorn/entropy/Riemann": 29,
+   "Hagedorn/entropy/Riemann": 15
+  },
+  "Ω_ZS": {
+   "d* (0.246)": 121,
+   "W(1)/Lambert": 68,
+   "(no role word on the line)": 58,
+   "W(1)/Lambert|d* (0.246)": 48,
+   "W(1)/Lambert|Hagedorn/entropy/Riemann": 8,
+   "Hagedorn/entropy/Riemann": 5
+  },
+  "A_pi": {
+   "alpha_fs (1/137)": 89,
+   "(no role word on the line)": 52,
+   "d* (0.246)": 4,
+   "W(1)/Lambert|alpha_fs (1/137)": 3,
+   "Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 2,
+   "W(1)/Lambert|speed of causality/inertia/Fermat": 2
+  },
+  "Α_π": {
+   "(no role word on the line)": 59,
+   "alpha_fs (1/137)|speed of causality/inertia/Fermat": 20,
+   "alpha_fs (1/137)": 19,
+   "speed of causality/inertia/Fermat": 5,
+   "W(1)/Lambert|d* (0.246)|Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 4,
+   "Hagedorn/entropy/Riemann": 4
+  },
+  "Omega_ZS": {
+   "(no role word on the line)": 43,
+   "W(1)/Lambert": 42,
+   "d* (0.246)": 24,
+   "W(1)/Lambert|d* (0.246)": 7,
+   "speed of causality/inertia/Fermat": 4,
+   "W(1)/Lambert|Hagedorn/entropy/Riemann": 1
+  },
+  "Omega_zS": {
+   "W(1)/Lambert": 38,
+   "(no role word on the line)": 32,
+   "W(1)/Lambert|d* (0.246)": 15,
+   "d* (0.246)": 8,
+   "W(1)/Lambert|alpha_fs (1/137)": 3,
+   "Hagedorn/entropy/Riemann": 1
+  },
+  "A_π": {
+   "alpha_fs (1/137)": 28,
+   "(no role word on the line)": 14,
+   "W(1)/Lambert|d* (0.246)|alpha_fs (1/137)|Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 6,
+   "alpha_fs (1/137)|speed of causality/inertia/Fermat": 5,
+   "speed of causality/inertia/Fermat": 4,
+   "d* (0.246)|alpha_fs (1/137)|speed of causality/inertia/Fermat": 4
+  },
+  "A_fermat": {
+   "alpha_fs (1/137)|speed of causality/inertia/Fermat": 22,
+   "speed of causality/inertia/Fermat": 12,
+   "d* (0.246)|speed of causality/inertia/Fermat": 10,
+   "d* (0.246)|alpha_fs (1/137)|speed of causality/inertia/Fermat": 8,
+   "Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 6,
+   "W(1)/Lambert|d* (0.246)|alpha_fs (1/137)|Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 6
+  },
+  "Alpha_Fermat": {
+   "alpha_fs (1/137)|speed of causality/inertia/Fermat": 25,
+   "d* (0.246)|Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 11,
+   "Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 11,
+   "speed of causality/inertia/Fermat": 11,
+   "W(1)/Lambert|d* (0.246)|alpha_fs (1/137)|speed of causality/inertia/Fermat": 3,
+   "d* (0.246)|alpha_fs (1/137)|speed of causality/inertia/Fermat": 2
+  },
+  "A_PI": {
+   "(no role word on the line)": 30,
+   "alpha_fs (1/137)": 15,
+   "d* (0.246)": 6,
+   "W(1)/Lambert|d* (0.246)": 2,
+   "W(1)/Lambert|d* (0.246)|alpha_fs (1/137)": 2,
+   "Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 1
+  },
+  "Omega_Riemann": {
+   "W(1)/Lambert|Hagedorn/entropy/Riemann": 17,
+   "d* (0.246)|Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 11,
+   "Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 10,
+   "Hagedorn/entropy/Riemann": 9,
+   "d* (0.246)|Hagedorn/entropy/Riemann": 3,
+   "W(1)/Lambert|d* (0.246)|Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 3
+  },
+  "Ω_RZ": {
+   "W(1)/Lambert|d* (0.246)|alpha_fs (1/137)|Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 6,
+   "W(1)/Lambert|d* (0.246)|speed of causality/inertia/Fermat": 3,
+   "d* (0.246)|Hagedorn/entropy/Riemann": 2,
+   "W(1)/Lambert": 2,
+   "Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 1,
+   "Hagedorn/entropy/Riemann": 1
+  },
+  "Omega_RZ": {
+   "Hagedorn/entropy/Riemann|speed of causality/inertia/Fermat": 2,
+   "Hagedorn/entropy/Riemann": 1,
+   "W(1)/Lambert|d* (0.246)|speed of causality/inertia/Fermat": 1
+  }
+ }
+}

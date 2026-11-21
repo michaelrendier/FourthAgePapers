@@ -1,0 +1,12 @@
+x* solves x = e^(−x): 0.5671432904097838  residual 0.00e+00
+Hagedorn ceiling (entropy → Ω_ζΣ = d*)     ceiling 7.780000e+16 K   crossing 4.412375e+16 K   x* = 0.5671432904098   digits below ceiling = 0.2463072014734
+Planck temperature (April-9 run)           ceiling 1.416784e+32 K   crossing 8.035196e+31 K   x* = 0.5671432904098   digits below ceiling = 0.2463072014734
+speed of causality (inertia → A_π)         ceiling 2.997925e+08 m/s   crossing 1.700253e+08 m/s   x* = 0.5671432904098   digits below ceiling = 0.2463072014734
+d* = W(1)/ln10 = 0.2463072014734;  d*·ln10 = 0.567143290409784  A_π = 0.567143290409784  |diff| = 0.0e+00
+P1/P2 HELD: same x*, same d* for all three ceilings.   P3 HELD.
+inertia chase g·e^(g/g0) = g0, g0 = c: g = 170025281.070157 m/s, residual 0.00e+00  (= 0.5671432904098 c)
+polar field S,I with α = 1/137.036 (fine-structure)     min|S−I| = 1.751e-01 at r = 0.2346
+polar field S,I with α = 0.137 (widget default)         min|S−I| = 1.470e-01 at r = 0.2563
+polar field S,I with coupling = A_π (Lambert)           min|S−I| = 1.285e-11 at r = 2.3505
+P4 HELD: with the fine-structure coupling the curves never meet (the 'closest-approach ring'); with A_π they touch.
+first-touch coupling in this widget (ripple constants 0.08/0.12 hand-chosen) = 0.5496 = 0.9691·A_π: touches for every coupling ≥ it, so the widget alone does not single out A_π; the chase equation does.

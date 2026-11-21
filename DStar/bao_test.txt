@@ -1,0 +1,8 @@
+z_drag: target 1059.94 ± 0.3: 0 expressions inside; random targets of the same size and relative precision: mean 0.045; fraction of random targets with ≥ this many = 1.000; hits: []
+z_*: target 1089.92 ± 0.25: 0 expressions inside; random targets of the same size and relative precision: mean 0.049; fraction of random targets with ≥ this many = 1.000; hits: []
+θ_*: target 0.010411 ± 3.1e-06: 0 expressions inside; random targets of the same size and relative precision: mean 0.120; fraction of random targets with ≥ this many = 1.000; hits: []
+ℓ_A: target 301.63 ± 0.15: 0 expressions inside; random targets of the same size and relative precision: mean 0.131; fraction of random targets with ≥ this many = 1.000; hits: []
+
+Test 1 (code): the engine's 'bao_consistency' divides Δ by Planck's FRACTIONAL error on r_s (0.177%) and calls a ratio > 0.1 'resolvable'; no line maps Δ or any constant to r_s, z, θ or ℓ. P1 holds (by reading `inductive_onset_residual` / the retired `bao_mass_gap`).
+
+VERDICT: P2 HELD: no target is matched more often than chance (every fraction > 0.05). BAO framing: no computation, no prediction beyond chance → strip the label (Δ is the onset residual).

@@ -1,0 +1,18 @@
+{
+ "\u03a9_\u03b6\u03a3": {
+  "lines": 2713,
+  "tied_W1": 799,
+  "tied_dstar": 801,
+  "tied_nothing": 1270,
+  "contradicts_ruling": 642,
+  "tied_alpha": 26
+ },
+ "A_\u03c0": {
+  "lines": 497,
+  "tied_nothing": 212,
+  "tied_alpha": 228,
+  "contradicts_ruling": 247,
+  "tied_dstar": 65,
+  "tied_W1": 38
+ }
+}

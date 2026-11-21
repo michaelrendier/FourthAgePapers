@@ -23,6 +23,8 @@ The notebooks record the derivation. The wiki page is written last.
 
 The project's interactive galleries are self-contained HTML pages. Each is served from a small local web server that listens on `127.0.0.1` only; start it with the launcher in the right-hand column (it also opens the page). They are served over http, not opened as files, so that Firefox shows the author's favicon in the tab (Firefox stores no icon for `file://` pages). The links open in a new tab once the server is running; GitHub removes the new-tab attribute when it renders this file, in which case middle-click.
 
+**One entry point for all galleries:** <a href="http://127.0.0.1:8760/galleries/index.html" target="_blank" rel="noopener">http://127.0.0.1:8760/galleries/index.html</a> (start it with `~/Projects/ThePlace/galleries/serve_all.sh`): every gallery, a combined search over all images, the atlas list and a README of how the galleries are made.
+
 | Gallery | What it shows | Repository | Open (new tab) | Start the server |
 |---|---|---|---|---|
 | **Scaffold Gallery** | every JWST scaffold, raw beside false colour, with selectable shear (JWST) and real-polarization (HST) vector overlays on both; the Bullet Cluster, Crab Nebula, HE 0435 and Pillars of Creation | `BulletCluster` | <a href="http://127.0.0.1:8765/gallery.html" target="_blank" rel="noopener">http://127.0.0.1:8765/gallery.html</a> | `BulletCluster/scaffolds/serve_gallery.sh` |
@@ -38,6 +40,7 @@ The project's interactive galleries are self-contained HTML pages. Each is serve
 | **Generational Lineage Gallery** | the two-ring chart, crystal spiral and factorial oscilloscope (4 images) | `GenerationalLineage` | <a href="http://127.0.0.1:8770/image_gallery/Generational_Lineage_Gallery.html" target="_blank" rel="noopener">http://127.0.0.1:8770/image_gallery/Generational_Lineage_Gallery.html</a> | `GenerationalLineage/image_gallery/serve_gallery.sh` |
 | **Sedenion Spectral Relativity Gallery** | Fano wobble, engines and spectrographs, the 1 + 1 pictures (18 SVGs) | `SedenionSpectralRelativity` | <a href="http://127.0.0.1:8771/image_gallery/Sedenion_Spectral_Relativity_Gallery.html" target="_blank" rel="noopener">http://127.0.0.1:8771/image_gallery/Sedenion_Spectral_Relativity_Gallery.html</a> | `SedenionSpectralRelativity/image_gallery/serve_gallery.sh` |
 | **VAPMIP Gallery** | paper figures, SemPriCon, Scalar Context Propagation, epicycles, portrait state (16 images) | `VAPMIP` | <a href="http://127.0.0.1:8772/image_gallery/VAPMIP_Gallery.html" target="_blank" rel="noopener">http://127.0.0.1:8772/image_gallery/VAPMIP_Gallery.html</a> | `VAPMIP/image_gallery/serve_gallery.sh` |
+| **Holcus 16D Paths Gallery** | the original SVG outputs of ptol.c, Holcus's 16-dimensional path papers (27 unique runs; proprietary, stays in VAPMIP) | `VAPMIP` | <a href="http://127.0.0.1:8773/holcus_paths_gallery/Holcus_16D_Paths_Gallery.html" target="_blank" rel="noopener">http://127.0.0.1:8773/holcus_paths_gallery/Holcus_16D_Paths_Gallery.html</a> | `VAPMIP/holcus_paths_gallery/serve_gallery.sh` |
 | *(more image galleries)* | any new set of generated images gets a gallery of its own | | *to be added* | |
 
 Each gallery page is named for what it shows and carries the favicon; more galleries will be listed here as they are made.

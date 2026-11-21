@@ -4,7 +4,7 @@
 
 **Cody Michael Allison** (Michael Rendier), independent researcher · the.wandering.god@gmail.com · [ORCID 0009-0007-7239-6760](https://orcid.org/0009-0007-7239-6760) · github.com/michaelrendier\
 **Written by an AI assistant:** Claude Sonnet 5.5 (`claude-sonnet-5-5`), with the author's [`cs-paper-code-conventions` skill](https://github.com/michaelrendier/ContextPlease/blob/main/claude/skills/cs-paper-code-conventions/SKILL.md) running\
-**Date:** 16 November 2026 · **Status:** stub for expert review · **Code:** [FourthAgePapers/AdditionMatrixOrbits](https://github.com/michaelrendier/FourthAgePapers/tree/main/AdditionMatrixOrbits)
+**Date:** 20 November 2026 · **Status:** stub for expert review · **Code:** [FourthAgePapers/AdditionMatrixOrbits](https://github.com/michaelrendier/FourthAgePapers/tree/main/AdditionMatrixOrbits)
 
 ---
 
@@ -219,7 +219,7 @@ python3 engine/e_addm_followup.py --crosscheck  # compares with the Explorer's t
 python3 paper/make_paper.py --check          # does this paper match a fresh build?
 ```
 
-Environment of this build: Python 3.12.3, a ThinkPad X1 Carbon (6th gen, Core i7-8550U); building the paper took about 10 s. SHA-256 prefixes of the engine file used:
+Environment of this build: Python 3.12.3, a ThinkPad X1 Carbon (6th gen, Core i7-8550U); building the paper took about 11 s. SHA-256 prefixes of the engine file used:
 
 | file | sha256 (first 12) |
 |---|---|

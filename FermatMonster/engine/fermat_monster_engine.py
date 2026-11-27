@@ -1311,20 +1311,15 @@ def fermat_n_shape_map() -> Dict:
         distribute across those 16 classes. Coverage is the claim; a 71=71
         identification is not, and the arithmetic 13 + 3 = 16 is what is verified.
 
-    Why {1,11,15} is algebraically forbidden for A/D/E root systems:
-        A_n:  h = n+1. For h≡1 mod 16: n≡0 mod 16. But A_{16k} has rank 16k.
-              Total rank must be 24 and all components must have SAME h.
-              h=1: A₀ (degenerate, empty root system). Not a root system.
-              h=17: A₁₆ has rank 16 (not 24); A₁₆.A₇ has h=max(17,8)=17 — rank 23 ✗.
-              No valid rank-24 root system with all components having h≡1 mod 16.
-        D_n:  h = 2n-2. For h≡1 mod 16: 2n≡3 mod 16 → no integer solution (odd).
-              D_n Coxeter numbers are ALL EVEN. Can never be ≡1,11,15 (odd) mod 16
-              UNLESS combined with A-type... but A_n h = n+1 (can be odd only if n even).
-              n even, n+1 odd: A_{2k} has h=2k+1. Rank 2k. For rank 24: A_{23} has h=24 (even).
-              The constraint that total rank=24 with equal h eliminates all odd h≡{1,11,15}.
-        E_n:  h ∈ {12,18,30}. None ≡ {1,11,15} mod 16.
-
-    The algebraic proof that {1,11,15} is impossible is in MonsterSiblings P1.
+    Why {1,11,15} is forbidden (proof, 2026-11-27; ValaQuenta hypergon_constructibility.niemeier_gap_theorem checks each step):
+        D_n has h = 2n-2 and E6, E7, E8 have h = 12, 18, 30: all even. So an odd h forces every component to be A_(h-1),
+        and k copies of A_(h-1) have rank k(h-1) = 24, so (h-1) divides 24. The divisors of 24 are 1,2,3,4,6,8,12,24, so the
+        odd h are 3,5,7,9,13,25, which are 3,5,7,9,13,9 modulo 16. An even h is never congruent to an odd residue.
+        Hence no Niemeier root system has h = 1, 11 or 15 (mod 16).  (The earlier text argued through mixed-h examples such
+        as A16.A7; those are not Niemeier root systems and are withdrawn.)
+        Status: the theorem is about Niemeier root systems. Reading a residue k as 'the Fermat forbidden zone at e_k' is
+        THEORETICAL; the Moonshine fill is an arithmetic fact that 68 % of 14-subsets of the odd primes up to 71 share
+        (ValaQuenta moonshine_fill_control).
     This function VERIFIES the claim computationally.
     """
     # The 23 non-Leech Niemeier root systems, one entry per lattice.

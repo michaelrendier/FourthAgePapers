@@ -299,3 +299,5 @@
 [ ] ScalarContextPropagation: MOVED to VAPMIP/ScalarContextPropagation on 2026-11-20 (proprietary licensing); NOT updated; to be discussed with the author first (it mentions the Smith chart and L_(I|O)).
 - [ ] EquationSpace — stub 2026-11-19: the author's definition (permutation space of all equations from 0_RB), records found, counts measured; claim and definition of a point to be discussed
 - [ ] Papers updated 2026-11-19 (c) with units/flattening/ħ-emergence notes: NegatingUncertainty, FastInverse, TheInterface, PiFromAbove, Telperion, addenda IV and VIII (Λ_QCD/M_Planck is 1.6×10⁻²⁰, not 10⁻¹⁷), WitchesHat H_constants + parent §15, AddScaleSign, DStarRG (branches); ScalarContextPropagation deferred for discussion
+
+- [ ] **HyperindexingSystem: the text-only Midline address** (four digits, 52 list indexes, digits and numbers by another method): see `HyperindexingSystem/TODO.md`. Author's next engineering goal, 2026-11-27; not to be built until he says go.

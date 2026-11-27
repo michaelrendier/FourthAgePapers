@@ -1,0 +1,9 @@
+# one .venv for the whole family: DM_GalacticCavity, CMB_FractalBoundary, CMB_PlasmaBoundary, Crawford_NavierStokes, WhiteHoleBang, WitchesHat
+astropy>=8.0  # tested 8.0.1
+healpy>=1.20  # tested 1.20.0
+lineage>=4.5  # tested 4.5.0
+matplotlib>=3.11  # tested 3.11.1
+numpy>=2.5  # tested 2.5.2
+pillow>=12.3  # tested 12.3.0
+requests>=2.34  # tested 2.34.2
+scipy>=1.18  # tested 1.18.0

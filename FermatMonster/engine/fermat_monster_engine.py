@@ -54,9 +54,10 @@ _THEPLACE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 
 if _THEPLACE not in sys.path:
     sys.path.insert(0, _THEPLACE)
 try:
-    from ValaQuenta.modules.t32_nilpotency.maths import prime_nilpotency_report
+    from ValaQuenta.modules.t32_nilpotency.maths import prime_nilpotency_report, matched_prime_control
 except ImportError:
     prime_nilpotency_report = None
+    matched_prime_control = None
 
 
 # ── Constants ─────────────────────────────────────────────────────────────────
@@ -520,18 +521,27 @@ def t32_nilpotency_check() -> Dict:
     gap_nilpotent_pct = 100 * sum(r['nilpotent'] for r in gap_rows) / len(gap_rows) if gap_rows else 0.0
     non_gap_nilpotent_pct = 100 * sum(r['nilpotent'] for r in non_gap_rows) / len(non_gap_rows) if non_gap_rows else 0.0
 
+    # Control (t32_nilpotency 0.120, 2026-11-26): a random word is nilpotent half the time (square law), and the Hyperwebster words of the
+    # integers are 50 % nilpotent from three digits up, primes and composites alike; the excess in the Moonshine primes is a two-digit-range
+    # effect. The prime-matched control is the chance of the same count of random primes up to the same maximum doing as well.
+    control = matched_prime_control(sorted(gap_primes)) if matched_prime_control else None
+
     return {
         'rows': report['rows'],
         'overall_nilpotent_pct': report['nilpotent_pct'],
         'gap_filling_primes_nilpotent_pct': gap_nilpotent_pct,
         'non_gap_primes_nilpotent_pct': non_gap_nilpotent_pct,
+        'random_word_baseline_pct': 50.0,
+        'gap_primes_prime_matched_control': control,   # p_all about 0.13: 5/5 among random primes up to 59 is not rare
         'note': (
             'Raw correlation between Niemeier-gap membership and T32/GF(2) '
             'nilpotency, using a mechanism already shown NOT to survive a '
             'magnitude-matched control in the factorization context '
             '(hypergon_constructibility). Report this number, do not treat '
             'a difference here as validated without the same control-testing '
-            'discipline applied.'
+            'discipline applied. Control added 2026-11-26: the chance baseline is 50 % (random word) or the prime-matched '
+            'control in gap_primes_prime_matched_control (about 1 in 8 for 5 of 5), not 70 %; the gap-prime result is unremarkable '
+            'against primes of the same size (ValaQuenta wiki 78 section 6).'
         ),
     }
 

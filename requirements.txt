@@ -1,0 +1,8 @@
+# FourthAgePapers: what this repository's own code imports (tools/repo_venv.py, root environment versions)
+matplotlib>=3.11  # tested 3.11.1
+mpmath>=1.3  # tested 1.3.0
+nbformat>=5.11  # tested 5.11.0
+numpy>=2.5  # tested 2.5.2
+scipy>=1.18  # tested 1.18.0
+sympy>=1.14  # tested 1.14.0
+toolsets>=0.1  # tested 0.1.9

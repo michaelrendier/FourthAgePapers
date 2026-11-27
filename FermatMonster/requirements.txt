@@ -1,0 +1,2 @@
+# FermatMonster: what this repository's own code imports (tools/repo_venv.py, root environment versions)
+
